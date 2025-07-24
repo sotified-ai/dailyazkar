@@ -1,5 +1,7 @@
 import { azkarData } from "@/data/azkar-data";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { SEOHead } from "@/components/seo-head";
+import { AdSense } from "@/components/adsense";
 
 export default function MorningAzkar() {
   const morningAzkar = azkarData.find(category => category.id === "morning");
@@ -16,8 +18,23 @@ export default function MorningAzkar() {
     );
   }
 
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Morning Azkar",
+    "url": window.location.href,
+    "description": "Explore authentic Morning Azkar with images and explanations to enhance your daily Zikr practice."
+  };
+
   return (
     <div className="pt-24 bg-gradient-to-br from-amber-50 via-white to-orange-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 min-h-screen">
+      <SEOHead
+        title="Morning Azkar - Daily Zikr | Start Your Day with Islamic Prayers"
+        description="Explore authentic Morning Azkar with images and explanations to enhance your daily Zikr practice. Start your day with blessed supplications and remembrance of Allah."
+        keywords="Morning Azkar, Zikr, Islamic Duas, Daily Prayers, Islamic Guidance, Subh Azkar, morning prayers, Islamic remembrance"
+        canonical={window.location.href}
+        structuredData={structuredData}
+      />
       <div className="container mx-auto px-4 py-8">
         {/* Header */}
         <div className="text-center mb-12 animate-fade-in">
@@ -36,6 +53,7 @@ export default function MorningAzkar() {
         </div>
 
         {/* Azkar List */}
+        <AdSense className="my-8" />
         <div className="space-y-8 max-w-4xl mx-auto">
           {morningAzkar.items.map((azkar, index) => (
             <Card key={azkar.id} className="glassmorphism border-0 shadow-lg animate-slide-up">
@@ -89,6 +107,8 @@ export default function MorningAzkar() {
           ))}
         </div>
 
+        <AdSense className="my-8" />
+        
         {/* Call to Action */}
         <div className="text-center mt-12">
           <div className="glassmorphism rounded-2xl p-8 max-w-2xl mx-auto">

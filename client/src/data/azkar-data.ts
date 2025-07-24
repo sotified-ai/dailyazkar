@@ -69,26 +69,4 @@ export const azkarData: AzkarCategory[] = [
   }
 ];
 
-export const galleryImages = [
-  {
-    id: 1,
-    category: "morning",
-    title: "Morning Azkar 1",
-    url: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=400",
-    alt: "Beautiful Arabic calligraphy of morning azkar"
-  },
-  {
-    id: 2,
-    category: "evening", 
-    title: "Evening Azkar 1",
-    url: "https://images.unsplash.com/photo-1591856225089-8e4c9c50547b?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=400",
-    alt: "Evening azkar in beautiful Arabic calligraphy with crescent moon design"
-  },
-  {
-    id: 3,
-    category: "quran",
-    title: "Quran Verse",
-    url: "https://images.unsplash.com/photo-1609599006353-e629aaabfeae?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=400",
-    alt: "Quranic verse in golden Arabic calligraphy with decorative borders"
-  }
-];
+// Gallery images are now handled by the image-data.ts file with proper folder structure

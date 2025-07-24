@@ -8,6 +8,10 @@ import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
 import { FloatingActions } from "@/components/floating-actions";
 import { useScrollProgress } from "@/hooks/use-scroll-progress";
+import { useEffect } from "react";
+import { initGA } from "./lib/analytics";
+import { useAnalytics } from "./hooks/use-analytics";
+import { GoogleTagManager } from "@/components/adsense";
 
 // Pages
 import Home from "@/pages/home";
@@ -31,6 +35,9 @@ function ReadingProgress() {
 }
 
 function Router() {
+  // Track page views when routes change
+  useAnalytics();
+  
   return (
     <div className="min-h-screen flex flex-col">
       <ReadingProgress />
@@ -54,10 +61,21 @@ function Router() {
 }
 
 function App() {
+  // Initialize Google Analytics when app loads
+  useEffect(() => {
+    // Verify required environment variable is present
+    if (!import.meta.env.VITE_GA_MEASUREMENT_ID) {
+      console.warn('Missing required Google Analytics key: VITE_GA_MEASUREMENT_ID');
+    } else {
+      initGA();
+    }
+  }, []);
+
   return (
     <QueryClientProvider client={queryClient}>
       <ThemeProvider>
         <TooltipProvider>
+          <GoogleTagManager />
           <Toaster />
           <Router />
         </TooltipProvider>

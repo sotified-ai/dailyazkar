@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { galleryImages } from "@/data/azkar-data";
+import { getAllImages, AZKAR_CATEGORIES, CATEGORY_LABELS } from "@/data/image-data";
 import { ImageModal } from "./image-modal";
 import { Button } from "@/components/ui/button";
 
@@ -8,16 +8,19 @@ export function ImageGallery() {
   const [selectedImage, setSelectedImage] = useState<any>(null);
   const [showModal, setShowModal] = useState(false);
 
+  const allImages = getAllImages();
+
   const filters = [
     { id: "all", label: "All Azkar" },
-    { id: "morning", label: "Morning" },
-    { id: "evening", label: "Evening" },
-    { id: "quran", label: "Quran" }
+    { id: AZKAR_CATEGORIES.MANZIL, label: CATEGORY_LABELS[AZKAR_CATEGORIES.MANZIL] },
+    { id: AZKAR_CATEGORIES.SUBHA, label: CATEGORY_LABELS[AZKAR_CATEGORIES.SUBHA] },
+    { id: AZKAR_CATEGORIES.SHAM, label: CATEGORY_LABELS[AZKAR_CATEGORIES.SHAM] },
+    { id: AZKAR_CATEGORIES.QURANIDUA, label: CATEGORY_LABELS[AZKAR_CATEGORIES.QURANIDUA] }
   ];
 
   const filteredImages = activeFilter === "all" 
-    ? galleryImages 
-    : galleryImages.filter(img => img.category === activeFilter);
+    ? allImages 
+    : allImages.filter(img => img.category === activeFilter);
 
   const handleImageClick = (image: any) => {
     setSelectedImage(image);
@@ -63,11 +66,28 @@ export function ImageGallery() {
                 className="gallery-item cursor-pointer"
                 onClick={() => handleImageClick(image)}
               >
-                <div className="image-gallery-item h-64 bg-gradient-to-br from-emerald-500 to-amber-500 rounded-2xl overflow-hidden">
+                <div className="image-gallery-item h-64 bg-gradient-to-br from-emerald-500 to-amber-500 rounded-2xl overflow-hidden relative">
                   <img
-                    src={image.url}
-                    alt={image.alt}
+                    src={image.path}
+                    alt={image.title}
                     className="w-full h-full object-cover"
+                    onError={(e) => {
+                      // Fallback to SVG placeholder if image fails to load
+                      const target = e.target as HTMLImageElement;
+                      target.src = `data:image/svg+xml;base64,${btoa(`
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300">
+                          <rect width="100%" height="100%" fill="#10b981"/>
+                          <text x="50%" y="40%" text-anchor="middle" fill="white" font-size="24" font-family="Arial">
+                            ${image.title}
+                          </text>
+                          <text x="50%" y="60%" text-anchor="middle" fill="white" font-size="16" font-family="Arial">
+                            ${image.description}
+                          </text>
+                          <circle cx="200" cy="200" r="50" fill="rgba(255,255,255,0.2)"/>
+                          <path d="M180 180 L220 220 M180 220 L220 180" stroke="white" stroke-width="3" stroke-linecap="round"/>
+                        </svg>
+                      `)}`;
+                    }}
                   />
                   <div className="image-overlay">
                     <div className="text-center">

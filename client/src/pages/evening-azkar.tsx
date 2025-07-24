@@ -1,5 +1,7 @@
 import { azkarData } from "@/data/azkar-data";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { SEOHead } from "@/components/seo-head";
+import { AdSense } from "@/components/adsense";
 
 export default function EveningAzkar() {
   const eveningAzkar = azkarData.find(category => category.id === "evening");
@@ -16,8 +18,23 @@ export default function EveningAzkar() {
     );
   }
 
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Evening Azkar",
+    "url": window.location.href,
+    "description": "Discover Daily Azkaar, your essential online companion for authentic Evening Zikr (masnoon sham). Enhance your spiritual journey with our interactive content."
+  };
+
   return (
     <div className="pt-24 bg-gradient-to-br from-emerald-50 via-white to-blue-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 min-h-screen">
+      <SEOHead
+        title="Evening Azkar: Daily Zikr | End Your Day with Islamic Prayers"
+        description="Discover Daily Azkaar, your essential online companion for authentic Evening Zikr (masnoon sham). Enhance your spiritual journey with our interactive image gallery."
+        keywords="Daily Azkaar, Evening Zikr, Azkar, Azkaar, Zikr, Muslim prayers, daily duas, spiritual guide, masnoon azkar, masnoon sham"
+        canonical={window.location.href}
+        structuredData={structuredData}
+      />
       <div className="container mx-auto px-4 py-8">
         {/* Header */}
         <div className="text-center mb-12 animate-fade-in">
@@ -36,6 +53,7 @@ export default function EveningAzkar() {
         </div>
 
         {/* Azkar List */}
+        <AdSense className="my-8" />
         <div className="space-y-8 max-w-4xl mx-auto">
           {eveningAzkar.items.map((azkar, index) => (
             <Card key={azkar.id} className="glassmorphism border-0 shadow-lg animate-slide-up">
@@ -89,6 +107,8 @@ export default function EveningAzkar() {
           ))}
         </div>
 
+        <AdSense className="my-8" />
+        
         {/* Call to Action */}
         <div className="text-center mt-12">
           <div className="glassmorphism rounded-2xl p-8 max-w-2xl mx-auto">

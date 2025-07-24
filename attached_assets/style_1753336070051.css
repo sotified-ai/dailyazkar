@@ -1,0 +1,230 @@
+/* Custom styles to complement Tailwind CSS */
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+}
+
+.image-gallery-container {
+    position: relative;
+    overflow: hidden;
+}
+
+.image-slits-grid {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    gap: 1rem;
+    padding: 1rem;
+    height: 400px;
+}
+
+.option {
+    flex-shrink: 0;
+    width: 80px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 12px;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+    scroll-snap-align: center;
+    border: 2px solid transparent;
+}
+
+.option.active {
+    flex-grow: 10000;
+    max-width: 600px;
+    border-radius: 16px;
+    border-color: #10b981;
+    box-shadow: 0 8px 20px rgba(16, 185, 129, 0.4);
+}
+
+.option .shadow {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 120px;
+    background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+    transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.option.active .shadow {
+    height: 100%;
+    background: linear-gradient(to top, rgba(0,0,0,0.5), transparent);
+}
+
+.option:not(.active) .shadow {
+    opacity: 0;
+}
+
+.option .label {
+    position: absolute;
+    bottom: 1rem;
+    left: 1rem;
+    display: flex;
+    align-items: center;
+    color: white;
+    transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.option:not(.active) .label {
+    opacity: 0;
+}
+
+.option .label .icon {
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    color: #10b981;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+}
+
+.option .label .info {
+    margin-left: 0.75rem;
+}
+
+.option .label .info .main {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.option .label .info .sub {
+    font-size: 0.8rem;
+    opacity: 0.8;
+}
+
+.expanded-image-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.4s ease-out;
+}
+
+.expanded-image-modal.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal-content img {
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: contain;
+    border-radius: 12px;
+}
+
+.modal-close-button, .modal-nav-button {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s ease-out;
+}
+
+.modal-close-button:hover, .modal-nav-button:hover {
+    background-color: white;
+    transform: scale(1.1);
+}
+
+.modal-close-button {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+}
+
+.modal-nav-button.prev {
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.modal-nav-button.next {
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.modal-nav-button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.message-box {
+    position: fixed;
+    bottom: 6rem;
+    right: 1rem;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    display: none;
+}
+
+.message-box.error {
+    background-color: #fee2e2;
+    color: #dc2626;
+}
+
+.message-box.info {
+    background-color: #dbeafe;
+    color: #2563eb;
+}
+
+.message-box.success {
+    background-color: #d1fae5;
+    color: #059669;
+}
+
+.loader {
+    border: 6px solid #e5e7eb;
+    border-top: 6px solid #10b981;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+}
+
+.llm-loader-small {
+    border: 4px solid #e5e7eb;
+    border-top: 4px solid #10b981;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    animation: spin 1s linear infinite;
+    display: none;
+    margin: 1rem auto;
+}
+
+.quran-text-display {
+    font-family: 'Amiri', serif;
+    text-align: right;
+    font-size: 1.6rem;
+    line-height: 2.2;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}

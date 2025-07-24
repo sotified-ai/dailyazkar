@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Your daily guide to Morning and Evening Zikr, featuring authentic Islamic Azkar and Quran Duas with explanations.">
+    <meta name="keywords" content="Zikr, Azkar, Morning Azkar, Evening Azkar, Quran, Islamic Duas, Daily Prayers">
+    <meta name="author" content="Your Zikr Site">
+    <meta name="robots" content="index, follow">
+    <title>Daily Azkar - Morning & Evening Zikr</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Daily Azkar",
+        "url": "https://dailyazkar.site",
+        "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://dailyazkar.site/search?q={search_term_string}",
+            "query-input": "required name=search_term_string"
+        }
+    }
+    </script>
+</head>
+<body data-azkar-category="manzil" class="bg-gray-100 dark:bg-gray-900 transition-colors duration-300">
+    <header class="sticky top-0 z-50 bg-white dark:bg-gray-800 shadow-md">
+        <nav class="container mx-auto px-6 py-4">
+            <ul class="flex flex-wrap justify-center gap-6">
+                <li class="relative group">
+                    <a href="#" class="text-gray-700 dark:text-gray-200 hover:text-emerald-600 font-semibold">Azkar</a>
+                    <ul class="absolute hidden group-hover:flex flex-col bg-white dark:bg-gray-700 shadow-lg rounded-lg p-2 mt-2">
+                        <li><a href="morning-azkar.html" class="block px-4 py-2 text-gray-600 dark:text-gray-300 hover:bg-emerald-100 dark:hover:bg-emerald-600">Morning Azkar</a></li>
+                        <li><a href="evening-azkar.html" class="block px-4 py-2 text-gray-600 dark:text-gray-300 hover:bg-emerald-100 dark:hover:bg-emerald-600">Evening Azkar</a></li>
+                    </ul>
+                </li>
+                <li><a href="dua-after-salah.html" class="text-gray-700 dark:text-gray-200 hover:text-emerald-600 font-semibold">Dua after Salah</a></li>
+                <li><a href="rabbana-duas.html" class="text-gray-700 dark:text-gray-200 hover:text-emerald-600 font-semibold">Rabbana Duas</a></li>
+                <li><a href="ruqiya.html" class="text-gray-700 dark:text-gray-200 hover:text-emerald-600 font-semibold">Ruqiya</a></li>
+                <li><a href="missed-salaah.html" class="text-gray-700 dark:text-gray-200 hover:text-emerald-600 font-semibold">Missed Salaah</a></li>
+                <li><a href="quran.html" class="text-gray-700 dark:text-gray-200 hover:text-emerald-600 font-semibold">Quran</a></li>
+                <li><a href="hadees.html" class="text-gray-700 dark:text-gray-200 hover:text-emerald-600 font-semibold">Hadees</a></li>
+                <li><a href="about-us.html" class="text-gray-700 dark:text-gray-200 hover:text-emerald-600 font-semibold">About Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="container mx-auto px-6 py-8">
+        <section class="text-center">
+            <h1 class="text-4xl md:text-5xl font-bold text-gray-800 dark:text-white mb-4">Daily Azkar</h1>
+            <h2 class="text-2xl md:text-3xl text-gray-600 dark:text-gray-300 mb-6">Your Guide to Morning & Evening Zikr</h2>
+            <p class="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">Your companion for authentic Morning and Evening Zikr, featuring Quran Duas and Islamic guidance.</p>
+        </section>
+        <section class="llm-search-section mt-10 bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-8">
+            <h2 class="text-2xl font-bold text-gray-800 dark:text-white mb-4">Search Azkar</h2>
+            <p class="text-gray-600 dark:text-gray-400 mb-6">Get explanations and context for various Azkar and Islamic terms.</p>
+            <div class="llm-search-input-group flex flex-col md:flex  items-center gap-4">
+                <input type="text" id="azkar-input" class="llm-search-input w-full max-w-md p-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-emerald-500 focus:border-emerald-500 dark:bg-gray-700 dark:text-white" placeholder="Enter Azkar or topic" aria-label="Search Azkar">
+                <button id="azkar-search-button" class="llm-search-button bg-emerald-500 hover:bg-emerald-600 text-white font-semibold py-3 px-6 rounded-lg">Search Azkar</button>
+            </div>
+            <div id="azkar-loader" class="llm-loader-small"></div>
+            <div id="azkar-response-area" class="llm-response-area hidden">
+                <p class="text-gray-700 dark:text-gray-300"></p>
+                <span class="llm-disclaimer">AI-generated content. Please verify.</span>
+            </div>
+        </section>
+        <section class="image-gallery-container mt-10 bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-6">
+            <div id="image-slits-grid" class="image-slits-grid"></div>
+            <div id="loader" class="loader"></div>
+            <div id="expanded-image-modal" class="expanded-image-modal">
+                <div class="modal-content">
+                    <img id="modal-image" src="" alt="Expanded Azkar Image">
+                </div>
+                <button id="modal-close-button" class="modal-close-button" aria-label="Close modal">✕</button>
+                <button id="modal-prev-button" class="modal-nav-button prev" aria-label="Previous image">❮</button>
+                <button id="modal-next-button" class="modal-nav-button next" aria-label="Next image">❯</button>
+            </div>
+        </section>
+        <section class="google-ad-space mt-10">
+            <div>Advertisement (Google AdSense)</div>
+        </section>
+    </main>
+    <footer class="bg-gray  dark:bg-gray-800 w-full py-6 mt-10">
+        <div class="container mx-auto px-6 text-center text-gray-600 dark:text-gray-400">
+            <p>&copy; 2025 Daily Azkar. All rights reserved.</p>
+            <div class="mt-4 flex justify-center gap-4">
+                <a href="#" class="text-gray-600 dark:text-gray-400 hover:text-emerald-600"><i class="fab fa-facebook"></i></a>
+                <a href="#" class="text-gray-600 dark:text-gray-400 hover:text-emerald-600"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="text-gray-600 dark:text-gray-400 hover:text-emerald-600"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+    <button id="dark-mode-toggle" class="fixed bottom-4 right-4 bg-emerald-500 text-white p-3 rounded-full shadow-lg" aria-label="Toggle dark mode">
+        <i class="fas fa-moon"></i>
+    </button>
+    <div id="message-box" class="message-box"></div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

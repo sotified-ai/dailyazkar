@@ -11,12 +11,12 @@ export function Footer() {
   ];
 
   const resources = [
-    { name: "About Islam", href: "#" },
-    { name: "Prayer Times", href: "#" },
-    { name: "Islamic Calendar", href: "#" },
-    { name: "Community", href: "#" },
-    { name: "Contact Us", href: "#" },
-    { name: "Privacy Policy", href: "#" }
+    { name: "Resources", href: "/resources" },
+    { name: "About Islam", href: "/about-islam" },
+    { name: "Prayer Times", href: "/prayer-times" },
+    { name: "Islamic Calendar", href: "/islamic-calendar" },
+    { name: "Community", href: "/community" },
+    { name: "Donate", href: "/donate" }
   ];
 
   const socialLinks = [
@@ -79,8 +79,8 @@ export function Footer() {
           <div>
             <h4 className="text-lg font-semibold mb-6">Resources</h4>
             <ul className="space-y-3 text-gray-300">
-              {resources.map((resource, index) => (
-                <li key={index}>
+              {resources.map((resource) => (
+                <li key={resource.href}>
                   <a
                     href={resource.href}
                     className="hover:text-emerald-400 transition-colors"
@@ -100,9 +100,7 @@ export function Footer() {
               © 2025 Daily Azkar. All rights reserved. Made with ❤️ for the Muslim Ummah.
             </p>
             <div className="flex items-center space-x-6 text-sm text-gray-400">
-              <a href="#" className="hover:text-emerald-400 transition-colors">Terms of Service</a>
-              <a href="#" className="hover:text-emerald-400 transition-colors">Privacy Policy</a>
-              <a href="#" className="hover:text-emerald-400 transition-colors">Support</a>
+              <a href="/donate" className="hover:text-emerald-400 transition-colors">Support</a>
             </div>
           </div>
         </div>

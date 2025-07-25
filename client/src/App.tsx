@@ -21,7 +21,14 @@ import Quran from "@/pages/quran";
 import DuaAfterSalah from "@/pages/dua-after-salah";
 import RabbanaDuas from "@/pages/rabbana-duas";
 import Ruqiya from "@/pages/ruqiya";
+import AboutIslamPage from "@/pages/about-islam";
 import NotFound from "@/pages/not-found";
+import CommunityPage from "@/pages/community";
+import DonatePage from "@/pages/donate";
+import IslamicCalendarPage from "@/pages/islamic-calendar";
+import PrayerTimesPage from "@/pages/prayer-times";
+import ResourcesPage from "@/pages/resources";
+
 
 function ReadingProgress() {
   const progress = useScrollProgress();
@@ -44,6 +51,7 @@ function Router() {
       <Header />
       <main className="flex-1">
         <Switch>
+          {/* Main Routes */}
           <Route path="/" component={Home} />
           <Route path="/morning-azkar" component={MorningAzkar} />
           <Route path="/evening-azkar" component={EveningAzkar} />
@@ -51,11 +59,21 @@ function Router() {
           <Route path="/dua-after-salah" component={DuaAfterSalah} />
           <Route path="/rabbana-duas" component={RabbanaDuas} />
           <Route path="/ruqiya" component={Ruqiya} />
+          
+          {/* Resource Routes */}
+          <Route path="/about-islam" component={AboutIslamPage} />
+          <Route path="/prayer-times" component={PrayerTimesPage} />
+          <Route path="/islamic-calendar" component={IslamicCalendarPage} />
+          <Route path="/community" component={CommunityPage} />
+          <Route path="/donate" component={DonatePage} />
+          <Route path="/resources" component={ResourcesPage} />
+          
+          {/* 404 Route */}
           <Route component={NotFound} />
         </Switch>
       </main>
-      <Footer />
       <FloatingActions />
+      <Footer />
     </div>
   );
 }

@@ -1,4 +1,4 @@
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { DuaBlock } from "@/components/dua-block";
 import { SEOHead } from "@/components/seo-head";
 import { AdSense } from "@/components/adsense";
 import { Link } from "wouter";
@@ -7,37 +7,64 @@ export default function DuaAfterSalah() {
   const duas = [
     {
       id: 1,
-      title: "Seeking Allah's Forgiveness",
+      title: "Seeking Forgiveness",
       titleArabic: "الاستغفار",
-      content: "أَسْتَغْفِرُ اللَّهَ (ثلاث مرات) اللَّهُمَّ أَنْتَ السَّلَامُ وَمِنْكَ السَّلَامُ تَبَارَكْتَ يَا ذَا الْجَلَالِ وَالْإِكْرَامِ",
-      translation: "I seek forgiveness from Allah (three times). O Allah, You are Peace and from You comes peace. Blessed are You, O Owner of majesty and honor.",
+      content: "أَسْتَغْفِرُ اللَّهَ",
+      translation: "I seek forgiveness from Allah.",
       reference: "Muslim 591",
       repetitions: 3
     },
     {
       id: 2,
-      title: "Declaration of Faith",
-      titleArabic: "التوحيد",
-      content: "لَا إِلَٰهَ إِلَّا اللَّهُ وَحْدَهُ لَا شَرِيكَ لَهُ، لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ وَهُوَ عَلَىٰ كُلِّ شَيْءٍ قَدِيرٌ",
-      translation: "There is no deity except Allah, alone without partner. To Him belongs the dominion and to Him belongs praise, and He is over all things competent.",
-      reference: "Bukhari 844",
+      title: "Peace from Allah",
+      titleArabic: "اللهم أنت السلام",
+      content: "اللَّهُمَّ أَنْتَ السَّلَامُ وَمِنْكَ السَّلَامُ تَبَارَكْتَ يَا ذَا الْجَلَالِ وَالْإِكْرَامِ",
+      translation: "O Allah, You are Peace and from You comes peace. Blessed are You, O Owner of majesty and honor.",
+      reference: "Muslim 591",
       repetitions: 1
     },
     {
       id: 3,
-      title: "Tasbih, Tahmid, and Takbir",
-      titleArabic: "التسبيح والتحميد والتكبير",
-      content: "سُبْحَانَ اللَّهِ (٣٣) الْحَمْدُ لِلَّهِ (٣٣) اللَّهُ أَكْبَرُ (٣٣)",
-      translation: "Glory be to Allah (33 times), Praise be to Allah (33 times), Allah is the Greatest (33 times).",
+      title: "Declaration of Faith",
+      titleArabic: "التهليل",
+      content: "لَا إِلَٰهَ إِلَّا اللَّهُ وَحْدَهُ لَا شَرِيكَ لَهُ، لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ وَهُوَ عَلَىٰ كُلِّ شَيْءٍ قَدِيرٌ، اللَّهُمَّ لَا مَانِعَ لِمَا أَعْطَيْتَ، وَلَا مُعْطِيَ لِمَا مَنَعْتَ، وَلَا يَنْفَعُ ذَا الْجَدِّ مِنْكَ الْجَدُّ",
+      translation: "There is no deity except Allah, alone without partner. To Him belongs the dominion and to Him belongs praise, and He is over all things competent. O Allah, there is none who can withhold what You give, and none who can give what You withhold, and the might of the mighty will not benefit him against You.",
+      reference: "Bukhari 844",
+      repetitions: 1
+    },
+    {
+      id: 4,
+      title: "Tasbih (Glory be to Allah)",
+      titleArabic: "التسبيح",
+      content: "سُبْحَانَ اللَّهِ",
+      translation: "Glory be to Allah.",
       reference: "Muslim 595",
       repetitions: 33
     },
     {
-      id: 4,
+      id: 5,
+      title: "Tahmid (Praise be to Allah)",
+      titleArabic: "التحميد",
+      content: "الْحَمْدُ لِلَّهِ",
+      translation: "Praise be to Allah.",
+      reference: "Muslim 595",
+      repetitions: 33
+    },
+    {
+      id: 6,
+      title: "Takbir (Allah is Greatest)",
+      titleArabic: "التكبير",
+      content: "اللَّهُ أَكْبَرُ",
+      translation: "Allah is the Greatest.",
+      reference: "Muslim 595",
+      repetitions: 33
+    },
+    {
+      id: 7,
       title: "Completing the Hundred",
       titleArabic: "تمام المائة",
       content: "لَا إِلَٰهَ إِلَّا اللَّهُ وَحْدَهُ لَا شَرِيكَ لَهُ، لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ وَهُوَ عَلَىٰ كُلِّ شَيْءٍ قَدِيرٌ",
-      translation: "There is no deity except Allah, alone without partner. To Him belongs the dominion and to Him belongs praise, and He is over all things competent. (Said once to complete 100)",
+      translation: "There is no deity except Allah, alone without partner. To Him belongs the dominion and to Him belongs praise, and He is over all things competent.",
       reference: "Muslim 597",
       repetitions: 1
     }
@@ -155,52 +182,7 @@ export default function DuaAfterSalah() {
         {/* Duas List */}
         <div className="space-y-8 max-w-4xl mx-auto">
           {duas.map((dua, index) => (
-            <Card key={dua.id} className="glassmorphism border-0 shadow-lg animate-slide-up">
-              <CardHeader>
-                <CardTitle className="flex items-center justify-between">
-                  <div className="flex items-center space-x-4">
-                    <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center text-white font-bold">
-                      {index + 1}
-                    </div>
-                    <div>
-                      <h3 className="text-xl font-semibold text-gray-800 dark:text-white">
-                        {dua.title}
-                      </h3>
-                      <p className="text-lg font-arabic text-blue-600 dark:text-blue-400">
-                        {dua.titleArabic}
-                      </p>
-                    </div>
-                  </div>
-                  {dua.repetitions > 1 && (
-                    <div className="bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 px-3 py-1 rounded-full text-sm font-medium">
-                      {dua.repetitions}x
-                    </div>
-                  )}
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                {/* Arabic Text */}
-                <div className="bg-gray-50 dark:bg-gray-800/50 rounded-xl p-6 mb-6">
-                  <p className="text-2xl font-arabic leading-loose text-right text-gray-800 dark:text-white">
-                    {dua.content}
-                  </p>
-                </div>
-
-                {/* Translation */}
-                <div className="mb-4">
-                  <h4 className="font-semibold text-gray-800 dark:text-white mb-2">Translation:</h4>
-                  <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
-                    {dua.translation}
-                  </p>
-                </div>
-
-                {/* Reference */}
-                <div className="flex items-center text-sm text-blue-600 dark:text-blue-400">
-                  <i className="fas fa-book mr-2"></i>
-                  <span className="font-medium">Reference: {dua.reference}</span>
-                </div>
-              </CardContent>
-            </Card>
+            <DuaBlock key={dua.id} azkar={dua} index={index} />
           ))}
         </div>
 

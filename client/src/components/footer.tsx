@@ -42,10 +42,10 @@ export function Footer() {
               </div>
             </Link>
             <p className="text-gray-300 mb-6 max-w-md">
-              Your trusted companion for authentic Islamic daily remembrance, Quranic verses, and spiritual guidance. 
+              Your trusted companion for authentic Islamic daily remembrance, Quranic verses, and spiritual guidance.
               Connect with Allah through beautiful Azkar and duas.
             </p>
-            <div className="flex space-x-4">
+            {/* <div className="flex space-x-4">
               {socialLinks.map((social, index) => (
                 <a
                   key={index}
@@ -55,9 +55,9 @@ export function Footer() {
                   <i className={social.icon}></i>
                 </a>
               ))}
-            </div>
+            </div> */}
           </div>
-          
+
           {/* Quick Links */}
           <div>
             <h4 className="text-lg font-semibold mb-6">Quick Links</h4>
@@ -74,7 +74,7 @@ export function Footer() {
               ))}
             </ul>
           </div>
-          
+
           {/* Resources */}
           <div>
             <h4 className="text-lg font-semibold mb-6">Resources</h4>
@@ -92,7 +92,7 @@ export function Footer() {
             </ul>
           </div>
         </div>
-        
+
         {/* Bottom Footer */}
         <div className="border-t border-gray-800 pt-8">
           <div className="flex flex-col md:flex-row items-center justify-between">

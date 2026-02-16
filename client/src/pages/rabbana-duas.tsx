@@ -1,4 +1,4 @@
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { DuaBlock } from "@/components/dua-block";
 import { SEOHead } from "@/components/seo-head";
 import { AdSense } from "@/components/adsense";
 import { Link } from "wouter";
@@ -11,8 +11,8 @@ export default function RabbanaDuas() {
       titleArabic: "دعاء الهداية",
       content: "رَبَّنَا آتِنَا فِي الدُّنْيَا حَسَنَةً وَفِي الْآخِرَةِ حَسَنَةً وَقِنَا عَذَابَ النَّارِ",
       translation: "Our Lord, give us good in this world and good in the Hereafter, and protect us from the punishment of the Fire.",
-      reference: "Quran 2:201",
-      chapter: "Al-Baqarah"
+      reference: "Quran 2:201 (Al-Baqarah)",
+      repetitions: 1
     },
     {
       id: 2,
@@ -20,8 +20,8 @@ export default function RabbanaDuas() {
       titleArabic: "دعاء المغفرة",
       content: "رَبَّنَا اغْفِرْ لَنَا ذُنُوبَنَا وَإِسْرَافَنَا فِي أَمْرِنَا وَثَبِّتْ أَقْدَامَنَا وَانصُرْنَا عَلَى الْقَوْمِ الْكَافِرِينَ",
       translation: "Our Lord, forgive us our sins and the excess in our affairs and plant firmly our feet and give us victory over the disbelieving people.",
-      reference: "Quran 3:147",
-      chapter: "Al-Imran"
+      reference: "Quran 3:147 (Al-Imran)",
+      repetitions: 1
     },
     {
       id: 3,
@@ -29,8 +29,8 @@ export default function RabbanaDuas() {
       titleArabic: "دعاء الصبر",
       content: "رَبَّنَا أَفْرِغْ عَلَيْنَا صَبْرًا وَتَوَفَّنَا مُسْلِمِينَ",
       translation: "Our Lord, pour upon us patience and let us die as Muslims [in submission to You].",
-      reference: "Quran 7:126",
-      chapter: "Al-A'raf"
+      reference: "Quran 7:126 (Al-A'raf)",
+      repetitions: 1
     },
     {
       id: 4,
@@ -38,8 +38,8 @@ export default function RabbanaDuas() {
       titleArabic: "دعاء الوقاية من العذاب",
       content: "رَبَّنَا اصْرِفْ عَنَّا عَذَابَ جَهَنَّمَ إِنَّ عَذَابَهَا كَانَ غَرَامًا",
       translation: "Our Lord, avert from us the punishment of Hell. Indeed, its punishment is ever adhering.",
-      reference: "Quran 25:65",
-      chapter: "Al-Furqan"
+      reference: "Quran 25:65 (Al-Furqan)",
+      repetitions: 1
     },
     {
       id: 5,
@@ -47,8 +47,8 @@ export default function RabbanaDuas() {
       titleArabic: "دعاء الذرية الصالحة",
       content: "رَبَّنَا هَبْ لَنَا مِنْ أَزْوَاجِنَا وَذُرِّيَّاتِنَا قُرَّةَ أَعْيُنٍ وَاجْعَلْنَا لِلْمُتَّقِينَ إِمَامًا",
       translation: "Our Lord, grant us from among our wives and offspring comfort to our eyes and make us an example for the righteous.",
-      reference: "Quran 25:74",
-      chapter: "Al-Furqan"
+      reference: "Quran 25:74 (Al-Furqan)",
+      repetitions: 1
     },
     {
       id: 6,
@@ -56,8 +56,35 @@ export default function RabbanaDuas() {
       titleArabic: "دعاء الرحمة",
       content: "رَبَّنَا لَا تُزِغْ قُلُوبَنَا بَعْدَ إِذْ هَدَيْتَنَا وَهَبْ لَنَا مِن لَّدُنكَ رَحْمَةً إِنَّكَ أَنتَ الْوَهَّابُ",
       translation: "Our Lord, let not our hearts deviate after You have guided us and grant us from Yourself mercy. Indeed, You are the Bestower.",
-      reference: "Quran 3:8",
-      chapter: "Al-Imran"
+      reference: "Quran 3:8 (Al-Imran)",
+      repetitions: 1
+    },
+    {
+      id: 7,
+      title: "Seeking Patience & Victory",
+      titleArabic: "الصبر والنصر",
+      content: "رَبَّنَا أَفْرِغْ عَلَيْنَا صَبْرًا وَثَبِّتْ أَقْدَامَنَا وَانصُرْنَا عَلَى الْقَوْمِ الْكَافِرِينَ",
+      translation: "Our Lord, pour upon us patience and plant firmly our feet and give us victory over the disbelieving people.",
+      reference: "Quran 2:250 (Al-Baqarah)",
+      repetitions: 1
+    },
+    {
+      id: 8,
+      title: "Seeking Forgiveness & Mercy",
+      titleArabic: "المغفرة والرحمة",
+      content: "رَبَّنَا آمَنَّا فَاغْفِرْ لَنَا وَارْحَمْنَا وَأَنتَ خَيْرُ الرَّاحِمِينَ",
+      translation: "Our Lord, we have believed, so forgive us and have mercy upon us, and You are the best of the merciful.",
+      reference: "Quran 23:109 (Al-Mu'minun)",
+      repetitions: 1
+    },
+    {
+      id: 9,
+      title: "Perfecting Light",
+      titleArabic: "إتمام النور",
+      content: "رَبَّنَا أَتْمِمْ لَنَا نُورَنَا وَاغْفِرْ لَنَا ۖ إِنَّكَ عَلَىٰ كُلِّ شَيْءٍ قَدِيرٌ",
+      translation: "Our Lord, perfect for us our light and forgive us. Indeed, You are over all things competent.",
+      reference: "Quran 66:8 (At-Tahrim)",
+      repetitions: 1
     }
   ];
 
@@ -181,52 +208,7 @@ export default function RabbanaDuas() {
         {/* Duas List */}
         <div className="space-y-8 max-w-4xl mx-auto">
           {duas.map((dua, index) => (
-            <Card key={dua.id} className="glassmorphism border-0 shadow-lg animate-slide-up">
-              <CardHeader>
-                <CardTitle className="flex items-center justify-between">
-                  <div className="flex items-center space-x-4">
-                    <div className="w-12 h-12 bg-gradient-to-br from-teal-500 to-cyan-600 rounded-full flex items-center justify-center text-white font-bold">
-                      {index + 1}
-                    </div>
-                    <div>
-                      <h3 className="text-xl font-semibold text-gray-800 dark:text-white">
-                        {dua.title}
-                      </h3>
-                      <p className="text-lg font-arabic text-teal-600 dark:text-teal-400">
-                        {dua.titleArabic}
-                      </p>
-                    </div>
-                  </div>
-                  <div className="text-right">
-                    <div className="text-sm text-teal-600 dark:text-teal-400 font-medium">
-                      {dua.chapter}
-                    </div>
-                  </div>
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                {/* Arabic Text */}
-                <div className="bg-gray-50 dark:bg-gray-800/50 rounded-xl p-6 mb-6">
-                  <p className="text-2xl font-arabic leading-loose text-right text-gray-800 dark:text-white">
-                    {dua.content}
-                  </p>
-                </div>
-
-                {/* Translation */}
-                <div className="mb-4">
-                  <h4 className="font-semibold text-gray-800 dark:text-white mb-2">Translation:</h4>
-                  <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
-                    {dua.translation}
-                  </p>
-                </div>
-
-                {/* Reference */}
-                <div className="flex items-center text-sm text-teal-600 dark:text-teal-400">
-                  <i className="fas fa-book-open mr-2"></i>
-                  <span className="font-medium">Reference: {dua.reference}</span>
-                </div>
-              </CardContent>
-            </Card>
+            <DuaBlock key={dua.id} azkar={dua} index={index} />
           ))}
         </div>
 

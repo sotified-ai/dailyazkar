@@ -1,0 +1,356 @@
+
+# Phase 2 Gap Analysis & Completion Plan
+
+DailyAzkar.site vs Competitor Morning Azkar Pages
+
+---
+
+# Executive Summary
+
+You have completed:
+
+* Guardrails & safety controls
+* Blank page detection
+* Keyword prioritization
+* Noindex protection
+* AI drafting workflow
+* On-page optimization framework
+* Release & monitoring pipeline
+
+What remains is **competitive execution**.
+
+Your system is structurally safe.
+It is not yet competitively dominant.
+
+The remaining work falls into five major gaps:
+
+1. Rendering & crawlability risk
+2. Pillar depth vs competitor depth
+3. UX differentiation
+4. Topic cluster authority
+5. Trust & CTR optimization
+
+This file converts those gaps into executable Antigravity tasks.
+
+---
+
+# SECTION 1 — Rendering & Crawlability Verification
+
+## Status: ❓ Needs Confirmation
+
+Your earlier crawl indicated near-zero extractable HTML text.
+
+If content is client-rendered only, this is a ranking bottleneck.
+
+Google prefers server-side or static rendering for JS-heavy sites.
+Reference:
+[https://developers.google.com/search/docs/crawling-indexing/javascript/dynamic-rendering](https://developers.google.com/search/docs/crawling-indexing/javascript/dynamic-rendering)
+
+---
+
+## PLAN 1 — Rendering Hardening
+
+### Objective
+
+Ensure Morning & Evening pillar pages are fully readable in raw HTML source.
+
+### Tasks
+
+1. Add pre-render or static generation for:
+
+   * `/morning-azkar`
+   * `/evening-azkar`
+   * Homepage
+
+2. CI check:
+
+   * Fail build if rendered HTML < 800 words on pillar routes
+
+3. Validate via:
+
+   * View Source
+   * GSC URL Inspection (Rendered HTML view)
+
+### Deliverables
+
+* `prerender/routes.json`
+* `prerender/report.json`
+* CI gate rule
+
+### Acceptance Criteria
+
+* Full dua content visible in initial HTML
+* No dependency on runtime JS for primary text
+
+---
+
+# SECTION 2 — Pillar Page Competitive Depth
+
+## Status: ⚠ Likely Partial
+
+Competitors include:
+
+* Clear timing guidance
+* Structured dua blocks
+* Repeat count labels
+* Transliteration
+* Translation
+* References
+* Benefits / explanation
+* PDF download
+* Audio support
+* Related internal links
+
+Your current plan ensures safety and drafting,
+but does not guarantee competitive formatting depth.
+
+---
+
+## PLAN 2 — Pillar Upgrade v2
+
+### Objective
+
+Rebuild `/morning-azkar` as a high-authority pillar.
+
+### Required Sections
+
+1. Intro (time window + context)
+2. Quick-start section (Top 7 azkar)
+3. Table of contents (anchor links)
+4. Structured dua blocks:
+
+   * Arabic
+   * Transliteration
+   * Translation
+   * Repeat count badge
+   * Reference
+   * Short benefit
+5. FAQ section (8–12 questions)
+6. Related azkar links
+
+### Implementation Artifacts
+
+* `content/pillars/morning-azkar.v2.md`
+* `ui/components/DuaBlock.tsx`
+* `seo/schema/faq.morning.json`
+
+### Acceptance Criteria
+
+* ≥ 1200 meaningful words
+* Consistent formatting for all duas
+* Mobile readability verified
+* Lighthouse performance not degraded
+
+---
+
+# SECTION 3 — Differentiation Layer
+
+## Status: ❌ Not Implemented
+
+Competitors rely heavily on static content.
+
+To win, you need interaction.
+
+---
+
+## PLAN 3 — Engagement Feature Layer
+
+### Objective
+
+Increase time-on-page and user preference.
+
+### Implement at least 2:
+
+1. Tap counter (1x / 3x / 7x / 100x presets)
+2. Copy Arabic button
+3. Urdu toggle
+4. Shareable image card
+5. Lightweight audio player
+
+### Deliverables
+
+* `ui/features/counter/`
+* `ui/features/copy/`
+* `i18n/ur/` (if used)
+
+### Acceptance Criteria
+
+* No layout shift
+* Works on mobile
+* No AdSense policy conflicts
+
+---
+
+# SECTION 4 — Topic Cluster Expansion
+
+## Status: ❌ Not Fully Executed
+
+You have keyword discovery,
+but not confirmed cluster deployment.
+
+Competitors rank because of topical authority depth.
+
+---
+
+## PLAN 4 — Authority Expansion (Cluster Build)
+
+### Objective
+
+Create 20–40 supporting pages over time.
+
+### Cluster Types
+
+1. Individual dua deep dives
+2. Use-case pages
+3. Timing-specific pages
+4. Arabic-only version
+5. Urdu version
+
+### Rules
+
+* One primary keyword per page
+* Minimum 450 meaningful words
+* Link back to pillar with consistent anchor text
+
+### Deliverables
+
+* `content/cluster/cluster-plan.csv`
+* `content/cluster/drafts/`
+* `internal-links/map.json`
+
+### Acceptance Criteria
+
+* No keyword cannibalization
+* Each page has distinct intent
+* Pillar linked from all clusters
+
+---
+
+# SECTION 5 — Structured Data & CTR Optimization
+
+## Status: ⚠ Partial
+
+You have on-page SEO rules
+but not confirmed schema deployment.
+
+Google structured data guidance:
+[https://developers.google.com/search/docs/appearance/structured-data/sd-policies](https://developers.google.com/search/docs/appearance/structured-data/sd-policies)
+FAQ guidelines:
+[https://developers.google.com/search/docs/appearance/structured-data/faqpage](https://developers.google.com/search/docs/appearance/structured-data/faqpage)
+
+---
+
+## PLAN 5 — Schema & Snippet Optimization
+
+### Implement
+
+* BreadcrumbList
+* FAQPage (only visible questions)
+* Article/WebPage schema
+
+### Deliverables
+
+* `seo/schema/generator.ts`
+* `seo/schema/validation-report.json`
+
+### Acceptance Criteria
+
+* Pass Rich Results Test
+* No spammy markup
+* No hidden FAQ content
+
+---
+
+# SECTION 6 — Title & Meta System Hardening
+
+## Status: ⚠ Likely Basic
+
+Google may rewrite titles if unclear.
+Reference:
+[https://developers.google.com/search/docs/appearance/title-link](https://developers.google.com/search/docs/appearance/title-link)
+
+---
+
+## PLAN 6 — Meta Framework v2
+
+### Objective
+
+Prevent title rewrites and improve CTR.
+
+### Rules
+
+* Unique title per page
+* Include:
+
+  * English keyword
+  * Arabic script
+  * Clear intent
+* No boilerplate stacking
+
+### Deliverables
+
+* `seo/meta/title.rules.json`
+* `seo/meta/audit-report.json`
+
+### Acceptance Criteria
+
+* No duplicate titles
+* No truncated SERP previews
+* Titles reflect page content
+
+---
+
+# SECTION 7 — Trust & Authority Signals
+
+## Status: ❌ Needs Expansion
+
+Competitors show:
+
+* Error reporting
+* Clear categorization
+* Content credibility
+
+---
+
+## PLAN 7 — Trust Layer
+
+### Add
+
+1. About page
+2. Sources & methodology page
+3. Corrections / Report error system
+4. “Last reviewed” timestamp (manual)
+
+### Deliverables
+
+* `/about`
+* `/sources`
+* `/report-error`
+* Footer trust block
+
+### Acceptance Criteria
+
+* Visible trust pages
+* Internal links from pillar
+* No thin content
+
+---
+
+# Final Execution Order for Antigravity
+
+Execute in this order:
+
+1. PLAN 1 — Rendering Hardening
+2. PLAN 2 — Pillar Upgrade
+3. PLAN 3 — Engagement Features
+4. PLAN 4 — Topic Cluster Expansion
+5. PLAN 5 — Schema Implementation
+6. PLAN 6 — Title System
+7. PLAN 7 — Trust Layer
+
+All actions must:
+
+* Run in report-only mode first
+* Require human approval before publishing
+* Fail deployment if rendering or schema checks fail
+

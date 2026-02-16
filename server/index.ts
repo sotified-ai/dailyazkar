@@ -1,10 +1,14 @@
 import express, { type Request, Response, NextFunction } from "express";
 import { registerRoutes } from "./routes";
 import { setupVite, serveStatic, log } from "./vite";
+import { noindexMiddleware } from "./seo-middleware";
 
 const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
+
+// SEO: Apply noindex headers for thin/blank pages
+app.use(noindexMiddleware);
 
 app.use((req, res, next) => {
   const start = Date.now();
@@ -62,7 +66,7 @@ app.use((req, res, next) => {
   // It is the only port that is not firewalled.
   const port = parseInt(process.env.PORT || '5000', 10);
   console.log(`Server is running on port ${port}`);
-  server.listen(port, () => { 
+  server.listen(port, () => {
     log(`Server is running on http://localhost:${port}`, "server");
   });
-})
+})()

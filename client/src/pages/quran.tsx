@@ -1,10 +1,61 @@
 import { quranSurahs } from "@/data/quran-data";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { SEOHead } from "@/components/seo-head";
+import { AdSense } from "@/components/adsense";
+import { Link } from "wouter";
 
 export default function Quran() {
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Holy Quran - Browse All 114 Surahs",
+    "description": "Explore the Holy Quran with all 114 Surahs. Browse Meccan and Medinan chapters with verse counts and discover the divine guidance from Allah.",
+    "url": "https://dailyazkar.site/quran"
+  };
+
+  const faqStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How many Surahs are in the Quran?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The Quran contains 114 Surahs (chapters), with 86 revealed in Mecca and 28 revealed in Medina."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the difference between Meccan and Medinan Surahs?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Meccan Surahs focus on fundamentals of faith, stories of prophets, and the Day of Judgment. Medinan Surahs often address social laws, community matters, and practical guidance."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Which Surah is the longest in the Quran?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Surah Al-Baqarah is the longest with 286 verses, covering many aspects of Islamic law and guidance."
+        }
+      }
+    ]
+  };
+
   return (
     <div className="pt-24 bg-gradient-to-br from-green-50 via-white to-emerald-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 min-h-screen">
+      <SEOHead
+        title="Holy Quran - Browse All 114 Surahs | Daily Azkar"
+        description="Explore the Holy Quran with all 114 Surahs. Browse Meccan and Medinan chapters with verse counts. Discover divine guidance, wisdom, and light for believers."
+        keywords="quran, holy quran, quran surahs, quran chapters, meccan surahs, medinan surahs, القرآن الكريم, islamic scripture, quran online"
+        canonical="https://dailyazkar.site/quran"
+        structuredData={structuredData}
+      />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqStructuredData) }} />
+
       <div className="container mx-auto px-4 py-8">
         {/* Header */}
         <div className="text-center mb-12 animate-fade-in">
@@ -20,6 +71,24 @@ export default function Quran() {
           <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
             Browse Surahs and explore the divine guidance from Allah. Each Surah contains wisdom and light for believers.
           </p>
+        </div>
+
+        {/* Introduction Section - SEO Content */}
+        <div className="max-w-4xl mx-auto mb-12">
+          <div className="glassmorphism rounded-2xl p-8">
+            <h2 className="text-2xl font-display font-bold text-gray-800 dark:text-white mb-4">
+              The Noble Quran: Allah's Final Revelation
+            </h2>
+            <p className="text-gray-600 dark:text-gray-300 leading-relaxed mb-4">
+              The Holy Quran is the literal word of Allah, revealed to Prophet Muhammad ﷺ over 23 years through the angel Jibreel (Gabriel). It serves as the ultimate source of guidance for all of humanity, containing wisdom, laws, stories of previous prophets, and the path to eternal success in both this world and the Hereafter.
+            </p>
+            <p className="text-gray-600 dark:text-gray-300 leading-relaxed mb-4">
+              Allah says: <em className="text-emerald-600 dark:text-emerald-400">"This is the Book about which there is no doubt, a guidance for those conscious of Allah"</em> (Quran 2:2). The Quran has been preserved letter by letter, exactly as it was revealed 1400 years ago, fulfilling Allah's promise to protect His final message.
+            </p>
+            <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
+              The Quran consists of 114 Surahs (chapters), divided into 30 Juz (parts). Each Surah addresses different aspects of faith, worship, ethics, and law. Regular recitation and reflection upon its verses brings immense reward, guidance, and tranquility to the heart of every believer.
+            </p>
+          </div>
         </div>
 
         {/* Stats */}
@@ -41,6 +110,8 @@ export default function Quran() {
             <div className="text-sm text-gray-600 dark:text-gray-400">Medinan</div>
           </div>
         </div>
+
+        <AdSense className="my-8" />
 
         {/* Surah List */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
@@ -81,6 +152,59 @@ export default function Quran() {
           ))}
         </div>
 
+        <AdSense className="my-8" />
+
+        {/* FAQ Section */}
+        <div className="max-w-4xl mx-auto mt-12">
+          <h2 className="text-2xl font-display font-bold text-gray-800 dark:text-white mb-6 text-center">
+            Frequently Asked Questions
+          </h2>
+          <div className="space-y-4">
+            <div className="glassmorphism rounded-xl p-6">
+              <h3 className="font-semibold text-gray-800 dark:text-white mb-2">
+                How many Surahs are in the Quran?
+              </h3>
+              <p className="text-gray-600 dark:text-gray-300">
+                The Quran contains 114 Surahs (chapters). Of these, 86 were revealed in Mecca before the Hijrah (migration), and 28 were revealed in Medina after the Prophet ﷺ migrated there.
+              </p>
+            </div>
+            <div className="glassmorphism rounded-xl p-6">
+              <h3 className="font-semibold text-gray-800 dark:text-white mb-2">
+                What is the difference between Meccan and Medinan Surahs?
+              </h3>
+              <p className="text-gray-600 dark:text-gray-300">
+                Meccan Surahs generally focus on fundamentals of faith (Aqeedah), stories of previous prophets, and descriptions of the Day of Judgment. Medinan Surahs often address social laws, community matters, family issues, and practical guidance for Muslims.
+              </p>
+            </div>
+            <div className="glassmorphism rounded-xl p-6">
+              <h3 className="font-semibold text-gray-800 dark:text-white mb-2">
+                Which Surah is the longest in the Quran?
+              </h3>
+              <p className="text-gray-600 dark:text-gray-300">
+                Surah Al-Baqarah (The Cow) is the longest Surah with 286 verses. It covers many aspects of Islamic law, stories of previous nations, and contains Ayat al-Kursi - one of the most powerful verses in the Quran.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* Internal Links */}
+        <div className="max-w-4xl mx-auto mt-12">
+          <h3 className="text-xl font-semibold text-gray-800 dark:text-white mb-4 text-center">
+            Explore More Islamic Content
+          </h3>
+          <div className="flex flex-wrap justify-center gap-4">
+            <Link href="/rabbana-duas" className="px-6 py-3 bg-teal-500 hover:bg-teal-600 text-white rounded-full transition-colors">
+              Quranic Duas
+            </Link>
+            <Link href="/ruqiya" className="px-6 py-3 bg-emerald-500 hover:bg-emerald-600 text-white rounded-full transition-colors">
+              Ruqyah (Quran Healing)
+            </Link>
+            <Link href="/morning-azkar" className="px-6 py-3 bg-amber-500 hover:bg-amber-600 text-white rounded-full transition-colors">
+              Morning Azkar
+            </Link>
+          </div>
+        </div>
+
         {/* Call to Action */}
         <div className="text-center mt-12">
           <div className="glassmorphism rounded-2xl p-8 max-w-2xl mx-auto">
@@ -88,7 +212,7 @@ export default function Quran() {
               Read with Reflection
             </h3>
             <p className="text-gray-600 dark:text-gray-300 mb-6">
-              "And We have certainly made the Quran easy for remembrance, so is there any who will remember?" - Quran 54:17
+              <em>"And We have certainly made the Quran easy for remembrance, so is there any who will remember?"</em> - Quran 54:17
             </p>
             <div className="text-sm text-gray-500 dark:text-gray-400">
               Click on any Surah to begin reading and reflecting upon Allah's guidance

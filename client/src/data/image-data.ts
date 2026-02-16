@@ -1,7 +1,7 @@
 // Image data based on the original JavaScript folder structure
 export const AZKAR_CATEGORIES = {
   MANZIL: 'manzil',
-  SUBHA: 'subha', 
+  SUBHA: 'subha',
   SHAM: 'sham',
   QURANIDUA: 'quranidua'
 } as const;
@@ -10,7 +10,7 @@ export const IMAGE_COUNTS = {
   [AZKAR_CATEGORIES.MANZIL]: 13,
   [AZKAR_CATEGORIES.SUBHA]: 7,
   [AZKAR_CATEGORIES.SHAM]: 10,
-  [AZKAR_CATEGORIES.QURANIDUA]: 8
+  [AZKAR_CATEGORIES.QURANIDUA]: 0  // Removed Quran Duas 1-8
 } as const;
 
 export const CATEGORY_LABELS = {
@@ -49,7 +49,7 @@ export function getAllImages() {
   Object.keys(IMAGE_COUNTS).forEach((category) => {
     const categoryKey = category as keyof typeof IMAGE_COUNTS;
     const filenames = getImageFilenames(categoryKey);
-    
+
     filenames.forEach((filename, index) => {
       allImages.push({
         id: `${category}-${index + 1}`,

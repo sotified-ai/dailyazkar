@@ -11,11 +11,11 @@ export default function Home() {
     "@context": "https://schema.org",
     "@type": "WebSite",
     "name": "Daily Azkar",
-    "url": window.location.origin,
+    "url": "https://dailyazkar.site",
     "description": "Your daily guide to Morning and Evening Zikr, featuring authentic Islamic Azkar and Quran Duas with explanations.",
     "potentialAction": {
       "@type": "SearchAction",
-      "target": `${window.location.origin}/search?q={search_term_string}`,
+      "target": "https://dailyazkar.site/search?q={search_term_string}",
       "query-input": "required name=search_term_string"
     }
   };
@@ -26,7 +26,7 @@ export default function Home() {
         title="Daily Azkar - Morning & Evening Zikr | Islamic Prayers & Supplications"
         description="Your daily guide to Morning and Evening Zikr, featuring authentic Islamic Azkar and Quran Duas with explanations. Enhance your spiritual journey with our interactive content."
         keywords="Zikr, Azkar, Morning Azkar, Evening Azkar, Quran, Islamic Duas, Daily Prayers, Muslim prayers, spiritual guide, masnoon azkar"
-        canonical={window.location.href}
+        canonical="https://dailyazkar.site"
         structuredData={structuredData}
       />
       <HeroSection />

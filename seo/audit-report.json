@@ -1,0 +1,80 @@
+[
+  {
+    "url": "/",
+    "wordCount": 411,
+    "status": "HEALTHY",
+    "recommendedAction": "NONE"
+  },
+  {
+    "url": "/morning-azkar",
+    "wordCount": 627,
+    "status": "HEALTHY",
+    "recommendedAction": "NONE"
+  },
+  {
+    "url": "/evening-azkar",
+    "wordCount": 482,
+    "status": "HEALTHY",
+    "recommendedAction": "NONE"
+  },
+  {
+    "url": "/quran",
+    "wordCount": 442,
+    "status": "HEALTHY",
+    "recommendedAction": "NONE"
+  },
+  {
+    "url": "/dua-after-salah",
+    "wordCount": 594,
+    "status": "HEALTHY",
+    "recommendedAction": "NONE"
+  },
+  {
+    "url": "/rabbana-duas",
+    "wordCount": 676,
+    "status": "HEALTHY",
+    "recommendedAction": "NONE"
+  },
+  {
+    "url": "/ruqiya",
+    "wordCount": 584,
+    "status": "HEALTHY",
+    "recommendedAction": "NONE"
+  },
+  {
+    "url": "/about-islam",
+    "wordCount": 571,
+    "status": "HEALTHY",
+    "recommendedAction": "NONE"
+  },
+  {
+    "url": "/prayer-times",
+    "wordCount": 480,
+    "status": "HEALTHY",
+    "recommendedAction": "NONE"
+  },
+  {
+    "url": "/islamic-calendar",
+    "wordCount": 591,
+    "status": "HEALTHY",
+    "recommendedAction": "NONE"
+  },
+  {
+    "url": "/community",
+    "wordCount": 479,
+    "status": "HEALTHY",
+    "recommendedAction": "NONE"
+  },
+  {
+    "url": "/donate",
+    "wordCount": 500,
+    "status": "HEALTHY",
+    "recommendedAction": "NONE"
+  },
+  {
+    "url": "/resources",
+    "wordCount": 485,
+    "status": "HEALTHY",
+    "recommendedAction": "NONE"
+  }
+]

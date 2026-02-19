@@ -1,4 +1,4 @@
-import { Switch, Route } from "wouter";
+import { Switch, Route, useLocation } from "wouter";
 import { queryClient } from "./lib/queryClient";
 import { QueryClientProvider } from "@tanstack/react-query";
 import { Toaster } from "@/components/ui/toaster";
@@ -32,19 +32,27 @@ import ResourcesPage from "@/pages/resources";
 
 function ReadingProgress() {
   const progress = useScrollProgress();
-  
+
   return (
-    <div 
+    <div
       className="progress-bar w-full"
       style={{ transform: `scaleX(${progress / 100})` }}
     />
   );
 }
 
+function RedirectTo({ to }: { to: string }) {
+  const [, setLocation] = useLocation();
+  useEffect(() => {
+    setLocation(to);
+  }, [to, setLocation]);
+  return null;
+}
+
 function Router() {
   // Track page views when routes change
   useAnalytics();
-  
+
   return (
     <div className="min-h-screen flex flex-col">
       <ReadingProgress />
@@ -59,7 +67,7 @@ function Router() {
           <Route path="/dua-after-salah" component={DuaAfterSalah} />
           <Route path="/rabbana-duas" component={RabbanaDuas} />
           <Route path="/ruqiya" component={Ruqiya} />
-          
+
           {/* Resource Routes */}
           <Route path="/about-islam" component={AboutIslamPage} />
           <Route path="/prayer-times" component={PrayerTimesPage} />
@@ -67,7 +75,23 @@ function Router() {
           <Route path="/community" component={CommunityPage} />
           <Route path="/donate" component={DonatePage} />
           <Route path="/resources" component={ResourcesPage} />
-          
+
+
+          {/* Legacy Redirects */}
+          <Route path="/index.html"><RedirectTo to="/" /></Route>
+          <Route path="/about.html"><RedirectTo to="/about-islam" /></Route>
+          <Route path="/morning-azkar.html"><RedirectTo to="/morning-azkar" /></Route>
+          <Route path="/evening-azkar.html"><RedirectTo to="/evening-azkar" /></Route>
+          <Route path="/quran.html"><RedirectTo to="/quran" /></Route>
+          <Route path="/dua-after-salah.html"><RedirectTo to="/dua-after-salah" /></Route>
+          <Route path="/rabbana-duas.html"><RedirectTo to="/rabbana-duas" /></Route>
+          <Route path="/ruqiya.html"><RedirectTo to="/ruqiya" /></Route>
+          <Route path="/prayer-times.html"><RedirectTo to="/prayer-times" /></Route>
+          <Route path="/islamic-calendar.html"><RedirectTo to="/islamic-calendar" /></Route>
+          <Route path="/community.html"><RedirectTo to="/community" /></Route>
+          <Route path="/donate.html"><RedirectTo to="/donate" /></Route>
+          <Route path="/resources.html"><RedirectTo to="/resources" /></Route>
+
           {/* 404 Route */}
           <Route component={NotFound} />
         </Switch>

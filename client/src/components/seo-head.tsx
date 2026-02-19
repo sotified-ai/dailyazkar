@@ -7,13 +7,14 @@ interface SEOHeadProps {
   canonical?: string;
   ogType?: 'website' | 'article';
   structuredData?: any;
+  robots?: string;
 }
 
-export function SEOHead({ title, description, keywords, canonical, ogType = 'website', structuredData }: SEOHeadProps) {
+export function SEOHead({ title, description, keywords, canonical, ogType = 'website', structuredData, robots }: SEOHeadProps) {
   useEffect(() => {
     // Update document title
     document.title = title;
-    
+
     // Update meta description
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
@@ -24,7 +25,7 @@ export function SEOHead({ title, description, keywords, canonical, ogType = 'web
       meta.content = description;
       document.head.appendChild(meta);
     }
-    
+
     // Update meta keywords
     if (keywords) {
       const metaKeywords = document.querySelector('meta[name="keywords"]');
@@ -37,7 +38,7 @@ export function SEOHead({ title, description, keywords, canonical, ogType = 'web
         document.head.appendChild(meta);
       }
     }
-    
+
     // Update Open Graph tags
     const updateOGTag = (property: string, content: string) => {
       let tag = document.querySelector(`meta[property="${property}"]`);
@@ -50,12 +51,12 @@ export function SEOHead({ title, description, keywords, canonical, ogType = 'web
         document.head.appendChild(tag);
       }
     };
-    
+
     updateOGTag('og:title', title);
     updateOGTag('og:description', description);
     updateOGTag('og:type', ogType);
     updateOGTag('og:url', window.location.href);
-    
+
     // Add canonical URL
     if (canonical) {
       let canonicalLink = document.querySelector('link[rel="canonical"]');
@@ -68,7 +69,7 @@ export function SEOHead({ title, description, keywords, canonical, ogType = 'web
         document.head.appendChild(canonicalLink);
       }
     }
-    
+
     // Add structured data
     if (structuredData) {
       let script = document.querySelector('script[type="application/ld+json"]') as HTMLScriptElement;
@@ -81,7 +82,20 @@ export function SEOHead({ title, description, keywords, canonical, ogType = 'web
         document.head.appendChild(script);
       }
     }
-  }, [title, description, keywords, canonical, ogType, structuredData]);
-  
+
+    // Add robots meta tag
+    if (robots) {
+      const metaRobots = document.querySelector('meta[name="robots"]');
+      if (metaRobots) {
+        metaRobots.setAttribute('content', robots);
+      } else {
+        const meta = document.createElement('meta');
+        meta.name = 'robots';
+        meta.content = robots;
+        document.head.appendChild(meta);
+      }
+    }
+  }, [title, description, keywords, canonical, ogType, structuredData, robots]);
+
   return null;
 }

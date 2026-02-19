@@ -15,11 +15,10 @@ export function ImageGallery() {
     { id: AZKAR_CATEGORIES.MANZIL, label: CATEGORY_LABELS[AZKAR_CATEGORIES.MANZIL] },
     { id: AZKAR_CATEGORIES.SUBHA, label: CATEGORY_LABELS[AZKAR_CATEGORIES.SUBHA] },
     { id: AZKAR_CATEGORIES.SHAM, label: CATEGORY_LABELS[AZKAR_CATEGORIES.SHAM] },
-    { id: AZKAR_CATEGORIES.QURANIDUA, label: CATEGORY_LABELS[AZKAR_CATEGORIES.QURANIDUA] }
   ];
 
-  const filteredImages = activeFilter === "all" 
-    ? allImages 
+  const filteredImages = activeFilter === "all"
+    ? allImages
     : allImages.filter(img => img.category === activeFilter);
 
   const handleImageClick = (image: any) => {
@@ -39,7 +38,7 @@ export function ImageGallery() {
               Immerse yourself in the beauty of Islamic calligraphy and sacred remembrance
             </p>
           </div>
-          
+
           {/* Gallery Filter Tabs */}
           <div className="flex flex-wrap justify-center mb-12 gap-3">
             {filters.map((filter) => (
@@ -47,17 +46,16 @@ export function ImageGallery() {
                 key={filter.id}
                 variant="outline"
                 onClick={() => setActiveFilter(filter.id)}
-                className={`px-6 py-3 glassmorphism rounded-full font-medium transition-all ${
-                  activeFilter === filter.id
+                className={`px-6 py-3 glassmorphism rounded-full font-medium transition-all ${activeFilter === filter.id
                     ? "text-emerald-600 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-900/30"
                     : "text-gray-600 dark:text-gray-400 hover:bg-emerald-50 dark:hover:bg-emerald-900/30"
-                }`}
+                  }`}
               >
                 {filter.label}
               </Button>
             ))}
           </div>
-          
+
           {/* Image Gallery Grid */}
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
             {filteredImages.map((image) => (
@@ -99,7 +97,7 @@ export function ImageGallery() {
               </div>
             ))}
           </div>
-          
+
           <div className="text-center mt-12">
             <Button
               variant="outline"

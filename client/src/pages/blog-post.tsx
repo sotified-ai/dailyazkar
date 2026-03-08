@@ -4,6 +4,8 @@ import { AdSense } from "@/components/adsense";
 import { Link } from "wouter";
 import { BLOG_POSTS } from "@/data/blog-data";
 import { Card, CardContent } from "@/components/ui/card";
+import { Breadcrumbs } from "@/components/breadcrumbs";
+import { RelatedContent } from "@/components/related-content";
 
 export default function BlogPost({ params }: { params: { slug: string } }) {
     const post = BLOG_POSTS.find(p => p.slug === params.slug);
@@ -52,13 +54,11 @@ export default function BlogPost({ params }: { params: { slug: string } }) {
             />
 
             <article className="container mx-auto px-4 py-8 max-w-4xl">
-                {/* Back Link */}
-                <div className="mb-8">
-                    <Link href="/daily-blogs" className="inline-flex items-center text-emerald-600 hover:text-emerald-700 dark:text-emerald-400 dark:hover:text-emerald-300 font-medium transition-colors">
-                        <i className="fas fa-arrow-left mr-2"></i>
-                        Back to All Blogs
-                    </Link>
-                </div>
+                <Breadcrumbs items={[
+                    { label: "Home", href: "/" },
+                    { label: "Blogs Hub", href: "/blog" },
+                    { label: post.title }
+                ]} />
 
                 {/* Header Section */}
                 <div className="text-center mb-12 animate-fade-in">
@@ -156,6 +156,8 @@ export default function BlogPost({ params }: { params: { slug: string } }) {
                         </button>
                     </div>
                 </div>
+
+                <RelatedContent hub="blog" currentHref={`/daily-blogs/${post.slug}`} />
             </article>
         </div>
     );

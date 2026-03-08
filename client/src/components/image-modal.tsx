@@ -56,22 +56,25 @@ export function ImageModal({ isOpen, onClose, image, images, onNavigate }: Image
         <Button
           onClick={onClose}
           className="absolute top-4 right-4 w-12 h-12 bg-black/50 hover:bg-black/70 text-white rounded-full flex items-center justify-center"
+          aria-label="Close image"
         >
-          <i className="fas fa-times"></i>
+          <i className="fas fa-times" aria-hidden="true"></i>
         </Button>
 
         <Button
           onClick={handlePrevious}
           className="absolute left-4 top-1/2 transform -translate-y-1/2 w-12 h-12 bg-black/50 hover:bg-black/70 text-white rounded-full flex items-center justify-center"
+          aria-label="Previous image"
         >
-          <i className="fas fa-chevron-left"></i>
+          <i className="fas fa-chevron-left" aria-hidden="true"></i>
         </Button>
 
         <Button
           onClick={handleNext}
           className="absolute right-4 top-1/2 transform -translate-y-1/2 w-12 h-12 bg-black/50 hover:bg-black/70 text-white rounded-full flex items-center justify-center"
+          aria-label="Next image"
         >
-          <i className="fas fa-chevron-right"></i>
+          <i className="fas fa-chevron-right" aria-hidden="true"></i>
         </Button>
 
         {/* Image Info */}

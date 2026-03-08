@@ -2,15 +2,11 @@ import { Link } from "wouter";
 
 export function Footer() {
   const quickLinks = [
-    { name: "Morning Azkar", href: "/morning-azkar" },
-    { name: "Evening Azkar", href: "/evening-azkar" },
-    { name: "Holy Quran", href: "/quran" },
-    { name: "Dua after Salah", href: "/dua-after-salah" },
-    { name: "Rabbana Duas", href: "/rabbana-duas" },
-    { name: "Ruqiya", href: "/ruqiya" },
-    { name: "Manzil", href: "/manzil" },
-    { name: "Daily Blogs", href: "/daily-blogs" },
-    { name: "Online Quran Tutor", href: "/online-quran-tutor" }
+    { name: "Azkar Hub", href: "/azkar" },
+    { name: "Quran Hub", href: "/quran" },
+    { name: "Dua Hub", href: "/dua" },
+    { name: "Azkar Quran Tutor", href: "/tutor" },
+    { name: "Blogs", href: "/blog" }
   ];
 
   const resources = [

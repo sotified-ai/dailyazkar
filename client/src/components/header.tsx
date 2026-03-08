@@ -23,16 +23,11 @@ export function Header() {
   };
 
   const navigation = [
-    { name: "Morning Azkar", href: "/morning-azkar", icon: "fas fa-sun" },
-    { name: "Evening Azkar", href: "/evening-azkar", icon: "fas fa-moon" },
-    { name: "Ramadan Azkar", href: "/ramadan-azkar", icon: "fas fa-star-and-crescent" },
-    { name: "Dua after Salah", href: "/dua-after-salah", icon: "fas fa-hands" },
-    { name: "Rabbana Duas", href: "/rabbana-duas", icon: "fas fa-heart" },
-    { name: "Quran", href: "/quran", icon: "fas fa-book-open" },
-    { name: "Ruqiya", href: "/ruqiya", icon: "fas fa-shield-alt" },
-    { name: "Manzil", href: "/manzil", icon: "fas fa-shield-virus" },
-    { name: "Daily Blogs", href: "/daily-blogs", icon: "fas fa-book-reader" },
-    { name: "Online Quran Tutor", href: "/online-quran-tutor", icon: "fas fa-graduation-cap" },
+    { name: "Azkar Hub", href: "/azkar", icon: "fas fa-sun" },
+    { name: "Quran Hub", href: "/quran", icon: "fas fa-book-open" },
+    { name: "Dua Hub", href: "/dua", icon: "fas fa-hands-praying" },
+    { name: "Azkar Quran Tutor", href: "/tutor", icon: "fas fa-graduation-cap" },
+    { name: "Blogs", href: "/blog", icon: "fas fa-book-reader" },
   ];
 
   return (
@@ -53,45 +48,13 @@ export function Header() {
 
             {/* Main Navigation */}
             <div className="hidden lg:flex items-center space-x-8">
-              <div className="relative group">
-                <button className="flex items-center space-x-1 text-gray-700 dark:text-gray-200 hover:text-emerald-600 dark:hover:text-emerald-400 font-medium transition-colors">
-                  <span>Azkar</span>
-                  <i className="fas fa-chevron-down text-xs"></i>
-                </button>
-                <div className="absolute top-full left-0 mt-2 w-56 glassmorphism rounded-xl shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
-                  <div className="p-2">
-                    <Link
-                      href="/morning-azkar"
-                      className="block px-4 py-3 text-gray-700 dark:text-gray-200 hover:bg-emerald-50 dark:hover:bg-emerald-900/30 rounded-lg transition-colors"
-                    >
-                      <i className="fas fa-sun text-amber-500 mr-3"></i>Morning Azkar
-                    </Link>
-                    <Link
-                      href="/evening-azkar"
-                      className="block px-4 py-3 text-gray-700 dark:text-gray-200 hover:bg-emerald-50 dark:hover:bg-emerald-900/30 rounded-lg transition-colors"
-                    >
-                      <i className="fas fa-moon text-emerald-500 mr-3"></i>Evening Azkar
-                    </Link>
-                    <Link
-                      href="/ramadan-azkar"
-                      className="block px-4 py-3 text-gray-700 dark:text-gray-200 hover:bg-amber-50 dark:hover:bg-amber-900/30 rounded-lg transition-colors"
-                    >
-                      <i className="fas fa-star-and-crescent text-amber-500 mr-3"></i>
-                      Ramadan Azkar
-                      <span className="ml-2 text-xs px-1.5 py-0.5 bg-amber-100 dark:bg-amber-900/40 text-amber-700 dark:text-amber-400 rounded-full">New</span>
-                    </Link>
-                  </div>
-                </div>
-              </div>
-
-              {navigation.slice(2).map((item) => (
+              {navigation.map((item) => (
                 <Link
                   key={item.href}
                   href={item.href}
-                  className={`text-gray-700 dark:text-gray-200 hover:text-emerald-600 dark:hover:text-emerald-400 font-medium transition-colors ${location === item.href ? "text-emerald-600 dark:text-emerald-400" : ""
-                    }`}
+                  className={`text-gray-700 dark:text-gray-200 hover:text-emerald-600 dark:hover:text-emerald-400 font-medium transition-colors ${location.startsWith(item.href) && item.href !== "/" ? "text-emerald-600 dark:text-emerald-400" : ""}`}
                 >
-                  {item.name}
+                  <i className={`${item.icon} mr-2 hidden xl:inline-block`}></i>{item.name}
                 </Link>
               ))}
             </div>
@@ -103,8 +66,9 @@ export function Header() {
                 size="sm"
                 onClick={() => setShowSearch(true)}
                 className="p-2 text-gray-600 dark:text-gray-400 hover:text-emerald-600 dark:hover:text-emerald-400"
+                aria-label="Open search"
               >
-                <i className="fas fa-search"></i>
+                <i className="fas fa-search" aria-hidden="true"></i>
               </Button>
 
               {/* Language Dropdown */}
@@ -114,8 +78,10 @@ export function Header() {
                   size="sm"
                   onClick={() => setShowLangMenu(!showLangMenu)}
                   className="p-2 text-gray-600 dark:text-gray-400 hover:text-emerald-600 dark:hover:text-emerald-400"
+                  aria-label="Change language"
+                  aria-expanded={showLangMenu}
                 >
-                  <i className="fas fa-globe"></i>
+                  <i className="fas fa-globe" aria-hidden="true"></i>
                 </Button>
                 {showLangMenu && (
                   <div className="absolute top-full right-0 mt-2 w-32 glassmorphism rounded-xl shadow-lg transition-all z-50">
@@ -133,8 +99,9 @@ export function Header() {
                 size="sm"
                 onClick={() => setTheme(theme === "light" ? "dark" : "light")}
                 className="p-2 text-gray-600 dark:text-gray-400 hover:text-emerald-600 dark:hover:text-emerald-400"
+                aria-label="Toggle dark mode"
               >
-                <i className={`fas ${theme === "light" ? "fa-moon" : "fa-sun"}`}></i>
+                <i className={`fas ${theme === "light" ? "fa-moon" : "fa-sun"}`} aria-hidden="true"></i>
               </Button>
 
               <Button
@@ -142,8 +109,10 @@ export function Header() {
                 size="sm"
                 onClick={() => setShowMobileMenu(!showMobileMenu)}
                 className="lg:hidden p-2 text-gray-600 dark:text-gray-400 hover:text-emerald-600 dark:hover:text-emerald-400"
+                aria-label="Toggle mobile menu"
+                aria-expanded={showMobileMenu}
               >
-                <i className="fas fa-bars"></i>
+                <i className="fas fa-bars" aria-hidden="true"></i>
               </Button>
             </div>
           </div>
@@ -157,9 +126,12 @@ export function Header() {
                     key={item.href}
                     href={item.href}
                     onClick={() => setShowMobileMenu(false)}
-                    className="block py-2 text-gray-700 dark:text-gray-200 hover:text-emerald-600 transition-colors"
+                    className={`block px-4 py-3 text-lg font-medium rounded-xl transition-colors ${location.startsWith(item.href) && item.href !== "/"
+                      ? "bg-emerald-50 dark:bg-emerald-900/50 text-emerald-600 dark:text-emerald-400"
+                      : "text-gray-800 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800"
+                      }`}
                   >
-                    <i className={`${item.icon} mr-3`}></i>
+                    <i className={`${item.icon} mr-3 text-emerald-500`}></i>
                     {item.name}
                   </Link>
                 ))}

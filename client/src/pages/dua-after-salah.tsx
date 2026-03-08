@@ -2,6 +2,8 @@ import { DuaBlock } from "@/components/dua-block";
 import { SEOHead } from "@/components/seo-head";
 import { AdSense } from "@/components/adsense";
 import { Link } from "wouter";
+import { Breadcrumbs } from "@/components/breadcrumbs";
+import { RelatedContent } from "@/components/related-content";
 
 export default function DuaAfterSalah() {
   const duas = [
@@ -121,6 +123,12 @@ export default function DuaAfterSalah() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqStructuredData) }} />
 
       <div className="container mx-auto px-4 py-8">
+        <Breadcrumbs items={[
+          { label: "Home", href: "/" },
+          { label: "Dua Hub", href: "/dua" },
+          { label: "Dua After Salah" }
+        ]} />
+
         {/* Header */}
         <div className="text-center mb-12 animate-fade-in">
           <div className="w-20 h-20 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-6">
@@ -222,25 +230,7 @@ export default function DuaAfterSalah() {
         </div>
 
         {/* Internal Links */}
-        <div className="max-w-4xl mx-auto mt-12">
-          <h3 className="text-xl font-semibold text-gray-800 dark:text-white mb-4 text-center">
-            Continue Your Worship
-          </h3>
-          <div className="flex flex-wrap justify-center gap-4">
-            <Link href="/prayer-times" className="px-6 py-3 bg-blue-500 hover:bg-blue-600 text-white rounded-full transition-colors">
-              Prayer Times
-            </Link>
-            <Link href="/morning-azkar" className="px-6 py-3 bg-amber-500 hover:bg-amber-600 text-white rounded-full transition-colors">
-              Morning Azkar
-            </Link>
-            <Link href="/evening-azkar" className="px-6 py-3 bg-indigo-500 hover:bg-indigo-600 text-white rounded-full transition-colors">
-              Evening Azkar
-            </Link>
-            <Link href="/rabbana-duas" className="px-6 py-3 bg-teal-500 hover:bg-teal-600 text-white rounded-full transition-colors">
-              Quranic Duas
-            </Link>
-          </div>
-        </div>
+        <RelatedContent hub="dua" currentHref="/dua-after-salah" />
 
         {/* Call to Action */}
         <div className="text-center mt-12">

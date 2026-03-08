@@ -1,5 +1,7 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { SEOHead } from "@/components/seo-head";
+import { Breadcrumbs } from "@/components/breadcrumbs";
+import { RelatedContent } from "@/components/related-content";
 
 export default function Ruqiya() {
   const ruqiyaItems = [
@@ -67,6 +69,12 @@ export default function Ruqiya() {
         structuredData={structuredData}
       />
       <div className="container mx-auto px-4 py-8">
+        <Breadcrumbs items={[
+          { label: "Home", href: "/" },
+          { label: "Quran Hub", href: "/quran" },
+          { label: "Ruqiya Shariah" }
+        ]} />
+
         {/* Header */}
         <div className="text-center mb-12 animate-fade-in">
           <div className="w-20 h-20 bg-gradient-to-br from-violet-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-6">
@@ -192,6 +200,8 @@ export default function Ruqiya() {
             </div>
           </div>
         </div>
+
+        <RelatedContent hub="quran" currentHref="/ruqiya" />
       </div>
     </div>
   );

@@ -1,6 +1,8 @@
 import { SEOHead } from '@/components/seo-head';
 import { AdSense } from '@/components/adsense';
 import { Link } from 'wouter';
+import { Breadcrumbs } from '@/components/breadcrumbs';
+import { RelatedContent } from '@/components/related-content';
 
 const sehriDuas = [
     {
@@ -137,6 +139,12 @@ export default function RamadanAzkarPage() {
             <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqStructuredData) }} />
 
             <main className="pt-24 container mx-auto px-4 py-8">
+                <Breadcrumbs items={[
+                    { label: "Home", href: "/" },
+                    { label: "Azkar Hub", href: "/azkar" },
+                    { label: "Ramadan Azkar" }
+                ]} />
+
                 {/* Header */}
                 <div className="text-center mb-12 animate-fade-in">
                     <div className="w-20 h-20 bg-gradient-to-br from-amber-500 to-orange-600 rounded-full flex items-center justify-center mx-auto mb-6">
@@ -319,28 +327,7 @@ export default function RamadanAzkarPage() {
                 <AdSense className="my-8" />
 
                 {/* Internal Links */}
-                <div className="max-w-4xl mx-auto mt-8">
-                    <h3 className="text-xl font-semibold text-gray-800 dark:text-white mb-4 text-center">
-                        More Islamic Supplications
-                    </h3>
-                    <div className="flex flex-wrap justify-center gap-4">
-                        <Link href="/morning-azkar" className="px-6 py-3 bg-amber-500 hover:bg-amber-600 text-white rounded-full transition-colors">
-                            Morning Azkar (Sehri Time)
-                        </Link>
-                        <Link href="/evening-azkar" className="px-6 py-3 bg-emerald-500 hover:bg-emerald-600 text-white rounded-full transition-colors">
-                            Evening Azkar (Iftar Time)
-                        </Link>
-                        <Link href="/dua-after-salah" className="px-6 py-3 bg-blue-500 hover:bg-blue-600 text-white rounded-full transition-colors">
-                            Post-Prayer Duas
-                        </Link>
-                        <Link href="/quran" className="px-6 py-3 bg-teal-500 hover:bg-teal-600 text-white rounded-full transition-colors">
-                            Read Holy Quran
-                        </Link>
-                        <Link href="/rabbana-duas" className="px-6 py-3 bg-purple-500 hover:bg-purple-600 text-white rounded-full transition-colors">
-                            Rabbana Duas
-                        </Link>
-                    </div>
-                </div>
+                <RelatedContent hub="azkar" currentHref="/ramadan-azkar" />
             </main>
         </div>
     );

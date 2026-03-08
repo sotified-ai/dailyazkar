@@ -2,6 +2,8 @@ import { DuaBlock } from "@/components/dua-block";
 import { SEOHead } from "@/components/seo-head";
 import { AdSense } from "@/components/adsense";
 import { Link } from "wouter";
+import { Breadcrumbs } from "@/components/breadcrumbs";
+import { RelatedContent } from "@/components/related-content";
 
 export default function RabbanaDuas() {
   const duas = [
@@ -147,6 +149,12 @@ export default function RabbanaDuas() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqStructuredData) }} />
 
       <div className="container mx-auto px-4 py-8">
+        <Breadcrumbs items={[
+          { label: "Home", href: "/" },
+          { label: "Dua Hub", href: "/dua" },
+          { label: "Rabbana Duas" }
+        ]} />
+
         {/* Header */}
         <div className="text-center mb-12 animate-fade-in">
           <div className="w-20 h-20 bg-gradient-to-br from-teal-500 to-cyan-600 rounded-full flex items-center justify-center mx-auto mb-6">
@@ -248,25 +256,7 @@ export default function RabbanaDuas() {
         </div>
 
         {/* Internal Links */}
-        <div className="max-w-4xl mx-auto mt-12">
-          <h3 className="text-xl font-semibold text-gray-800 dark:text-white mb-4 text-center">
-            Explore More Supplications
-          </h3>
-          <div className="flex flex-wrap justify-center gap-4">
-            <Link href="/quran" className="px-6 py-3 bg-emerald-500 hover:bg-emerald-600 text-white rounded-full transition-colors">
-              Browse Quran
-            </Link>
-            <Link href="/dua-after-salah" className="px-6 py-3 bg-blue-500 hover:bg-blue-600 text-white rounded-full transition-colors">
-              Post-Prayer Duas
-            </Link>
-            <Link href="/morning-azkar" className="px-6 py-3 bg-amber-500 hover:bg-amber-600 text-white rounded-full transition-colors">
-              Morning Azkar
-            </Link>
-            <Link href="/ruqiya" className="px-6 py-3 bg-purple-500 hover:bg-purple-600 text-white rounded-full transition-colors">
-              Ruqyah Protection
-            </Link>
-          </div>
-        </div>
+        <RelatedContent hub="dua" currentHref="/rabbana-duas" />
 
         {/* Call to Action */}
         <div className="text-center mt-12">

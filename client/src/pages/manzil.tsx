@@ -1,6 +1,8 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { SEOHead } from "@/components/seo-head";
 import { manzilDua } from "@/data/azkar-data";
+import { Breadcrumbs } from "@/components/breadcrumbs";
+import { RelatedContent } from "@/components/related-content";
 
 export default function Manzil() {
     const structuredData = {
@@ -25,6 +27,12 @@ export default function Manzil() {
                 structuredData={structuredData}
             />
             <div className="container mx-auto px-4 py-8">
+                <Breadcrumbs items={[
+                    { label: "Home", href: "/" },
+                    { label: "Quran Hub", href: "/quran" },
+                    { label: "Manzil" }
+                ]} />
+
                 {/* Header */}
                 <div className="text-center mb-12 animate-fade-in">
                     <div className="w-20 h-20 bg-gradient-to-br from-indigo-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-6">
@@ -124,6 +132,8 @@ export default function Manzil() {
                         </p>
                     </div>
                 </div>
+
+                <RelatedContent hub="quran" currentHref="/manzil" />
             </div>
         </div>
     );

@@ -7,6 +7,8 @@ import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
 import { useEffect, useState } from "react";
 import { Badge } from "@/components/ui/badge";
+import { Breadcrumbs } from "@/components/breadcrumbs";
+import { RelatedContent } from "@/components/related-content";
 
 const ITEMS_PER_PAGE = 20;
 
@@ -78,6 +80,12 @@ export default function SurahDetail() {
             />
 
             <div className="container mx-auto px-4 py-8">
+                <Breadcrumbs items={[
+                    { label: "Home", href: "/" },
+                    { label: "Quran Hub", href: "/quran" },
+                    { label: `Surah ${surahInfo.name}` }
+                ]} />
+
                 <div className="mb-8 flex justify-between items-center">
                     <Link href="/quran">
                         <Button variant="ghost" className="hover:bg-emerald-100 dark:hover:bg-emerald-900/20 text-emerald-600 dark:text-emerald-400">
@@ -272,6 +280,7 @@ export default function SurahDetail() {
                     )}
                 </div>
 
+                <RelatedContent hub="quran" />
             </div>
         </div>
     );

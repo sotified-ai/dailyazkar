@@ -54,6 +54,9 @@ import AzkarBeforeSleep from "@/pages/azkar-before-sleep";
 import AzkarAfterEveryPrayer from "@/pages/azkar-after-every-prayer";
 import ShortAzkarForBusyMuslims from "@/pages/short-azkar-for-busy-muslims";
 
+// Hubs
+import AzkarHub from "@/pages/hubs/azkar-hub";
+import DuaHub from "@/pages/hubs/dua-hub";
 
 function ReadingProgress() {
   const progress = useScrollProgress();
@@ -86,18 +89,46 @@ function Router() {
         <Switch>
           {/* Main Routes */}
           <Route path="/" component={Home} />
-          <Route path="/morning-azkar" component={MorningAzkar} />
-          <Route path="/evening-azkar" component={EveningAzkar} />
+
+          {/* Hub Indexes */}
+          <Route path="/azkar" component={AzkarHub} />
+          <Route path="/dua" component={DuaHub} />
+
+          {/* Azkar Hub Routes */}
+          <Route path="/azkar/morning" component={MorningAzkar} />
+          <Route path="/azkar/evening" component={EveningAzkar} />
+          <Route path="/azkar/ramadan" component={RamadanAzkarPage} />
+
+          {/* Quran Hub Routes */}
           <Route path="/quran" component={Quran} />
-          <Route path="/quran/:number" component={SurahDetail} />
-          <Route path="/dua-after-salah" component={DuaAfterSalah} />
-          <Route path="/rabbana-duas" component={RabbanaDuas} />
-          <Route path="/ruqiya" component={Ruqiya} />
-          <Route path="/manzil" component={Manzil} />
-          <Route path="/ramadan-azkar" component={RamadanAzkarPage} />
-          <Route path="/daily-blogs" component={DailyBlogs} />
-          <Route path="/daily-blogs/:slug" component={BlogPost} />
-          <Route path="/online-quran-tutor" component={OnlineQuranTutor} />
+          <Route path="/quran/surahs" component={Quran} />
+          <Route path="/quran/surahs/:number" component={SurahDetail} />
+          <Route path="/quran/ruqiya" component={Ruqiya} />
+          <Route path="/quran/manzil" component={Manzil} />
+
+          {/* Dua Hub Routes */}
+          <Route path="/dua/after-salah" component={DuaAfterSalah} />
+          <Route path="/dua/rabbana" component={RabbanaDuas} />
+
+          {/* Tutor Hub Route */}
+          <Route path="/tutor" component={OnlineQuranTutor} />
+
+          {/* Blogs Routes */}
+          <Route path="/blog" component={DailyBlogs} />
+          <Route path="/blog/:slug" component={BlogPost} />
+
+          {/* Original Route Paths (Redirects) */}
+          <Route path="/morning-azkar"><RedirectTo to="/azkar/morning" /></Route>
+          <Route path="/evening-azkar"><RedirectTo to="/azkar/evening" /></Route>
+          <Route path="/ramadan-azkar"><RedirectTo to="/azkar/ramadan" /></Route>
+          <Route path="/quran/:number"><RedirectTo to="/quran/surahs/:number" /></Route>
+          <Route path="/dua-after-salah"><RedirectTo to="/dua/after-salah" /></Route>
+          <Route path="/rabbana-duas"><RedirectTo to="/dua/rabbana" /></Route>
+          <Route path="/ruqiya"><RedirectTo to="/quran/ruqiya" /></Route>
+          <Route path="/manzil"><RedirectTo to="/quran/manzil" /></Route>
+          <Route path="/daily-blogs"><RedirectTo to="/blog" /></Route>
+          <Route path="/daily-blogs/:slug"><RedirectTo to="/blog/:slug" /></Route>
+          <Route path="/online-quran-tutor"><RedirectTo to="/tutor" /></Route>
 
           {/* Resource Routes */}
           <Route path="/about-islam" component={AboutIslamPage} />

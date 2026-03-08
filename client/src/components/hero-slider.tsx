@@ -132,7 +132,7 @@ export function HeroSlider() {
                     {slides.map((slide, index) => (
                         <div
                             key={slide.id}
-                            className={`relative flex-[0_0_100%] min-w-0 min-h-[50vh] transition-opacity duration-500 bg-gradient-to-br ${slide.bgClass} flex items-center justify-center`}
+                            className={`relative flex-[0_0_100%] min-w-0 min-h-[50vh] transition-opacity duration-500 bg-gradient-to-br ${slide.bgClass} bg-[length:200%_200%] animate-gradient-shift flex items-center justify-center`}
                             role="group"
                             aria-roledescription="slide"
                             aria-label={`Slide ${index + 1} of ${slides.length}`}

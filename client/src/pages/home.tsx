@@ -1,4 +1,6 @@
+import { useEffect, useState } from "react";
 import { HeroSlider } from "@/components/hero-slider";
+import { HeroSection } from "@/components/hero-section";
 import { FeaturedContent } from "@/components/featured-content";
 import { EnhancedSearch } from "@/components/enhanced-search";
 
@@ -7,6 +9,22 @@ import { AdSense } from "@/components/adsense";
 import { Link } from "wouter";
 
 export default function Home() {
+  const [heroVariant, setHeroVariant] = useState<"slider" | "static">("slider");
+
+  useEffect(() => {
+    // A/B test hook: Check URL params first, then fallback to random assignment or local storage
+    const urlParams = new URLSearchParams(window.location.search);
+    const forceVariant = urlParams.get("hero");
+
+    if (forceVariant === "static" || forceVariant === "slider") {
+      setHeroVariant(forceVariant);
+    } else {
+      // For now, default to slider to roll out the new feature as the primary winner.
+      // But we have the hook ready to switch based on a backend flag or a 50/50 Math.random() roll if desired.
+      setHeroVariant("slider");
+    }
+  }, []);
+
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "WebSite",
@@ -29,7 +47,7 @@ export default function Home() {
         canonical="https://dailyazkar.site"
         structuredData={structuredData}
       />
-      <HeroSlider />
+      {heroVariant === "slider" ? <HeroSlider /> : <HeroSection />}
       <AdSense className="my-8" />
       <FeaturedContent />
       <AdSense className="my-8" />

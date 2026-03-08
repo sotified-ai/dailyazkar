@@ -13,7 +13,7 @@ import { RelatedContent } from "@/components/related-content";
 const ITEMS_PER_PAGE = 20;
 
 export default function SurahDetail() {
-    const [match, params] = useRoute("/quran/:number");
+    const [match, params] = useRoute("/quran/surahs/:number");
     const surahNumber = params ? parseInt(params.number) : 0;
     const [currentPage, setCurrentPage] = useState(1);
     const [showArabic, setShowArabic] = useState(true);
@@ -76,7 +76,7 @@ export default function SurahDetail() {
                 title={`${surahInfo.name} (${surahInfo.nameArabic}) - Quran | Daily Azkar`}
                 description={`Read Surah ${surahInfo.name} (${surahInfo.nameArabic}) from the Holy Quran. ${surahInfo.verses} verses, ${surahInfo.type} revelation.`}
                 keywords={`quran, surah ${surahInfo.name}, ${surahInfo.nameArabic}, quran chapter ${surahInfo.number}, read quran online`}
-                canonical={`https://dailyazkar.site/quran/${surahInfo.number}`}
+                canonical={`https://dailyazkar.site/quran/surahs/${surahInfo.number}`}
             />
 
             <div className="container mx-auto px-4 py-8">
@@ -265,14 +265,14 @@ export default function SurahDetail() {
                 {/* Navigation */}
                 <div className="max-w-4xl mx-auto flex justify-between mt-12">
                     {surahNumber > 1 && (
-                        <Link href={`/quran/${surahNumber - 1}`}>
+                        <Link href={`/quran/surahs/${surahNumber - 1}`}>
                             <Button variant="outline" className="gap-2">
                                 <i className="fas fa-chevron-left"></i> Previous Surah
                             </Button>
                         </Link>
                     )}
                     {surahNumber < 114 && (
-                        <Link href={`/quran/${surahNumber + 1}`}>
+                        <Link href={`/quran/surahs/${surahNumber + 1}`}>
                             <Button variant="outline" className="gap-2">
                                 Next Surah <i className="fas fa-chevron-right"></i>
                             </Button>

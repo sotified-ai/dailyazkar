@@ -365,7 +365,7 @@ export function EnhancedSearch() {
                         </h4>
                         <div className="space-y-3">
                           {quranResults.map((verse, i) => (
-                            <Link key={i} href={`/quran/${verse.surah.number}`}>
+                            <Link key={i} href={`/quran/surahs/${verse.surah.number}`}>
                               <div className="bg-amber-50 dark:bg-amber-900/10 rounded-xl p-4 border-l-4 border-amber-400 hover:bg-amber-100 dark:hover:bg-amber-900/20 transition-all cursor-pointer group">
                                 <div className="flex items-start justify-between gap-3">
                                   <div className="flex-1 min-w-0">

@@ -121,7 +121,7 @@ function Router() {
           <Route path="/morning-azkar"><RedirectTo to="/azkar/morning" /></Route>
           <Route path="/evening-azkar"><RedirectTo to="/azkar/evening" /></Route>
           <Route path="/ramadan-azkar"><RedirectTo to="/azkar/ramadan" /></Route>
-          <Route path="/quran/:number"><RedirectTo to="/quran/surahs/:number" /></Route>
+          <Route path="/quran/:number">{(params) => <RedirectTo to={`/quran/surahs/${params.number}`} />}</Route>
           <Route path="/dua-after-salah"><RedirectTo to="/dua/after-salah" /></Route>
           <Route path="/rabbana-duas"><RedirectTo to="/dua/rabbana" /></Route>
           <Route path="/ruqiya"><RedirectTo to="/quran/ruqiya" /></Route>

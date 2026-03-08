@@ -139,7 +139,7 @@ export default function Quran() {
         {/* Surah List */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
           {quranSurahs.map((surah) => (
-            <Link key={surah.number} href={`/quran/${surah.number}`}>
+            <Link key={surah.number} href={`/quran/surahs/${surah.number}`}>
               <Card className="glassmorphism border-0 shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer group h-full">
                 <CardHeader className="pb-3">
                   <CardTitle className="flex items-center justify-between">

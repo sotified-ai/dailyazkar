@@ -120,14 +120,14 @@ export function DuaBlock({ azkar, index }: DuaBlockProps) {
                             onClick={handleIncrement}
                             disabled={isCompleted}
                             className={cn(
-                                "flex-1 sm:flex-none w-full sm:w-48 h-12 rounded-full font-bold text-lg transition-all shadow-md active:scale-95 flex items-center justify-between px-6",
+                                "flex-1 sm:flex-none w-full sm:w-auto sm:min-w-[220px] h-12 rounded-full font-bold text-lg transition-all shadow-md active:scale-95 flex items-center justify-between px-6 gap-4",
                                 isCompleted
                                     ? "bg-emerald-500 hover:bg-emerald-600 text-white cursor-default"
                                     : "bg-amber-500 hover:bg-amber-600 text-white"
                             )}
                         >
-                            <span>{isCompleted ? "Completed" : "Tap to Count"}</span>
-                            <div className="flex items-center gap-2 bg-black/10 px-3 py-1 rounded-full">
+                            <span className="whitespace-nowrap">{isCompleted ? "Completed" : "Tap to Count"}</span>
+                            <div className="flex items-center gap-2 bg-black/10 px-3 py-1 rounded-full whitespace-nowrap flex-shrink-0">
                                 <span>{count}</span>
                                 <span className="opacity-60">/</span>
                                 <span>{azkar.repetitions}</span>

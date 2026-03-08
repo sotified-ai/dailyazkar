@@ -114,37 +114,35 @@ export function DuaBlock({ azkar, index }: DuaBlockProps) {
                         )}
                     </div>
 
-                    <div className="flex items-center gap-4 w-full sm:w-auto">
+                    <div className="flex items-center gap-3 w-full sm:w-auto">
                         {/* Counter Button */}
-                        <div className="relative flex-1 sm:flex-none">
-                            <Button
-                                onClick={handleIncrement}
-                                disabled={isCompleted}
-                                className={cn(
-                                    "w-full sm:w-48 h-12 rounded-full font-bold text-lg transition-all shadow-md active:scale-95 flex items-center justify-between px-6",
-                                    isCompleted
-                                        ? "bg-emerald-500 hover:bg-emerald-600 text-white cursor-default"
-                                        : "bg-amber-500 hover:bg-amber-600 text-white"
-                                )}
-                            >
-                                <span>{isCompleted ? "Completed" : "Tap to Count"}</span>
-                                <div className="flex items-center gap-2 bg-black/10 px-3 py-1 rounded-full">
-                                    <span>{count}</span>
-                                    <span className="opacity-60">/</span>
-                                    <span>{azkar.repetitions}</span>
-                                </div>
-                            </Button>
+                        <Button
+                            onClick={handleIncrement}
+                            disabled={isCompleted}
+                            className={cn(
+                                "flex-1 sm:flex-none w-full sm:w-48 h-12 rounded-full font-bold text-lg transition-all shadow-md active:scale-95 flex items-center justify-between px-6",
+                                isCompleted
+                                    ? "bg-emerald-500 hover:bg-emerald-600 text-white cursor-default"
+                                    : "bg-amber-500 hover:bg-amber-600 text-white"
+                            )}
+                        >
+                            <span>{isCompleted ? "Completed" : "Tap to Count"}</span>
+                            <div className="flex items-center gap-2 bg-black/10 px-3 py-1 rounded-full">
+                                <span>{count}</span>
+                                <span className="opacity-60">/</span>
+                                <span>{azkar.repetitions}</span>
+                            </div>
+                        </Button>
 
-                            {/* Progress Bar (Small line at bottom of button? Or ring?) */}
-                            {/* Actually the button text is clear enough */}
-
+                        <div className="w-10 flex-shrink-0 flex justify-center">
                             {count > 0 && !isCompleted && (
                                 <Button
                                     variant="ghost"
                                     size="icon"
                                     onClick={handleReset}
-                                    className="absolute -right-10 top-1/2 -translate-y-1/2 rounded-full text-gray-400 hover:text-red-500"
+                                    className="rounded-full text-gray-400 hover:bg-red-50 hover:text-red-500 dark:hover:bg-red-950/30"
                                     title="Reset Counter"
+                                    aria-label="Reset Counter"
                                 >
                                     <RefreshCw className="w-4 h-4" />
                                 </Button>

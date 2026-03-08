@@ -58,6 +58,16 @@ import ShortAzkarForBusyMuslims from "@/pages/short-azkar-for-busy-muslims";
 import AzkarHub from "@/pages/hubs/azkar-hub";
 import DuaHub from "@/pages/hubs/dua-hub";
 
+function ScrollToTop() {
+  const [pathname] = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
+}
+
 function ReadingProgress() {
   const progress = useScrollProgress();
 
@@ -83,6 +93,7 @@ function Router() {
 
   return (
     <div className="min-h-screen flex flex-col">
+      <ScrollToTop />
       <ReadingProgress />
       <Header />
       <main className="flex-1">

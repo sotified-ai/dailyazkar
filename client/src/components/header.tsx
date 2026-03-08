@@ -9,14 +9,30 @@ export function Header() {
   const { theme, setTheme } = useTheme();
   const [showMobileMenu, setShowMobileMenu] = useState(false);
   const [showSearch, setShowSearch] = useState(false);
+  const [showLangMenu, setShowLangMenu] = useState(false);
+
+  const changeLanguage = (langCode: string) => {
+    if (langCode === 'en') {
+      document.cookie = 'googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
+      document.cookie = `googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=${window.location.hostname};`;
+    } else {
+      document.cookie = `googtrans=/en/${langCode}; path=/;`;
+      document.cookie = `googtrans=/en/${langCode}; path=/; domain=${window.location.hostname};`;
+    }
+    window.location.reload();
+  };
 
   const navigation = [
     { name: "Morning Azkar", href: "/morning-azkar", icon: "fas fa-sun" },
     { name: "Evening Azkar", href: "/evening-azkar", icon: "fas fa-moon" },
+    { name: "Ramadan Azkar", href: "/ramadan-azkar", icon: "fas fa-star-and-crescent" },
     { name: "Dua after Salah", href: "/dua-after-salah", icon: "fas fa-hands" },
     { name: "Rabbana Duas", href: "/rabbana-duas", icon: "fas fa-heart" },
     { name: "Quran", href: "/quran", icon: "fas fa-book-open" },
     { name: "Ruqiya", href: "/ruqiya", icon: "fas fa-shield-alt" },
+    { name: "Manzil", href: "/manzil", icon: "fas fa-shield-virus" },
+    { name: "Daily Blogs", href: "/daily-blogs", icon: "fas fa-book-reader" },
+    { name: "Online Quran Tutor", href: "/online-quran-tutor", icon: "fas fa-graduation-cap" },
   ];
 
   return (
@@ -34,7 +50,7 @@ export function Header() {
                 <p className="text-xs text-gray-600 dark:text-gray-400">Islamic Remembrance</p>
               </div>
             </Link>
-            
+
             {/* Main Navigation */}
             <div className="hidden lg:flex items-center space-x-8">
               <div className="relative group">
@@ -42,37 +58,44 @@ export function Header() {
                   <span>Azkar</span>
                   <i className="fas fa-chevron-down text-xs"></i>
                 </button>
-                <div className="absolute top-full left-0 mt-2 w-48 glassmorphism rounded-xl shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
+                <div className="absolute top-full left-0 mt-2 w-56 glassmorphism rounded-xl shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
                   <div className="p-2">
-                    <Link 
-                      href="/morning-azkar" 
+                    <Link
+                      href="/morning-azkar"
                       className="block px-4 py-3 text-gray-700 dark:text-gray-200 hover:bg-emerald-50 dark:hover:bg-emerald-900/30 rounded-lg transition-colors"
                     >
                       <i className="fas fa-sun text-amber-500 mr-3"></i>Morning Azkar
                     </Link>
-                    <Link 
-                      href="/evening-azkar" 
+                    <Link
+                      href="/evening-azkar"
                       className="block px-4 py-3 text-gray-700 dark:text-gray-200 hover:bg-emerald-50 dark:hover:bg-emerald-900/30 rounded-lg transition-colors"
                     >
                       <i className="fas fa-moon text-emerald-500 mr-3"></i>Evening Azkar
                     </Link>
+                    <Link
+                      href="/ramadan-azkar"
+                      className="block px-4 py-3 text-gray-700 dark:text-gray-200 hover:bg-amber-50 dark:hover:bg-amber-900/30 rounded-lg transition-colors"
+                    >
+                      <i className="fas fa-star-and-crescent text-amber-500 mr-3"></i>
+                      Ramadan Azkar
+                      <span className="ml-2 text-xs px-1.5 py-0.5 bg-amber-100 dark:bg-amber-900/40 text-amber-700 dark:text-amber-400 rounded-full">New</span>
+                    </Link>
                   </div>
                 </div>
               </div>
-              
+
               {navigation.slice(2).map((item) => (
                 <Link
                   key={item.href}
                   href={item.href}
-                  className={`text-gray-700 dark:text-gray-200 hover:text-emerald-600 dark:hover:text-emerald-400 font-medium transition-colors ${
-                    location === item.href ? "text-emerald-600 dark:text-emerald-400" : ""
-                  }`}
+                  className={`text-gray-700 dark:text-gray-200 hover:text-emerald-600 dark:hover:text-emerald-400 font-medium transition-colors ${location === item.href ? "text-emerald-600 dark:text-emerald-400" : ""
+                    }`}
                 >
                   {item.name}
                 </Link>
               ))}
             </div>
-            
+
             {/* Action Buttons */}
             <div className="flex items-center space-x-3">
               <Button
@@ -83,7 +106,28 @@ export function Header() {
               >
                 <i className="fas fa-search"></i>
               </Button>
-              
+
+              {/* Language Dropdown */}
+              <div className="relative">
+                <Button
+                  variant="ghost"
+                  size="sm"
+                  onClick={() => setShowLangMenu(!showLangMenu)}
+                  className="p-2 text-gray-600 dark:text-gray-400 hover:text-emerald-600 dark:hover:text-emerald-400"
+                >
+                  <i className="fas fa-globe"></i>
+                </Button>
+                {showLangMenu && (
+                  <div className="absolute top-full right-0 mt-2 w-32 glassmorphism rounded-xl shadow-lg transition-all z-50">
+                    <div className="p-2 flex flex-col">
+                      <button onClick={() => changeLanguage('en')} className="px-4 py-2 text-sm text-left hover:bg-emerald-50 dark:hover:bg-emerald-900/30 rounded-lg text-gray-700 dark:text-gray-200">English</button>
+                      <button onClick={() => changeLanguage('ur')} className="px-4 py-2 text-sm text-left hover:bg-emerald-50 dark:hover:bg-emerald-900/30 rounded-lg font-arabic text-gray-700 dark:text-gray-200">اردو</button>
+                      <button onClick={() => changeLanguage('ar')} className="px-4 py-2 text-sm text-left hover:bg-emerald-50 dark:hover:bg-emerald-900/30 rounded-lg font-arabic text-gray-700 dark:text-gray-200">العربية</button>
+                    </div>
+                  </div>
+                )}
+              </div>
+
               <Button
                 variant="ghost"
                 size="sm"
@@ -92,7 +136,7 @@ export function Header() {
               >
                 <i className={`fas ${theme === "light" ? "fa-moon" : "fa-sun"}`}></i>
               </Button>
-              
+
               <Button
                 variant="ghost"
                 size="sm"
@@ -103,7 +147,7 @@ export function Header() {
               </Button>
             </div>
           </div>
-          
+
           {/* Mobile Menu */}
           {showMobileMenu && (
             <div className="lg:hidden mt-4 opacity-100 visible transition-all duration-300">

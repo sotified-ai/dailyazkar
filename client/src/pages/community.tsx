@@ -175,39 +175,87 @@ export default function CommunityPage() {
         {/* Community Features */}
         <div className="max-w-4xl mx-auto mb-12">
           <h2 className="text-2xl font-display font-bold text-gray-800 dark:text-white mb-6 text-center">
-            Community Features
+            How to Build Your Azkar Habit
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <Card className="glassmorphism border-0">
-              <div className="p-6 text-center">
+              <div className="p-6">
                 <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <i className="fas fa-lightbulb text-white text-2xl"></i>
+                  <i className="fas fa-calendar-check text-white text-2xl"></i>
                 </div>
-                <h3 className="text-xl font-semibold text-gray-800 dark:text-white mb-3">Daily Reflections</h3>
-                <p className="text-gray-600 dark:text-gray-300 mb-4">Share your daily reflections on azkar and Quranic verses with the community.</p>
-                <Button variant="outline" className="w-full">Coming Soon</Button>
+                <h3 className="text-xl font-semibold text-gray-800 dark:text-white mb-3 text-center">Daily Challenge</h3>
+                <p className="text-gray-600 dark:text-gray-300 mb-4">
+                  Start with just one Azkar session per day. The Prophet ﷺ said: <em className="text-purple-600 dark:text-purple-400">"The most beloved deeds to Allah are the most regular, even if they are small."</em> (Bukhari)
+                </p>
+                <ul className="space-y-2 text-sm text-gray-600 dark:text-gray-300">
+                  <li className="flex items-start gap-2"><span className="text-purple-500">✓</span> Week 1: Morning Azkar after Fajr</li>
+                  <li className="flex items-start gap-2"><span className="text-purple-500">✓</span> Week 2: Add Evening Azkar after Asr</li>
+                  <li className="flex items-start gap-2"><span className="text-purple-500">✓</span> Week 3: Add post-prayer duas</li>
+                </ul>
               </div>
             </Card>
             <Card className="glassmorphism border-0">
-              <div className="p-6 text-center">
+              <div className="p-6">
                 <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <i className="fas fa-comments text-white text-2xl"></i>
+                  <i className="fas fa-users text-white text-2xl"></i>
                 </div>
-                <h3 className="text-xl font-semibold text-gray-800 dark:text-white mb-3">Discussions</h3>
-                <p className="text-gray-600 dark:text-gray-300 mb-4">Join discussions about Islamic teachings, practices, and daily remembrance.</p>
-                <Button variant="outline" className="w-full">Coming Soon</Button>
+                <h3 className="text-xl font-semibold text-gray-800 dark:text-white mb-3 text-center">Group Dhikr</h3>
+                <p className="text-gray-600 dark:text-gray-300 mb-4">
+                  Encourage your family and friends to practice together. The Prophet ﷺ said groups engaged in Dhikr are surrounded by angels.
+                </p>
+                <ul className="space-y-2 text-sm text-gray-600 dark:text-gray-300">
+                  <li className="flex items-start gap-2"><span className="text-blue-500">✓</span> Share this site with your family</li>
+                  <li className="flex items-start gap-2"><span className="text-blue-500">✓</span> Practice Morning Azkar together</li>
+                  <li className="flex items-start gap-2"><span className="text-blue-500">✓</span> Remind each other via WhatsApp</li>
+                </ul>
               </div>
             </Card>
             <Card className="glassmorphism border-0">
-              <div className="p-6 text-center">
+              <div className="p-6">
                 <div className="w-16 h-16 bg-gradient-to-br from-emerald-500 to-teal-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <i className="fas fa-star text-white text-2xl"></i>
+                  <i className="fas fa-heart text-white text-2xl"></i>
                 </div>
-                <h3 className="text-xl font-semibold text-gray-800 dark:text-white mb-3">Success Stories</h3>
-                <p className="text-gray-600 dark:text-gray-300 mb-4">Read and share stories of spiritual growth and transformation through Dhikr.</p>
-                <Button variant="outline" className="w-full">Coming Soon</Button>
+                <h3 className="text-xl font-semibold text-gray-800 dark:text-white mb-3 text-center">Spread the Reward</h3>
+                <p className="text-gray-600 dark:text-gray-300 mb-4">
+                  Sharing knowledge is itself an act of worship. The Prophet ﷺ said: <em className="text-emerald-600 dark:text-emerald-400">"Whoever guides someone to a good deed will have a reward similar to the doer."</em>
+                </p>
+                <ul className="space-y-2 text-sm text-gray-600 dark:text-gray-300">
+                  <li className="flex items-start gap-2"><span className="text-emerald-500">✓</span> Share a dua with someone today</li>
+                  <li className="flex items-start gap-2"><span className="text-emerald-500">✓</span> Teach children Morning Azkar</li>
+                  <li className="flex items-start gap-2"><span className="text-emerald-500">✓</span> Invite others to this resource</li>
+                </ul>
               </div>
             </Card>
+          </div>
+        </div>
+
+        {/* Islamic Tips Section */}
+        <div className="max-w-4xl mx-auto mb-12">
+          <div className="glassmorphism rounded-2xl p-8">
+            <h2 className="text-2xl font-display font-bold text-gray-800 dark:text-white mb-6 text-center">
+              10 Tips for Consistent Dhikr Practice
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              {[
+                { tip: "Set a daily reminder on your phone after Fajr and Asr", icon: "fa-bell" },
+                { tip: "Keep this website bookmarked for easy access", icon: "fa-bookmark" },
+                { tip: "Start with the essential 3: Subhanallah, Alhamdulillah, Allahu Akbar", icon: "fa-star" },
+                { tip: "Make Dhikr while commuting or doing household chores", icon: "fa-car" },
+                { tip: "Place a tasbeeh (prayer beads) where you'll see it daily", icon: "fa-pray" },
+                { tip: "Read the meaning of each Azkar to deepen your connection", icon: "fa-book-open" },
+                { tip: "Make dua to Allah to help you be consistent in worship", icon: "fa-hands" },
+                { tip: "Track your consistency — even a simple tally on paper works", icon: "fa-chart-line" },
+                { tip: "Join a local Islamic study circle for accountability", icon: "fa-users" },
+                { tip: "Remember: even 5 minutes of morning Azkar is better than none", icon: "fa-clock" }
+              ].map((item, i) => (
+                <div key={i} className="flex items-start gap-3 p-3 bg-white/50 dark:bg-gray-800/50 rounded-xl">
+                  <div className="w-8 h-8 bg-purple-100 dark:bg-purple-900/30 rounded-full flex items-center justify-center flex-shrink-0">
+                    <i className={`fas ${item.icon} text-purple-600 dark:text-purple-400 text-sm`}></i>
+                  </div>
+                  <p className="text-sm text-gray-600 dark:text-gray-300">{item.tip}</p>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
 

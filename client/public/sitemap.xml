@@ -3,80 +3,146 @@
   
   <url>
     <loc>https://dailyazkar.site</loc>
-    <lastmod>2026-02-19</lastmod>
+    <lastmod>2026-02-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://dailyazkar.site/morning-azkar</loc>
-    <lastmod>2026-02-19</lastmod>
+    <lastmod>2026-02-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://dailyazkar.site/evening-azkar</loc>
-    <lastmod>2026-02-19</lastmod>
+    <lastmod>2026-02-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://dailyazkar.site/quran</loc>
-    <lastmod>2026-02-19</lastmod>
+    <lastmod>2026-02-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://dailyazkar.site/dua-after-salah</loc>
-    <lastmod>2026-02-19</lastmod>
+    <lastmod>2026-02-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://dailyazkar.site/rabbana-duas</loc>
-    <lastmod>2026-02-19</lastmod>
+    <lastmod>2026-02-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://dailyazkar.site/ruqiya</loc>
-    <lastmod>2026-02-19</lastmod>
+    <lastmod>2026-02-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://dailyazkar.site/ramadan-azkar</loc>
+    <lastmod>2026-02-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://dailyazkar.site/about-islam</loc>
-    <lastmod>2026-02-19</lastmod>
+    <lastmod>2026-02-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://dailyazkar.site/prayer-times</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>weekly</changefreq>
+    <lastmod>2026-02-21</lastmod>
+    <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://dailyazkar.site/islamic-calendar</loc>
-    <lastmod>2026-02-19</lastmod>
+    <lastmod>2026-02-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://dailyazkar.site/community</loc>
-    <lastmod>2026-02-19</lastmod>
+    <lastmod>2026-02-21</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://dailyazkar.site/donate</loc>
-    <lastmod>2026-02-19</lastmod>
+    <lastmod>2026-02-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://dailyazkar.site/resources</loc>
+    <lastmod>2026-02-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://dailyazkar.site/privacy-policy</loc>
+    <lastmod>2026-02-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://dailyazkar.site/terms</loc>
+    <lastmod>2026-02-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://dailyazkar.site/contact</loc>
+    <lastmod>2026-02-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://dailyazkar.site/daily-blogs</loc>
+    <lastmod>2026-03-05</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://dailyazkar.site/daily-blogs/dua-never-rejected</loc>
+    <lastmod>2026-03-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://dailyazkar.site/resources</loc>
-    <lastmod>2026-02-19</lastmod>
+    <loc>https://dailyazkar.site/daily-blogs/importance-of-morning-azkar</loc>
+    <lastmod>2026-03-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://dailyazkar.site/daily-blogs/understanding-ruqyah</loc>
+    <lastmod>2026-03-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://dailyazkar.site/daily-blogs/duas-for-anxiety</loc>
+    <lastmod>2026-03-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://dailyazkar.site/daily-blogs/consistency-with-daily-dhikr</loc>
+    <lastmod>2026-03-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://dailyazkar.site/online-quran-tutor</loc>
+    <lastmod>2026-03-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
   </url>
 </urlset>

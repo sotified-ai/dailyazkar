@@ -1,0 +1,194 @@
+import { QuranSurahContent } from "../quran-data";
+
+export const surah76: QuranSurahContent = {
+    "sura_name": "سُورَةُ الإِنسَانِ",
+    "bismillah": "بِسۡمِ ٱللَّهِ ٱلرَّحۡمَـٰنِ ٱلرَّحِيمِ",
+    "verses": [
+    {
+        "number": 1,
+        "text": "هَلْ أَتَىٰ عَلَى ٱلْإِنسَٰنِ حِينٌۭ مِّنَ ٱلدَّهْرِ لَمْ يَكُن شَيْـًۭٔا مَّذْكُورًا",
+        "translationEn": "Has there [not] come upon man a period of time when he was not a thing [even] mentioned?",
+        "translationUr": "بےشک انسان پر زمانے میں ایک ایسا وقت بھی آچکا ہے کہ وہ کوئی چیز قابل ذکر نہ تھی"
+    },
+    {
+        "number": 2,
+        "text": "إِنَّا خَلَقْنَا ٱلْإِنسَٰنَ مِن نُّطْفَةٍ أَمْشَاجٍۢ نَّبْتَلِيهِ فَجَعَلْنَٰهُ سَمِيعًۢا بَصِيرًا",
+        "translationEn": "Indeed, We created man from a sperm-drop mixture that We may try him; and We made him hearing and seeing.",
+        "translationUr": "ہم نے انسان کو نطفہٴ مخلوط سے پیدا کیا تاکہ اسے آزمائیں تو ہم نے اس کو سنتا دیکھتا بنایا"
+    },
+    {
+        "number": 3,
+        "text": "إِنَّا هَدَيْنَٰهُ ٱلسَّبِيلَ إِمَّا شَاكِرًۭا وَإِمَّا كَفُورًا",
+        "translationEn": "Indeed, We guided him to the way, be he grateful or be he ungrateful.",
+        "translationUr": "(اور) اسے رستہ بھی دکھا دیا۔ (اب) وہ خواہ شکرگزار ہو خواہ ناشکرا"
+    },
+    {
+        "number": 4,
+        "text": "إِنَّآ أَعْتَدْنَا لِلْكَٰفِرِينَ سَلَٰسِلَا۟ وَأَغْلَٰلًۭا وَسَعِيرًا",
+        "translationEn": "Indeed, We have prepared for the disbelievers chains and shackles and a blaze.",
+        "translationUr": "ہم نے کافروں کے لئے زنجیر اور طوق اور دہکتی آگ تیار کر رکھی ہے"
+    },
+    {
+        "number": 5,
+        "text": "إِنَّ ٱلْأَبْرَارَ يَشْرَبُونَ مِن كَأْسٍۢ كَانَ مِزَاجُهَا كَافُورًا",
+        "translationEn": "Indeed, the righteous will drink from a cup [of wine] whose mixture is of Kafur,",
+        "translationUr": "جو نیکو کار ہیں اور وہ ایسی شراب نوش جان کریں گے جس میں کافور کی آمیزش ہوگی"
+    },
+    {
+        "number": 6,
+        "text": "عَيْنًۭا يَشْرَبُ بِهَا عِبَادُ ٱللَّهِ يُفَجِّرُونَهَا تَفْجِيرًۭا",
+        "translationEn": "A spring of which the [righteous] servants of Allah will drink; they will make it gush forth in force [and abundance].",
+        "translationUr": "یہ ایک چشمہ ہے جس میں سے خدا کے بندے پئیں گے اور اس میں سے (چھوٹی چھوٹی) نہریں نکالیں گے"
+    },
+    {
+        "number": 7,
+        "text": "يُوفُونَ بِٱلنَّذْرِ وَيَخَافُونَ يَوْمًۭا كَانَ شَرُّهُۥ مُسْتَطِيرًۭا",
+        "translationEn": "They [are those who] fulfill [their] vows and fear a Day whose evil will be widespread.",
+        "translationUr": "یہ لوگ نذریں پوری کرتے ہیں اور اس دن سے جس کی سختی پھیل رہی ہوگی خوف رکھتے ہیں"
+    },
+    {
+        "number": 8,
+        "text": "وَيُطْعِمُونَ ٱلطَّعَامَ عَلَىٰ حُبِّهِۦ مِسْكِينًۭا وَيَتِيمًۭا وَأَسِيرًا",
+        "translationEn": "And they give food in spite of love for it to the needy, the orphan, and the captive,",
+        "translationUr": "اور باوجود یہ کہ ان کو خود طعام کی خواہش (اور حاجت) ہے فقیروں اور یتیموں اور قیدیوں کو کھلاتے ہیں"
+    },
+    {
+        "number": 9,
+        "text": "إِنَّمَا نُطْعِمُكُمْ لِوَجْهِ ٱللَّهِ لَا نُرِيدُ مِنكُمْ جَزَآءًۭ وَلَا شُكُورًا",
+        "translationEn": "[Saying], \"We feed you only for the countenance of Allah. We wish not from you reward or gratitude.",
+        "translationUr": "(اور کہتے ہیں کہ) ہم تم کو خالص خدا کے لئے کھلاتے ہیں۔ نہ تم سے عوض کے خواستگار ہیں نہ شکرگزاری کے (طلبگار)"
+    },
+    {
+        "number": 10,
+        "text": "إِنَّا نَخَافُ مِن رَّبِّنَا يَوْمًا عَبُوسًۭا قَمْطَرِيرًۭا",
+        "translationEn": "Indeed, We fear from our Lord a Day austere and distressful.\"",
+        "translationUr": "ہم کو اپنے پروردگار سے اس دن کا ڈر لگتا ہے (جو چہروں کو) کریہہ المنظر اور (دلوں کو) سخت (مضطر کر دینے والا) ہے"
+    },
+    {
+        "number": 11,
+        "text": "فَوَقَىٰهُمُ ٱللَّهُ شَرَّ ذَٰلِكَ ٱلْيَوْمِ وَلَقَّىٰهُمْ نَضْرَةًۭ وَسُرُورًۭا",
+        "translationEn": "So Allah will protect them from the evil of that Day and give them radiance and happiness",
+        "translationUr": "تو خدا ان کو اس دن کی سختی سے بچالے گا اور تازگی اور خوش دلی عنایت فرمائے گا"
+    },
+    {
+        "number": 12,
+        "text": "وَجَزَىٰهُم بِمَا صَبَرُوا۟ جَنَّةًۭ وَحَرِيرًۭا",
+        "translationEn": "And will reward them for what they patiently endured [with] a garden [in Paradise] and silk [garments].",
+        "translationUr": "اور ان کے صبر کے بدلے ان کو بہشت (کے باغات) اور ریشم (کے ملبوسات) عطا کرے گا"
+    },
+    {
+        "number": 13,
+        "text": "مُّتَّكِـِٔينَ فِيهَا عَلَى ٱلْأَرَآئِكِ ۖ لَا يَرَوْنَ فِيهَا شَمْسًۭا وَلَا زَمْهَرِيرًۭا",
+        "translationEn": "[They will be] reclining therein on adorned couches. They will not see therein any [burning] sun or [freezing] cold.",
+        "translationUr": "ان میں وہ تختوں پر تکیے لگائے بیٹھے ہوں گے۔ وہاں نہ دھوپ (کی حدت) دیکھیں گے نہ سردی کی شدت"
+    },
+    {
+        "number": 14,
+        "text": "وَدَانِيَةً عَلَيْهِمْ ظِلَٰلُهَا وَذُلِّلَتْ قُطُوفُهَا تَذْلِيلًۭا",
+        "translationEn": "And near above them are its shades, and its [fruit] to be picked will be lowered in compliance.",
+        "translationUr": "ان سے (ثمردار شاخیں اور) ان کے سائے قریب ہوں گے اور میوؤں کے گچھے جھکے ہوئے لٹک رہے ہوں گے"
+    },
+    {
+        "number": 15,
+        "text": "وَيُطَافُ عَلَيْهِم بِـَٔانِيَةٍۢ مِّن فِضَّةٍۢ وَأَكْوَابٍۢ كَانَتْ قَوَارِيرَا۠",
+        "translationEn": "And there will be circulated among them vessels of silver and cups having been [created] clear [as glass],",
+        "translationUr": "خدام) چاندی کے باسن لئے ہوئے ان کے اردگرد پھریں گے اور شیشے کے (نہایت شفاف) گلاس"
+    },
+    {
+        "number": 16,
+        "text": "قَوَارِيرَا۟ مِن فِضَّةٍۢ قَدَّرُوهَا تَقْدِيرًۭا",
+        "translationEn": "Clear glasses [made] from silver of which they have determined the measure.",
+        "translationUr": "اور شیشے بھی چاندی کے جو ٹھیک اندازے کے مطابق بنائے گئے ہیں"
+    },
+    {
+        "number": 17,
+        "text": "وَيُسْقَوْنَ فِيهَا كَأْسًۭا كَانَ مِزَاجُهَا زَنجَبِيلًا",
+        "translationEn": "And they will be given to drink a cup [of wine] whose mixture is of ginger",
+        "translationUr": "اور وہاں ان کو ایسی شراب (بھی) پلائی جائے گی جس میں سونٹھ کی آمیزش ہوگی"
+    },
+    {
+        "number": 18,
+        "text": "عَيْنًۭا فِيهَا تُسَمَّىٰ سَلْسَبِيلًۭا",
+        "translationEn": "[From] a fountain within Paradise named Salsabeel.",
+        "translationUr": "یہ بہشت میں ایک چشمہ ہے جس کا نام سلسبیل ہے"
+    },
+    {
+        "number": 19,
+        "text": "۞ وَيَطُوفُ عَلَيْهِمْ وِلْدَٰنٌۭ مُّخَلَّدُونَ إِذَا رَأَيْتَهُمْ حَسِبْتَهُمْ لُؤْلُؤًۭا مَّنثُورًۭا",
+        "translationEn": "There will circulate among them young boys made eternal. When you see them, you would think them [as beautiful as] scattered pearls.",
+        "translationUr": "اور ان کے پاس لڑکے آتے جاتے ہوں گے جو ہمیشہ (ایک ہی حالت پر) رہیں گے۔ جب تم ان پر نگاہ ڈالو تو خیال کرو کہ بکھرے ہوئے موتی ہیں"
+    },
+    {
+        "number": 20,
+        "text": "وَإِذَا رَأَيْتَ ثَمَّ رَأَيْتَ نَعِيمًۭا وَمُلْكًۭا كَبِيرًا",
+        "translationEn": "And when you look there [in Paradise], you will see pleasure and great dominion.",
+        "translationUr": "اور بہشت میں (جہاں) آنکھ اٹھاؤ گے کثرت سے نعمت اور عظیم (الشان) سلطنت دیکھو گے"
+    },
+    {
+        "number": 21,
+        "text": "عَٰلِيَهُمْ ثِيَابُ سُندُسٍ خُضْرٌۭ وَإِسْتَبْرَقٌۭ ۖ وَحُلُّوٓا۟ أَسَاوِرَ مِن فِضَّةٍۢ وَسَقَىٰهُمْ رَبُّهُمْ شَرَابًۭا طَهُورًا",
+        "translationEn": "Upon the inhabitants will be green garments of fine silk and brocade. And they will be adorned with bracelets of silver, and their Lord will give them a purifying drink.",
+        "translationUr": "ان (کے بدنوں) پر دیبا سبز اور اطلس کے کپڑے ہوں گے۔ اور انہیں چاندی کے کنگن پہنائے جائیں گے اور ان کا پروردگار ان کو نہایت پاکیزہ شراب پلائے گا"
+    },
+    {
+        "number": 22,
+        "text": "إِنَّ هَٰذَا كَانَ لَكُمْ جَزَآءًۭ وَكَانَ سَعْيُكُم مَّشْكُورًا",
+        "translationEn": "[And it will be said], \"Indeed, this is for you a reward, and your effort has been appreciated.\"",
+        "translationUr": "یہ تمہارا صلہ اور تمہاری کوشش (خدا کے ہاں) مقبول ہوئی"
+    },
+    {
+        "number": 23,
+        "text": "إِنَّا نَحْنُ نَزَّلْنَا عَلَيْكَ ٱلْقُرْءَانَ تَنزِيلًۭا",
+        "translationEn": "Indeed, it is We who have sent down to you, [O Muhammad], the Qur'an progressively.",
+        "translationUr": "اے محمد (ﷺ) ہم نے تم پر قرآن آہستہ آہستہ نازل کیا ہے"
+    },
+    {
+        "number": 24,
+        "text": "فَٱصْبِرْ لِحُكْمِ رَبِّكَ وَلَا تُطِعْ مِنْهُمْ ءَاثِمًا أَوْ كَفُورًۭا",
+        "translationEn": "So be patient for the decision of your Lord and do not obey from among them a sinner or ungrateful [disbeliever].",
+        "translationUr": "تو اپنے پروردگار کے حکم کے مطابق صبر کئے رہو اور ان لوگوں میں سے کسی بد عمل اور ناشکرے کا کہا نہ مانو"
+    },
+    {
+        "number": 25,
+        "text": "وَٱذْكُرِ ٱسْمَ رَبِّكَ بُكْرَةًۭ وَأَصِيلًۭا",
+        "translationEn": "And mention the name of your Lord [in prayer] morning and evening",
+        "translationUr": "اور صبح وشام اپنے پروردگار کا نام لیتے رہو"
+    },
+    {
+        "number": 26,
+        "text": "وَمِنَ ٱلَّيْلِ فَٱسْجُدْ لَهُۥ وَسَبِّحْهُ لَيْلًۭا طَوِيلًا",
+        "translationEn": "And during the night prostrate to Him and exalt Him a long [part of the] night.",
+        "translationUr": "اور رات کو بڑی رات تک سجدے کرو اور اس کی پاکی بیان کرتے رہو"
+    },
+    {
+        "number": 27,
+        "text": "إِنَّ هَٰٓؤُلَآءِ يُحِبُّونَ ٱلْعَاجِلَةَ وَيَذَرُونَ وَرَآءَهُمْ يَوْمًۭا ثَقِيلًۭا",
+        "translationEn": "Indeed, these [disbelievers] love the immediate and leave behind them a grave Day.",
+        "translationUr": "یہ لوگ دنیا کو دوست رکھتے ہیں اور (قیامت کے) بھاری دن کو پس پشت چھوڑے دیتے ہیں"
+    },
+    {
+        "number": 28,
+        "text": "نَّحْنُ خَلَقْنَٰهُمْ وَشَدَدْنَآ أَسْرَهُمْ ۖ وَإِذَا شِئْنَا بَدَّلْنَآ أَمْثَٰلَهُمْ تَبْدِيلًا",
+        "translationEn": "We have created them and strengthened their forms, and when We will, We can change their likenesses with [complete] alteration.",
+        "translationUr": "ہم نے ان کو پیدا کیا اور ان کے مقابل کو مضبوط بنایا۔ اور اگر ہم چاہیں تو ان کے بدلے ان ہی کی طرح اور لوگ لے آئیں"
+    },
+    {
+        "number": 29,
+        "text": "إِنَّ هَٰذِهِۦ تَذْكِرَةٌۭ ۖ فَمَن شَآءَ ٱتَّخَذَ إِلَىٰ رَبِّهِۦ سَبِيلًۭا",
+        "translationEn": "Indeed, this is a reminder, so he who wills may take to his Lord a way.",
+        "translationUr": "یہ تو نصیحت ہے۔ جو چاہے اپنے پروردگار کی طرف پہنچنے کا رستہ اختیار کرے"
+    },
+    {
+        "number": 30,
+        "text": "وَمَا تَشَآءُونَ إِلَّآ أَن يَشَآءَ ٱللَّهُ ۚ إِنَّ ٱللَّهَ كَانَ عَلِيمًا حَكِيمًۭا",
+        "translationEn": "And you do not will except that Allah wills. Indeed, Allah is ever Knowing and Wise.",
+        "translationUr": "اور تم کچھ بھی نہیں چاہ سکتے مگر جو خدا کو منظور ہو۔ بےشک خدا جاننے والا حکمت والا ہے"
+    },
+    {
+        "number": 31,
+        "text": "يُدْخِلُ مَن يَشَآءُ فِى رَحْمَتِهِۦ ۚ وَٱلظَّٰلِمِينَ أَعَدَّ لَهُمْ عَذَابًا أَلِيمًۢا",
+        "translationEn": "He admits whom He wills into His mercy; but the wrongdoers - He has prepared for them a painful punishment.",
+        "translationUr": "جس کو چاہتا ہے اپنی رحمت میں داخل کرلیتا ہے اور ظالموں کے لئے اس نے دکھ دینے والا عذاب تیار کر رکھا ہے"
+    }
+]
+};

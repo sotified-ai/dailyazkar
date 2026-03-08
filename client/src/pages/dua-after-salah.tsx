@@ -114,7 +114,7 @@ export default function DuaAfterSalah() {
       <SEOHead
         title="Dua After Salah - Complete Post-Prayer Supplications | Daily Azkar"
         description="Learn the authentic duas and supplications to recite after completing your daily prayers. Includes Arabic text, translations, and references from Hadith."
-        keywords="dua after salah, post prayer dua, after namaz dua, salah supplications, tasbih after prayer, adhkar after salah, دعاء بعد الصلاة"
+        keywords="dua after salah, post prayer dua, after namaz dua, salah supplications, tasbih after prayer, adhkar after salah, دعاء بعد الصلاة, dua after wudu, fajr time in la, salah meaning, salat al sunnah, dua after azan in english, how to recite namaz, sunni dua after namaz, dua after prayer, dua after the azan, dua after namaz, how to perform salat, sunnah salah, attahiyat in english, dua istikhara, istikhara supplication, dua for istikhara"
         canonical="https://dailyazkar.site/dua-after-salah"
         structuredData={structuredData}
       />

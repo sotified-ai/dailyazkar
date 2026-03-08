@@ -1,4 +1,4 @@
-import { azkarData } from "@/data/azkar-data";
+import { azkarData, anasDua } from "@/data/azkar-data";
 
 import { SEOHead } from "@/components/seo-head";
 import { AdSense } from "@/components/adsense";
@@ -24,7 +24,7 @@ export default function MorningAzkar() {
     "@context": "https://schema.org",
     "@type": "Article",
     "headline": "Morning Azkar - Complete Guide to Dawn Supplications",
-    "description": "Discover the complete collection of Morning Azkar (أذكار الصباح) with Arabic text, transliteration, and English translations. Start your day with blessed remembrance.",
+    "description": "Discover the complete collection of Morning Azkar (أذكار الصباح) with Arabic text, transliteration, and English translations. Includes Prophetic prescriptions for sufficiency (کفایت کا نبوى نسخہ) in all affairs and prayers for completely thanking Allah's blessings.",
     "author": {
       "@type": "Organization",
       "name": "Daily Azkar"
@@ -70,9 +70,9 @@ export default function MorningAzkar() {
   return (
     <div className="pt-24 bg-gradient-to-br from-amber-50 via-white to-orange-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 min-h-screen">
       <SEOHead
-        title="Morning Azkar (أذكار الصباح) - Complete Guide to Dawn Supplications | Daily Azkar"
-        description="Discover the complete collection of Morning Azkar with Arabic text, transliteration, and English translations. Start your day with blessed remembrance and divine protection."
-        keywords="morning azkar, أذكار الصباح, dawn prayers islam, subh azkar, morning dhikr, morning remembrance, islamic supplications, fajr duas"
+        title="50 Authentic Morning Azkar with Translation | Daily Azkar"
+        description="Discover the complete collection of Morning Azkar with Arabic text, transliteration, and English translations. Start your day with blessed remembrance, divine protection, and Prophetic prescriptions for sufficiency in worldly and hereafter affairs."
+        keywords="morning azkar, أذكار الصباح, dawn prayers islam, subh azkar, morning dhikr, morning remembrance, Prophetic Prescription for Sufficiency, دنیا و آخرت کے کاموں پر کفایت کا نبوى نسخہ, ہر چیز سے کفایت کا نبوى نسخہ, اپنے لئے اللہ کى نعمتوں کو مکمّل فرمانے کا نبوى نسخہ, دن اور رات کى نعمتوں کا شکر ادا کرنے کا نبوى نسخہ, completing allah's blessings, islamic supplications, fajr duas, ramzan azkar, ramadan morning azkar, sehri dua, fasting duas, azkar after fajr, ramzaan azkar, suhoor dua, الاذكار الصباحية, morning dua, morning adhkar, waking up dua, dua for waking up, dua after waking up, dua wake up, dua waking up, morning dus, complete morning, best morning prayer, morning doa, wake up dua"
         canonical="https://dailyazkar.site/morning-azkar"
         structuredData={structuredData}
       />
@@ -149,6 +149,19 @@ export default function MorningAzkar() {
           {morningAzkar.items.map((azkar, index) => (
             <DuaBlock key={azkar.id} azkar={azkar} index={index} />
           ))}
+        </div>
+
+        {/* Hazrat Anas Dua Section */}
+        <div className="max-w-4xl mx-auto mt-16 mb-8">
+          <div className="text-center mb-10">
+            <h2 className="text-3xl font-display font-bold text-gray-800 dark:text-white mb-4">
+              Dua of Hazrat Anas (RA)
+            </h2>
+            <p className="text-gray-600 dark:text-gray-300">
+              A powerful daily protection dua against all harm, taught by the Prophet ﷺ (narrated by Hazrat Anas RA)
+            </p>
+          </div>
+          <DuaBlock azkar={anasDua} index={morningAzkar.items.length} />
         </div>
 
         <AdSense className="my-8" />

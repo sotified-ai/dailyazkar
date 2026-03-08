@@ -50,7 +50,7 @@ export default function Quran() {
       <SEOHead
         title="Holy Quran - Browse All 114 Surahs | Daily Azkar"
         description="Explore the Holy Quran with all 114 Surahs. Browse Meccan and Medinan chapters with verse counts. Discover divine guidance, wisdom, and light for believers."
-        keywords="quran, holy quran, quran surahs, quran chapters, meccan surahs, medinan surahs, القرآن الكريم, islamic scripture, quran online"
+        keywords="quran, holy quran, quran surahs, quran chapters, meccan surahs, medinan surahs, القرآن الكريم, islamic scripture, quran online, al kursi translation, ayatul kursiyyu transliteration, al asr, ayatul kursi in transliteration, falaq surah in english, translation of ayat al kursi, surah falaq transliteration, transliteration of surah falaq, surah al falaq transliteration, surat al falaq, ayat al kursi translation, fatiha translation, surah baqarah transliteration, wal asr translation, al asr translation, ayat kursi transliteration, ayatul kursi with transliteration, surah ikhlas translation, surah ikhlas transliteration, surah list, 4 qul surah, al asr surah translation, al fajr surah, ayatul kursi and translation, ayatul kursi translation"
         canonical="https://dailyazkar.site/quran"
         structuredData={structuredData}
       />
@@ -85,9 +85,32 @@ export default function Quran() {
             <p className="text-gray-600 dark:text-gray-300 leading-relaxed mb-4">
               Allah says: <em className="text-emerald-600 dark:text-emerald-400">"This is the Book about which there is no doubt, a guidance for those conscious of Allah"</em> (Quran 2:2). The Quran has been preserved letter by letter, exactly as it was revealed 1400 years ago, fulfilling Allah's promise to protect His final message.
             </p>
-            <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
+            <p className="text-gray-600 dark:text-gray-300 leading-relaxed mb-8">
               The Quran consists of 114 Surahs (chapters), divided into 30 Juz (parts). Each Surah addresses different aspects of faith, worship, ethics, and law. Regular recitation and reflection upon its verses brings immense reward, guidance, and tranquility to the heart of every believer.
             </p>
+
+            <div className="bg-emerald-50 dark:bg-emerald-900/20 rounded-xl p-6 border border-emerald-100 dark:border-emerald-800/30">
+              <h3 className="text-xl font-bold text-gray-800 dark:text-white mb-4 flex items-center">
+                <i className="fas fa-language text-emerald-600 dark:text-emerald-400 mr-3 text-2xl"></i>
+                Authentic Translations
+              </h3>
+              <ul className="space-y-4">
+                <li className="flex items-start text-gray-700 dark:text-gray-300">
+                  <i className="fas fa-check-circle text-emerald-500 mt-1 mr-3 flex-shrink-0"></i>
+                  <div>
+                    <strong className="text-gray-900 dark:text-gray-100 block mb-1">Authentic English Translation: (Saheeh International)</strong>
+                    The global gold standard for clear, authentic English translation.
+                  </div>
+                </li>
+                <li className="flex items-start text-gray-700 dark:text-gray-300">
+                  <i className="fas fa-check-circle text-emerald-500 mt-1 mr-3 flex-shrink-0"></i>
+                  <div>
+                    <strong className="text-gray-900 dark:text-gray-100 block mb-1">Authentic Urdu Translation: (Fateh Muhammad Jalandhry)</strong>
+                    One of the most beautifully written and scholar-approved Urdu translations available.
+                  </div>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
 
@@ -116,39 +139,41 @@ export default function Quran() {
         {/* Surah List */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
           {quranSurahs.map((surah) => (
-            <Card key={surah.number} className="glassmorphism border-0 shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer group">
-              <CardHeader className="pb-3">
-                <CardTitle className="flex items-center justify-between">
-                  <div className="flex items-center space-x-3">
-                    <div className="w-10 h-10 bg-gradient-to-br from-emerald-500 to-teal-600 rounded-full flex items-center justify-center text-white font-bold text-sm">
-                      {surah.number}
+            <Link key={surah.number} href={`/quran/${surah.number}`}>
+              <Card className="glassmorphism border-0 shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer group h-full">
+                <CardHeader className="pb-3">
+                  <CardTitle className="flex items-center justify-between">
+                    <div className="flex items-center space-x-3">
+                      <div className="w-10 h-10 bg-gradient-to-br from-emerald-500 to-teal-600 rounded-full flex items-center justify-center text-white font-bold text-sm">
+                        {surah.number}
+                      </div>
+                      <div>
+                        <h3 className="text-lg font-semibold text-gray-800 dark:text-white group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors">
+                          {surah.name}
+                        </h3>
+                        <p className="text-xl font-arabic text-emerald-600 dark:text-emerald-400">
+                          {surah.nameArabic}
+                        </p>
+                      </div>
                     </div>
-                    <div>
-                      <h3 className="text-lg font-semibold text-gray-800 dark:text-white group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors">
-                        {surah.name}
-                      </h3>
-                      <p className="text-xl font-arabic text-emerald-600 dark:text-emerald-400">
-                        {surah.nameArabic}
-                      </p>
+                    <i className="fas fa-chevron-right text-gray-400 group-hover:text-emerald-500 group-hover:translate-x-1 transition-all"></i>
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <div className="flex items-center justify-between">
+                    <div className="flex items-center space-x-4">
+                      <div className="text-sm text-gray-600 dark:text-gray-400">
+                        <i className="fas fa-list mr-1"></i>
+                        {surah.verses} verses
+                      </div>
+                      <Badge variant={surah.type === "meccan" ? "default" : "secondary"}>
+                        {surah.type === "meccan" ? "Meccan" : "Medinan"}
+                      </Badge>
                     </div>
                   </div>
-                  <i className="fas fa-chevron-right text-gray-400 group-hover:text-emerald-500 group-hover:translate-x-1 transition-all"></i>
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <div className="flex items-center justify-between">
-                  <div className="flex items-center space-x-4">
-                    <div className="text-sm text-gray-600 dark:text-gray-400">
-                      <i className="fas fa-list mr-1"></i>
-                      {surah.verses} verses
-                    </div>
-                    <Badge variant={surah.type === "meccan" ? "default" : "secondary"}>
-                      {surah.type === "meccan" ? "Meccan" : "Medinan"}
-                    </Badge>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
+                </CardContent>
+              </Card>
+            </Link>
           ))}
         </div>
 

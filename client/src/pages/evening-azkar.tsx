@@ -1,4 +1,4 @@
-import { azkarData } from "@/data/azkar-data";
+import { azkarData, anasDua } from "@/data/azkar-data";
 
 import { SEOHead } from "@/components/seo-head";
 import { AdSense } from "@/components/adsense";
@@ -70,9 +70,9 @@ export default function EveningAzkar() {
   return (
     <div className="pt-24 bg-gradient-to-br from-emerald-50 via-white to-blue-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 min-h-screen">
       <SEOHead
-        title="Evening Azkar (أذكار المساء) - Complete Guide to Night Supplications | Daily Azkar"
+        title="Evening Azkar (Authentic & Verified) | Daily Azkar"
         description="Discover the complete collection of Evening Azkar with Arabic text, transliteration, and English translations. Protect yourself with these blessed night supplications from authentic Islamic sources."
-        keywords="evening azkar, أذكار المساء, night dhikr, evening prayers islam, masnoon sham, evening remembrance, islamic supplications, bedtime duas"
+        keywords="evening azkar, أذكار المساء, night dhikr, evening prayers islam, masnoon sham, evening remembrance, islamic supplications, bedtime duas, ramzan evening azkar, ramadan azkar msa, iftar dua, dua before iftar, fasting dua, ramzaan, roza kholne ki dua, shaam app, dua for sleeping, sleeping dua, surah lail, surah layl, al lail, al layl, daily nightly lyrics, evening adhkar, massa lyrics, short night prayer, surah al layl, al magrib, masa lyrics, dua after sleeping, dua close fast"
         canonical="https://dailyazkar.site/evening-azkar"
         structuredData={structuredData}
       />
@@ -150,6 +150,19 @@ export default function EveningAzkar() {
           {eveningAzkar.items.map((azkar, index) => (
             <DuaBlock key={azkar.id} azkar={azkar} index={index} />
           ))}
+        </div>
+
+        {/* Hazrat Anas Dua Section */}
+        <div className="max-w-4xl mx-auto mt-16 mb-8">
+          <div className="text-center mb-10">
+            <h2 className="text-3xl font-display font-bold text-gray-800 dark:text-white mb-4">
+              Dua of Hazrat Anas (RA)
+            </h2>
+            <p className="text-gray-600 dark:text-gray-300">
+              A powerful daily protection dua against all harm, taught by the Prophet ﷺ (narrated by Hazrat Anas RA)
+            </p>
+          </div>
+          <DuaBlock azkar={anasDua} index={eveningAzkar.items.length} />
         </div>
 
         <AdSense className="my-8" />

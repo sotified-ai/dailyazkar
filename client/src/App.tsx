@@ -18,16 +18,41 @@ import Home from "@/pages/home";
 import MorningAzkar from "@/pages/morning-azkar";
 import EveningAzkar from "@/pages/evening-azkar";
 import Quran from "@/pages/quran";
+import SurahDetail from "@/pages/surah-detail";
 import DuaAfterSalah from "@/pages/dua-after-salah";
 import RabbanaDuas from "@/pages/rabbana-duas";
 import Ruqiya from "@/pages/ruqiya";
+import Manzil from "@/pages/manzil";
 import AboutIslamPage from "@/pages/about-islam";
 import NotFound from "@/pages/not-found";
+import DailyBlogs from "@/pages/daily-blogs";
+import BlogPost from "@/pages/blog-post";
+import OnlineQuranTutor from "@/pages/online-quran-tutor";
 import CommunityPage from "@/pages/community";
 import DonatePage from "@/pages/donate";
 import IslamicCalendarPage from "@/pages/islamic-calendar";
 import PrayerTimesPage from "@/pages/prayer-times";
 import ResourcesPage from "@/pages/resources";
+import PrivacyPolicyPage from "@/pages/privacy-policy";
+import TermsPage from "@/pages/terms";
+import ContactPage from "@/pages/contact";
+import RamadanAzkarPage from "@/pages/ramadan-azkar";
+import Gallery from "@/pages/gallery";
+import BenefitsOfMorningAzkar from "@/pages/benefits-of-morning-azkar";
+import BenefitsOfEveningAzkar from "@/pages/benefits-of-evening-azkar";
+import AuthenticHadithOnAzkar from "@/pages/authentic-hadith-on-azkar";
+import WhenToReciteMorningAzkar from "@/pages/when-to-recite-morning-azkar";
+import DuaAfterFajrPrayer from "@/pages/dua-after-fajr-prayer";
+import DuaAfterMaghribPrayer from "@/pages/dua-after-maghrib-prayer";
+import AzkarForAnxietyInIslam from "@/pages/azkar-for-anxiety-in-islam";
+import DailyIslamicRemembranceGuide from "@/pages/daily-islamic-remembrance-guide";
+import DifferenceBetweenDhikrAndDua from "@/pages/difference-between-dhikr-and-dua";
+import QuranicDuasExplained from "@/pages/quranic-duas-explained";
+import ProtectionDuasInIslam from "@/pages/protection-duas-in-islam";
+import AzkarForProtectionFromEvilEye from "@/pages/azkar-for-protection-from-evil-eye";
+import AzkarBeforeSleep from "@/pages/azkar-before-sleep";
+import AzkarAfterEveryPrayer from "@/pages/azkar-after-every-prayer";
+import ShortAzkarForBusyMuslims from "@/pages/short-azkar-for-busy-muslims";
 
 
 function ReadingProgress() {
@@ -64,9 +89,15 @@ function Router() {
           <Route path="/morning-azkar" component={MorningAzkar} />
           <Route path="/evening-azkar" component={EveningAzkar} />
           <Route path="/quran" component={Quran} />
+          <Route path="/quran/:number" component={SurahDetail} />
           <Route path="/dua-after-salah" component={DuaAfterSalah} />
           <Route path="/rabbana-duas" component={RabbanaDuas} />
           <Route path="/ruqiya" component={Ruqiya} />
+          <Route path="/manzil" component={Manzil} />
+          <Route path="/ramadan-azkar" component={RamadanAzkarPage} />
+          <Route path="/daily-blogs" component={DailyBlogs} />
+          <Route path="/daily-blogs/:slug" component={BlogPost} />
+          <Route path="/online-quran-tutor" component={OnlineQuranTutor} />
 
           {/* Resource Routes */}
           <Route path="/about-islam" component={AboutIslamPage} />
@@ -76,6 +107,26 @@ function Router() {
           <Route path="/donate" component={DonatePage} />
           <Route path="/resources" component={ResourcesPage} />
 
+          {/* Legal & Contact Routes */}
+          <Route path="/privacy-policy" component={PrivacyPolicyPage} />
+          <Route path="/terms" component={TermsPage} />
+          <Route path="/contact" component={ContactPage} />
+          <Route path="/gallery" component={Gallery} />
+          <Route path="/benefits-of-morning-azkar" component={BenefitsOfMorningAzkar} />
+          <Route path="/benefits-of-evening-azkar" component={BenefitsOfEveningAzkar} />
+          <Route path="/authentic-hadith-on-azkar" component={AuthenticHadithOnAzkar} />
+          <Route path="/when-to-recite-morning-azkar" component={WhenToReciteMorningAzkar} />
+          <Route path="/dua-after-fajr-prayer" component={DuaAfterFajrPrayer} />
+          <Route path="/dua-after-maghrib-prayer" component={DuaAfterMaghribPrayer} />
+          <Route path="/azkar-for-anxiety-in-islam" component={AzkarForAnxietyInIslam} />
+          <Route path="/daily-islamic-remembrance-guide" component={DailyIslamicRemembranceGuide} />
+          <Route path="/difference-between-dhikr-and-dua" component={DifferenceBetweenDhikrAndDua} />
+          <Route path="/quranic-duas-explained" component={QuranicDuasExplained} />
+          <Route path="/protection-duas-in-islam" component={ProtectionDuasInIslam} />
+          <Route path="/azkar-for-protection-from-evil-eye" component={AzkarForProtectionFromEvilEye} />
+          <Route path="/azkar-before-sleep" component={AzkarBeforeSleep} />
+          <Route path="/azkar-after-every-prayer" component={AzkarAfterEveryPrayer} />
+          <Route path="/short-azkar-for-busy-muslims" component={ShortAzkarForBusyMuslims} />
 
           {/* Legacy Redirects */}
           <Route path="/index.html"><RedirectTo to="/" /></Route>
@@ -86,6 +137,7 @@ function Router() {
           <Route path="/dua-after-salah.html"><RedirectTo to="/dua-after-salah" /></Route>
           <Route path="/rabbana-duas.html"><RedirectTo to="/rabbana-duas" /></Route>
           <Route path="/ruqiya.html"><RedirectTo to="/ruqiya" /></Route>
+          <Route path="/manzil.html"><RedirectTo to="/manzil" /></Route>
           <Route path="/prayer-times.html"><RedirectTo to="/prayer-times" /></Route>
           <Route path="/islamic-calendar.html"><RedirectTo to="/islamic-calendar" /></Route>
           <Route path="/community.html"><RedirectTo to="/community" /></Route>

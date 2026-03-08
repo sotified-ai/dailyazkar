@@ -98,7 +98,7 @@ export function DuaBlock({ azkar, index }: DuaBlockProps) {
                 {/* Translation */}
                 <div className="mb-6">
                     <h4 className="font-semibold text-gray-800 dark:text-white mb-2 text-sm uppercase tracking-wide opacity-70">Translation</h4>
-                    <p className="text-gray-600 dark:text-gray-300 leading-relaxed font-serif">
+                    <p className="text-gray-600 dark:text-gray-300 leading-relaxed font-serif whitespace-pre-wrap">
                         {azkar.translation}
                     </p>
                 </div>

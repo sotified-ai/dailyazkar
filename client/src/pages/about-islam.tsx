@@ -202,6 +202,61 @@ export default function AboutIslamPage() {
           </div>
         </div>
 
+        {/* Authenticity Section */}
+        <div className="max-w-4xl mx-auto mb-12">
+          <div className="glassmorphism rounded-2xl p-8">
+            <h2 className="text-2xl font-display font-bold text-gray-800 dark:text-white mb-6 text-center">
+              Our Commitment to Authenticity
+            </h2>
+            
+            <div className="grid md:grid-cols-2 gap-6">
+              <div className="space-y-4">
+                <div className="flex items-start">
+                  <div className="mr-4 mt-1 text-amber-500">
+                    <i className="fas fa-book-open"></i>
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-gray-800 dark:text-white">Source Verification</h3>
+                    <p className="text-gray-600 dark:text-gray-300 text-sm">All content is verified through authentic Islamic sources including Quran, Sahih Hadith collections, and classical commentaries.</p>
+                  </div>
+                </div>
+                
+                <div className="flex items-start">
+                  <div className="mr-4 mt-1 text-amber-500">
+                    <i className="fas fa-graduation-cap"></i>
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-gray-800 dark:text-white">Scholarly Review</h3>
+                    <p className="text-gray-600 dark:text-gray-300 text-sm">Our content undergoes review by qualified Islamic scholars to ensure accuracy and adherence to authentic teachings.</p>
+                  </div>
+                </div>
+              </div>
+              
+              <div className="space-y-4">
+                <div className="flex items-start">
+                  <div className="mr-4 mt-1 text-amber-500">
+                    <i className="fas fa-check-circle"></i>
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-gray-800 dark:text-white">Reference Standards</h3>
+                    <p className="text-gray-600 dark:text-gray-300 text-sm">We reference established works like Hisn al-Muslim, Al-Adhkar by Imam Nawawi, and authentic hadith collections.</p>
+                  </div>
+                </div>
+                
+                <div className="flex items-start">
+                  <div className="mr-4 mt-1 text-amber-500">
+                    <i className="fas fa-gavel"></i>
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-gray-800 dark:text-white">Verification Methodology</h3>
+                    <p className="text-gray-600 dark:text-gray-300 text-sm">Multiple verification steps ensure each piece of content meets the highest standards of Islamic scholarship.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
         {/* Internal Links */}
         <div className="max-w-4xl mx-auto mb-12">
           <h3 className="text-xl font-semibold text-gray-800 dark:text-white mb-4 text-center">

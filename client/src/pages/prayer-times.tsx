@@ -2,7 +2,7 @@ import { SEOHead } from '@/components/seo-head';
 import { AdSense } from '@/components/adsense';
 import { Button } from '@/components/ui/button';
 import { Select, SelectTrigger, SelectValue, SelectContent, SelectItem } from '@/components/ui/select';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Link } from 'wouter';
 
 type City = string;
@@ -14,23 +14,58 @@ const cities: Record<Country, City[]> = {
   Other: ['New York', 'Dubai', 'Istanbul', 'Cairo']
 };
 
+interface PrayerTimesData {
+  fajr: string;
+  sunrise: string;
+  dhuhr: string;
+  asr: string;
+  maghrib: string;
+  isha: string;
+}
+
 export default function PrayerTimesPage() {
   const [selectedCountry, setSelectedCountry] = useState<Country>('Pakistan');
   const [selectedCity, setSelectedCity] = useState<City>('Karachi');
+  const [prayerTimes, setPrayerTimes] = useState<PrayerTimesData | null>(null);
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
-  const getPrayerTimes = () => {
-    // TODO: Implement prayer times API integration
-    return {
-      fajr: '04:30',
-      sunrise: '05:45',
-      dhuhr: '12:30',
-      asr: '15:45',
-      maghrib: '18:30',
-      isha: '19:45'
-    };
+  const fetchPrayerTimes = async (city: string) => {
+    setIsLoading(true);
+    setError(null);
+    try {
+      const today = new Date();
+      const dd = String(today.getDate()).padStart(2, '0');
+      const mm = String(today.getMonth() + 1).padStart(2, '0');
+      const yyyy = today.getFullYear();
+      const response = await fetch(
+        `https://api.aladhan.com/v1/timingsByCity/${dd}-${mm}-${yyyy}?city=${encodeURIComponent(city)}&country=${encodeURIComponent(selectedCountry === 'Other' ? '' : selectedCountry)}&method=2`
+      );
+      if (!response.ok) throw new Error('Failed to fetch prayer times');
+      const data = await response.json();
+      const t = data.data.timings;
+      setPrayerTimes({
+        fajr: t.Fajr,
+        sunrise: t.Sunrise,
+        dhuhr: t.Dhuhr,
+        asr: t.Asr,
+        maghrib: t.Maghrib,
+        isha: t.Isha
+      });
+    } catch (err) {
+      setError('Could not load prayer times. Please try again.');
+      // Fallback approximate times
+      setPrayerTimes({ fajr: '—', sunrise: '—', dhuhr: '—', asr: '—', maghrib: '—', isha: '—' });
+    } finally {
+      setIsLoading(false);
+    }
   };
 
-  const prayerTimes = getPrayerTimes();
+  // Fetch on mount and when city/country changes
+  useEffect(() => {
+    fetchPrayerTimes(selectedCity);
+  }, [selectedCity, selectedCountry]);
+
 
   const structuredData = {
     "@context": "https://schema.org",
@@ -69,7 +104,7 @@ export default function PrayerTimesPage() {
     {
       name: 'Fajr',
       arabic: 'الفجر',
-      time: prayerTimes.fajr,
+      time: prayerTimes?.fajr ?? '—',
       description: 'The dawn prayer, performed from the beginning of twilight until just before sunrise.',
       rakah: '2 Fard',
       icon: 'fa-sun'
@@ -77,7 +112,7 @@ export default function PrayerTimesPage() {
     {
       name: 'Dhuhr',
       arabic: 'الظهر',
-      time: prayerTimes.dhuhr,
+      time: prayerTimes?.dhuhr ?? '—',
       description: 'The noon prayer, performed after the sun passes its zenith until the afternoon.',
       rakah: '4 Fard',
       icon: 'fa-cloud-sun'
@@ -85,7 +120,7 @@ export default function PrayerTimesPage() {
     {
       name: 'Asr',
       arabic: 'العصر',
-      time: prayerTimes.asr,
+      time: prayerTimes?.asr ?? '—',
       description: 'The afternoon prayer, performed from mid-afternoon until just before sunset.',
       rakah: '4 Fard',
       icon: 'fa-sun'
@@ -93,7 +128,7 @@ export default function PrayerTimesPage() {
     {
       name: 'Maghrib',
       arabic: 'المغرب',
-      time: prayerTimes.maghrib,
+      time: prayerTimes?.maghrib ?? '—',
       description: 'The sunset prayer, performed just after sunset when the sun dips below the horizon.',
       rakah: '3 Fard',
       icon: 'fa-moon'
@@ -101,7 +136,7 @@ export default function PrayerTimesPage() {
     {
       name: 'Isha',
       arabic: 'العشاء',
-      time: prayerTimes.isha,
+      time: prayerTimes?.isha ?? '—',
       description: 'The night prayer, performed from nightfall until midnight or before Fajr.',
       rakah: '4 Fard',
       icon: 'fa-star'
@@ -218,52 +253,65 @@ export default function PrayerTimesPage() {
           <h2 className="text-2xl font-display font-bold text-gray-800 dark:text-white mb-6 text-center">
             Today's Prayer Times for {selectedCity}
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {prayerInfo.map((prayer) => (
-              <div key={prayer.name} className="glassmorphism rounded-xl p-6 text-center">
-                <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <i className={`fas ${prayer.icon} text-white text-2xl`}></i>
+          {isLoading ? (
+            <div className="text-center py-12">
+              <div className="w-12 h-12 border-4 border-blue-500 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
+              <p className="text-gray-600 dark:text-gray-400">Loading prayer times...</p>
+            </div>
+          ) : error ? (
+            <div className="text-center py-8">
+              <p className="text-red-500 mb-2">{error}</p>
+              <button onClick={() => fetchPrayerTimes(selectedCity)} className="px-4 py-2 bg-blue-500 text-white rounded-full hover:bg-blue-600 transition-colors">Retry</button>
+            </div>
+          ) : (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {prayerInfo.map((prayer) => (
+                <div key={prayer.name} className="glassmorphism rounded-xl p-6 text-center">
+                  <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <i className={`fas ${prayer.icon} text-white text-2xl`}></i>
+                  </div>
+                  <h3 className="text-xl font-bold text-gray-800 dark:text-white mb-1">
+                    {prayer.name}
+                  </h3>
+                  <p className="text-lg font-arabic text-blue-600 dark:text-blue-400 mb-2">
+                    {prayer.arabic}
+                  </p>
+                  <p className="text-3xl font-bold text-gray-800 dark:text-white mb-2">
+                    {prayer.time}
+                  </p>
+                  <p className="text-sm text-emerald-600 dark:text-emerald-400 mb-3">
+                    {prayer.rakah}
+                  </p>
+                  <p className="text-sm text-gray-600 dark:text-gray-300">
+                    {prayer.description}
+                  </p>
+                </div>
+              ))}
+              {/* Sunrise Card */}
+              <div className="glassmorphism rounded-xl p-6 text-center bg-amber-50 dark:bg-amber-900/20">
+                <div className="w-16 h-16 bg-gradient-to-br from-amber-500 to-orange-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <i className="fas fa-sun text-white text-2xl"></i>
                 </div>
                 <h3 className="text-xl font-bold text-gray-800 dark:text-white mb-1">
-                  {prayer.name}
+                  Sunrise
                 </h3>
-                <p className="text-lg font-arabic text-blue-600 dark:text-blue-400 mb-2">
-                  {prayer.arabic}
+                <p className="text-lg font-arabic text-amber-600 dark:text-amber-400 mb-2">
+                  الشروق
                 </p>
                 <p className="text-3xl font-bold text-gray-800 dark:text-white mb-2">
-                  {prayer.time}
+                  {prayerTimes?.sunrise ?? '—'}
                 </p>
-                <p className="text-sm text-emerald-600 dark:text-emerald-400 mb-3">
-                  {prayer.rakah}
+                <p className="text-sm text-amber-600 dark:text-amber-400 mb-3">
+                  No Prayer
                 </p>
                 <p className="text-sm text-gray-600 dark:text-gray-300">
-                  {prayer.description}
+                  Fajr prayer must be completed before this time.
                 </p>
               </div>
-            ))}
-            {/* Sunrise Card */}
-            <div className="glassmorphism rounded-xl p-6 text-center bg-amber-50 dark:bg-amber-900/20">
-              <div className="w-16 h-16 bg-gradient-to-br from-amber-500 to-orange-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                <i className="fas fa-sun text-white text-2xl"></i>
-              </div>
-              <h3 className="text-xl font-bold text-gray-800 dark:text-white mb-1">
-                Sunrise
-              </h3>
-              <p className="text-lg font-arabic text-amber-600 dark:text-amber-400 mb-2">
-                الشروق
-              </p>
-              <p className="text-3xl font-bold text-gray-800 dark:text-white mb-2">
-                {prayerTimes.sunrise}
-              </p>
-              <p className="text-sm text-amber-600 dark:text-amber-400 mb-3">
-                No Prayer
-              </p>
-              <p className="text-sm text-gray-600 dark:text-gray-300">
-                Fajr prayer must be completed before this time.
-              </p>
             </div>
-          </div>
+          )}
         </div>
+
 
         <AdSense className="my-8" />
 

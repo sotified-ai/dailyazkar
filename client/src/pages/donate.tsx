@@ -6,29 +6,17 @@ import { Link } from 'wouter';
 
 const bankAccounts = [
   {
-    name: 'EasyPaisa',
-    accountNumber: '03214029297',
+    name: 'Mashriq Bank',
+    accountNumber: 'PK16MSHQ0000089200017509',
     icon: 'fa-mobile-alt',
     color: 'from-green-500 to-emerald-600'
   },
   {
-    name: 'JazzCash',
-    accountNumber: '03214029297',
-    icon: 'fa-money-bill-wave',
-    color: 'from-red-500 to-rose-600'
-  },
-  {
-    name: 'RaastID',
+    name: 'NayaPay/SadaPay/RaastID',
     accountNumber: '03214029297',
     icon: 'fa-university',
     color: 'from-blue-500 to-indigo-600'
   },
-  {
-    name: 'NayaPay/SadaPay',
-    accountNumber: '03214029297',
-    icon: 'fa-credit-card',
-    color: 'from-purple-500 to-violet-600'
-  }
 ];
 
 export default function DonatePage() {

@@ -7,7 +7,10 @@ export function Footer() {
     { name: "Holy Quran", href: "/quran" },
     { name: "Dua after Salah", href: "/dua-after-salah" },
     { name: "Rabbana Duas", href: "/rabbana-duas" },
-    { name: "Ruqiya", href: "/ruqiya" }
+    { name: "Ruqiya", href: "/ruqiya" },
+    { name: "Manzil", href: "/manzil" },
+    { name: "Daily Blogs", href: "/daily-blogs" },
+    { name: "Online Quran Tutor", href: "/online-quran-tutor" }
   ];
 
   const resources = [
@@ -94,12 +97,21 @@ export function Footer() {
         </div>
 
         {/* Bottom Footer */}
-        <div className="border-t border-gray-800 pt-8">
-          <div className="flex flex-col md:flex-row items-center justify-between">
-            <p className="text-gray-400 mb-4 md:mb-0">
+        <div className="border-t border-gray-800 pt-8 mt-8">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-6">
+            <p className="text-gray-400 text-center md:text-left">
               © 2025 Daily Azkar. All rights reserved. Made with ❤️ for the Muslim Ummah.
             </p>
-            <div className="flex items-center space-x-6 text-sm text-gray-400">
+
+            <div className="flex items-center gap-4 bg-gray-800/50 p-2 rounded-lg">
+              <i className="fas fa-language text-gray-400"></i>
+              <div id="google_translate_element"></div>
+            </div>
+
+            <div className="flex flex-wrap items-center justify-center gap-4 text-sm text-gray-400">
+              <a href="/privacy-policy" className="hover:text-emerald-400 transition-colors">Privacy Policy</a>
+              <a href="/terms" className="hover:text-emerald-400 transition-colors">Terms of Service</a>
+              <a href="/contact" className="hover:text-emerald-400 transition-colors">Contact Us</a>
               <a href="/donate" className="hover:text-emerald-400 transition-colors">Support</a>
             </div>
           </div>

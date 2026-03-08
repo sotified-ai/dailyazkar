@@ -4,6 +4,7 @@ import useEmblaCarousel from "embla-carousel-react";
 import { Button } from "@/components/ui/button";
 import translations from "@/data/hero-i18n.json";
 import { trackEvent } from "@/lib/analytics";
+import { quranSurahs } from "@/data/quran-data";
 
 type SupportedLang = "en" | "ur" | "ar";
 
@@ -24,6 +25,17 @@ function getTimeContext() {
     return "default";
 }
 
+function getDailySurah() {
+    const now = new Date();
+    const start = new Date(now.getFullYear(), 0, 0);
+    const diff = now.getTime() - start.getTime();
+    const oneDay = 1000 * 60 * 60 * 24;
+    const dayOfYear = Math.floor(diff / oneDay);
+
+    const index = dayOfYear % quranSurahs.length;
+    return quranSurahs[index];
+}
+
 export function HeroSlider() {
     const [lang, setLang] = useState<SupportedLang>("en");
     const [emblaRef, emblaApi] = useEmblaCarousel({
@@ -34,10 +46,19 @@ export function HeroSlider() {
     });
 
     const [selectedIndex, setSelectedIndex] = useState(0);
+    const [returningUser, setReturningUser] = useState(false);
 
     const timeContext = useMemo(() => getTimeContext(), []);
+    const dailySurah = useMemo(() => getDailySurah(), []);
 
     useEffect(() => {
+        // Track returning user
+        const visits = localStorage.getItem('azkar_visits') || '0';
+        if (parseInt(visits) > 0) {
+            setReturningUser(true);
+        }
+        localStorage.setItem('azkar_visits', (parseInt(visits) + 1).toString());
+
         // Initial lang check
         setLang(getLanguageFromCookie());
 
@@ -71,6 +92,22 @@ export function HeroSlider() {
 
     const t = (key: keyof typeof translations) => translations[key][lang];
 
+    const getDynamicCtaText = () => {
+        if (lang === "ar") return `أبرز ما في اليوم: سورة ${dailySurah.nameArabic}`;
+        if (lang === "ur") return `آج کی خاص پیشکش: سورہ ${dailySurah.nameArabic}`;
+        return `Today's Highlight: Surah ${dailySurah.name}`;
+    };
+
+    const getDynamicTitleText = () => {
+        const baseTitle = t("slide1.title");
+        if (returningUser) {
+            if (lang === "ar") return `مرحباً بك مجدداً! ${baseTitle}`;
+            if (lang === "ur") return `خوش آمدید! ${baseTitle}`;
+            return `Welcome Back! ${baseTitle}`;
+        }
+        return baseTitle;
+    };
+
     const handleCtaClick = (ctaId: string) => {
         trackEvent("hero_cta_click", "hero", `${ctaId}_slide_${selectedIndex}`);
     };
@@ -80,12 +117,12 @@ export function HeroSlider() {
     const slides = [
         {
             id: "core_azkar",
-            title: t("slide1.title"),
+            title: getDynamicTitleText(),
             subtext: t("slide1.subtext"),
             bgClass: "from-emerald-900 to-indigo-900",
             hasPrimaryCtas: true,
-            secondaryCta: t("cta.secondary_slide1"),
-            secondaryLink: "/quran/surahs/67",
+            secondaryCta: getDynamicCtaText(),
+            secondaryLink: `/quran/surahs/${dailySurah.number}`,
             icon: "fas fa-moon"
         },
         {

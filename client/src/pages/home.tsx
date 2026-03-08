@@ -1,4 +1,4 @@
-import { HeroSection } from "@/components/hero-section";
+import { HeroSlider } from "@/components/hero-slider";
 import { FeaturedContent } from "@/components/featured-content";
 import { EnhancedSearch } from "@/components/enhanced-search";
 
@@ -29,7 +29,7 @@ export default function Home() {
         canonical="https://dailyazkar.site"
         structuredData={structuredData}
       />
-      <HeroSection />
+      <HeroSlider />
       <AdSense className="my-8" />
       <FeaturedContent />
       <AdSense className="my-8" />

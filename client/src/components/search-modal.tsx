@@ -14,14 +14,14 @@ export function SearchModal({ isOpen, onClose }: SearchModalProps) {
 
   const popularSearches = [
     "Morning Azkar",
-    "Evening Azkar", 
+    "Evening Azkar",
     "Surah Al-Fatiha",
     "Istighfar"
   ];
 
   const handleSearch = async () => {
     if (!searchQuery.trim()) return;
-    
+
     setIsLoading(true);
     // Simulate API call
     setTimeout(() => {
@@ -44,11 +44,12 @@ export function SearchModal({ isOpen, onClose }: SearchModalProps) {
             size="sm"
             onClick={onClose}
             className="p-2 text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200"
+            aria-label="Close search"
           >
-            <i className="fas fa-times"></i>
+            <i className="fas fa-times" aria-hidden="true"></i>
           </Button>
         </div>
-        
+
         <div className="relative mb-4">
           <Input
             type="text"
@@ -65,7 +66,7 @@ export function SearchModal({ isOpen, onClose }: SearchModalProps) {
             <i className="fas fa-search mr-2"></i>Search
           </Button>
         </div>
-        
+
         {/* Search Loading */}
         {isLoading && (
           <div className="text-center py-6">
@@ -73,7 +74,7 @@ export function SearchModal({ isOpen, onClose }: SearchModalProps) {
             <p className="text-gray-600 dark:text-gray-400 mt-3">Searching Islamic knowledge...</p>
           </div>
         )}
-        
+
         {/* Search Results */}
         {searchResults && !isLoading && (
           <div className="mt-8">
@@ -89,7 +90,7 @@ export function SearchModal({ isOpen, onClose }: SearchModalProps) {
             </div>
           </div>
         )}
-        
+
         {/* Popular Searches */}
         <div className="mt-8">
           <h4 className="font-semibold text-gray-800 dark:text-white mb-4">Popular Searches</h4>

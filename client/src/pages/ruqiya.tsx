@@ -1,4 +1,7 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { SEOHead } from "@/components/seo-head";
+import { Breadcrumbs } from "@/components/breadcrumbs";
+import { RelatedContent } from "@/components/related-content";
 
 export default function Ruqiya() {
   const ruqiyaItems = [
@@ -44,9 +47,34 @@ export default function Ruqiya() {
     }
   ];
 
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Ruqiya - Islamic Spiritual Healing",
+    "description": "Authentic Ruqiya from Quran and Sunnah for protection against evil eye, magic, and envy. Spiritual healing through the words of Allah.",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Daily Azkar",
+      "url": "https://dailyazkar.site"
+    }
+  };
+
   return (
     <div className="pt-24 bg-gradient-to-br from-violet-50 via-white to-purple-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 min-h-screen">
+      <SEOHead
+        title="Ruqiya (رقية شرعية) - Islamic Spiritual Healing & Protection | Daily Azkar"
+        description="Authentic Ruqiya from Quran and Sunnah. Verses of protection and healing for spiritual well-being, evil eye, and protection from harm."
+        keywords="ruqiya, ruqyah shariah, islamic healing, spiritual healing, evil eye protection, quranic healing, رقية شرعية, protection duas"
+        canonical="https://dailyazkar.site/ruqiya"
+        structuredData={structuredData}
+      />
       <div className="container mx-auto px-4 py-8">
+        <Breadcrumbs items={[
+          { label: "Home", href: "/" },
+          { label: "Quran Hub", href: "/quran" },
+          { label: "Ruqiya Shariah" }
+        ]} />
+
         {/* Header */}
         <div className="text-center mb-12 animate-fade-in">
           <div className="w-20 h-20 bg-gradient-to-br from-violet-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-6">
@@ -172,6 +200,8 @@ export default function Ruqiya() {
             </div>
           </div>
         </div>
+
+        <RelatedContent hub="quran" currentHref="/ruqiya" />
       </div>
     </div>
   );

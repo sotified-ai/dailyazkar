@@ -2,12 +2,11 @@ import { Link } from "wouter";
 
 export function Footer() {
   const quickLinks = [
-    { name: "Morning Azkar", href: "/morning-azkar" },
-    { name: "Evening Azkar", href: "/evening-azkar" },
-    { name: "Holy Quran", href: "/quran" },
-    { name: "Dua after Salah", href: "/dua-after-salah" },
-    { name: "Rabbana Duas", href: "/rabbana-duas" },
-    { name: "Ruqiya", href: "/ruqiya" }
+    { name: "Azkar Hub", href: "/azkar" },
+    { name: "Quran Hub", href: "/quran" },
+    { name: "Dua Hub", href: "/dua" },
+    { name: "Azkar Quran Tutor", href: "/tutor" },
+    { name: "Blogs", href: "/blog" }
   ];
 
   const resources = [
@@ -42,10 +41,10 @@ export function Footer() {
               </div>
             </Link>
             <p className="text-gray-300 mb-6 max-w-md">
-              Your trusted companion for authentic Islamic daily remembrance, Quranic verses, and spiritual guidance. 
+              Your trusted companion for authentic Islamic daily remembrance, Quranic verses, and spiritual guidance.
               Connect with Allah through beautiful Azkar and duas.
             </p>
-            <div className="flex space-x-4">
+            {/* <div className="flex space-x-4">
               {socialLinks.map((social, index) => (
                 <a
                   key={index}
@@ -55,9 +54,9 @@ export function Footer() {
                   <i className={social.icon}></i>
                 </a>
               ))}
-            </div>
+            </div> */}
           </div>
-          
+
           {/* Quick Links */}
           <div>
             <h4 className="text-lg font-semibold mb-6">Quick Links</h4>
@@ -74,7 +73,7 @@ export function Footer() {
               ))}
             </ul>
           </div>
-          
+
           {/* Resources */}
           <div>
             <h4 className="text-lg font-semibold mb-6">Resources</h4>
@@ -92,14 +91,23 @@ export function Footer() {
             </ul>
           </div>
         </div>
-        
+
         {/* Bottom Footer */}
-        <div className="border-t border-gray-800 pt-8">
-          <div className="flex flex-col md:flex-row items-center justify-between">
-            <p className="text-gray-400 mb-4 md:mb-0">
+        <div className="border-t border-gray-800 pt-8 mt-8">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-6">
+            <p className="text-gray-400 text-center md:text-left">
               © 2025 Daily Azkar. All rights reserved. Made with ❤️ for the Muslim Ummah.
             </p>
-            <div className="flex items-center space-x-6 text-sm text-gray-400">
+
+            <div className="flex items-center gap-4 bg-gray-800/50 p-2 rounded-lg">
+              <i className="fas fa-language text-gray-400"></i>
+              <div id="google_translate_element"></div>
+            </div>
+
+            <div className="flex flex-wrap items-center justify-center gap-4 text-sm text-gray-400">
+              <a href="/privacy-policy" className="hover:text-emerald-400 transition-colors">Privacy Policy</a>
+              <a href="/terms" className="hover:text-emerald-400 transition-colors">Terms of Service</a>
+              <a href="/contact" className="hover:text-emerald-400 transition-colors">Contact Us</a>
               <a href="/donate" className="hover:text-emerald-400 transition-colors">Support</a>
             </div>
           </div>

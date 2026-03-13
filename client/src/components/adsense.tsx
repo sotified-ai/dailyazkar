@@ -8,8 +8,8 @@ interface AdSenseProps {
   className?: string;
 }
 
-export function AdSense({ 
-  adSlot = 'YOUR_AD_SLOT_ID', 
+export function AdSense({
+  adSlot = '4270192420',
   adFormat = 'auto',
   adClient = 'ca-pub-1780067953006047',
   style = { display: 'block' },
@@ -24,7 +24,7 @@ export function AdSense({
       script.crossOrigin = 'anonymous';
       document.head.appendChild(script);
     }
-    
+
     // Initialize AdSense after component mounts
     const timer = setTimeout(() => {
       try {
@@ -35,7 +35,7 @@ export function AdSense({
         console.error('AdSense error:', error);
       }
     }, 100);
-    
+
     return () => clearTimeout(timer);
   }, [adClient]);
 
@@ -64,7 +64,7 @@ export function GoogleTagManager() {
       })(window,document,'script','dataLayer','GTM-PHH33TBB');
     `;
     document.head.appendChild(gtmScript);
-    
+
     // Noscript fallback
     const noscript = document.createElement('noscript');
     noscript.innerHTML = `

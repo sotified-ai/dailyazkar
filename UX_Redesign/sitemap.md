@@ -1,0 +1,21 @@
+# Site Map: Daily Azkar Hub Model
+
+- **Home** (/)
+  - **Azkar Hub** (/azkar)
+    - Morning Azkar (/azkar/morning)
+    - Evening Azkar (/azkar/evening)
+    - Ramadan Azkar (/azkar/ramadan)
+  - **Quran Hub** (/quran)
+    - Surah Index (/quran/surahs)
+      - Surah Al-Fatiha Detail (/quran/surahs/1) ... 114 Surahs
+    - Manzil (/quran/manzil)
+    - Ruqiya (/quran/ruqiya)
+  - **Dua Hub** (/dua)
+    - Dua after Salah (/dua/after-salah)
+    - Rabbana Duas (/dua/rabbana)
+  - **Azkar Quran Tutor** (/tutor)
+    - Tutor Landing & Booking (/tutor)
+    - Tutor Profile & Courses (/tutor/profile/:id)
+  - **Blogs** (/blog)
+    - Blog List Index (/blog)
+    - Blog Detail Post (/blog/:slug)

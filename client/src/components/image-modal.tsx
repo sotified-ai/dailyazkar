@@ -13,7 +13,7 @@ export function ImageModal({ isOpen, onClose, image, images, onNavigate }: Image
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       if (!isOpen) return;
-      
+
       if (e.key === "Escape") {
         onClose();
       } else if (e.key === "ArrowLeft") {
@@ -47,37 +47,40 @@ export function ImageModal({ isOpen, onClose, image, images, onNavigate }: Image
     <div className="fixed inset-0 z-50 modal-backdrop flex items-center justify-center min-h-screen p-4">
       <div className="relative max-w-5xl w-full">
         <img
-          src={image.url}
-          alt={image.alt}
+          src={image.path}
+          alt={image.title}
           className="w-full h-auto max-h-[90vh] object-contain rounded-xl shadow-2xl"
         />
-        
+
         {/* Modal Controls */}
         <Button
           onClick={onClose}
           className="absolute top-4 right-4 w-12 h-12 bg-black/50 hover:bg-black/70 text-white rounded-full flex items-center justify-center"
+          aria-label="Close image"
         >
-          <i className="fas fa-times"></i>
+          <i className="fas fa-times" aria-hidden="true"></i>
         </Button>
-        
+
         <Button
           onClick={handlePrevious}
           className="absolute left-4 top-1/2 transform -translate-y-1/2 w-12 h-12 bg-black/50 hover:bg-black/70 text-white rounded-full flex items-center justify-center"
+          aria-label="Previous image"
         >
-          <i className="fas fa-chevron-left"></i>
+          <i className="fas fa-chevron-left" aria-hidden="true"></i>
         </Button>
-        
+
         <Button
           onClick={handleNext}
           className="absolute right-4 top-1/2 transform -translate-y-1/2 w-12 h-12 bg-black/50 hover:bg-black/70 text-white rounded-full flex items-center justify-center"
+          aria-label="Next image"
         >
-          <i className="fas fa-chevron-right"></i>
+          <i className="fas fa-chevron-right" aria-hidden="true"></i>
         </Button>
-        
+
         {/* Image Info */}
         <div className="absolute bottom-4 left-4 right-4 glassmorphism rounded-xl p-4">
           <h4 className="font-semibold text-white mb-2">{image.title}</h4>
-          <p className="text-gray-200 text-sm">{image.alt}</p>
+          <p className="text-gray-200 text-sm">{image.description}</p>
         </div>
       </div>
     </div>

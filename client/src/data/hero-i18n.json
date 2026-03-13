@@ -1,0 +1,72 @@
+{
+    "slide1.title": {
+        "en": "Daily Azkar — Your Spiritual Companion",
+        "ur": "روزمرہ اذکار — آپ کا روحانی ساتھی",
+        "ar": "الأذكار اليومية — رفيقك الروحي"
+    },
+    "slide1.subtext": {
+        "en": "Begin and end your day with authentic Islamic remembrance, available in Arabic, Urdu, and English.",
+        "ur": "اپنے دن کا آغاز اور اختتام مستند اسلامی اذکار کے ساتھ کریں، جو عربی، اردو اور انگریزی میں دستیاب ہیں۔",
+        "ar": "ابدأ يومك واختمه بالأذكار الإسلامية الصحيحة المتوفرة باللغة العربية والأردية والإنجليزية."
+    },
+    "slide2.title": {
+        "en": "Read & Reflect on the Holy Quran",
+        "ur": "قرآن مجید پڑھیں اور غور و فکر کریں",
+        "ar": "اقرأ وتأمل في القرآن الكريم"
+    },
+    "slide2.subtext": {
+        "en": "Surah index, Manzil, Ruqiya, Arabic text with translation and audio.",
+        "ur": "سورہ انڈیکس، منزل، رقیہ، عربی متن مع ترجمہ اور آڈیو۔",
+        "ar": "فهرس السور، منزل، رقية، نص عربي مع ترجمة وصوت."
+    },
+    "slide3.title": {
+        "en": "Powerful Duas for Every Moment",
+        "ur": "ہر لمحے کے لئے طاقتور دعائیں",
+        "ar": "أدعية قوية لكل لحظة"
+    },
+    "slide3.subtext": {
+        "en": "Rabbana Duas, Post-Prayer Duas, and essential supplications compiled for daily use.",
+        "ur": "روزمرہ استعمال کے لیے مرتب کردہ ربنا دعائیں، نماز کے بعد کی دعائیں، اور ضروری دعائیں۔",
+        "ar": "أدعية ربنا، أدعية ما بعد الصلاة، وأدعية أساسية مجمعة للاستخدام اليومي."
+    },
+    "slide4.title": {
+        "en": "Learn with a Qualified Quran Tutor",
+        "ur": "ایک اہل قرآن ٹیوٹر کے ساتھ سیکھیں",
+        "ar": "تعلم مع معلم قرآن مؤهل"
+    },
+    "slide4.subtext": {
+        "en": "Personalized online Quran classes in Urdu, English, and Arabic.",
+        "ur": "اردو، انگریزی اور عربی میں ذاتی نوعیت کی آن لائن قرآن کلاسز۔",
+        "ar": "دروس قرآن عبر الإنترنت مخصصة باللغة الأردية والإنجليزية والعربية."
+    },
+    "cta.primary_morning": {
+        "en": "Start Morning Azkar",
+        "ur": "صبح کے اذکار شروع کریں",
+        "ar": "ابدأ أذكار الصباح"
+    },
+    "cta.primary_evening": {
+        "en": "Evening Remembrance",
+        "ur": "شام کے اذکار",
+        "ar": "أذكار المساء"
+    },
+    "cta.secondary_slide1": {
+        "en": "Today’s Highlight: Surah Al-Mulk",
+        "ur": "آج کی خاص پیشکش: سورہ الملک",
+        "ar": "أبرز ما في اليوم: سورة الملك"
+    },
+    "cta.secondary_slide2": {
+        "en": "Explore Quran Hub",
+        "ur": "قرآن ہب کو دریافت کریں",
+        "ar": "استكشف قسم القرآن"
+    },
+    "cta.secondary_slide3": {
+        "en": "Explore Dua Hub",
+        "ur": "دعا ہب کو دریافت کریں",
+        "ar": "استكشف قسم الدعاء"
+    },
+    "cta.secondary_slide4": {
+        "en": "Book a Free Trial",
+        "ur": "مفت ٹرائل بک کریں",
+        "ar": "احجز تجربة مجانية"
+    }
+}

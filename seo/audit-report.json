@@ -1,0 +1,93 @@
+[
+  {
+    "url": "/",
+    "wordCount": 0,
+    "status": "BLANK_RISKY",
+    "recommendedAction": "CHECK_ERROR",
+    "error": "net::ERR_CONNECTION_REFUSED at http://localhost:5173/"
+  },
+  {
+    "url": "/morning-azkar",
+    "wordCount": 0,
+    "status": "BLANK_RISKY",
+    "recommendedAction": "CHECK_ERROR",
+    "error": "net::ERR_CONNECTION_REFUSED at http://localhost:5173/morning-azkar"
+  },
+  {
+    "url": "/evening-azkar",
+    "wordCount": 0,
+    "status": "BLANK_RISKY",
+    "recommendedAction": "CHECK_ERROR",
+    "error": "net::ERR_CONNECTION_REFUSED at http://localhost:5173/evening-azkar"
+  },
+  {
+    "url": "/quran",
+    "wordCount": 0,
+    "status": "BLANK_RISKY",
+    "recommendedAction": "CHECK_ERROR",
+    "error": "net::ERR_CONNECTION_REFUSED at http://localhost:5173/quran"
+  },
+  {
+    "url": "/dua-after-salah",
+    "wordCount": 0,
+    "status": "BLANK_RISKY",
+    "recommendedAction": "CHECK_ERROR",
+    "error": "net::ERR_CONNECTION_REFUSED at http://localhost:5173/dua-after-salah"
+  },
+  {
+    "url": "/rabbana-duas",
+    "wordCount": 0,
+    "status": "BLANK_RISKY",
+    "recommendedAction": "CHECK_ERROR",
+    "error": "net::ERR_CONNECTION_REFUSED at http://localhost:5173/rabbana-duas"
+  },
+  {
+    "url": "/ruqiya",
+    "wordCount": 0,
+    "status": "BLANK_RISKY",
+    "recommendedAction": "CHECK_ERROR",
+    "error": "net::ERR_CONNECTION_REFUSED at http://localhost:5173/ruqiya"
+  },
+  {
+    "url": "/about-islam",
+    "wordCount": 0,
+    "status": "BLANK_RISKY",
+    "recommendedAction": "CHECK_ERROR",
+    "error": "net::ERR_CONNECTION_REFUSED at http://localhost:5173/about-islam"
+  },
+  {
+    "url": "/prayer-times",
+    "wordCount": 0,
+    "status": "BLANK_RISKY",
+    "recommendedAction": "CHECK_ERROR",
+    "error": "net::ERR_CONNECTION_REFUSED at http://localhost:5173/prayer-times"
+  },
+  {
+    "url": "/islamic-calendar",
+    "wordCount": 0,
+    "status": "BLANK_RISKY",
+    "recommendedAction": "CHECK_ERROR",
+    "error": "net::ERR_CONNECTION_REFUSED at http://localhost:5173/islamic-calendar"
+  },
+  {
+    "url": "/community",
+    "wordCount": 0,
+    "status": "BLANK_RISKY",
+    "recommendedAction": "CHECK_ERROR",
+    "error": "net::ERR_CONNECTION_REFUSED at http://localhost:5173/community"
+  },
+  {
+    "url": "/donate",
+    "wordCount": 0,
+    "status": "BLANK_RISKY",
+    "recommendedAction": "CHECK_ERROR",
+    "error": "net::ERR_CONNECTION_REFUSED at http://localhost:5173/donate"
+  },
+  {
+    "url": "/resources",
+    "wordCount": 0,
+    "status": "BLANK_RISKY",
+    "recommendedAction": "CHECK_ERROR",
+    "error": "net::ERR_CONNECTION_REFUSED at http://localhost:5173/resources"
+  }
+]

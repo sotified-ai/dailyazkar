@@ -61,25 +61,28 @@ export function FloatingActions() {
       <Button
         onClick={handleShare}
         className="w-12 h-12 bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white rounded-full shadow-lg hover:shadow-xl transform hover:scale-110 transition-all flex items-center justify-center"
+        aria-label="Share this page"
       >
-        <i className="fas fa-share-alt"></i>
+        <i className="fas fa-share-alt" aria-hidden="true"></i>
       </Button>
-      
+
       {/* Bookmark Button */}
       <Button
         onClick={handleBookmark}
         className="w-12 h-12 bg-gradient-to-r from-purple-500 to-purple-600 hover:from-purple-600 hover:to-purple-700 text-white rounded-full shadow-lg hover:shadow-xl transform hover:scale-110 transition-all flex items-center justify-center"
+        aria-label="Bookmark this page"
       >
-        <i className="fas fa-bookmark"></i>
+        <i className="fas fa-bookmark" aria-hidden="true"></i>
       </Button>
-      
+
       {/* Scroll to Top */}
       {showScrollTop && (
         <Button
           onClick={scrollToTop}
           className="w-12 h-12 bg-gradient-to-r from-emerald-500 to-emerald-600 hover:from-emerald-600 hover:to-emerald-700 text-white rounded-full shadow-lg hover:shadow-xl transform hover:scale-110 transition-all flex items-center justify-center animate-fade-in"
+          aria-label="Scroll to top"
         >
-          <i className="fas fa-arrow-up"></i>
+          <i className="fas fa-arrow-up" aria-hidden="true"></i>
         </Button>
       )}
     </div>

@@ -1,0 +1,104 @@
+[
+    {
+        "page": "/evening-azkar",
+        "status": "PUBLISHED",
+        "originalWordCount": 79,
+        "newWordCount": 650,
+        "keyword": "evening azkar",
+        "draftStatus": "PUBLISHED",
+        "publishedDate": "2024-01-30",
+        "changes": [
+            "Added comprehensive SEO introduction section",
+            "Enhanced benefits list with detailed explanations",
+            "Added FAQ section with structured data",
+            "Implemented internal linking to related pages",
+            "Added Arabic typography and visual enhancements"
+        ],
+        "notes": "Page now has 650+ words with full SEO optimization. Safe for indexing."
+    },
+    {
+        "page": "/about-islam",
+        "status": "PUBLISHED",
+        "originalWordCount": 52,
+        "newWordCount": 550,
+        "keyword": "benefits of azkar",
+        "draftStatus": "PUBLISHED",
+        "publishedDate": "2024-01-30",
+        "changes": [
+            "Added educational content about Azkar concept",
+            "Created benefits grid with icons",
+            "Added Quranic references and hadith",
+            "Implemented FAQ section",
+            "Added internal navigation links"
+        ],
+        "notes": "Page now has 550+ words explaining Azkar in Islam. Safe for indexing."
+    },
+    {
+        "page": "/prayer-times",
+        "status": "PUBLISHED",
+        "originalWordCount": 34,
+        "newWordCount": 600,
+        "keyword": "islamic prayer times",
+        "draftStatus": "PUBLISHED",
+        "publishedDate": "2024-01-30",
+        "changes": [
+            "Added comprehensive introduction about Salah importance",
+            "Created detailed prayer cards with rakah info",
+            "Added Quranic verses and hadith references",
+            "Implemented FAQ section",
+            "Enhanced location selector UI"
+        ],
+        "notes": "Page now has 600+ words with educational prayer content. Safe for indexing."
+    },
+    {
+        "page": "/community",
+        "status": "PUBLISHED",
+        "originalWordCount": 62,
+        "newWordCount": 580,
+        "keyword": "muslim community",
+        "draftStatus": "PUBLISHED",
+        "publishedDate": "2024-01-30",
+        "changes": [
+            "Added welcome section with hadith reference",
+            "Created benefits of community grid",
+            "Enhanced social sharing functionality",
+            "Added FAQ section",
+            "Implemented internal navigation"
+        ],
+        "notes": "Page now has 580+ words about Muslim community. Safe for indexing."
+    },
+    {
+        "page": "/donate",
+        "status": "PUBLISHED",
+        "originalWordCount": 55,
+        "newWordCount": 680,
+        "keyword": "sadaqah jariyah",
+        "draftStatus": "PUBLISHED",
+        "publishedDate": "2024-01-30",
+        "changes": [
+            "Added comprehensive Sadaqah Jariyah explanation",
+            "Created donation benefits section",
+            "Enhanced payment method cards with copy functionality",
+            "Added FAQ section",
+            "Implemented internal navigation"
+        ],
+        "notes": "Page now has 680+ words about supporting the project. Safe for indexing."
+    },
+    {
+        "page": "/resources",
+        "status": "PUBLISHED",
+        "originalWordCount": 44,
+        "newWordCount": 620,
+        "keyword": "islamic resources",
+        "draftStatus": "PUBLISHED",
+        "publishedDate": "2024-01-30",
+        "changes": [
+            "Added educational introduction about Islamic knowledge",
+            "Created internal Azkar collection cards",
+            "Added trusted external resources links",
+            "Created recommended books section",
+            "Implemented FAQ section"
+        ],
+        "notes": "Page now has 620+ words about Islamic resources. Safe for indexing."
+    }
+]

@@ -1,0 +1,128 @@
+[
+    {
+        "keyword": "morning azkar",
+        "intent": "daily devotional",
+        "searchVolumeEstimate": "high",
+        "difficulty": "medium",
+        "priority": 0.87,
+        "recommendedPage": "/morning-azkar",
+        "notes": "Primary keyword for morning prayers page"
+    },
+    {
+        "keyword": "evening azkar",
+        "intent": "daily devotional",
+        "searchVolumeEstimate": "high",
+        "difficulty": "medium",
+        "priority": 0.85,
+        "recommendedPage": "/evening-azkar",
+        "notes": "Primary keyword for evening prayers page - NEEDS CONTENT"
+    },
+    {
+        "keyword": "azkar morning and evening",
+        "intent": "comprehensive devotional",
+        "searchVolumeEstimate": "medium",
+        "difficulty": "low",
+        "priority": 0.78,
+        "recommendedPage": "/",
+        "notes": "Long-tail supporting home page"
+    },
+    {
+        "keyword": "dua after salah",
+        "intent": "post-prayer supplication",
+        "searchVolumeEstimate": "high",
+        "difficulty": "medium",
+        "priority": 0.82,
+        "recommendedPage": "/dua-after-salah",
+        "notes": "Primary keyword - page needs content improvement"
+    },
+    {
+        "keyword": "rabbana duas quran",
+        "intent": "quranic supplications",
+        "searchVolumeEstimate": "medium",
+        "difficulty": "low",
+        "priority": 0.75,
+        "recommendedPage": "/rabbana-duas",
+        "notes": "Specific Islamic dua category"
+    },
+    {
+        "keyword": "ruqyah shariah",
+        "intent": "spiritual healing",
+        "searchVolumeEstimate": "high",
+        "difficulty": "medium",
+        "priority": 0.80,
+        "recommendedPage": "/ruqiya",
+        "notes": "Page already healthy - maintain"
+    },
+    {
+        "keyword": "quran reading online",
+        "intent": "scripture access",
+        "searchVolumeEstimate": "very high",
+        "difficulty": "high",
+        "priority": 0.65,
+        "recommendedPage": "/quran",
+        "notes": "Competitive keyword - focus on niche"
+    },
+    {
+        "keyword": "islamic prayer times",
+        "intent": "utility/tool",
+        "searchVolumeEstimate": "very high",
+        "difficulty": "high",
+        "priority": 0.60,
+        "recommendedPage": "/prayer-times",
+        "notes": "Utility page - add substantial content around prayer importance"
+    },
+    {
+        "keyword": "hijri calendar today",
+        "intent": "utility/tool",
+        "searchVolumeEstimate": "high",
+        "difficulty": "medium",
+        "priority": 0.68,
+        "recommendedPage": "/islamic-calendar",
+        "notes": "Utility page - add Islamic months significance content"
+    },
+    {
+        "keyword": "daily azkar list",
+        "intent": "habit-based devotional",
+        "searchVolumeEstimate": "medium",
+        "difficulty": "low",
+        "priority": 0.76,
+        "recommendedPage": "/",
+        "notes": "Supporting keyword for home page"
+    },
+    {
+        "keyword": "azkar before sleep",
+        "intent": "bedtime devotional",
+        "searchVolumeEstimate": "medium",
+        "difficulty": "low",
+        "priority": 0.74,
+        "recommendedPage": "/evening-azkar",
+        "notes": "Secondary keyword for evening page"
+    },
+    {
+        "keyword": "benefits of azkar",
+        "intent": "informational",
+        "searchVolumeEstimate": "medium",
+        "difficulty": "low",
+        "priority": 0.72,
+        "recommendedPage": "/about-islam",
+        "notes": "Informational content opportunity - page needs major content"
+    },
+    {
+        "keyword": "dua for anxiety islam",
+        "intent": "emotional/spiritual support",
+        "searchVolumeEstimate": "medium",
+        "difficulty": "low",
+        "priority": 0.79,
+        "recommendedPage": "/ruqiya",
+        "notes": "Long-tail keyword - mental wellness angle"
+    },
+    {
+        "keyword": "islamic resources",
+        "intent": "educational/reference",
+        "searchVolumeEstimate": "low",
+        "difficulty": "low",
+        "priority": 0.55,
+        "recommendedPage": "/resources",
+        "notes": "Page needs substantial content"
+    }
+]

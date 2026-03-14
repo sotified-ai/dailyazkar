@@ -1,511 +1,258 @@
 import { SEOHead } from "@/components/seo-head";
 import { AdSense } from "@/components/adsense";
+import { Breadcrumbs } from "@/components/breadcrumbs";
+import { Card, CardContent } from "@/components/ui/card";
 import { Link } from "wouter";
 
 export default function AzkarBeforeSleep() {
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "Article",
-    "headline": "Azkar Before Sleep - Islamic Supplications for Peaceful Rest",
-    "description": "Discover authentic Islamic remembrances and supplications to recite before sleep, with Arabic text, transliteration, and translations for peaceful rest.",
+    "headline": "Azkar Before Sleep: The Ultimate Guide to Islamic Bedtime Duas & Protection",
+    "description": "Unlock the spiritual secrets of azkar before sleep. Discover authentic Islamic sleep supplications, protection duas for sleep, and the Prophetic sunnah of bedtime remembrance.",
     "author": {
       "@type": "Organization",
       "name": "Daily Azkar"
     },
-    "publisher": {
-      "@type": "Organization",
-      "name": "Daily Azkar",
-      "url": "https://dailyazkar.site"
-    }
-  };
-
-  const faqStructuredData = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "What are the recommended azkar before sleep?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "The recommended azkar before sleep include Ayat al-Kursi, the three Quls (Surah Al-Ikhlas, Al-Falaq, An-Nas), specific duas for protection during sleep, and recitation of the last two verses of Surah Al-Baqarah. These provide spiritual protection throughout the night."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "How long should I spend on azkar before sleep?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "The time spent on azkar before sleep can vary from 5-15 minutes depending on your schedule. The key is consistency rather than duration. Even reciting a few essential azkar regularly is better than skipping them entirely. The Prophet (peace be upon him) emphasized regularity in worship."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Can azkar before sleep help with nightmares?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes, reciting protective azkar before sleep can help prevent nightmares. Surah Al-Falaq and Surah An-Nas are particularly effective for protection during sleep. The Prophet (peace be upon him) recommended these surahs for protection from evil influences while sleeping."
-        }
-      }
-    ]
+    "image": "https://dailyazkar.site/sleep-azkar-hero.png"
   };
 
   return (
-    <div className="pt-24 bg-gradient-to-br from-indigo-50 via-white to-purple-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 min-h-screen">
+    <div className="pt-24 bg-gradient-to-br from-slate-900 via-indigo-950 to-slate-900 min-h-screen text-slate-200">
       <SEOHead
-        title="Azkar Before Sleep - Islamic Supplications for Peaceful Rest | Daily Azkar"
-        description="Discover authentic Islamic remembrances and supplications to recite before sleep, with Arabic text, transliteration, and translations for peaceful rest. Learn Islamic prayers before sleep."
-        keywords="azkar before sleep, duas before sleep, islamic prayers before sleep, islamic supplications for sleep, bedtime azkar, protection duas for sleep, peaceful sleep duas, morning and evening azkar before sleep, islamic bedtime remembrance"
+        title="Azkar Before Sleep: Bedtime Duas & Protection (Islamic Guide)"
+        description="Master your nightly routine with authentic azkar before sleep. Learn powerful protection duas for sleep, night duas for peace, and the sunnah of bedtime remembrance."
+        keywords="azkar before sleep, dua before sleeping, night duas, sleep supplication, protection duas for sleep, sunnah of sleeping, islamic bedtime routine, bedtime azkar, night dhikr"
         canonical="https://dailyazkar.site/azkar-before-sleep"
         structuredData={structuredData}
       />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqStructuredData) }} />
 
       <div className="container mx-auto px-4 py-8">
-        {/* Header */}
-        <div className="text-center mb-12 animate-fade-in">
-          <div className="w-20 h-20 bg-gradient-to-br from-indigo-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-6">
-            <i className="fas fa-moon text-white text-3xl"></i>
+        <Breadcrumbs items={[
+          { label: "Home", href: "/" },
+          { label: "Dua Hub", href: "/dua" },
+          { label: "Azkar Before Sleep" }
+        ]} />
+
+        {/* Hero Section */}
+        <div className="text-center mb-16 animate-fade-in pt-10">
+          <div className="w-24 h-24 bg-gradient-to-br from-indigo-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-8 shadow-[0_0_50px_rgba(79,70,229,0.4)] animate-pulse">
+            <i className="fas fa-moon text-white text-4xl"></i>
           </div>
-          <h1 className="text-4xl md:text-5xl font-display font-bold text-gray-800 dark:text-white mb-4">
-            Azkar Before Sleep
+          <h1 className="text-4xl md:text-6xl font-display font-bold text-white mb-6 tracking-tight">
+            Azkar Before Sleep: <span className="text-indigo-400">Nightly Protection</span>
           </h1>
-          <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-            Islamic supplications for peaceful and protected rest
+          <p className="text-xl text-slate-400 max-w-3xl mx-auto leading-relaxed">
+            Transform your sleep into an act of worship. Discover the authentic <span className="text-white font-semibold italic">azkar before sleep</span> and powerful <span className="text-white font-semibold italic">night duas</span> that build a spiritual fortress around you until morning.
           </p>
         </div>
 
         {/* Introduction Section */}
-        <div className="max-w-4xl mx-auto mb-12">
-          <div className="glassmorphism rounded-2xl p-8">
-            <h2 className="text-2xl font-display font-bold text-gray-800 dark:text-white mb-4">
-              The Sacred Transition to Rest
+        <div className="max-w-4xl mx-auto mb-20 prose prose-invert prose-lg">
+          <h2 className="text-3xl font-display font-bold text-white mb-6 border-l-4 border-indigo-500 pl-4">The Importance of Bedtime Azkar in Islam</h2>
+          <p>
+            In the fast-paced world we live in, sleep is often viewed merely as a physiological necessity. However, in Islam, the transition into the state of rest is a sacred moment of surrender. Reciting <strong>azkar before sleep</strong> is not just a ritual; it is a profound declaration of faith. It is the moment where a believer acknowledges that even in the vulnerability of sleep, they are in the constant care of Al-Hafiz (The Preserver).
+          </p>
+          <p>
+            Implementing a consistent <strong>islamic bedtime routine</strong> filled with <strong>sleep supplications</strong> and <strong>night dhikr</strong> allows the heart to remain connected to the Divine while the body rests. The Prophet Muhammad ﷺ taught us that these moments are opportunities to seek forgiveness, find peace, and gain protection from the whisperings of Shaytan and the trials of the night.
+          </p>
+          <p>
+            By making <strong>dua before sleeping</strong> a non-negotiable part of your night, you ensure that your last conscious thoughts are focused on the remembrance of Allah. This spiritual mindfulness has a profound impact on the quality of your rest and the state of your soul upon waking.
+          </p>
+        </div>
+
+        {/* The Sunnah of Sleeping */}
+        <div className="max-w-5xl mx-auto mb-20 grid md:grid-cols-2 gap-10 items-center">
+          <div className="glassmorphism p-10 rounded-3xl border border-white/10 shadow-2xl">
+            <h2 className="text-2xl font-bold text-white mb-6 flex items-center">
+              <i className="fas fa-star-and-crescent text-indigo-400 mr-3"></i>
+              The Sunnah of Sleeping
             </h2>
-            <p className="text-gray-600 dark:text-gray-300 leading-relaxed mb-4">
-              Sleep is one of Allah's greatest blessings, a temporary return to the state of peace and tranquility He has granted us. Islam teaches specific remembrances (azkar) to recite before sleep, creating a spiritual shield of protection and gratitude as we enter this state of rest.
+            <p className="text-slate-300 mb-6 leading-relaxed">
+              Before delving into specific <strong>night duas</strong>, it's essential to understand the physical and spiritual etiquettes taught by the Prophet ﷺ:
             </p>
-            <p className="text-gray-600 dark:text-gray-300 leading-relaxed mb-6">
-              The Prophet Muhammad (peace be upon him) emphasized the importance of reciting these azkar before sleep, highlighting their role in ensuring peaceful rest and protection throughout the night. These blessed words connect us with Allah even as we transition from the conscious to the unconscious state.
+            <ul className="space-y-4">
+              <li className="flex items-start gap-4">
+                <span className="w-8 h-8 rounded-lg bg-indigo-500/20 flex items-center justify-center shrink-0 mt-1">
+                  <i className="fas fa-check text-indigo-400 text-sm"></i>
+                </span>
+                <span className="text-slate-300"><strong>Performing Wudu:</strong> Sleeping in a state of purity is highly recommended.</span>
+              </li>
+              <li className="flex items-start gap-4">
+                <span className="w-8 h-8 rounded-lg bg-indigo-500/20 flex items-center justify-center shrink-0 mt-1">
+                  <i className="fas fa-check text-indigo-400 text-sm"></i>
+                </span>
+                <span className="text-slate-300"><strong>Dusting the Bed:</strong> A practical and spiritual preparation of the sleeping space.</span>
+              </li>
+              <li className="flex items-start gap-4">
+                <span className="w-8 h-8 rounded-lg bg-indigo-500/20 flex items-center justify-center shrink-0 mt-1">
+                  <i className="fas fa-check text-indigo-400 text-sm"></i>
+                </span>
+                <span className="text-slate-300"><strong>Sleeping on the Right Side:</strong> Following the heart-centered posture of the Prophet ﷺ.</span>
+              </li>
+              <li className="flex items-start gap-4">
+                <span className="w-8 h-8 rounded-lg bg-indigo-500/20 flex items-center justify-center shrink-0 mt-1">
+                  <i className="fas fa-check text-indigo-400 text-sm"></i>
+                </span>
+                <span className="text-slate-300"><strong>Hand Under the Cheek:</strong> Placing the right hand under the right cheek.</span>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3 className="text-3xl font-display font-bold text-white mb-6">Why These Practices Matter</h3>
+            <p className="text-slate-400 text-lg leading-relaxed mb-6">
+              These physical actions are the "vessel" for your <strong>azkar before sleep</strong>. When the body is aligned with the Sunnah, the heart finds it easier to focus on the <strong>dua before sleeping</strong>. It creates a holistic environment where every aspect of your rest is dedicated to the Creator.
+            </p>
+            <p className="text-slate-400 text-lg leading-relaxed">
+              Whether you're reciting a short <strong>sleep supplication</strong> or engaging in lengthy <strong>night dhikr</strong>, these Sunnah practices prepare your mind for the spiritual journey of sleep.
             </p>
           </div>
         </div>
 
-        {/* Essential Azkar Before Sleep */}
-        <div className="max-w-4xl mx-auto mb-12">
-          <h2 className="text-3xl font-display font-bold text-gray-800 dark:text-white mb-6 text-center">
-            Essential Azkar Before Sleep
+        {/* Primary Sleep Azkar Sections */}
+        <div className="max-w-5xl mx-auto mb-20 space-y-12">
+          <h2 className="text-4xl font-display font-bold text-center text-white mb-12 underline decoration-indigo-500/30 underline-offset-8">
+            Core Protection Duas for Sleep
           </h2>
-          
-          <div className="space-y-8">
-            <div className="glassmorphism rounded-2xl p-6">
-              <div className="flex items-center mb-4">
-                <div className="w-10 h-10 bg-indigo-100 dark:bg-indigo-900/30 rounded-full flex items-center justify-center mr-4">
-                  <span className="text-indigo-600 dark:text-indigo-400 font-bold">1</span>
-                </div>
-                <h3 className="text-xl font-semibold text-gray-800 dark:text-white">Ayat al-Kursi</h3>
-              </div>
-              
-              <div className="bg-gray-50 dark:bg-gray-700 rounded-xl p-4 mb-4">
-                <p className="text-right text-2xl font-arabic text-gray-800 dark:text-white mb-3 leading-loose">
-                  اللَّهُ لَا إِلَٰهَ إِلَّا هُوَ الْحَيُّ الْقَيُّومُ ۚ لَا تَأْخُذُهُ سِنَةٌ وَلَا نَوْمٌ ۚ لَّهُ مَا فِي السَّمَاوَاتِ وَمَا فِي الْأَرْضِ ۗ مَن ذَا الَّذِي يَشْفَعُ عِندَهُ إِلَّا بِإِذْنِهِ ۚ يَعْلَمُ مَا بَيْنَ أَيْدِيهِمْ وَمَا خَلْفَهُمْ ۖ وَلَا يُحِيطُونَ بِشَيْءٍ مِّنْ عِلْمِهِ إِلَّا بِمَا شَاءَ ۚ وَسِعَ كُرْسِيُّهُ السَّمَاوَاتِ وَالْأَرْضَ ۖ وَلَا يَئُودُهُ حِفْظُهُمَا ۚ وَهُوَ الْعَلِيُّ الْعَظِيمُ
-                </p>
-              </div>
-              
-              <p className="text-gray-700 dark:text-gray-300 mb-4 italic">
-                Transliteration: "Allahu la ilaha illa Huwal-Hayyul-Qayyum. La taKhudhuhu sinatun wa la nawm. Lahuma fi assama wati wa ma fi al-ardi. Man dhal ladhi yashfa'u indahu illa bi-idhnihi. Ya'lamu ma bayna aydihim wa ma khalfahum. Wa la yuheetoona bishayin min 'ilmihi illa bima sha'. Wasia kursiyyuhus-samawati wal-arda. Wa la yaooduhu hifdhuhuma. Wa Huwal-'Aliyyul-'Adheem."
-              </p>
-              
-              <p className="text-gray-700 dark:text-gray-300 mb-4">
-                The Prophet (peace be upon him) said: "Whoever recites Ayat al-Kursi when going to bed, Allah will appoint a guardian over him, and no devil will come near him until morning."
-              </p>
-              
-              <p className="text-sm text-gray-600 dark:text-gray-400">
-                Reference: Sahih al-Bukhari | Benefit: Protection throughout the night
-              </p>
-            </div>
 
-            <div className="glassmorphism rounded-2xl p-6">
-              <div className="flex items-center mb-4">
-                <div className="w-10 h-10 bg-purple-100 dark:bg-purple-900/30 rounded-full flex items-center justify-center mr-4">
-                  <span className="text-purple-600 dark:text-purple-400 font-bold">2</span>
+          {/* Ayat al-Kursi */}
+          <Card className="glassmorphism border-white/5 bg-white/5 overflow-hidden group hover:border-indigo-500/40 transition-all duration-500 shadow-2xl">
+            <CardContent className="p-10">
+              <div className="flex flex-col md:flex-row gap-10 items-start">
+                <div className="md:w-1/3">
+                  <span className="inline-block px-4 py-1 rounded-full bg-indigo-500 text-xs font-bold uppercase tracking-widest text-white mb-4">The Greatest Ayah</span>
+                  <h3 className="text-2xl font-bold text-white mb-4">Ayat al-Kursi</h3>
+                  <p className="text-slate-400 leading-relaxed mb-6">
+                    This is perhaps the most powerful <strong>protection dua for sleep</strong>. The Prophet ﷺ mentioned that reciting this before bed ensures a guardian remains with you from Allah throughout the night.
+                  </p>
+                  <div className="p-4 rounded-2xl bg-slate-800/50 border border-slate-700">
+                    <p className="text-sm italic text-slate-300">"Whoever recites this when he goes to bed, there will come to him a protector from Allah..." (Bukhari)</p>
+                  </div>
                 </div>
-                <h3 className="text-xl font-semibold text-gray-800 dark:text-white">The Three Quls</h3>
-              </div>
-              
-              <div className="space-y-6">
-                <div>
-                  <h4 className="font-semibold text-gray-800 dark:text-white mb-2">Surah Al-Ikhlas (Quran 112:1-4)</h4>
-                  <div className="bg-gray-50 dark:bg-gray-700 rounded-xl p-4 mb-3">
-                    <p className="text-right text-xl font-arabic text-gray-800 dark:text-white mb-3 leading-loose">
-                      قُلْ هُوَ اللَّهُ أَحَدٌ ۝ اللَّهُ الصَّمَدُ ۝ لَمْ يَلِدْ وَلَمْ يُولَدْ ۝ وَلَمْ يَكُن لَّهُ كُفُوًا أَحَدٌ
+                <div className="md:w-2/3 w-full bg-slate-900/80 p-8 rounded-3xl border border-white/10">
+                  <p className="text-right text-3xl font-arabic text-white mb-8 leading-[2.5]" dir="rtl">
+                    اللَّهُ لَا إِلَٰهَ إِلَّا هُوَ الْحَيُّ الْقَيُّومُ ۚ لَا تَأْخُذُهُ سِنَةٌ وَلَا نَوْمٌ ۚ لَّهُ مَا فِي السَّمَاوَاتِ وَمَا فِي الْأَرْضِ ۗ مَن ذَا الَّذِي يَشْفَعُ عِندَهُ إِلَّا بِإِذْنِهِ ۚ يَعْلَمُ مَا بَيْنَ أَيْدِيهِمْ وَمَا خَلْفَهُمْ ۖ وَلَا يُحِيطُونَ بِشَيْءٍ مِّنْ عِلْمِهِ إِلَّا بِمَا شَاءَ ۚ وَسِعَ كُرْسِيُّهُ السَّمَاوَاتِ وَالْأَرْضَ ۖ وَلَا يَئُودُهُ حِفْظُهما ۚ وَهُوَ الْعَلِيُّ الْعَظِيمُ
+                  </p>
+                  <div className="space-y-4 pt-6 border-t border-white/10">
+                    <p className="text-sm text-indigo-300 leading-relaxed italic">
+                      <strong>Transliteration:</strong> Allahu la ilaha illa Huwal-Hayyul-Qayyum. La ta'khudhuhu sinatun wa la nawm...
+                    </p>
+                    <p className="text-sm text-slate-400 leading-relaxed">
+                      <strong>Benefit:</strong> Spiritual guardian and protection from Shaytan until morning.
                     </p>
                   </div>
-                  
-                  <p className="text-gray-700 dark:text-gray-300 mb-3 italic">
-                    Transliteration: "Qul huwallahu ahad. Allahus-Samad. Lam yalid wa lam yulad. Wa lam yakun lahu kufuwan ahad."
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+
+          {/* The Three Quls */}
+          <Card className="glassmorphism border-white/5 bg-white/5 overflow-hidden group hover:border-purple-500/40 transition-all duration-500 shadow-2xl">
+            <CardContent className="p-10">
+              <div className="flex flex-col md:flex-row-reverse gap-10 items-start">
+                <div className="md:w-1/3">
+                  <span className="inline-block px-4 py-1 rounded-full bg-purple-500 text-xs font-bold uppercase tracking-widest text-white mb-4">Complete Shifa</span>
+                  <h3 className="text-2xl font-bold text-white mb-4">The Three Quls</h3>
+                  <p className="text-slate-400 leading-relaxed mb-6">
+                    The sunnah technique for these <strong>night duas</strong> is to join your hands, blow into them, and recite Surah Al-Ikhlas, Al-Falaq, and An-Nas, then wipe your body. Repeat this three times.
                   </p>
-                  
-                  <p className="text-gray-700 dark:text-gray-300 mb-4">
-                    Reciting this surah after going to bed is equivalent to reciting one-third of the Quran.
+                  <p className="text-slate-400 leading-relaxed">
+                    This provides a layer of healing (Shifa) and protection against the evil eye and magic while you sleep.
                   </p>
                 </div>
-                
-                <div>
-                  <h4 className="font-semibold text-gray-800 dark:text-white mb-2">Surah Al-Falaq (Quran 113:1-5)</h4>
-                  <div className="bg-gray-50 dark:bg-gray-700 rounded-xl p-4 mb-3">
-                    <p className="text-right text-xl font-arabic text-gray-800 dark:text-white mb-3 leading-loose">
-                      قُلْ أَعُوذُ بِرَبِّ الْفَلَقِ ۝ مِن شَرِّ مَا خَلَقَ ۝ وَمِن شَرِّ غَاسِقٍ إِذَا وَقَبَ ۝ وَمِن شَرِّ النَّفَّاثَاتِ فِي الْعُقَدِ ۝ وَمِن شَرِّ حَاسِدٍ إِذَا حَسَدَ
-                    </p>
+                <div className="md:w-2/3 w-full space-y-6">
+                  <div className="bg-slate-900/80 p-6 rounded-3xl border border-white/10">
+                    <p className="text-right text-2xl font-arabic text-white mb-2" dir="rtl">قُلْ هُوَ اللَّهُ أَحَدٌ ...</p>
+                    <p className="text-xs text-slate-500">Surah Al-Ikhlas</p>
                   </div>
-                  
-                  <p className="text-gray-700 dark:text-gray-300 mb-3 italic">
-                    Transliteration: "Qul a'udhu birabbi'l-falaq. Min sharri ma khalaq. Wa min sharri ghasiqin idha waqab. Wa min sharri'n-naffathati fil 'uqad. Wa min sharri hasidin idha hasad."
-                  </p>
-                  
-                  <p className="text-gray-700 dark:text-gray-300 mb-4">
-                    This surah seeks protection from evil forces during the night, including witchcraft and the evil eye.
-                  </p>
-                </div>
-                
-                <div>
-                  <h4 className="font-semibold text-gray-800 dark:text-white mb-2">Surah An-Nas (Quran 114:1-6)</h4>
-                  <div className="bg-gray-50 dark:bg-gray-700 rounded-xl p-4 mb-3">
-                    <p className="text-right text-xl font-arabic text-gray-800 dark:text-white mb-3 leading-loose">
-                      قُلْ أَعُوذُ بِرَبِّ النَّاسِ ۝ مَلِكِ النَّاسِ ۝ إِلَٰهِ النَّاسِ ۝ مِن شَرِّ الْوَسْوَاسِ الْخَنَّاسِ ۝ الَّذِي يُوَسْوِسُ فِي صُدُورِ النَّاسِ ۝ مِنَ الْجِنَّةِ وَ النَّاسِ
-                    </p>
+                  <div className="bg-slate-900/80 p-6 rounded-3xl border border-white/10">
+                    <p className="text-right text-2xl font-arabic text-white mb-2" dir="rtl">قُلْ أَعُوذُ بِرَبِّ الْفَلَقِ ...</p>
+                    <p className="text-xs text-slate-500">Surah Al-Falaq</p>
                   </div>
-                  
-                  <p className="text-gray-700 dark:text-gray-300 mb-3 italic">
-                    Transliteration: "Qul a'udhu birabbin-nas. Malikin-nas. Ilahin-nas. Min sharri'l-waswas'il-khannas. Alladhi yuwaswisu fi sudurin-nas. Minal-jinnati wan-nas."
-                  </p>
-                  
-                  <p className="text-gray-700 dark:text-gray-300 mb-4">
-                    This surah seeks protection from evil whisperings that can affect sleep and dreams.
-                  </p>
+                  <div className="bg-slate-900/80 p-6 rounded-3xl border border-white/10">
+                    <p className="text-right text-2xl font-arabic text-white mb-2" dir="rtl">قُلْ أَعُوذُ بِرَبِّ النَّاسِ ...</p>
+                    <p className="text-xs text-slate-500">Surah An-Nas</p>
+                  </div>
                 </div>
               </div>
-              
-              <p className="text-sm text-gray-600 dark:text-gray-400">
-                Benefit: Comprehensive protection during sleep from various harms
-              </p>
-            </div>
+            </CardContent>
+          </Card>
+        </div>
 
-            <div className="glassmorphism rounded-2xl p-6">
-              <div className="flex items-center mb-4">
-                <div className="w-10 h-10 bg-emerald-100 dark:bg-emerald-900/30 rounded-full flex items-center justify-center mr-4">
-                  <span className="text-emerald-600 dark:text-emerald-400 font-bold">3</span>
-                </div>
-                <h3 className="text-xl font-semibold text-gray-800 dark:text-white">Tasbih Before Sleep</h3>
+        {/* Educational Content Deep-Dive */}
+        <div className="max-w-4xl mx-auto mb-20 prose prose-invert prose-lg">
+          <h2 className="text-3xl font-display font-bold text-white mb-6">The Power of Night Duas: Seeking Forgiveness and Tranquility</h2>
+          <p>
+            Beyond protection, <strong>night duas</strong> serve as a platform for <strong>istighfar</strong> (seeking forgiveness). We often carry the weight of our daily sins into our beds. By reciting specific <strong>azkar before sleep</strong>, we cleanse our spiritual slates. One of the most beloved <strong>dua before sleeping</strong> for this purpose is the Sayyid al-Istighfar, although even a simple "Astaghfirullah" repeated as part of your <strong>night dhikr</strong> holds immense value.
+          </p>
+          <p>
+            Furthermore, <strong>sleep supplications</strong> help manage anxiety. Many Muslims suffer from insomnia or restless nights due to worldly worries. The act of performing <strong>azkar before sleep</strong> is a form of spiritual meditation. It lowers the heart rate, focuses the mind on the Infinite, and reminds the soul that "with every hardship, there is ease."
+          </p>
+          <h3 className="text-white">Authentic Tasbih Before Sleep</h3>
+          <p>
+            Another essential part of the <strong>islamic bedtime routine</strong> is the Tasbih of Fatima (RA). The Prophet ﷺ advised his daughter to recite:
+          </p>
+          <ul>
+            <li><strong>SubhanAllah</strong> (Glory be to Allah) - 33 Times</li>
+            <li><strong>Alhamdulillah</strong> (All praise is to Allah) - 33 Times</li>
+            <li><strong>Allahu Akbar</strong> (Allah is the Greatest) - 34 Times</li>
+          </ul>
+          <p>
+            This specific <strong>night dhikr</strong> was described by the Prophet ﷺ as being better for one than a servant. It provides the believer with strength and energy for the coming day, proving that <strong>bedtime azkar</strong> have physical benefits that extend beyond the night itself.
+          </p>
+        </div>
+
+        {/* FAQs Section */}
+        <div className="max-w-4xl mx-auto mb-20">
+          <h2 className="text-4xl font-display font-bold text-center text-white mb-16">Bedtime Azkar FAQs</h2>
+          <div className="grid gap-6">
+            {[
+              {
+                q: "What is the best dua before sleeping for protection?",
+                a: "Reciting Ayat al-Kursi is widely considered the best practice for protection, followed by the Three Quls (joined hands technique). These are primary 'protection duas for sleep' mentioned in authentic Hadith."
+              },
+              {
+                q: "Can I recite azkar before sleep without Wudu?",
+                a: "Yes, you can recite them without Wudu, but it is a highly recommended Sunnah to be in a state of purity. The focus should be on the 'night dhikr' even if you couldn't perform wudu."
+              },
+              {
+                q: "What should I do if I forget my bedtime azkar?",
+                a: "Simply recite them whenever you remember. If you wake up in the middle of the night, you can still perform your 'sleep supplication' and seek Allah's protection for the remainder of the night."
+              },
+              {
+                q: "How do night duas help with nightmares?",
+                a: "By seeking refuge in Allah from the whisperings of evil (as found in Surah Al-Falaq and An-Nas), you create a spiritual barrier that often results in more peaceful, nightmare-free rest."
+              }
+            ].map((faq, i) => (
+              <div key={i} className="glassmorphism p-8 rounded-3xl border border-white/10 hover:border-indigo-500/30 transition-all duration-300 shadow-lg">
+                <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-4">
+                  <span className="w-10 h-10 rounded-full bg-indigo-600 flex items-center justify-center shrink-0">?</span>
+                  {faq.q}
+                </h3>
+                <p className="text-slate-400 pl-14 leading-relaxed">{faq.a}</p>
               </div>
-              
-              <div className="bg-gray-50 dark:bg-gray-700 rounded-xl p-4 mb-4">
-                <p className="text-right text-xl font-arabic text-gray-800 dark:text-white mb-3">
-                  سُبْحَانَ اللَّهِ وَالْحَمْدُ لِلَّهِ وَلَا إِلَٰهَ إِلَّا اللَّهُ وَاللَّهُ أَكْبَرُ
-                </p>
-              </div>
-              
-              <p className="text-gray-700 dark:text-gray-300 mb-4 italic">
-                Transliteration: "Subhanallah, walhamdulillah, wa la ilaha illallahu, wallahu akbar"
-              </p>
-              
-              <p className="text-gray-700 dark:text-gray-300 mb-4">
-                Translation: "Glory be to Allah, praise be to Allah, there is no god but Allah, and Allah is the Greatest"
-              </p>
-              
-              <p className="text-gray-700 dark:text-gray-300 mb-4">
-                The Prophet (peace be upon him) said: "Whoever says 'Subhan Allahi wa bihamdihi' one hundred times during the day, nothing will be more excellent than his action except one who does the like or more."
-              </p>
-              
-              <p className="text-sm text-gray-600 dark:text-gray-400">
-                Reference: Sahih al-Bukhari | Benefit: Forgiveness of sins and spiritual purification
-              </p>
-            </div>
+            ))}
           </div>
         </div>
 
-        {/* Additional Supplications */}
-        <div className="max-w-4xl mx-auto mb-12">
-          <h2 className="text-2xl font-display font-bold text-gray-800 dark:text-white mb-6">
-            Additional Supplications Before Sleep
-          </h2>
-          
-          <div className="space-y-6">
-            <div className="glassmorphism rounded-2xl p-6">
-              <h3 className="text-xl font-semibold text-gray-800 dark:text-white mb-4 flex items-center">
-                <i className="fas fa-pray mr-3 text-indigo-500"></i>
-                Dua for Protection During Sleep
-              </h3>
-              
-              <div className="bg-gray-50 dark:bg-gray-700 rounded-xl p-4 mb-4">
-                <p className="text-right text-xl font-arabic text-gray-800 dark:text-white mb-3">
-                  بِاسْمِكَ رَبِّي وَضَعْتُ جَنْبِي وَبِكَ أَرْفَعُهُ، فَإِن أَمْسَكْتَ نَفْسِي فَارْحَمْهَا، وَإِنْ أَرْسَلْتَهَا فَاحْفَظْهَا بِمَا تَحْفَظُ بِهِ عِبَادَكَ الصَّالِحِينَ
-                </p>
-              </div>
-              
-              <p className="text-gray-700 dark:text-gray-300 mb-4 italic">
-                Transliteration: "Bismika Rabbi wada'tu janbi wa bika arfa'uhu, fa in amsakt nafsii farhamha, wa in arsaltaha fahfazha bima tahfazu bihi 'ibadaka as-salihin"
-              </p>
-              
-              <p className="text-gray-700 dark:text-gray-300 mb-4">
-                Translation: "In Your name, my Lord, I lie down and in Your name I rise. So if You take my soul, have mercy on it, and if You return it to me, protect it with the protection with which You protect Your righteous servants."
-              </p>
-              
-              <p className="text-sm text-gray-600 dark:text-gray-400">
-                Reference: Sahih al-Bukhari | Benefit: Complete protection during sleep
-              </p>
-            </div>
-            
-            <div className="glassmorphism rounded-2xl p-6">
-              <h3 className="text-xl font-semibold text-gray-800 dark:text-white mb-4 flex items-center">
-                <i className="fas fa-heart mr-3 text-purple-500"></i>
-                Dua for Peaceful Sleep
-              </h3>
-              
-              <div className="bg-gray-50 dark:bg-gray-700 rounded-xl p-4 mb-4">
-                <p className="text-right text-xl font-arabic text-gray-800 dark:text-white mb-3">
-                  اللَّهُمَّ بِاسْمِكَ أَمُوتُ وَأَحْيَا
-                </p>
-              </div>
-              
-              <p className="text-gray-700 dark:text-gray-300 mb-4 italic">
-                Transliteration: "Allahumma bismika amutu wa ahyaa"
-              </p>
-              
-              <p className="text-gray-700 dark:text-gray-300 mb-4">
-                Translation: "O Allah, in Your name I die and live"
-              </p>
-              
-              <p className="text-sm text-gray-600 dark:text-gray-400">
-                Reference: Sahih al-Bukhari | Benefit: Peaceful sleep and awakening
-              </p>
-            </div>
-            
-            <div className="glassmorphism rounded-2xl p-6">
-              <h3 className="text-xl font-semibold text-gray-800 dark:text-white mb-4 flex items-center">
-                <i className="fas fa-shield-alt mr-3 text-emerald-500"></i>
-                Seeking Forgiveness Before Sleep
-              </h3>
-              
-              <div className="bg-gray-50 dark:bg-gray-700 rounded-xl p-4 mb-4">
-                <p className="text-right text-xl font-arabic text-gray-800 dark:text-white mb-3">
-                  اللَّهُمَّ أَسْلَمْتُ نَفْسِي إِلَيْكَ، وَفَوَّضْتُ أَمْرِي إِلَيْكَ، وَوَجَّهْتُ وَجْهِي إِلَيْكَ، وَأَلْجَأْتُ ظَهْرِي إِلَيْكَ، رَغْبَةً وَرَهْبَةً إِلَيْكَ، لَا مَلْجَأَ وَلَا مَنْجَا مِنْكَ إِلَّا إِلَيْكَ، آمَنْتُ بِكِتَابِكَ الَّذِي أَنْزَلْتَ، وَبِنَبِيِّكَ الَّذِي أَرْسَلْتَ
-                </p>
-              </div>
-              
-              <p className="text-gray-700 dark:text-gray-300 mb-4 italic">
-                Transliteration: "Allahumma aslamtu nafsi ilayka, wa fawwadtu amri ilayka, wa wajjahtu wajhi ilayka, wa alja'tu zahri ilayka, raghbata wa rahbata ilayka, la malja' wa la manja minka illa ilayka, amantu bikitabika alladhi anzalta, wa binabiyyika alladhi arsalt"
-              </p>
-              
-              <p className="text-gray-700 dark:text-gray-300 mb-4">
-                Translation: "O Allah, I submit my soul to You, and I entrust my affair to You, and I turn my face to You, and I commit my back to You, hoping and fearing You. There is no refuge or escape from You except to You. I believe in Your Book which You have sent down, and in Your Prophet whom You have sent."
-              </p>
-              
-              <p className="text-sm text-gray-600 dark:text-gray-400">
-                Reference: Sahih al-Bukhari | Benefit: Complete surrender to Allah and protection
-              </p>
-            </div>
-          </div>
-        </div>
-
-        {/* Benefits of Reciting Azkar Before Sleep */}
-        <div className="max-w-4xl mx-auto mb-12">
-          <h2 className="text-2xl font-display font-bold text-gray-800 dark:text-white mb-6">
-            Benefits of Reciting Azkar Before Sleep
-          </h2>
-          
-          <div className="grid md:grid-cols-3 gap-6">
-            <div className="glassmorphism rounded-2xl p-6 text-center">
-              <div className="w-16 h-16 bg-gradient-to-br from-indigo-400 to-purple-500 rounded-full flex items-center justify-center mb-4 mx-auto">
-                <i className="fas fa-shield-alt text-white text-2xl"></i>
-              </div>
-              <h3 className="text-lg font-semibold text-gray-800 dark:text-white mb-2">
-                Spiritual Protection
-              </h3>
-              <p className="text-gray-600 dark:text-gray-300 text-sm">
-                Creates a spiritual barrier against harmful forces during sleep
-              </p>
-            </div>
-            
-            <div className="glassmorphism rounded-2xl p-6 text-center">
-              <div className="w-16 h-16 bg-gradient-to-br from-emerald-400 to-teal-500 rounded-full flex items-center justify-center mb-4 mx-auto">
-                <i className="fas fa-bed text-white text-2xl"></i>
-              </div>
-              <h3 className="text-lg font-semibold text-gray-800 dark:text-white mb-2">
-                Peaceful Sleep
-              </h3>
-              <p className="text-gray-600 dark:text-gray-300 text-sm">
-                Helps achieve restful and undisturbed sleep
-              </p>
-            </div>
-            
-            <div className="glassmorphism rounded-2xl p-6 text-center">
-              <div className="w-16 h-16 bg-gradient-to-br from-amber-400 to-orange-500 rounded-full flex items-center justify-center mb-4 mx-auto">
-                <i className="fas fa-pray text-white text-2xl"></i>
-              </div>
-              <h3 className="text-lg font-semibold text-gray-800 dark:text-white mb-2">
-                Spiritual Reward
-              </h3>
-              <p className="text-gray-600 dark:text-gray-300 text-sm">
-                Earns great reward and increases good deeds
-              </p>
-            </div>
-          </div>
-        </div>
-
-        {/* Hadith Evidence */}
-        <div className="max-w-4xl mx-auto mb-12">
-          <h2 className="text-2xl font-display font-bold text-gray-800 dark:text-white mb-6">
-            Hadith Evidence for Azkar Before Sleep
-          </h2>
-          
-          <div className="space-y-6">
-            <div className="glassmorphism rounded-2xl p-6 border-l-4 border-indigo-500">
-              <div className="flex items-start">
-                <div className="mr-4 mt-1 text-indigo-500">
-                  <i className="fas fa-quote-left text-lg"></i>
-                </div>
-                <div>
-                  <p className="text-gray-800 dark:text-gray-200 text-lg italic mb-4 leading-relaxed">
-                    "When anyone of you goes to bed, let him recite: 'Bismika Allahumma amutu wa ahyaa', and when he gets up, let him say: 'Alhamdu lillahi alladhi ahyaana ba'da ma amaatana wa ilayhi an-nushur'."
-                  </p>
-                  <p className="text-gray-600 dark:text-gray-400">
-                    Sahih al-Bukhari - This hadith emphasizes the importance of reciting specific words when going to sleep and upon waking up.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div className="glassmorphism rounded-2xl p-6 border-l-4 border-purple-500">
-              <div className="flex items-start">
-                <div className="mr-4 mt-1 text-purple-500">
-                  <i className="fas fa-quote-left text-lg"></i>
-                </div>
-                <div>
-                  <p className="text-gray-800 dark:text-gray-200 text-lg italic mb-4 leading-relaxed">
-                    "Whoever lies down in his bed and then says: 'Allahumma bismika amutu wa ahyaa', and if he dies during the night, his soul will be in a state of faith, and if he lives, his soul will be returned to him in a state of faith."
-                  </p>
-                  <p className="text-gray-600 dark:text-gray-400">
-                    Sahih al-Bukhari - This hadith highlights the spiritual significance of reciting these words before sleep.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Practical Tips */}
-        <div className="max-w-4xl mx-auto mb-12">
-          <h2 className="text-2xl font-display font-bold text-gray-800 dark:text-white mb-6">
-            Practical Tips for Reciting Azkar Before Sleep
-          </h2>
-          
-          <div className="grid md:grid-cols-2 gap-6">
-            <div className="glassmorphism rounded-2xl p-6">
-              <h3 className="text-lg font-semibold text-gray-800 dark:text-white mb-4 flex items-center">
-                <i className="fas fa-clock mr-2 text-indigo-500"></i>
-                Timing and Position
-              </h3>
-              <ul className="space-y-3">
-                <li className="flex items-start">
-                  <i className="fas fa-check-circle text-indigo-500 mt-1 mr-3"></i>
-                  <span className="text-gray-600 dark:text-gray-300">Recite the azkar while lying on your right side</span>
-                </li>
-                <li className="flex items-start">
-                  <i className="fas fa-check-circle text-indigo-500 mt-1 mr-3"></i>
-                  <span className="text-gray-600 dark:text-gray-300">Face the Qibla if possible</span>
-                </li>
-                <li className="flex items-start">
-                  <i className="fas fa-check-circle text-indigo-500 mt-1 mr-3"></i>
-                  <span className="text-gray-600 dark:text-gray-300">Recite with full concentration and understanding</span>
-                </li>
-                <li className="flex items-start">
-                  <i className="fas fa-check-circle text-indigo-500 mt-1 mr-3"></i>
-                  <span className="text-gray-600 dark:text-gray-300">Recite quietly to avoid disturbing others</span>
-                </li>
-              </ul>
-            </div>
-            
-            <div className="glassmorphism rounded-2xl p-6">
-              <h3 className="text-lg font-semibold text-gray-800 dark:text-white mb-4 flex items-center">
-                <i className="fas fa-lightbulb mr-2 text-purple-500"></i>
-                Helpful Practices
-              </h3>
-              <ul className="space-y-3">
-                <li className="flex items-start">
-                  <i className="fas fa-check-circle text-purple-500 mt-1 mr-3"></i>
-                  <span className="text-gray-600 dark:text-gray-300">Prepare a quiet, comfortable space</span>
-                </li>
-                <li className="flex items-start">
-                  <i className="fas fa-check-circle text-purple-500 mt-1 mr-3"></i>
-                  <span className="text-gray-600 dark:text-gray-300">Minimize distractions before sleep</span>
-                </li>
-                <li className="flex items-start">
-                  <i className="fas fa-check-circle text-purple-500 mt-1 mr-3"></i>
-                  <span className="text-gray-600 dark:text-gray-300">Make it a consistent habit</span>
-                </li>
-                <li className="flex items-start">
-                  <i className="fas fa-check-circle text-purple-500 mt-1 mr-3"></i>
-                  <span className="text-gray-600 dark:text-gray-300">Include these azkar in your daily routine</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <AdSense className="my-8" />
-
-        {/* FAQ Section */}
-        <div className="max-w-4xl mx-auto mt-12">
-          <h2 className="text-2xl font-display font-bold text-gray-800 dark:text-white mb-6 text-center">
-            Frequently Asked Questions
-          </h2>
-          <div className="space-y-4">
-            <div className="glassmorphism rounded-xl p-6">
-              <h3 className="font-semibold text-gray-800 dark:text-white mb-2">
-                What are the recommended azkar before sleep?
-              </h3>
-              <p className="text-gray-600 dark:text-gray-300">
-                The recommended azkar before sleep include Ayat al-Kursi, the three Quls (Surah Al-Ikhlas, Al-Falaq, An-Nas), specific duas for protection during sleep, and recitation of the last two verses of Surah Al-Baqarah. These provide spiritual protection throughout the night. The Prophet (peace be upon him) also recommended reciting the tasbih (glorification) and specific duas for complete protection.
-              </p>
-            </div>
-            <div className="glassmorphism rounded-xl p-6">
-              <h3 className="font-semibold text-gray-800 dark:text-white mb-2">
-                How long should I spend on azkar before sleep?
-              </h3>
-              <p className="text-gray-600 dark:text-gray-300">
-                The time spent on azkar before sleep can vary from 5-15 minutes depending on your schedule. The key is consistency rather than duration. Even reciting a few essential azkar regularly is better than skipping them entirely. The Prophet (peace be upon him) emphasized regularity in worship, and consistency in reciting these protective words is more beneficial than sporadic lengthy sessions.
-              </p>
-            </div>
-            <div className="glassmorphism rounded-xl p-6">
-              <h3 className="font-semibold text-gray-800 dark:text-white mb-2">
-                Can azkar before sleep help with nightmares?
-              </h3>
-              <p className="text-gray-600 dark:text-gray-300">
-                Yes, reciting protective azkar before sleep can help prevent nightmares. Surah Al-Falaq and Surah An-Nas are particularly effective for protection during sleep. The Prophet (peace be upon him) recommended these surahs for protection from evil influences while sleeping. These surahs seek protection from evil whisperings and negative forces that can affect dreams and sleep quality.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        {/* Internal Links */}
-        <div className="max-w-4xl mx-auto mt-12">
-          <h3 className="text-xl font-semibold text-gray-800 dark:text-white mb-4 text-center">
-            Related Topics
-          </h3>
-          <div className="flex flex-wrap justify-center gap-4">
-            <Link href="/evening-azkar" className="px-6 py-3 bg-indigo-500 hover:bg-indigo-600 text-white rounded-full transition-colors">
-              Evening Azkar
+        {/* Conclusion CTA */}
+        <div className="text-center bg-gradient-to-br from-indigo-600 to-purple-700 rounded-[3rem] p-16 shadow-[0_20px_60px_rgba(79,70,229,0.5)] border border-white/20">
+          <h2 className="text-4xl font-display font-bold text-white mb-6">Experience a Blessed Night</h2>
+          <p className="text-indigo-100 text-xl mb-10 max-w-2xl mx-auto">
+            Make <strong>azkar before sleep</strong> your lifelong companion. Join thousands of Muslims using Daily Azkar to perfect their <strong>nightly remembrance</strong> and find true spiritual peace.
+          </p>
+          <div className="flex flex-col sm:flex-row justify-center gap-6">
+            <Link href="/azkar" className="bg-white text-indigo-700 px-10 py-5 rounded-full font-bold text-lg hover:scale-105 transition-transform shadow-xl">
+              Explore All Azkar
             </Link>
-            <Link href="/ruqiya" className="px-6 py-3 bg-purple-500 hover:bg-purple-600 text-white rounded-full transition-colors">
-              Islamic Ruqiya
-            </Link>
-            <Link href="/morning-azkar" className="px-6 py-3 bg-emerald-500 hover:bg-emerald-600 text-white rounded-full transition-colors">
-              Morning Azkar
-            </Link>
-            <Link href="/azkar-for-anxiety-in-islam" className="px-6 py-3 bg-amber-500 hover:bg-amber-600 text-white rounded-full transition-colors">
-              Azkar for Anxiety
+            <Link href="/dua/rabbana" className="bg-indigo-900/50 text-white border border-white/20 px-10 py-5 rounded-full font-bold text-lg hover:bg-indigo-900 transition-colors shadow-xl">
+              Read Quranic Duas
             </Link>
           </div>
+        </div>
+
+        <div className="mt-20">
+          <AdSense />
         </div>
       </div>
     </div>

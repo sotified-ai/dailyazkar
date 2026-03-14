@@ -8,7 +8,7 @@ import { useQuery } from "@tanstack/react-query";
 import { type Blog } from "@shared/schema";
 
 // Custom CSS for Quill content in the frontend
-import "react-quill/dist/quill.snow.css"; 
+import "react-quill/dist/quill.snow.css";
 
 export default function BlogPost({ params }: { params: { slug: string } }) {
     const { data: post, isLoading } = useQuery<Blog>({
@@ -108,7 +108,7 @@ export default function BlogPost({ params }: { params: { slug: string } }) {
                 {/* Content Section */}
                 <div className="glassmorphism rounded-3xl p-8 md:p-12 shadow-xl animate-slide-up">
                     {/* We apply ql-editor wrapper manually so the native Quill styles cascade properly to the html */}
-                    <div 
+                    <div
                         className="ql-editor prose prose-lg md:prose-xl dark:prose-invert max-w-none text-gray-700 dark:text-gray-300 p-0"
                         dangerouslySetInnerHTML={{ __html: post.content }}
                     />
@@ -117,29 +117,29 @@ export default function BlogPost({ params }: { params: { slug: string } }) {
                 <AdSense className="my-8" />
 
                 {/* Share Section */}
-                <div className="mt-12 text-center">
-                    <h3 className="text-lg font-semibold text-gray-800 dark:text-white mb-4">Share this knowledge</h3>
-                    <div className="flex justify-center space-x-4">
+                <div className="mt-16 pt-8 border-t border-gray-100 dark:border-gray-800 text-center">
+                    <h3 className="text-xl font-display font-bold text-gray-800 dark:text-white mb-6">Spread the Knowledge</h3>
+                    <div className="flex justify-center space-x-6">
                         <button
                             onClick={() => window.open(`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(window.location.href)}`, '_blank')}
-                            className="w-12 h-12 rounded-full bg-blue-600 text-white flex items-center justify-center hover:-translate-y-1 transition-transform shadow-lg"
+                            className="w-14 h-14 rounded-2xl bg-[#1877F2] text-white flex items-center justify-center hover:-translate-y-2 transition-all duration-300 shadow-xl ring-4 ring-[#1877F2]/10"
                             aria-label="Share on Facebook"
                         >
-                            <i className="fab fa-facebook-f"></i>
+                            <i className="fab fa-facebook-f text-2xl"></i>
                         </button>
                         <button
                             onClick={() => window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent(post.title)}&url=${encodeURIComponent(window.location.href)}`, '_blank')}
-                            className="w-12 h-12 rounded-full bg-black text-white flex items-center justify-center hover:-translate-y-1 transition-transform shadow-lg"
+                            className="w-14 h-14 rounded-2xl bg-[#000000] text-white flex items-center justify-center hover:-translate-y-2 transition-all duration-300 shadow-xl ring-4 ring-black/10"
                             aria-label="Share on X (Twitter)"
                         >
-                            <i className="fa-brands fa-x-twitter"></i>
+                            <i className="fa-brands fa-x-twitter text-2xl"></i>
                         </button>
                         <button
                             onClick={() => window.open(`https://api.whatsapp.com/send?text=${encodeURIComponent(post.title + " - " + window.location.href)}`, '_blank')}
-                            className="w-12 h-12 rounded-full bg-green-500 text-white flex items-center justify-center hover:-translate-y-1 transition-transform shadow-lg"
+                            className="w-14 h-14 rounded-2xl bg-[#25D366] text-white flex items-center justify-center hover:-translate-y-2 transition-all duration-300 shadow-xl ring-4 ring-[#25D366]/10"
                             aria-label="Share on WhatsApp"
                         >
-                            <i className="fab fa-whatsapp text-xl"></i>
+                            <i className="fab fa-whatsapp text-2xl"></i>
                         </button>
                     </div>
                 </div>

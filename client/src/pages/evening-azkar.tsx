@@ -25,8 +25,8 @@ export default function EveningAzkar() {
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "Article",
-    "headline": "Evening Azkar - Complete Guide to Night Supplications",
-    "description": "Discover the complete collection of Evening Azkar (أذكار المساء) with Arabic text, transliteration, and English translations. Protect yourself with these blessed night supplications.",
+    "headline": "Evening Dua and Evening Azkar - Complete Guide to Night Supplications",
+    "description": "Discover the best evening dua and the complete collection of Evening Azkar (أذكار المساء) with Arabic text, transliteration, and English translations. Protect yourself with these blessed night supplications.",
     "author": {
       "@type": "Organization",
       "name": "Daily Azkar"
@@ -72,9 +72,9 @@ export default function EveningAzkar() {
   return (
     <div className="pt-24 bg-gradient-to-br from-emerald-50 via-white to-blue-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 min-h-screen">
       <SEOHead
-        title="Evening Azkar (Authentic & Verified) | Daily Azkar"
-        description="Discover the complete collection of Evening Azkar with Arabic text, transliteration, and English translations. Protect yourself with these blessed night supplications from authentic Islamic sources."
-        keywords="evening azkar, أذكار المساء, night dhikr, evening prayers islam, masnoon sham, evening remembrance, islamic supplications, bedtime duas, ramzan evening azkar, ramadan azkar msa, iftar dua, dua before iftar, fasting dua, ramzaan, roza kholne ki dua, shaam app, dua for sleeping, sleeping dua, surah lail, surah layl, al lail, al layl, daily nightly lyrics, evening adhkar, massa lyrics, short night prayer, surah al layl, al magrib, masa lyrics, dua after sleeping, dua close fast"
+        title="Evening Dua: Authentic Evening Azkar (Verified) | Daily Azkar"
+        description="Discover the best evening dua and complete collection of Evening Azkar with Arabic text, transliteration, and English translations. Protect yourself with these blessed night supplications from authentic Islamic sources."
+        keywords="evening dua, evening azkar, أذكار المساء, night dhikr, evening prayers islam, masnoon sham, evening remembrance, islamic supplications, bedtime duas, ramzan evening azkar, ramadan azkar msa, iftar dua, dua before iftar, fasting dua, ramzaan, roza kholne ki dua, shaam app, dua for sleeping, sleeping dua, surah lail, surah layl, al lail, al layl, daily nightly lyrics, evening adhkar, massa lyrics, short night prayer, surah al layl, al magrib, masa lyrics, dua after sleeping, dua close fast"
         canonical="https://dailyazkar.site/evening-azkar"
         structuredData={structuredData}
       />
@@ -94,7 +94,7 @@ export default function EveningAzkar() {
             <i className="fas fa-moon text-white text-3xl"></i>
           </div>
           <h1 className="text-4xl md:text-5xl font-display font-bold text-gray-800 dark:text-white mb-4">
-            {eveningAzkar.name}
+            Evening Dua and {eveningAzkar.name}
           </h1>
           <h2 className="text-2xl md:text-3xl font-arabic text-emerald-600 dark:text-emerald-400 mb-6">
             {eveningAzkar.nameArabic}
@@ -108,10 +108,10 @@ export default function EveningAzkar() {
         <div className="max-w-4xl mx-auto mb-12">
           <div className="glassmorphism rounded-2xl p-8">
             <h2 className="text-2xl font-display font-bold text-gray-800 dark:text-white mb-4">
-              The Importance of Evening Azkar
+              What is Evening Dua and its Importance?
             </h2>
             <p className="text-gray-600 dark:text-gray-300 leading-relaxed mb-4">
-              Evening Azkar (أذكار المساء) are the remembrances and supplications that Muslims recite after Asr prayer until Maghrib. These blessed words of remembrance provide spiritual protection, peace of heart, and closeness to Allah throughout the night. The practice of evening remembrance is deeply rooted in the Prophetic tradition and carries immense spiritual benefits.
+              Reciting an **evening dua** and Evening Azkar (أذكار المساء) are the remembrances and supplications that Muslims recite after Asr prayer until Maghrib. These blessed words of remembrance provide spiritual protection, peace of heart, and closeness to Allah throughout the night. The practice of evening remembrance is deeply rooted in the Prophetic tradition and carries immense spiritual benefits.
             </p>
             <p className="text-gray-600 dark:text-gray-300 leading-relaxed mb-6">
               The Prophet Muhammad ﷺ consistently recited Evening Azkar and encouraged his companions to do the same. These supplications serve as a shield against harm and a means of gaining Allah's mercy and protection during the vulnerable hours of the night. By establishing this daily practice, believers strengthen their connection with their Creator and find peace in His remembrance.

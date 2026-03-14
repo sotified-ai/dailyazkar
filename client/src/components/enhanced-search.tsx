@@ -3,6 +3,8 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { azkarData } from "@/data/azkar-data";
 import { Link } from "wouter";
+import { cn } from "@/lib/utils";
+import { useLanguage } from "@/lib/language-context";
 
 interface LocalResult {
   title: string;
@@ -231,6 +233,7 @@ async function searchQuran(query: string): Promise<QuranVerse[]> {
 }
 
 export function EnhancedSearch() {
+  const { lang, t, isUrdu } = useLanguage();
   const [searchQuery, setSearchQuery] = useState("");
   const [localResults, setLocalResults] = useState<LocalResult[]>([]);
   const [quranResults, setQuranResults] = useState<QuranVerse[]>([]);
@@ -268,11 +271,18 @@ export function EnhancedSearch() {
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto">
           <div className="text-center mb-12 animate-fade-in">
-            <h2 className="text-3xl md:text-4xl font-display font-bold text-gray-800 dark:text-white mb-4">
-              Discover <span className="gradient-text">Islamic Knowledge</span>
+            <h2 className={cn(
+              "text-3xl md:text-4xl font-display font-bold text-gray-800 dark:text-white mb-4",
+              isUrdu ? "font-urdu text-3xl md:text-5xl" : ""
+            )}>
+              {isUrdu ? "اسلامی علم " : "Discover "}
+              <span className="gradient-text">{isUrdu ? "تلاش کریں" : "Islamic Knowledge"}</span>
             </h2>
-            <p className="text-lg text-gray-600 dark:text-gray-300">
-              Search for Azkar, duas, or Islamic topics — includes live Quran verse search
+            <p className={cn(
+              "text-lg text-gray-600 dark:text-gray-300",
+              isUrdu ? "font-urdu text-base" : ""
+            )}>
+              {isUrdu ? "اذکار، دعائیں، یا اسلامی موضوعات تلاش کریں - زندہ قرآن آیت کی تلاش شامل ہے" : "Search for Azkar, duas, or Islamic topics — includes live Quran verse search"}
             </p>
           </div>
 
@@ -281,17 +291,24 @@ export function EnhancedSearch() {
             <div className="relative mb-6">
               <Input
                 type="text"
-                placeholder="Search 'Morning Dua', 'Subhanallah', 'forgiveness', 'protection'..."
+                placeholder={isUrdu ? "'صبح کی دعا'، 'سبحان اللہ'، 'استغفار' تلاش کریں..." : "Search 'Morning Dua', 'Subhanallah', 'forgiveness', 'protection'..."}
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 onKeyDown={(e) => e.key === "Enter" && handleSearch()}
-                className="w-full px-6 py-4 bg-white dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 transition-all text-lg"
+                className={cn(
+                  "w-full px-6 py-4 bg-white dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 transition-all text-lg",
+                  isUrdu ? "font-urdu text-base text-right" : ""
+                )}
               />
               <Button
                 onClick={() => handleSearch()}
-                className="absolute right-2 top-1/2 transform -translate-y-1/2 px-6 py-2 bg-gradient-to-r from-emerald-500 to-emerald-600 hover:from-emerald-600 hover:to-emerald-700 text-white font-medium rounded-lg"
+                className={cn(
+                  "absolute top-1/2 transform -translate-y-1/2 px-6 py-2 bg-gradient-to-r from-emerald-500 to-emerald-600 hover:from-emerald-600 hover:to-emerald-700 text-white font-medium rounded-lg",
+                  isUrdu ? "left-2" : "right-2"
+                )}
               >
-                <i className="fas fa-search mr-2"></i>Search
+                <i className={cn("fas fa-search", isUrdu ? "ml-2" : "mr-2")}></i>
+                {isUrdu ? "تلاش" : "Search"}
               </Button>
             </div>
 
@@ -398,14 +415,22 @@ export function EnhancedSearch() {
 
             {/* Popular Searches */}
             <div className="mt-8">
-              <h4 className="font-semibold text-gray-800 dark:text-white mb-4">Popular Searches</h4>
+              <h4 className={cn(
+                "font-semibold text-gray-800 dark:text-white mb-4",
+                isUrdu ? "font-urdu" : ""
+              )}>
+                {isUrdu ? "مشہور تلاش" : "Popular Searches"}
+              </h4>
               <div className="flex flex-wrap gap-3">
-                {popularSearches.map((search) => (
+                {(isUrdu ? ["سبحان اللہ", "صبح کی دعا", "استغفراللہ", "آیۃ الکرسی", "شام کے اذکار"] : popularSearches).map((search) => (
                   <Button
                     key={search}
                     variant="outline"
                     onClick={() => handleSearch(search)}
-                    className="px-4 py-2 bg-gray-100 dark:bg-gray-700 hover:bg-emerald-100 dark:hover:bg-emerald-900/30 text-gray-700 dark:text-gray-300 rounded-full text-sm"
+                    className={cn(
+                      "px-4 py-2 bg-gray-100 dark:bg-gray-700 hover:bg-emerald-100 dark:hover:bg-emerald-900/30 text-gray-700 dark:text-gray-300 rounded-full text-sm font-medium",
+                      isUrdu ? "font-urdu" : ""
+                    )}
                   >
                     {search}
                   </Button>

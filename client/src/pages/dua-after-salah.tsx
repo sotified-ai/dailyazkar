@@ -75,8 +75,8 @@ export default function DuaAfterSalah() {
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "Article",
-    "headline": "Dua After Salah - Complete Post-Prayer Supplications",
-    "description": "Learn the authentic duas and supplications to recite after completing your daily prayers. These blessed words complete your Salah and bring immense rewards.",
+    "headline": "Dua After Prayer and Salah - Complete Post-Prayer Supplications",
+    "description": "Learn the best dua after prayer and authentic supplications to recite after completing your daily prayers. These blessed words complete your Namaz and bring immense rewards.",
     "author": {
       "@type": "Organization",
       "name": "Daily Azkar"
@@ -114,9 +114,9 @@ export default function DuaAfterSalah() {
   return (
     <div className="pt-24 bg-gradient-to-br from-blue-50 via-white to-indigo-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 min-h-screen">
       <SEOHead
-        title="Dua After Salah - Complete Post-Prayer Supplications | Daily Azkar"
-        description="Learn the authentic duas and supplications to recite after completing your daily prayers. Includes Arabic text, translations, and references from Hadith."
-        keywords="dua after salah, post prayer dua, after namaz dua, salah supplications, tasbih after prayer, adhkar after salah, دعاء بعد الصلاة, dua after wudu, fajr time in la, salah meaning, salat al sunnah, dua after azan in english, how to recite namaz, sunni dua after namaz, dua after prayer, dua after the azan, dua after namaz, how to perform salat, sunnah salah, attahiyat in english, dua istikhara, istikhara supplication, dua for istikhara"
+        title="Dua After Prayer: Authentic Duas after Namaz & Salah | Daily Azkar"
+        description="Learn the best dua after prayer and authentic supplications to recite after completing your daily prayers. Includes Arabic text, translations, and references from Hadith."
+        keywords="dua after prayer, dua after namaz, dua after salah, post prayer dua, after namaz dua, salah supplications, tasbih after prayer, adhkar after salah, دعاء بعد الصلاة, dua after wudu, fajr time in la, salah meaning, salat al sunnah, dua after azan in english, how to recite namaz, sunni dua after namaz, dua after prayer, dua after the azan, how to perform salat, sunnah salah, attahiyat in english, dua istikhara, istikhara supplication, dua for istikhara"
         canonical="https://dailyazkar.site/dua-after-salah"
         structuredData={structuredData}
       />
@@ -135,7 +135,7 @@ export default function DuaAfterSalah() {
             <i className="fas fa-hands text-white text-3xl"></i>
           </div>
           <h1 className="text-4xl md:text-5xl font-display font-bold text-gray-800 dark:text-white mb-4">
-            Dua after Salah
+            Dua after Prayer and Salah
           </h1>
           <h2 className="text-2xl md:text-3xl font-arabic text-blue-600 dark:text-blue-400 mb-6">
             دعاء بعد الصلاة
@@ -149,10 +149,10 @@ export default function DuaAfterSalah() {
         <div className="max-w-4xl mx-auto mb-12">
           <div className="glassmorphism rounded-2xl p-8">
             <h2 className="text-2xl font-display font-bold text-gray-800 dark:text-white mb-4">
-              The Importance of Post-Prayer Supplications
+              What is the best Dua after Prayer?
             </h2>
             <p className="text-gray-600 dark:text-gray-300 leading-relaxed mb-4">
-              The moments immediately after completing Salah are among the most blessed times for making dua. The Prophet Muhammad ﷺ taught us specific supplications to recite after the Tasleem (ending greeting) that complete our prayer and bring immense rewards. These adhkar maintain the spiritual connection we established during prayer.
+              The moments immediately after completing a **dua after prayer** or Salah are among the most blessed times for making supplication. The Prophet Muhammad ﷺ taught us specific supplications and **dua after namaz** to recite after the Tasleem (ending greeting) that complete our prayer and bring immense rewards. These adhkar maintain the spiritual connection we established during prayer.
             </p>
             <p className="text-gray-600 dark:text-gray-300 leading-relaxed mb-4">
               The Prophet ﷺ said: <em className="text-blue-600 dark:text-blue-400">"The supplication made between the Adhan and Iqamah is not rejected, and neither is the one made after the obligatory prayer"</em> (Tirmidhi). This highlights why we should never rush away from our prayer mat without completing these blessed remembrances.

@@ -3,6 +3,8 @@ import { AdSense } from '@/components/adsense';
 import { Link } from 'wouter';
 import { Breadcrumbs } from '@/components/breadcrumbs';
 import { RelatedContent } from '@/components/related-content';
+import { useLanguage } from '@/lib/language-context';
+import { cn } from '@/lib/utils';
 
 const sehriDuas = [
     {
@@ -45,7 +47,7 @@ const iftarDuas = [
 const ramadanAzkar = [
     {
         title: "Tarawih Dua (Between Rakaahs)",
-        arabic: "سُبْحَانَ ذِي الْمُلْكِ وَالْمَلَكُوتِ سُبْحَانَ ذِي الْعِزَّةِ وَالْعَظَمَةِ وَالْهَيْبَةِ وَالْقُدْرَةِ وَالْكِبْرِيَاءِ وَالْجَبَرُوتِ",
+        arabic: "سُبْحَانَ ذِي الْمُلْكِ وَالْمَلَکُوتِ سُبْحَانَ ذِي الْعِزَّةِ وَالْعَظَمَةِ وَالْهَيْبَةِ وَالْقُدْرَةِ وَالْکِبْرِيَاءِ وَالْجَبَرُوتِ",
         transliteration: "Subhana dhil mulki wal malakoot, subhana dhil 'izzati wal 'azhamati wal haybati wal qudrati wal kibriyaa'i wal jabaroot",
         translation: "Glory be to the Owner of dominion and sovereignty. Glory be to the One with might, greatness, awe, power, pride and omnipotence.",
         reference: "Traditional",
@@ -58,31 +60,82 @@ const ramadanAzkar = [
         translation: "O Allah, You are Most Forgiving, and You love forgiveness; so forgive me.",
         reference: "Tirmidhi 3513",
         note: "The dua Aisha (RA) asked the Prophet ﷺ to teach her for Laylatul Qadr. Recite abundantly in the last 10 nights."
+    }
+];
+
+const oddNightAzkar = [
+    {
+        title: "Istighfar (100 times)",
+        arabic: "أَسْتَغْفِرُ اللّٰهَ",
+        translation: "I seek forgiveness from Allah",
+        reference: "Bukhari"
     },
     {
-        title: "Dua for Ramadan (Start of Month)",
-        arabic: "اللَّهُمَّ سَلِّمْنِي لِرَمَضَانَ وَسَلِّمْ رَمَضَانَ لِي وَتَسَلَّمْهُ مِنِّي مُتَقَبَّلاً",
-        transliteration: "Allahumma sallimni li-Ramadan wa sallim Ramadana li wa tasallamhu minni mutaqabbalan",
-        translation: "O Allah, keep me safe for Ramadan, keep Ramadan safe for me, and accept it from me.",
-        reference: "Transmitted by the Salaf",
-        note: "Recite at the beginning of Ramadan"
+        title: "Durood Sharif (100 times)",
+        arabic: "اَللّٰهُمَّ صَلِّ عَلَى مُحَمَّدٍ وَّعَلَى آلِ مُحَمَّدٍ",
+        translation: "O Allah, bestow Your blessings upon Muhammad and the family of Muhammad",
+        reference: "Traditional"
     },
     {
-        title: "Istighfar in Ramadan",
-        arabic: "أَسْتَغْفِرُ اللَّهَ الْعَظِيمَ الَّذِي لَا إِلَهَ إِلَّا هُوَ الْحَيَّ الْقَيُّومَ وَأَتُوبُ إِلَيْهِ",
-        transliteration: "Astaghfirullaha al-'Atheema alladhi la ilaha illa huwa al-Hayyul Qayyoumu wa atubu ilayh",
-        translation: "I seek forgiveness from Allah, the Magnificent, the One besides Whom there is no deity, the Ever-Living, the Sustainer, and I repent to Him.",
-        reference: "Abu Dawud, Tirmidhi",
-        note: "Recite abundantly in Ramadan — especially in the last third of the night"
+        title: "Kalima Tayyaba (100 times)",
+        arabic: "لَا اِلٰهَ اِلَّا اللّٰهُ",
+        translation: "There is no deity except Allah",
+        reference: "Traditional"
+    },
+    {
+        title: "Laylatul Qadr Dua (100 times)",
+        arabic: "اللَّهُمَّ إِنَّكَ عَفُوٌّ كَرِيمٌ تُحِبُّ الْعَفْوَ فَاعْفُ عَنِّي",
+        translation: "O Allah, You are Most Forgiving, most Generous and You love forgiveness; so forgive me.",
+        reference: "Tirmidhi"
+    },
+    {
+        title: "Dua for Paradise & Refuge from Fire",
+        arabic: "اَستغفرُاللّٰه لا الٰه الّا اللّٰه اَسْأَلُکَ الْجَنّةَ وَاَعُوذُبِکَ مِنَ النّار",
+        translation: "I seek forgiveness, there is no deity except Allah, I ask You for Paradise and seek refuge in You from the Fire.",
+        reference: "Traditional"
+    }
+];
+
+const oddNightActions = [
+    {
+        title: "2 Rakat Salat al-Tawbah (Prayer of Repentance)",
+        desc: "Recall your sins and repent sincerely. Ask for strength to avoid them and seek refuge from moral evils like backbiting and malice.",
+        urdu: "دو رکعات نماز صلوۃ التوبہ: اپنے گناہوں سے توبہ کریں اور آئندہ ان سے بچنے کی توفیق مانگیں۔"
+    },
+    {
+        title: "2 Rakat Salat al-Shukr (Prayer of Gratitude)",
+        desc: "Thank Allah for specific blessings: faith, health, children, and sustenance.",
+        urdu: "دو رکعات صلوۃ الشکر: اللہ کی نعمتوں (ایمان، صحت، اولاد) کا شکر ادا کریں۔"
+    },
+    {
+        title: "2 Rakat Salat al-Hajat (Prayer of Need)",
+        desc: "Ask for all your needs—for success in this world and the hereafter, and a good end in faith.",
+        urdu: "دو رکعات صلوۃ الحاجات: اپنی تمام دینی و دنیاوی حاجات کے لیے دعائیں مانگیں۔"
+    },
+    {
+        title: "2 Rakat Nafl (Gift for the Prophet ﷺ)",
+        desc: "Gift the reward to the Prophet ﷺ and pray for his vision in dreams and his intercession.",
+        urdu: "دو رکعات نفل ہدیہ نبی کریم ﷺ: آپ ﷺ کی شفاعت اور خواب میں زیارت کے لیے دعا کریں۔"
+    },
+    {
+        title: "2 Rakat Nafl (Parents & Family)",
+        desc: "Pray for your parents, children, and family members individually.",
+        urdu: "والدین اور اہل خانہ کے لیے نفل: اپنے بچوں اور والدین کی خیر و عافیت کے لیے دعا کریں۔"
+    },
+    {
+        title: "2 Rakat Nafl (Ummah & Oppressed)",
+        desc: "Pray for the entire Muslim Ummah, especially those facing oppression globally.",
+        urdu: "پوری امت مسلمہ کے لیے نفل: مظلوم مسلمانوں اور پوری امت کی کامیابی کے لیے دعا کریں۔"
     }
 ];
 
 export default function RamadanAzkarPage() {
+    const { t, isUrdu } = useLanguage();
     const structuredData = {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": "Ramadan Azkar - Sehri Dua, Iftar Dua & Fasting Supplications",
-        "description": "Complete guide to Ramadan Azkar including Sehri dua, Iftar dua, Laylatul Qadr dua, and fasting supplications. Authentic duas for Ramzan with Arabic text and translation.",
+        "headline": "Ramadan Azkar - Sehri, Iftar & Odd Night Azkar for Laylatul Qadr",
+        "description": "Complete guide to Ramadan Azkar including Sehri dua, Iftar dua, Laylatul Qadr dua, Odd Night Azkar actions, and fasting supplications. Authentic duas for Ramzan with Arabic text and translation.",
         "author": { "@type": "Organization", "name": "Daily Azkar" },
         "publisher": { "@type": "Organization", "name": "Daily Azkar", "url": "https://dailyazkar.site" },
         "url": "https://dailyazkar.site/ramadan-azkar"
@@ -130,9 +183,9 @@ export default function RamadanAzkarPage() {
     return (
         <div className="min-h-screen bg-gradient-to-br from-amber-50 via-white to-emerald-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900">
             <SEOHead
-                title="Ramadan Azkar - Sehri Dua, Iftar Dua & Fasting Supplications | Daily Azkar"
-                description="Complete Ramadan Azkar guide: Sehri dua, Iftar dua, Laylatul Qadr dua, Tarawih duas & Ramzan supplications. Authentic Arabic text with English translation for fasting Muslims."
-                keywords="ramadan azkar, ramzan azkar, sehri dua, iftar dua, fasting duas, roza ki dua, ramadan dua, ramzaan azkar, laylatul qadr dua, tarawih dua, ramadan mubarak dua, suhoor dua, dua for breaking fast, ramadan 2025, azkar ramadan"
+                title="Ramadan Azkar - Sehri, Iftar & Laylatul Qadr (Odd Night) Duas | Daily Azkar"
+                description="Complete Ramadan Azkar guide: Dua for suhoor, Iftar dua, Laylatul Qadr dua, Odd Night Azkar & actions, Tarawih duas & Ramzan supplications. Authentic Arabic text with English translation."
+                keywords="dua for suhoor, ramadan azkar, ramzan azkar, laylatul qadr dua, odd night azkar, odd night actions, laylatul qadr amal, sehri dua, iftar dua, fasting duas, roza ki dua, ramadan dua, ramzaan azkar, tarawih dua, ramadan mubarak dua, suhoor dua, dua for breaking fast, ramadan 2025, azkar ramadan"
                 canonical="https://dailyazkar.site/ramadan-azkar"
                 structuredData={structuredData}
             />
@@ -165,10 +218,10 @@ export default function RamadanAzkarPage() {
                 <div className="max-w-4xl mx-auto mb-12">
                     <div className="glassmorphism rounded-2xl p-8">
                         <h2 className="text-2xl font-display font-bold text-gray-800 dark:text-white mb-4">
-                            The Blessed Month of Ramadan (رمضان المبارك)
+                            Ramadan Duas: From Dua for Suhoor to Iftar
                         </h2>
                         <p className="text-gray-600 dark:text-gray-300 leading-relaxed mb-4">
-                            Ramadan (also spelled Ramzan or Ramzaan) is the holiest month in the Islamic calendar — the month in which the Quran was revealed. Allah says: <em className="text-amber-600 dark:text-amber-400">"The month of Ramadan is that in which the Quran was revealed, a guidance for the people and clear proofs of guidance and criterion."</em> (Quran 2:185)
+                            Ramadan (also spelled Ramzan or Ramzaan) is the holiest month in the Islamic calendar — the month in which the Quran was revealed. Reciting a **dua for suhoor** and staying in remembrance of Allah throughout the day is the essence of this month. Allah says: <em className="text-amber-600 dark:text-amber-400">"The month of Ramadan is that in which the Quran was revealed, a guidance for the people and clear proofs of guidance and criterion."</em> (Quran 2:185)
                         </p>
                         <p className="text-gray-600 dark:text-gray-300 leading-relaxed mb-4">
                             During Ramadan, Muslims fast (roza) from Sehri (Suhoor — pre-dawn meal) until Iftar (sunset), abstaining from food, drink, and sinful behavior. This month is a time of heightened worship, increased Quran recitation, charity (Zakat and Sadaqah), and abundant Azkar (remembrance of Allah).
@@ -238,7 +291,7 @@ export default function RamadanAzkarPage() {
                 <AdSense className="my-8" />
 
                 {/* Ramadan Azkar */}
-                <div className="max-w-4xl mx-auto mb-12">
+                <div className="max-w-4xl mx-auto mb-16">
                     <h2 className="text-3xl font-display font-bold text-gray-800 dark:text-white mb-2 text-center">
                         ✨ Special Ramadan Azkar
                     </h2>
@@ -253,7 +306,7 @@ export default function RamadanAzkarPage() {
                                 <p className="text-3xl font-arabic text-right text-gray-800 dark:text-white leading-loose mb-4 bg-purple-50/50 dark:bg-purple-900/10 rounded-xl p-4">
                                     {dua.arabic}
                                 </p>
-                                <p className="text-base text-purple-600 dark:text-purple-400 italic mb-2">{dua.transliteration}</p>
+                                <p className="text-base text-purple-600 dark:text-amber-400 italic mb-2">{dua.transliteration}</p>
                                 <p className="text-gray-600 dark:text-gray-300 mb-3"><strong>Translation:</strong> {dua.translation}</p>
                                 <div className="flex items-start gap-2 text-sm text-gray-500 dark:text-gray-400 bg-gray-50 dark:bg-gray-800/50 rounded-lg p-3">
                                     <i className="fas fa-info-circle mt-0.5 text-purple-500 flex-shrink-0"></i>
@@ -261,6 +314,84 @@ export default function RamadanAzkarPage() {
                                 </div>
                             </div>
                         ))}
+                    </div>
+                </div>
+
+                {/* Odd Night Section */}
+                <div className="max-w-4xl mx-auto mb-16">
+                    <div className="text-center mb-10">
+                        <h2 className={cn(
+                            "text-3xl md:text-4xl font-display font-bold text-gray-800 dark:text-white mb-4",
+                            isUrdu ? "font-urdu" : ""
+                        )}>
+                            {isUrdu ? "🌟 طاق راتوں کے اعمال" : "🌟 Odd Night Actions (Laylatul Qadr)"}
+                        </h2>
+                        <p className={cn(
+                            "text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto",
+                            isUrdu ? "font-urdu leading-relaxed" : ""
+                        )}>
+                            {isUrdu
+                                ? "(نوٹ ) یہ تمام اعمال طاق راتوں کے لئے خاص یا لازم نہیں ھیں اسلئے ان میں سے جو کرنا چاھیں کر لیں اسکے علاوہ کوئی اور کرنا چاھیں تو وہ کر لیں۔ جاۓ نماز پر قبلہ رو ہو کر پوری توجہ اور یکسوئی کیساتھ پڑھیں۔"
+                                : "(Note) These actions are not exclusive or mandatory for odd nights; you can perform any of these or any other righteous deeds you prefer. Sit facing the Qibla with full focus and devotion."
+                            }
+                        </p>
+                    </div>
+
+                    {/* Odd Night Azkar */}
+                    <div className="grid md:grid-cols-2 gap-6 mb-12">
+                        {oddNightAzkar.map((dua, i) => (
+                            <div key={i} className="glassmorphism rounded-2xl p-6 border-l-4 border-amber-500">
+                                <h3 className="font-bold text-gray-800 dark:text-white mb-2">{dua.title}</h3>
+                                <p className="text-2xl font-arabic text-right mb-3 text-emerald-600 dark:text-emerald-400">{dua.arabic}</p>
+                                <p className="text-sm text-gray-600 dark:text-gray-300 italic">{dua.translation}</p>
+                            </div>
+                        ))}
+                    </div>
+
+                    {/* Odd Night Nawafil & Actions */}
+                    <div className="space-y-4">
+                        {oddNightActions.map((action, i) => (
+                            <div key={i} className="glassmorphism rounded-2xl p-6 flex items-start gap-4 hover:bg-white/60 dark:hover:bg-gray-800/60 transition-all">
+                                <div className="w-10 h-10 rounded-full bg-emerald-100 dark:bg-emerald-900/40 flex items-center justify-center shrink-0">
+                                    <span className="text-emerald-600 dark:text-emerald-400 font-bold">{i + 1}</span>
+                                </div>
+                                <div>
+                                    <h4 className={cn("text-lg font-bold text-gray-800 dark:text-white mb-1", isUrdu ? "font-urdu" : "")}>
+                                        {isUrdu ? action.urdu.split(':')[0] : action.title}
+                                    </h4>
+                                    <p className={cn("text-gray-600 dark:text-gray-300 text-sm", isUrdu ? "font-urdu leading-relaxed" : "")}>
+                                        {isUrdu ? action.urdu.split(':')[1] || action.urdu : action.desc}
+                                    </p>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+
+                    <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div className="glassmorphism p-6 rounded-2xl bg-amber-50/50 dark:bg-amber-900/10 flex items-center justify-between">
+                            <div className="flex items-center gap-3">
+                                <div className="w-12 h-12 bg-amber-100 dark:bg-amber-900/30 rounded-xl flex items-center justify-center">
+                                    <i className="fas fa-book-open text-amber-600"></i>
+                                </div>
+                                <div>
+                                    <h5 className="font-bold text-gray-800 dark:text-white">Quran Recitation</h5>
+                                    <p className="text-xs text-gray-500">As much as possible</p>
+                                </div>
+                            </div>
+                            {isUrdu && <span className="font-urdu text-amber-700">تلاوتِ قرآن</span>}
+                        </div>
+                        <div className="glassmorphism p-6 rounded-2xl bg-emerald-50/50 dark:bg-emerald-900/10 flex items-center justify-between">
+                            <div className="flex items-center gap-3">
+                                <div className="w-12 h-12 bg-emerald-100 dark:bg-emerald-900/30 rounded-xl flex items-center justify-center">
+                                    <i className="fas fa-hand-holding-heart text-emerald-600"></i>
+                                </div>
+                                <div>
+                                    <h5 className="font-bold text-gray-800 dark:text-white">Sadaqah (Charity)</h5>
+                                    <p className="text-xs text-gray-500">Even a small amount</p>
+                                </div>
+                            </div>
+                            {isUrdu && <span className="font-urdu text-emerald-700">صدقہ و خیرات</span>}
+                        </div>
                     </div>
                 </div>
 

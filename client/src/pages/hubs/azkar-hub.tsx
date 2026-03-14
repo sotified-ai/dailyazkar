@@ -96,6 +96,29 @@ export default function AzkarHub() {
                             </CardContent>
                         </Card>
                     </Link>
+
+                    {/* Tasbeeh Counter */}
+                    <Link href="/tasbeeh-counter">
+                        <Card className="glassmorphism border-0 shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer group h-full hover:-translate-y-1">
+                            <CardHeader className="text-center pb-2">
+                                <div className="w-16 h-16 bg-teal-100 dark:bg-teal-900/30 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+                                    <i className="fas fa-calculator text-teal-600 text-2xl"></i>
+                                </div>
+                                <CardTitle className="text-2xl text-gray-800 dark:text-white group-hover:text-teal-600 transition-colors">
+                                    Tasbeeh Counter
+                                </CardTitle>
+                                <p className="text-emerald-600 dark:text-emerald-400 font-arabic text-xl mt-2">المسبحة الإلكترونية</p>
+                            </CardHeader>
+                            <CardContent className="text-center">
+                                <p className="text-gray-600 dark:text-gray-400 mb-4">
+                                    Track your daily dhikr with our interactive digital tasbeeh tool.
+                                </p>
+                                <span className="text-teal-600 dark:text-teal-400 font-medium text-sm flex items-center justify-center gap-2">
+                                    Start Counting <i className="fas fa-arrow-right text-xs transition-transform group-hover:translate-x-1"></i>
+                                </span>
+                            </CardContent>
+                        </Card>
+                    </Link>
                 </div>
 
                 {/* Bottom CTA to Another Hub */}

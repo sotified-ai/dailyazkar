@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import { useLanguage } from '@/lib/language-context';
 
 interface SEOHeadProps {
   title: string;
@@ -102,6 +103,14 @@ export function SEOHead({ title, description, keywords, canonical, ogType = 'web
       script.textContent = JSON.stringify(structuredData);
     }
   }, [title, description, keywords, canonical, ogType, structuredData, robots]);
+
+  const { lang, direction } = useLanguage();
+
+  useEffect(() => {
+    // Update HTML lang and dir attributes
+    document.documentElement.lang = lang;
+    document.documentElement.dir = direction;
+  }, [lang, direction]);
 
   return null;
 }

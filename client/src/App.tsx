@@ -12,6 +12,8 @@ import { useEffect } from "react";
 import { initGA } from "./lib/analytics";
 import { useAnalytics } from "./hooks/use-analytics";
 import { GoogleTagManager } from "@/components/adsense";
+import { LanguageProvider } from "@/lib/language-context";
+import { Router as BaseRouter } from "wouter";
 
 // Pages
 import Home from "@/pages/home";
@@ -53,6 +55,9 @@ import AzkarForProtectionFromEvilEye from "@/pages/azkar-for-protection-from-evi
 import AzkarBeforeSleep from "@/pages/azkar-before-sleep";
 import AzkarAfterEveryPrayer from "@/pages/azkar-after-every-prayer";
 import ShortAzkarForBusyMuslims from "@/pages/short-azkar-for-busy-muslims";
+import MorningDuaPillar from "@/pages/morning-dua";
+import NamesOfAllahPage from "@/pages/99-names";
+import TasbeehCounterPage from "@/pages/tasbeeh-counter";
 
 // Hubs
 import AzkarHub from "@/pages/hubs/azkar-hub";
@@ -85,6 +90,20 @@ function RedirectTo({ to }: { to: string }) {
     setLocation(to);
   }, [to, setLocation]);
   return null;
+}
+
+function LangRouter({ children }: { children: React.ReactNode }) {
+  const [location] = useLocation();
+  const isUrdu = location.startsWith("/ur");
+  const base = isUrdu ? "/ur" : "";
+
+  return (
+    <BaseRouter base={base}>
+      <LanguageProvider>
+        {children}
+      </LanguageProvider>
+    </BaseRouter>
+  );
 }
 
 function Router() {
@@ -141,6 +160,14 @@ function Router() {
           <Route path="/daily-blogs"><RedirectTo to="/blog" /></Route>
           <Route path="/daily-blogs/:slug"><RedirectTo to="/blog/:slug" /></Route>
           <Route path="/online-quran-tutor"><RedirectTo to="/tutor" /></Route>
+          <Route path="/dua-after-waking-up" component={MorningDuaPillar} />
+          <Route path="/morning-dua"><RedirectTo to="/dua-after-waking-up" /></Route>
+          <Route path="/after-fajr-dua"><RedirectTo to="/dua-after-fajr-prayer" /></Route>
+          <Route path="/dua-after-prayer"><RedirectTo to="/dua/after-salah" /></Route>
+          <Route path="/dua-after-namaz"><RedirectTo to="/dua/after-salah" /></Route>
+          <Route path="/dua-for-protection"><RedirectTo to="/protection-duas-in-islam" /></Route>
+          <Route path="/dua-for-protection-from-evil"><RedirectTo to="/protection-duas-in-islam" /></Route>
+          <Route path="/dua-for-suhoor"><RedirectTo to="/azkar/ramadan" /></Route>
 
           {/* Resource Routes */}
           <Route path="/about-islam" component={AboutIslamPage} />
@@ -169,6 +196,9 @@ function Router() {
           <Route path="/azkar-before-sleep" component={AzkarBeforeSleep} />
           <Route path="/azkar-after-every-prayer" component={AzkarAfterEveryPrayer} />
           <Route path="/short-azkar-for-busy-muslims" component={ShortAzkarForBusyMuslims} />
+          <Route path="/99-names-of-allah" component={NamesOfAllahPage} />
+          <Route path="/tasbeeh-counter" component={TasbeehCounterPage} />
+          <Route path="/en/99-names-of-allah"><RedirectTo to="/99-names-of-allah" /></Route>
 
           {/* Legacy Redirects */}
           <Route path="/index.html"><RedirectTo to="/" /></Route>
@@ -213,7 +243,9 @@ function App() {
         <TooltipProvider>
           <GoogleTagManager />
           <Toaster />
-          <Router />
+          <LangRouter>
+            <Router />
+          </LangRouter>
         </TooltipProvider>
       </ThemeProvider>
     </QueryClientProvider>

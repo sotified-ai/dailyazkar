@@ -10,10 +10,11 @@ interface RelatedLink {
 
 export const relatedContentMap: Record<string, RelatedLink[]> = {
     azkar: [
-        { title: "Evening Azkar", description: "Evening supplications for protection", href: "/evening-azkar", icon: "fas fa-moon", color: "from-blue-500 to-indigo-600" },
-        { title: "Morning Azkar", description: "Start your day with remembrance", href: "/morning-azkar", icon: "fas fa-sun", color: "from-amber-500 to-orange-600" },
-        { title: "Ramadan Azkar", description: "Special duas for the blessed month", href: "/ramadan-azkar", icon: "fas fa-star-and-crescent", color: "from-emerald-500 to-teal-600" },
+        { title: "Morning Dua & Azkar", description: "Start your day with remembrance", href: "/morning-azkar", icon: "fas fa-sun", color: "from-amber-500 to-orange-600" },
+        { title: "Evening Dua & Azkar", description: "Evening supplications for protection", href: "/evening-azkar", icon: "fas fa-moon", color: "from-blue-500 to-indigo-600" },
         { title: "Dua After Salah", description: "Post-prayer supplications", href: "/dua-after-salah", icon: "fas fa-hands", color: "from-purple-500 to-pink-600" },
+        { title: "Protection Duas", description: "Islamic supplications for safety", href: "/protection-duas-in-islam", icon: "fas fa-shield-alt", color: "from-red-500 to-rose-600" },
+        { title: "Ramadan Azkar", description: "Special duas for the blessed month", href: "/ramadan-azkar", icon: "fas fa-star-and-crescent", color: "from-emerald-500 to-teal-600" },
     ],
     quran: [
         { title: "Read Quran", description: "Read the Holy Quran online", href: "/quran", icon: "fas fa-quran", color: "from-emerald-500 to-teal-600" },
@@ -24,8 +25,8 @@ export const relatedContentMap: Record<string, RelatedLink[]> = {
     dua: [
         { title: "Dua After Salah", description: "Post-prayer supplications", href: "/dua-after-salah", icon: "fas fa-hands", color: "from-blue-500 to-indigo-600" },
         { title: "Rabbana Duas", description: "Quranic supplications", href: "/rabbana-duas", icon: "fas fa-heart", color: "from-teal-500 to-emerald-600" },
-        { title: "Morning Azkar", description: "Start your day with remembrance", href: "/morning-azkar", icon: "fas fa-sun", color: "from-amber-500 to-orange-600" },
-        { title: "Evening Azkar", description: "Evening supplications for protection", href: "/evening-azkar", icon: "fas fa-moon", color: "from-violet-500 to-purple-600" },
+        { title: "Morning Dua & Azkar", description: "Start your day with remembrance", href: "/morning-azkar", icon: "fas fa-sun", color: "from-amber-500 to-orange-600" },
+        { title: "Protection Duas", description: "Islamic supplications for safety", href: "/protection-duas-in-islam", icon: "fas fa-shield-alt", color: "from-red-500 to-rose-600" },
     ],
     blog: [
         { title: "Daily Blogs", description: "Read all blog posts", href: "/daily-blogs", icon: "fas fa-blog", color: "from-emerald-500 to-teal-600" },

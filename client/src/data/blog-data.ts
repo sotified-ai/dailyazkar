@@ -410,5 +410,69 @@ Modern Warfare میں اسے کہتے ہیں: Disorientation Strategy۔ گھوڑ
 العادیات ہمیں ایک سادہ مگر لرزا دینے والا سوال دیتی ہے: اگر ایک گھوڑا معمولی مالک کے لیے اپنی جان خطرے میں ڈال سکتا ہے—تو کیا انسان اپنے رب کے لیے اپنا غرور نہیں چھوڑ سکتا؟ کیا ہم اتنی وفاداری بھی نہیں دکھا سکتے جتنی ایک جانور دکھاتا ہے؟
 
 ہم سب دوڑ رہے ہیں۔ سوال یہ نہیں کہ ہم ہانپ رہے ہیں یا نہیں۔ سوال یہ ہے: ہم کس کے لیے ہانپ رہے ہیں؟ اگر ہماری دوڑ مال کے لیے ہے، تو ہم کنود ہیں۔ اگر ہماری دوڑ مالک کے لیے ہے، تو ہم وفادار ہیں۔ اور جس دن سینوں کے راز کھل گئے—وہاں کوئی بہانہ قبول نہیں ہوگا۔ پس گھوڑے سے سبق سیکھو۔ مالک کو پہچانو۔ اور وفاداری کی دوڑ شروع کرو اس سے پہلے کہ قبروں کا دروازہ کھل جائے۔`
-    }
+    },
+    {
+        slug: "last-ashra-dua",
+        title: "Last Ashra Dua: A Soul-Stirring Supplication",
+        titleUrdu: "رمضان کے آخری عشرے کی خوبصورت دعا",
+        excerpt: "A deeply emotional and personal dua for the final ten nights of Ramadan, seeking forgiveness, transformation, and a place in Jannah.",
+        date: "March 14, 2026",
+        readTime: "4 min read",
+        category: "Ramadan Essentials",
+        image: "/last-ashra-dua.png",
+        content: `Ya Allah... I come to You tonight with a heart that is not perfect, with a record that is not clean, with a soul that has wandered too many times. I have disappointed You more than I can count yet you still allow me to reach this night.
+Do not let me leave it the same. Wash me completely not just from sin, but from the love of sin.
+
+Ya Allah... there are parts of me I don't show anyone. The doubts. The insecurities. The fears about my future. The guilt about my past. You see it all. If I am breaking inside, mend me. If I am lost, guide me. If I am weak, strengthen me. I have no refuge except You.
+
+Ya Allah... if I have grown distant from You, pull me back gently. If my heart has hardened, soften it with Your remembrance. If I have chosen dunya over You too many times, forgive me and realign my priorities. Do not let this world become bigger in my heart than my akhirah.
+
+Ya Allah... forgive me for every prayer I rushed, every blessing I took for granted, every sin I justified, every moment I chose disobedience over gratitude. I am ashamed of my shortcomings, but I am hopeful in Your mercy. You are greater than my worst mistakes.
+
+Ya Allah... if You know that my heart will not survive another year in the same state, then transform me tonight.
+Remove from me what is pulling me away from You even if it hurts. Replace it with what will bring me closer to Jannah.
+
+Ya Allah... grant my parents forgiveness that reaches the heavens, health that eases their bodies, and light that fills their graves when they return to You. Make me a source of ongoing reward for them, not a source of regret.
+
+Ya Allah... protect me from a death that comes suddenly while I am heedless. Let my final moments be filled with remembrance, with sincerity, with Your pleasure. Let my last breath carry Your name.
+
+Ya Allah... if tonight is Laylatul Qadr, then write me among those forgiven. Among those freed from the Fire. Among those whose destinies were changed because they cried to You sincerely. Let angels witness my tears and carry my du'as to the heavens.
+
+Ya Allah... I am asking You for Jannah. Not because I deserve it, but because You are Al-Kareem. Save me from the Hellfire, even if my deeds are small. Let Your mercy be greater than my failures.
+
+Ya Allah… when this night ends let me wake up as someone different. Cleaner. Softer. Closer to You. Do not let this be just another Ramadan night I wasted. Let it be the night that changed my eternity.
+
+Ya Allah… if this is the night You descend with mercy, then do not pass me by. Do not let my name be written among the heedless. I am standing at Your door with nothing but hope.
+
+My deeds are small. My sins are many. But my trust in You is greater than all of it. If You forgive me tonight, no one can question it. If You accept me tonight, no one can reject me.
+
+So Ya Allah... look at me with mercy. Look at me with forgiveness. Look at me as a servant who is desperate for You and do not let me leave this night empty.`,
+        contentUrdu: `یا اللہ... میں آج رات تیرے پاس ایک ایسے دل کے ساتھ آیا ہوں جو کامل نہیں ہے، ایک ایسے ریکارڈ کے ساتھ جس پر داغ ہیں، ایک ایسی روح کے ساتھ جو نجانے کتنی بار بھٹک چکی ہے۔ میں نے تجھے اتنی بار مایوس کیا ہے کہ میں گن نہیں سکتا، پھر بھی تو نے مجھے اس رات تک پہنچنے کی مہلت دی۔
+مجھے اس رات سے ویسا ہی بن کر نہ نکلنے دینا جیسا میں داخل ہوا تھا۔ مجھے مکمل طور پر دھو ڈال، نہ صرف گناہ سے، بلکہ گناہ کی محبت سے بھی۔
+
+یا اللہ... میرے کچھ حصے ایسے ہیں جو میں کسی کو نہیں دکھاتا۔ وہ شکوک، وہ عدم تحفظ، میرے مستقبل کے بارے میں خوف، میرے ماضی کے بارے میں پچھتاوے۔ تو سب دیکھتا ہے۔ اگر میں اندر سے ٹوٹ رہا ہوں، تو میری مرمت کر دے۔ اگر میں کھو گیا ہوں، تو میری رہنمائی فرما۔ اگر میں کمزور ہوں، تو مجھے طاقت عطا کر۔ تیرے سوا میری کوئی پناہ نہیں۔
+
+یا اللہ... اگر میں تجھ سے دور ہو گیا ہوں، تو مجھے نرمی سے واپس کھینچ لے۔ اگر میرا دل سخت ہو گیا ہے، تو اسے اپنی یاد سے نرم کر دے۔ اگر میں نے تجھ پر دنیا کو کئی بار ترجیح دی ہے، تو مجھے معاف کر دے اور میری ترجیحات کو درست کر دے۔ اس دنیا کو میرے دل میں میری آخرت سے بڑا نہ ہونے دینا۔
+
+یا اللہ... مجھے ہر اس نماز کے لیے معاف کر دے جس میں میں نے جلدی کی، ہر اس نعمت کے لیے جسے میں نے معمولی سمجھا، ہر اس گناہ کے لیے جسے میں نے جائز قرار دیا، ہر اس لمحے کے لیے جب میں نے شکرگزاری کے بجائے نافرمانی کا انتخاب کیا۔ میں اپنی کوتاہیوں پر شرمندہ ہوں، لیکن تیری رحمت سے پرامید ہوں۔ تو میری بدترین غلطیوں سے بھی بڑا ہے۔
+
+یا اللہ... اگر تو جانتا ہے کہ میرا دل اسی حالت میں ایک اور سال زندہ نہیں رہ سکے گا، تو مجھے آج رات بدل دے۔
+مجھ سے وہ سب چھین لے جو مجھے تجھ سے دور کر رہا ہے، چاہے اس میں تکلیف ہی کیوں نہ ہو۔ اسے ان چیزوں سے بدل دے جو مجھے جنت کے قریب کر دیں۔
+
+یا اللہ... میرے والدین کو ایسی مغفرت عطا فرما جو آسمانوں تک پہنچے، ایسی صحت جو ان کے جسموں کو راحت دے، اور ایسا نور جو ان کی قبروں کو بھر دے جب وہ تیری طرف لوٹیں۔ مجھے ان کے لیے مسلسل ثواب کا ذریعہ بنا، پچھتاوے کا نہیں۔
+
+یا اللہ... مجھے ایسی موت سے بچا جو اچانک آئے جبکہ میں غافل ہوں۔ میرے آخری لمحات تیری یاد، اخلاص اور تیری رضا سے بھرے ہوں۔ میری آخری سانس تیرا نام لے کر نکلے۔
+
+یا اللہ... اگر آج رات لیلۃ القدر ہے، تو میرا نام ان لوگوں میں لکھ دے جنہیں معاف کر دیا گیا ہے۔ ان میں سے جنہیں آگ سے آزاد کر دیا گیا ہے۔ ان میں سے جن کی تقدیریں بدل دی گئیں کیونکہ انہوں نے تیرے سامنے سچی تڑپ سے گریہ کیا۔ فرشتے میرے آنسوؤں کے گواہ بنیں اور میری دعاؤں کو آسمانوں تک لے جائیں۔
+
+یا اللہ... میں تجھ سے جنت مانگ رہا ہوں۔ اس لیے نہیں کہ میں اس کا حقدار ہوں، بلکہ اس لیے کہ تو الکریم ہے۔ مجھے جہنم سے بچا لے، چاہے میرے اعمال چھوٹے ہوں۔ تیری رحمت میری ناکامیوں سے بڑی ہو۔
+
+یا اللہ... جب یہ رات ختم ہو تو میں ایک بدلے ہوئے انسان کے طور پر بیدار ہوں۔ زیادہ پاکیزہ، زیادہ نرم، تیرے زیادہ قریب۔ اسے محض رمضان کی ایک اور ضائع شدہ رات نہ ہونے دینا۔ اسے وہ رات بنا دے جس نے میری ابدیت بدل دی۔
+
+یا اللہ... اگر یہ وہ رات ہے جس میں تو رحمت لے کر اترتا ہے، تو مجھے نظر انداز نہ کرنا۔ میرا نام غافل لوگوں میں نہ لکھا جائے۔ میں تیرے دروازے پر صرف امید لے کر کھڑا ہوں۔
+
+میرے اعمال چھوٹے ہیں، میرے گناہ بہت ہیں، لیکن میرا تجھ پر بھروسہ ان سب سے بڑا ہے۔ اگر تو نے مجھے معاف کر دیا، تو کوئی سوال نہیں کر سکے گا۔ اگر تو نے مجھے قبول کر لیا، تو کوئی مسترد نہیں کر سکے گا۔
+
+پس یا اللہ... مجھ پر رحمت کی نظر فرما۔ مجھے مغفرت کی نظر سے دیکھ۔ مجھے ایک ایسے بندے کے طور پر دیکھ جو تیرے لیے تڑپ رہا ہے، اور مجھے اس رات سے خالی ہاتھ نہ لوٹانا۔`
+    },
 ];

@@ -6,8 +6,11 @@ import { Link } from "wouter";
 import { DuaBlock } from "@/components/dua-block";
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { RelatedContent } from "@/components/related-content";
+import { cn } from "@/lib/utils";
+import { useLanguage } from "@/lib/language-context";
 
 export default function MorningAzkar() {
+  const { lang, t, isUrdu } = useLanguage();
   const morningAzkar = azkarData.find(category => category.id === "morning");
 
   if (!morningAzkar) {
@@ -25,8 +28,10 @@ export default function MorningAzkar() {
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "Article",
-    "headline": "Morning Azkar - Complete Guide to Dawn Supplications",
-    "description": "Discover the complete collection of Morning Azkar (أذكار الصباح) with Arabic text, transliteration, and English translations. Includes Prophetic prescriptions for sufficiency (کفایت کا نبوى نسخہ) in all affairs and prayers for completely thanking Allah's blessings.",
+    "headline": isUrdu ? "صبح کی دعائیں اور اذکار - مکمل گائیڈ" : "Morning Dua and Morning Azkar - Complete Guide to Dawn Supplications",
+    "description": isUrdu
+      ? "صبح کی مسنون دعائیں اور اذکار (أذكار الصباح) عربی متن اور اردو ترجمہ کے ساتھ۔ زندگی کے تمام معاملات میں کفایت کا نبوی نسخہ۔"
+      : "Discover the best morning dua and the complete collection of Morning Azkar (أذكار الصباح) with Arabic text, transliteration, and English translations. Includes Prophetic prescriptions for sufficiency (کفایت کا نبوى نسخہ) in all affairs and prayers for completely thanking Allah's blessings.",
     "author": {
       "@type": "Organization",
       "name": "Daily Azkar"
@@ -72,19 +77,21 @@ export default function MorningAzkar() {
   return (
     <div className="pt-24 bg-gradient-to-br from-amber-50 via-white to-orange-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 min-h-screen">
       <SEOHead
-        title="50 Authentic Morning Azkar with Translation | Daily Azkar"
-        description="Discover the complete collection of Morning Azkar with Arabic text, transliteration, and English translations. Start your day with blessed remembrance, divine protection, and Prophetic prescriptions for sufficiency in worldly and hereafter affairs."
-        keywords="morning azkar, أذكار الصباح, dawn prayers islam, subh azkar, morning dhikr, morning remembrance, Prophetic Prescription for Sufficiency, دنیا و آخرت کے کاموں پر کفایت کا نبوى نسخہ, ہر چیز سے کفایت کا نبوى نسخہ, اپنے لئے اللہ کى نعمتوں کو مکمّل فرمانے کا نبوى نسخہ, دن اور رات کى نعمتوں کا شکر ادا کرنے کا نبوى نسخہ, completing allah's blessings, islamic supplications, fajr duas, ramzan azkar, ramadan morning azkar, sehri dua, fasting duas, azkar after fajr, ramzaan azkar, suhoor dua, الاذكار الصباحية, morning dua, morning adhkar, waking up dua, dua for waking up, dua after waking up, dua wake up, dua waking up, morning dus, complete morning, best morning prayer, morning doa, wake up dua"
-        canonical="https://dailyazkar.site/morning-azkar"
+        title={isUrdu ? "صبح کی دعائیں: 50 مستند صبح کے اذکار ترجمہ کے ساتھ | ڈیلی اذکار" : "Morning Dua: 50 Authentic Morning Azkar with Translation | Daily Azkar"}
+        description={isUrdu
+          ? "صبح کی مسنون دعائیں اور اذکار عربی اور اردو ترجمہ کے ساتھ۔ اپنے دن کا آغاز اللہ کے بابرکت ذکر اور نبوی دعاؤں سے کریں۔"
+          : "Discover the best morning dua and complete collection of Morning Azkar with Arabic text, transliteration, and English translations. Start your day with blessed remembrance, divine protection, and Prophetic prescriptions for sufficiency in worldly and hereafter affairs."}
+        keywords="morning dua, morning azkar, أذكار الصباح, dawn prayers islam, subh azkar, morning dhikr, morning remembrance, Prophetic Prescription for Sufficiency, دنیا و آخرت کے کاموں پر کفایت کا نبوى نسخہ, ہر چیز سے کفایت کا نبوى نسخہ, اپنے لئے اللہ کى نعمتوں کو مکمّل فرمانے کا نبوى نسخہ, دن اور رات کى نعمتوں کا شکر ادا کرنے کا نبوى نسخہ, completing allah's blessings, islamic supplications, fajr duas, ramzan azkar, ramadan morning azkar, sehri dua, fasting duas, azkar after fajr, ramzaan azkar, suhoor dua, الاذكار الصباحية, morning adhkar, waking up dua, dua for waking up, dua after waking up, dua wake up, dua waking up, morning dus, complete morning, best morning prayer, morning doa, wake up dua"
+        canonical={`https://dailyazkar.site${isUrdu ? '/ur' : ''}/morning-azkar`}
         structuredData={structuredData}
       />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqStructuredData) }} />
 
       <div className="container mx-auto px-4 py-8">
         <Breadcrumbs items={[
-          { label: "Home", href: "/" },
-          { label: "Azkar Hub", href: "/azkar" },
-          { label: "Morning Azkar" }
+          { label: t("nav.home") || "Home", href: "/" },
+          { label: t("nav.azkar"), href: "/azkar" },
+          { label: isUrdu ? "صبح کے اذکار" : "Morning Azkar" }
         ]} />
 
         {/* Header */}
@@ -92,14 +99,20 @@ export default function MorningAzkar() {
           <div className="w-20 h-20 bg-gradient-to-br from-amber-500 to-orange-600 rounded-full flex items-center justify-center mx-auto mb-6">
             <i className="fas fa-sun text-white text-3xl"></i>
           </div>
-          <h1 className="text-4xl md:text-5xl font-display font-bold text-gray-800 dark:text-white mb-4">
-            {morningAzkar.name}
+          <h1 className={cn(
+            "text-4xl md:text-5xl font-display font-bold text-gray-800 dark:text-white mb-4",
+            isUrdu ? "font-urdu text-3xl md:text-4xl" : ""
+          )}>
+            {isUrdu ? "صبح کی دعائیں اور اذکار" : `Morning Dua and ${morningAzkar.name}`}
           </h1>
           <h2 className="text-2xl md:text-3xl font-arabic text-amber-600 dark:text-amber-400 mb-6">
             {morningAzkar.nameArabic}
           </h2>
-          <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-            {morningAzkar.description}
+          <p className={cn(
+            "text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto",
+            isUrdu ? "font-urdu text-base leading-loose" : ""
+          )}>
+            {isUrdu ? "اپنے دن کا آغاز بابرکت اذکار کے ساتھ کریں اور اللہ کی پناہ طلب کریں۔" : morningAzkar.description}
           </p>
         </div>
 
@@ -107,10 +120,10 @@ export default function MorningAzkar() {
         <div className="max-w-4xl mx-auto mb-12">
           <div className="glassmorphism rounded-2xl p-8">
             <h2 className="text-2xl font-display font-bold text-gray-800 dark:text-white mb-4">
-              The Power of Morning Azkar
+              What is Morning Dua and its Power?
             </h2>
             <p className="text-gray-600 dark:text-gray-300 leading-relaxed mb-4">
-              Morning Azkar (أذكار الصباح) are the blessed remembrances and supplications that Muslims recite after Fajr prayer until sunrise. These sacred words connect us with Allah at the start of each day, providing spiritual protection, inner peace, and divine blessings that accompany us throughout our daily activities.
+              Reciting a **morning dua** and Morning Azkar (أذكار الصباح) are blessed practices that Muslims follow after Fajr prayer until sunrise. These sacred words connect us with Allah at the start of each day, providing spiritual protection, inner peace, and divine blessings that accompany us throughout our daily activities.
             </p>
             <p className="text-gray-600 dark:text-gray-300 leading-relaxed mb-6">
               The Prophet Muhammad ﷺ was consistent in his morning remembrance and taught his companions these supplications for their protection and reward. He said: <em className="text-amber-600 dark:text-amber-400">"Whoever says SubhanAllah 100 times in the morning and 100 times in the evening, it is as if he has performed Hajj 100 times"</em> (Tirmidhi). This shows the immense value Allah places on morning remembrance.
@@ -143,10 +156,10 @@ export default function MorningAzkar() {
             </ul>
 
             <h3 className="text-xl font-semibold text-gray-800 dark:text-white mb-3">
-              When to Recite Morning Azkar
+              Dua After Waking Up and After Fajr Dua
             </h3>
             <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
-              The preferred time for Morning Azkar is after Fajr prayer until sunrise. This is a blessed time when Allah descends to the lowest heaven and responds to the supplications of His servants. If you miss this window, you may still recite them until mid-morning (Dhuha time). Consistency is key - even a few minutes of daily remembrance is better than occasional lengthy sessions.
+              The preferred time for Morning Azkar is after Fajr prayer until sunrise. This is a blessed time when Allah descends to the lowest heaven and responds to the supplications of His servants. Reciting an **after fajr dua** is highly recommended in the Sunnah. If you miss this window, you may still recite them until mid-morning (Dhuha time). Consistency is key - even a few minutes of daily remembrance is better than occasional lengthy sessions.
             </p>
           </div>
         </div>

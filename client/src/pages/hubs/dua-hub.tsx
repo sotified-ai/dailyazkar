@@ -73,6 +73,75 @@ export default function DuaHub() {
                             </CardContent>
                         </Card>
                     </Link>
+
+                    {/* 99 Names of Allah */}
+                    <Link href="/99-names-of-allah">
+                        <Card className="glassmorphism border-0 shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer group h-full hover:-translate-y-1">
+                            <CardHeader className="text-center pb-2">
+                                <div className="w-16 h-16 bg-emerald-100 dark:bg-emerald-900/30 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+                                    <i className="fas fa-star text-emerald-500 text-2xl"></i>
+                                </div>
+                                <CardTitle className="text-2xl text-gray-800 dark:text-white group-hover:text-emerald-600 transition-colors">
+                                    99 Names of Allah
+                                </CardTitle>
+                                <p className="text-emerald-600 dark:text-emerald-400 font-arabic text-xl mt-2">أسماء الله الحسنى</p>
+                            </CardHeader>
+                            <CardContent className="text-center">
+                                <p className="text-gray-600 dark:text-gray-400 mb-4">
+                                    Explore the beautiful attributes of Allah with Arabic text, meanings, and Urdu translations.
+                                </p>
+                                <span className="text-emerald-600 dark:text-emerald-400 font-medium text-sm flex items-center justify-center gap-2">
+                                    Explore Now <i className="fas fa-arrow-right text-xs transition-transform group-hover:translate-x-1"></i>
+                                </span>
+                            </CardContent>
+                        </Card>
+                    </Link>
+
+                    {/* Dua After Waking Up */}
+                    <Link href="/dua-after-waking-up">
+                        <Card className="glassmorphism border-0 shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer group h-full hover:-translate-y-1">
+                            <CardHeader className="text-center pb-2">
+                                <div className="w-16 h-16 bg-indigo-100 dark:bg-indigo-900/30 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+                                    <i className="fas fa-sun text-indigo-500 text-2xl"></i>
+                                </div>
+                                <CardTitle className="text-2xl text-gray-800 dark:text-white group-hover:text-indigo-600 transition-colors">
+                                    Dua After Waking Up
+                                </CardTitle>
+                                <p className="text-emerald-600 dark:text-emerald-400 font-arabic text-xl mt-2">دعاء الاستيقاظ</p>
+                            </CardHeader>
+                            <CardContent className="text-center">
+                                <p className="text-gray-600 dark:text-gray-400 mb-4">
+                                    A soul-stirring guide to starting your day with gratitude and authentic morning supplications.
+                                </p>
+                                <span className="text-indigo-600 dark:text-indigo-400 font-medium text-sm flex items-center justify-center gap-2">
+                                    Read Guide <i className="fas fa-arrow-right text-xs transition-transform group-hover:translate-x-1"></i>
+                                </span>
+                            </CardContent>
+                        </Card>
+                    </Link>
+
+                    {/* Azkar Before Sleep */}
+                    <Link href="/azkar-before-sleep">
+                        <Card className="glassmorphism border-0 shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer group h-full hover:-translate-y-1">
+                            <CardHeader className="text-center pb-2">
+                                <div className="w-16 h-16 bg-purple-100 dark:bg-purple-900/30 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+                                    <i className="fas fa-moon text-purple-500 text-2xl"></i>
+                                </div>
+                                <CardTitle className="text-2xl text-gray-800 dark:text-white group-hover:text-purple-600 transition-colors">
+                                    Azkar Before Sleep
+                                </CardTitle>
+                                <p className="text-emerald-600 dark:text-emerald-400 font-arabic text-xl mt-2">أذكار النوم</p>
+                            </CardHeader>
+                            <CardContent className="text-center">
+                                <p className="text-gray-600 dark:text-gray-400 mb-4">
+                                    Protect your soul throughout the night with authentic protection duas and bedtime sunnah.
+                                </p>
+                                <span className="text-purple-600 dark:text-purple-400 font-medium text-sm flex items-center justify-center gap-2">
+                                    Read Guide <i className="fas fa-arrow-right text-xs transition-transform group-hover:translate-x-1"></i>
+                                </span>
+                            </CardContent>
+                        </Card>
+                    </Link>
                 </div>
 
                 {/* Bottom CTA to Another Hub */}

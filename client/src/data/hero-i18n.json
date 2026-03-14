@@ -68,5 +68,20 @@
         "en": "Book a Free Trial",
         "ur": "مفت ٹرائل بک کریں",
         "ar": "احجز تجربة مجانية"
+    },
+    "slide5.title": {
+        "en": "Last Ashra Dua: A Soul-Stirring Supplication",
+        "ur": "رمضان کے آخری عشرے کی خوبصورت دعا",
+        "ar": "دعاء العشر الأواخر من رمضان"
+    },
+    "slide5.subtext": {
+        "en": "Seeking forgiveness and transformation in the final nights of Ramadan.",
+        "ur": "رمضان کی آخری راتوں میں بخشش اور تبدیلی کی طلب۔",
+        "ar": "طلب المغفرة والتغيير في الليالي الأخيرة من رمضان."
+    },
+    "cta.secondary_slide5": {
+        "en": "Read Full Dua",
+        "ur": "مکمل دعا پڑھیں",
+        "ar": "اقرأ الدعاء كاملاً"
     }
 }

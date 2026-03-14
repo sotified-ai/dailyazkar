@@ -2,23 +2,49 @@
 
 ---
 
+## High-Value Missing Keywords (Keyword Gap Analysis vs duaandazkar.com)
+
+| Keyword               | Volume | Difficulty | Status |
+| --------------------- | ------ | ---------- | ------ |
+| morning dua           | 2400   | 32         | ✅ (Integrated) |
+| morning azkar         | 1300   | 12         | ✅ (Primary) |
+| dua after prayer      | 1000   | 23         | ✅ (Integrated) |
+| dua after waking up   | 1000   | 22         | ✅ (Integrated) |
+| dua after namaz       | 880    | 25         | ✅ (Integrated) |
+| morning prayer islam  | 880    | 25         | ✅ (Integrated) |
+| morning duas          | 590    | 27         | ✅ (Integrated) |
+| muslim morning prayer | 590    | 29         | ✅ (Integrated) |
+| adhkar                | 590    | 22         | ✅ (Integrated) |
+| azkar                 | 480    | 33         | ✅ (Integrated) |
+
+**Very Easy Keywords (Quick Wins):**
+- dua for suhoor (480) ✅
+- after fajr dua (390) ✅
+- after fajr prayer dua (390) ✅
+- dua for morning (390) ✅
+- dua for protection from evil (390) ✅
+
+---
+
 ## 1. Morning Azkar (EN)
 Page: /en/morning-azkar
 Language: en
 Search intent: informational
 Primary keyword: "morning azkar"
-Secondary keywords: ["morning adhkar", "azkar for morning", "daily morning supplications"]
-LSI terms: ["dua for morning", "Islamic morning remembrance", "authentic azkar"]
+Secondary keywords: ["morning dua", "morning adhkar", "azkar for morning", "daily morning supplications", "morning prayer islam", "muslim morning prayer"]
+LSI terms: ["dua for morning", "Islamic morning remembrance", "authentic azkar", "morning doa", "adkar sabah"]
 
 H2 Outline:
-- What are morning azkar?
-- Benefits of reciting morning azkar daily
-- Authentic morning azkar with translation
-- Audio recitation of morning azkar
-- FAQs about morning azkar
+- What are morning azkar? (H2)
+- Benefits of reciting morning azkar daily (H2)
+- Authentic morning azkar with translation (H2)
+- Dua After Waking Up (H2 - Target: "dua after waking up")
+- After Fajr Dua (H2 - Target: "after fajr dua")
+- Audio recitation of morning azkar (H2)
+- FAQs about morning azkar (H2)
 
 Content target: 1200–1500 words
-Status: ⬜ Draft ⬜ Review ⬜ Published
+Status: ✅ Published (Optimized with all primary/secondary keywords)
 
 ---
 
@@ -35,7 +61,7 @@ H2 Outline:
 - Common questions
 
 Content target: 1200–1500 words
-Status: ⬜ Draft ⬜ Review ⬜ Published
+Status: ✅ Published (Optimized with evening dua keywords)
 
 ---
 
@@ -51,6 +77,7 @@ H2 Outline:
 - FAQs
 
 Content target: 1000–1200 words
+Status: ✅ Published (1200+ word SEO Optimized Pillar Page)
 
 ---
 
@@ -85,21 +112,60 @@ Content target: 1000–1200 words
 
 ---
 
-## 6. Evening Azkar (UR)
-Primary keyword: "شام کے اذکار"
-Secondary: ["اذکار شام", "روزانہ دعائیں"]
+## 11. Dua After Waking Up (PILLAR PAGE)
+Page: /dua-after-waking-up
+Search intent: informational
+Primary keyword: "morning dua"
+Secondary keywords: ["morning prayer islam", "morning duas", "muslim morning prayer", "authentic morning azkar", "islamic morning supplications"]
+
+H2 Outline:
+- What is Morning Dua?
+- Benefits of Morning Azkar
+- Authentic Morning Duas
+- Dua After Waking Up
+- After Fajr Dua
+- FAQs
+
+Content target: 1500+ words
+Status: ✅ Published (1200+ word SEO Optimized Pillar Page)
+Notes: This is the biggest SEO opportunity. Inclusion of Arabic, Urdu translation, English translation, benefits, and references is mandatory.
 
 ---
 
-## 7. Morning Azkar (AR)
-Primary keyword: "أذكار الصباح"
-Secondary: ["ذكر الصباح", "دعاء الصباح"]
+## 12. Dua After Prayer
+Page: /en/dua-after-prayer
+Primary keyword: "dua after prayer"
+Secondary: ["dua after namaz", "dua after salah", "after fajr duas"]
+
+H2 Outline:
+- Introduction to Dua after Prayer
+- Authentic Duas after Namaz
+- Importance of Post-Prayer Dhikr
+- FAQs
+
+Status: ✅ Published (Optimized page live at /dua/after-salah)
 
 ---
 
-## 8. Evening Azkar (AR)
-Primary keyword: "أذكار المساء"
-Secondary: ["ذكر المساء", "دعاء المساء"]
+## 14. NEW BLOG: Last Ashra Dua 
+Page: /blog/last-ashra-dua
+Primary keyword: "last ashra dua"
+Status: ✅ Published (Bilingual Content + Hero Slider Integration)
+
+---
+
+## 13. Dua for Protection
+Page: /en/dua-for-protection
+Primary keyword: "dua for protection"
+Secondary: ["dua for protection from evil", "protection duas"]
+
+H2 Outline:
+- Why we need protection duas
+- Authentic duas for protection from evil
+- Morning and Evening protection azkar
+- FAQs
+
+Status: ✅ Published (Optimized page live at /protection-duas-in-islam)
 
 ---
 
@@ -109,10 +175,7 @@ Search intent: informational + utility
 Primary keyword: "tasbeeh counter online"
 Secondary: ["digital tasbih counter", "online zikr counter"]
 
-Outline:
-- What is a tasbeeh counter?
-- How to use online tasbeeh counter
-- Benefits of digital dhikr tracking
+Status: ✅ Published (Interactive Digital Tool + SEO Pillar Content)
 
 ---
 
@@ -120,8 +183,4 @@ Outline:
 Page: /en/99-names-of-allah
 Primary keyword: "99 names of Allah"
 Secondary: ["asma ul husna", "names of Allah with meaning"]
-
-Outline:
-- What are the 99 names of Allah?
-- Meaning and benefits
-- Full list with translation
+Status: ✅ Published (Interactive Grid + Arabic/English/Urdu meanings)

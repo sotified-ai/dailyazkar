@@ -154,6 +154,16 @@ export function HeroSlider() {
             secondaryCta: t("cta.secondary_slide4"),
             secondaryLink: "/tutor",
             icon: "fas fa-graduation-cap"
+        },
+        {
+            id: "last_ashra",
+            title: t("slide5.title"),
+            subtext: t("slide5.subtext"),
+            bgClass: "from-rose-900 to-red-950",
+            hasPrimaryCtas: false,
+            secondaryCta: t("cta.secondary_slide5"),
+            secondaryLink: "/blog/last-ashra-dua",
+            icon: "fas fa-pray"
         }
     ];
 

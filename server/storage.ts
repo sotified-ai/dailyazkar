@@ -1,4 +1,5 @@
 import { users, type User, type InsertUser, type Blog, type InsertBlog } from "@shared/schema";
+import { BLOG_POSTS } from "../client/src/data/blog-data";
 
 // modify the interface with any CRUD methods
 // you might need
@@ -25,6 +26,33 @@ export class MemStorage implements IStorage {
     this.blogs = new Map();
     this.currentId = 1;
     this.currentBlogId = 1;
+
+    // Seed static blogs immediately on startup
+    this.seedStaticBlogs();
+  }
+
+  private seedStaticBlogs() {
+    BLOG_POSTS.forEach(post => {
+      const id = this.currentBlogId++;
+      const combinedContent = post.content + (post.contentUrdu ?
+        `<div class="mt-8 pt-8 border-t border-emerald-100 dark:border-emerald-800" dir="rtl">
+          <div class="font-arabic text-3xl mb-4 leading-relaxed">${post.titleUrdu}</div>
+          <div class="font-arabic text-xl leading-loose whitespace-pre-line text-right">${post.contentUrdu}</div>
+        </div>` : "");
+
+      this.blogs.set(id, {
+        id,
+        title: post.title,
+        slug: post.slug,
+        content: combinedContent,
+        imageUrl: post.image || null,
+        seoTitle: post.title,
+        seoDescription: post.excerpt,
+        seoKeywords: post.category,
+        publishedAt: new Date(post.date),
+        createdAt: new Date(post.date)
+      });
+    });
   }
 
   async getUser(id: number): Promise<User | undefined> {
@@ -39,11 +67,11 @@ export class MemStorage implements IStorage {
 
   async createUser(insertUser: InsertUser): Promise<User> {
     const id = this.currentId++;
-    const user: User = { 
-      ...insertUser, 
-      id, 
+    const user: User = {
+      ...insertUser,
+      id,
       preferences: insertUser.preferences ?? null,
-      createdAt: new Date() 
+      createdAt: new Date()
     };
     this.users.set(id, user);
     return user;
@@ -63,10 +91,10 @@ export class MemStorage implements IStorage {
 
   async createBlog(insertBlog: InsertBlog): Promise<Blog> {
     const id = this.currentBlogId++;
-    const blog: Blog = { 
-      ...insertBlog, 
-      id, 
-      publishedAt: new Date(), 
+    const blog: Blog = {
+      ...insertBlog,
+      id,
+      publishedAt: new Date(),
       createdAt: new Date(),
       imageUrl: insertBlog.imageUrl || null,
       seoTitle: insertBlog.seoTitle || null,

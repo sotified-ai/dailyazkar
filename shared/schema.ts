@@ -44,6 +44,19 @@ export const users = pgTable("users", {
   createdAt: timestamp("created_at").defaultNow(),
 });
 
+export const blogs = pgTable("blogs", {
+  id: serial("id").primaryKey(),
+  title: text("title").notNull(),
+  slug: text("slug").notNull().unique(),
+  content: text("content").notNull(), // Rich text HTML/Markdown
+  imageUrl: text("image_url"),
+  seoTitle: text("seo_title"),
+  seoDescription: text("seo_description"),
+  seoKeywords: text("seo_keywords"),
+  publishedAt: timestamp("published_at").defaultNow(),
+  createdAt: timestamp("created_at").defaultNow(),
+});
+
 export const insertAzkarCategorySchema = createInsertSchema(azkarCategories).omit({
   id: true,
   createdAt: true,
@@ -64,11 +77,19 @@ export const insertUserSchema = createInsertSchema(users).omit({
   createdAt: true,
 });
 
+export const insertBlogSchema = createInsertSchema(blogs).omit({
+  id: true,
+  createdAt: true,
+  publishedAt: true,
+});
+
 export type AzkarCategory = typeof azkarCategories.$inferSelect;
 export type AzkarItem = typeof azkarItems.$inferSelect;
 export type QuranSurah = typeof quranSurahs.$inferSelect;
 export type User = typeof users.$inferSelect;
+export type Blog = typeof blogs.$inferSelect;
 export type InsertAzkarCategory = z.infer<typeof insertAzkarCategorySchema>;
 export type InsertAzkarItem = z.infer<typeof insertAzkarItemSchema>;
 export type InsertQuranSurah = z.infer<typeof insertQuranSurahSchema>;
 export type InsertUser = z.infer<typeof insertUserSchema>;
+export type InsertBlog = z.infer<typeof insertBlogSchema>;

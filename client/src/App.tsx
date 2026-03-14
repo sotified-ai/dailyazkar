@@ -27,6 +27,7 @@ import AboutIslamPage from "@/pages/about-islam";
 import NotFound from "@/pages/not-found";
 import DailyBlogs from "@/pages/daily-blogs";
 import BlogPost from "@/pages/blog-post";
+import AdminBlog from "@/pages/admin-blog";
 import OnlineQuranTutor from "@/pages/online-quran-tutor";
 import CommunityPage from "@/pages/community";
 import DonatePage from "@/pages/donate";
@@ -37,7 +38,6 @@ import PrivacyPolicyPage from "@/pages/privacy-policy";
 import TermsPage from "@/pages/terms";
 import ContactPage from "@/pages/contact";
 import RamadanAzkarPage from "@/pages/ramadan-azkar";
-import Gallery from "@/pages/gallery";
 import BenefitsOfMorningAzkar from "@/pages/benefits-of-morning-azkar";
 import BenefitsOfEveningAzkar from "@/pages/benefits-of-evening-azkar";
 import AuthenticHadithOnAzkar from "@/pages/authentic-hadith-on-azkar";
@@ -125,6 +125,7 @@ function Router() {
           <Route path="/tutor" component={OnlineQuranTutor} />
 
           {/* Blogs Routes */}
+          <Route path="/admin/blog" component={AdminBlog} />
           <Route path="/blog" component={DailyBlogs} />
           <Route path="/blog/:slug" component={BlogPost} />
 
@@ -153,7 +154,6 @@ function Router() {
           <Route path="/privacy-policy" component={PrivacyPolicyPage} />
           <Route path="/terms" component={TermsPage} />
           <Route path="/contact" component={ContactPage} />
-          <Route path="/gallery" component={Gallery} />
           <Route path="/benefits-of-morning-azkar" component={BenefitsOfMorningAzkar} />
           <Route path="/benefits-of-evening-azkar" component={BenefitsOfEveningAzkar} />
           <Route path="/authentic-hadith-on-azkar" component={AuthenticHadithOnAzkar} />

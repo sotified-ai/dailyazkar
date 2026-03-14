@@ -172,19 +172,7 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Gallery Link */}
-          <div className="text-center my-16">
-            <div className="inline-block bg-gradient-to-r from-amber-500 to-orange-500 rounded-2xl p-1">
-              <Link to="/gallery" className="block bg-white dark:bg-gray-800 rounded-xl px-8 py-6 text-center">
-                <h3 className="text-2xl font-display font-bold text-gray-800 dark:text-white mb-2">Explore Our Azkar Gallery</h3>
-                <p className="text-gray-600 dark:text-gray-300 mb-4">Beautiful Islamic calligraphy and sacred remembrance images</p>
-                <div className="flex items-center justify-center text-amber-600 dark:text-amber-400 font-medium">
-                  <span>View Collection</span>
-                  <i className="fas fa-arrow-right ml-2"></i>
-                </div>
-              </Link>
-            </div>
-          </div>
+
         </div>
       </div>
 

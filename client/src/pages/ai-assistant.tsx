@@ -128,7 +128,7 @@ export default function AIAssistant() {
       <SEOHead
         title="AI Assistant | Daily Azkar"
         description="Chat with our AI assistant about Islamic daily remembrance (Azkar) and get personalized spiritual guidance."
-        path="/ai-assistant"
+        canonical="https://dailyazkar.site/ai-assistant"
       />
       <div className="min-h-screen pt-24 pb-20">
         <div className="container mx-auto px-4">
@@ -154,11 +154,10 @@ export default function AIAssistant() {
                       <button
                         key={conv.id}
                         onClick={() => setCurrentConversationId(conv.id)}
-                        className={`w-full text-left px-3 py-2 rounded-lg text-sm transition-colors ${
-                          currentConversationId === conv.id
+                        className={`w-full text-left px-3 py-2 rounded-lg text-sm transition-colors ${currentConversationId === conv.id
                             ? "bg-emerald-100 dark:bg-emerald-900/30 text-emerald-900 dark:text-emerald-100 font-medium"
                             : "text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800"
-                        }`}
+                          }`}
                       >
                         {conv.title.length > 20 ? conv.title.slice(0, 20) + "..." : conv.title}
                       </button>
@@ -204,11 +203,10 @@ export default function AIAssistant() {
                             className={`flex ${msg.role === "user" ? "justify-end" : "justify-start"}`}
                           >
                             <div
-                              className={`max-w-xs lg:max-w-md px-4 py-2 rounded-lg ${
-                                msg.role === "user"
+                              className={`max-w-xs lg:max-w-md px-4 py-2 rounded-lg ${msg.role === "user"
                                   ? "bg-emerald-500 text-white rounded-br-none"
                                   : "bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-gray-100 rounded-bl-none"
-                              }`}
+                                }`}
                             >
                               <p className="text-sm">{msg.content}</p>
                             </div>

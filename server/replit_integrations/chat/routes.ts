@@ -1,11 +1,18 @@
 import type { Express, Request, Response } from "express";
-import OpenAI from "openai";
+import { GoogleGenerativeAI } from "@google/generative-ai";
 import { chatStorage } from "./storage";
 
-const openai = new OpenAI({
-  apiKey: process.env.AI_INTEGRATIONS_OPENAI_API_KEY,
-  baseURL: process.env.AI_INTEGRATIONS_OPENAI_BASE_URL,
-});
+const GEMINI_API_KEY = process.env.GEMINI_API_KEY;
+
+if (!GEMINI_API_KEY) {
+  console.warn("GEMINI_API_KEY is not defined in environment variables. AI Assistant will not function.");
+}
+
+const genAI = GEMINI_API_KEY ? new GoogleGenerativeAI(GEMINI_API_KEY) : null;
+const model = genAI ? genAI.getGenerativeModel({
+  model: "gemini-2.0-flash",
+  systemInstruction: "You are a helpful Islamic Assistant for the Daily Azkar website. Provide guidance on daily prayers, Azkar (remembrance), Quranic insights, and Prophetic guidance. Be respectful, accurate, and concise. Always provide references from Quran and Sunnah where possible. If asked about things not related to Islam, politely redirect to your core purpose."
+}) : null;
 
 export function registerChatRoutes(app: Express): void {
   app.get("/api/conversations", async (req: Request, res: Response) => {
@@ -63,29 +70,32 @@ export function registerChatRoutes(app: Express): void {
       await chatStorage.createMessage(conversationId, "user", content);
 
       const messages = await chatStorage.getMessagesByConversation(conversationId);
-      const chatMessages = messages.map((m) => ({
-        role: m.role as "user" | "assistant",
-        content: m.content,
+
+      // Separate history and current message for Gemini
+      const history = messages.slice(0, -1).map((m) => ({
+        role: m.role === "user" ? "user" : "model",
+        parts: [{ text: m.content }],
       }));
+      const currentMessage = messages[messages.length - 1].content;
 
       res.setHeader("Content-Type", "text/event-stream");
       res.setHeader("Cache-Control", "no-cache");
       res.setHeader("Connection", "keep-alive");
 
-      const stream = await openai.chat.completions.create({
-        model: "gpt-5.1",
-        messages: chatMessages,
-        stream: true,
-        max_completion_tokens: 8192,
-      });
+      if (!model) {
+        throw new Error("AI Assistant is not configured. Please check GEMINI_API_KEY.");
+      }
+
+      const chat = model.startChat({ history });
+      const result = await chat.sendMessageStream(currentMessage);
 
       let fullResponse = "";
 
-      for await (const chunk of stream) {
-        const content = chunk.choices[0]?.delta?.content || "";
-        if (content) {
-          fullResponse += content;
-          res.write(`data: ${JSON.stringify({ content })}\n\n`);
+      for await (const chunk of result.stream) {
+        const chunkText = chunk.text();
+        if (chunkText) {
+          fullResponse += chunkText;
+          res.write(`data: ${JSON.stringify({ content: chunkText })}\n\n`);
         }
       }
 
@@ -93,13 +103,21 @@ export function registerChatRoutes(app: Express): void {
 
       res.write(`data: ${JSON.stringify({ done: true })}\n\n`);
       res.end();
-    } catch (error) {
+    } catch (error: any) {
       console.error("Error sending message:", error);
+
+      let errorMessage = "Failed to send message";
+      if (error.message?.includes("quota") || error.status === 429) {
+        errorMessage = "Daily limit reached. Please try again later.";
+      } else if (error.message?.includes("configured")) {
+        errorMessage = error.message;
+      }
+
       if (res.headersSent) {
-        res.write(`data: ${JSON.stringify({ error: "Failed to send message" })}\n\n`);
+        res.write(`data: ${JSON.stringify({ error: errorMessage })}\n\n`);
         res.end();
       } else {
-        res.status(500).json({ error: "Failed to send message" });
+        res.status(500).json({ error: errorMessage });
       }
     }
   });

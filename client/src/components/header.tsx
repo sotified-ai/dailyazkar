@@ -19,7 +19,6 @@ export function Header() {
     { name: t("nav.dua"), href: "/dua", icon: "fas fa-hands-praying" },
     { name: t("nav.tutor"), href: "/tutor", icon: "fas fa-graduation-cap" },
     { name: t("nav.blogs"), href: "/blog", icon: "fas fa-book-reader" },
-    { name: "AI Assistant", href: "/ai-assistant", icon: "fas fa-robot" },
   ];
 
   const handleLanguageChange = (targetLang: "en" | "ur") => {

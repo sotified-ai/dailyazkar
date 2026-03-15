@@ -63,6 +63,9 @@ import TasbeehCounterPage from "@/pages/tasbeeh-counter";
 import AzkarHub from "@/pages/hubs/azkar-hub";
 import DuaHub from "@/pages/hubs/dua-hub";
 
+// AI Assistant
+import AIAssistant from "@/pages/ai-assistant";
+
 function ScrollToTop() {
   const [pathname] = useLocation();
 
@@ -147,6 +150,9 @@ function Router() {
           <Route path="/admin/blog" component={AdminBlog} />
           <Route path="/blog" component={DailyBlogs} />
           <Route path="/blog/:slug" component={BlogPost} />
+
+          {/* AI Assistant Route */}
+          <Route path="/ai-assistant" component={AIAssistant} />
 
           {/* Original Route Paths (Redirects) */}
           <Route path="/morning-azkar"><RedirectTo to="/azkar/morning" /></Route>

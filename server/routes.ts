@@ -4,6 +4,7 @@ import { storage } from "./storage";
 import multer from "multer";
 import path from "path";
 import fs from "fs";
+import { registerChatRoutes } from "./replit_integrations/chat";
 
 // Ensure uploads directory exists
 const uploadDir = path.join(process.cwd(), "uploads", "blogs");
@@ -32,6 +33,8 @@ const adminAuth = (req: express.Request, res: express.Response, next: express.Ne
 };
 
 export async function registerRoutes(app: Express): Promise<Server> {
+  // Register AI Chat routes
+  registerChatRoutes(app);
   // Serve uploaded files statically
   app.use("/uploads", express.static(path.join(process.cwd(), "uploads")));
 

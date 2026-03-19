@@ -6,14 +6,36 @@ import { Breadcrumbs } from "@/components/breadcrumbs";
 import { RelatedContent } from "@/components/related-content";
 import { useQuery } from "@tanstack/react-query";
 import { type Blog } from "@shared/schema";
+import { BLOG_POSTS } from "@/data/blog-data";
+import { useLanguage } from "@/lib/language-context";
 
 // Custom CSS for Quill content in the frontend
 import "react-quill/dist/quill.snow.css";
 
 export default function BlogPost({ params }: { params: { slug: string } }) {
-    const { data: post, isLoading } = useQuery<Blog>({
+    const { lang } = useLanguage();
+    const { data: dbPost, isLoading } = useQuery<Blog>({
         queryKey: [`/api/blogs/${params.slug}`]
     });
+
+    // Check static posts if not found in database
+    const staticPost = BLOG_POSTS.find(p => p.slug === params.slug);
+
+    // Normalize either post to the same shape
+    const post = dbPost || (staticPost ? {
+        id: -1,
+        title: lang === "ur" ? staticPost.titleUrdu : staticPost.title,
+        slug: staticPost.slug,
+        content: lang === "ur" ? staticPost.contentUrdu : staticPost.content,
+        imageUrl: staticPost.image,
+        seoTitle: staticPost.title,
+        seoDescription: staticPost.excerpt,
+        seoKeywords: staticPost.category,
+        isPublished: true,
+        publishedAt: staticPost.date,
+        createdAt: staticPost.date,
+        updatedAt: staticPost.date,
+    } : null);
 
     if (isLoading) {
         return (

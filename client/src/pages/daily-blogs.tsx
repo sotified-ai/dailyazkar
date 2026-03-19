@@ -4,11 +4,33 @@ import { Link } from "wouter";
 import { Card, CardContent } from "@/components/ui/card";
 import { useQuery } from "@tanstack/react-query";
 import { type Blog } from "@shared/schema";
+import { BLOG_POSTS } from "@/data/blog-data";
+import { useLanguage } from "@/lib/language-context";
 
 export default function DailyBlogs() {
-    const { data: blogs, isLoading } = useQuery<Blog[]>({
+    const { lang } = useLanguage();
+    const { data: dbBlogs, isLoading } = useQuery<Blog[]>({
         queryKey: ["/api/blogs"]
     });
+
+    // Merge static blogs with database blogs
+    const blogs = [
+        ...(BLOG_POSTS.map(post => ({
+            id: -1, // Dummy ID for static posts
+            title: lang === "ur" ? post.titleUrdu : post.title,
+            slug: post.slug,
+            content: lang === "ur" ? post.contentUrdu : post.content,
+            imageUrl: post.image,
+            seoTitle: post.title,
+            seoDescription: post.excerpt,
+            seoKeywords: post.category,
+            isPublished: true,
+            publishedAt: new Date(post.date).toISOString(),
+            createdAt: new Date(post.date).toISOString(),
+            updatedAt: new Date(post.date).toISOString(),
+        }))),
+        ...(dbBlogs || [])
+    ];
 
     const structuredData = {
         "@context": "https://schema.org",

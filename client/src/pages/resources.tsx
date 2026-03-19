@@ -276,7 +276,7 @@ export default function ResourcesPage() {
             <Link href="/rabbana-duas" className="px-6 py-3 bg-amber-500 hover:bg-amber-600 text-white rounded-full transition-colors">
               Quranic Duas
             </Link>
-            <Link href="/sleep-azkar" className="px-6 py-3 bg-blue-500 hover:bg-blue-600 text-white rounded-full transition-colors">
+            <Link href="/azkar-before-sleep" className="px-6 py-3 bg-blue-500 hover:bg-blue-600 text-white rounded-full transition-colors">
               Sleep Azkar
             </Link>
             <Link href="/about-islam" className="px-6 py-3 bg-emerald-500 hover:bg-emerald-600 text-white rounded-full transition-colors">

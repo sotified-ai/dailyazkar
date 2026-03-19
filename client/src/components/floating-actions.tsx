@@ -28,7 +28,8 @@ export function FloatingActions() {
 
   return (
     <div className="fixed bottom-6 right-6 space-y-3 z-40">
-      {/* AI Assistant Button */}
+      {/* AI Assistant Button - Hidden for Production */}
+      {/* 
       <Sheet open={isOpen} onOpenChange={setIsOpen}>
         <SheetTrigger asChild>
           <Button
@@ -46,7 +47,8 @@ export function FloatingActions() {
         <SheetContent side="right" className="p-0 sm:max-w-[400px] w-full border-l border-border/40">
           <AIChatWidget />
         </SheetContent>
-      </Sheet>
+      </Sheet> 
+      */}
 
       {/* Scroll to Top */}
       {showScrollTop && (

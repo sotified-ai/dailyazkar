@@ -5,6 +5,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { ThemeProvider } from "@/components/theme-provider";
 import { Header } from "@/components/header";
+import { AnnouncementBar } from "@/components/announcement-bar";
 import { Footer } from "@/components/footer";
 import { FloatingActions } from "@/components/floating-actions";
 import { useScrollProgress } from "@/hooks/use-scroll-progress";
@@ -117,6 +118,7 @@ function Router() {
     <div className="min-h-screen flex flex-col">
       <ScrollToTop />
       <ReadingProgress />
+      <AnnouncementBar />
       <Header />
       <main className="flex-1">
         <Switch>
@@ -151,8 +153,8 @@ function Router() {
           <Route path="/blog" component={DailyBlogs} />
           <Route path="/blog/:slug" component={BlogPost} />
 
-          {/* AI Assistant Route */}
-          <Route path="/ai-assistant" component={AIAssistant} />
+          {/* AI Assistant Route - Hidden for Production */}
+          {/* <Route path="/ai-assistant" component={AIAssistant} /> */}
 
           {/* Original Route Paths (Redirects) */}
           <Route path="/morning-azkar"><RedirectTo to="/azkar/morning" /></Route>

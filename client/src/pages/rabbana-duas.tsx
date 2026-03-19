@@ -211,6 +211,45 @@ export default function RabbanaDuas() {
           </div>
         </div>
 
+        {/* Unique Perspective Section for AdSense */}
+        <div className="max-w-4xl mx-auto mb-12">
+          <div className="glassmorphism rounded-2xl p-8 border-l-4 border-teal-500 shadow-inner">
+            <h2 className="text-2xl font-display font-bold text-gray-800 dark:text-white mb-6">
+              The Heart of a Rabbana Dua: Why They Work Differently
+            </h2>
+            <div className="grid md:grid-cols-2 gap-8">
+              <div>
+                <h3 className="text-lg font-bold text-teal-600 dark:text-teal-400 mb-2">The Psychology of "Our Lord"</h3>
+                <p className="text-gray-600 dark:text-gray-300 text-sm leading-relaxed mb-4">
+                  The word **Rabbana** carries a collective and intimate weight. Unlike "Rabbi" (My Lord), "Rabbana" (Our Lord) connects us to the entire Ummah. It reflects a communal humility, acknowledging that while our needs are personal, we belong to a larger family of believers.
+                </p>
+                <p className="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">
+                  In psychology, shifting from "Me" to "We" reduces the isolation often felt during times of trial. By saying "Our Lord," you are unconsciously tapping into the strength of the righteous who have used these same words for centuries.
+                </p>
+              </div>
+              <div>
+                <h3 className="text-lg font-bold text-teal-600 dark:text-teal-400 mb-2">Quranic vs. Personal Dua</h3>
+                <p className="text-gray-600 dark:text-gray-300 text-sm leading-relaxed mb-4">
+                  While personal supplications in your own language are essential, **Quranic Prayers** serve a unique purpose: they are the "Gold Standard" of logic and etiquette when speaking to Allah.
+                </p>
+                <p className="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">
+                  They are balanced—always asking for both the worldly benefit and the eternal success. This prevents our prayers from becoming purely materialistic, helping us maintain a "High-Value Mindset" focused on the ultimate goal: the pleasure of Allah.
+                </p>
+              </div>
+            </div>
+
+            <div className="mt-8 bg-teal-50/50 dark:bg-emerald-900/10 p-5 rounded-xl border border-teal-100 dark:border-teal-800/30">
+              <h3 className="text-lg font-bold text-gray-800 dark:text-white mb-2 flex items-center">
+                <i className="fas fa-scroll mr-2 text-teal-500"></i>
+                Did You Know?
+              </h3>
+              <p className="text-gray-600 dark:text-gray-300 text-sm italic">
+                Many of the **40 Rabbana Duas** were uttered by Prophets like Ibrahim (AS), Musa (AS), and Zakariya (AS) during the most challenging moments of their lives. When you recite them, you are literally speaking the same words revealed by the Creator to the greatest human beings to ever walk the Earth.
+              </p>
+            </div>
+          </div>
+        </div>
+
         <AdSense className="my-8" />
 
         {/* Duas List */}

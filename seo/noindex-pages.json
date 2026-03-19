@@ -1,5 +1,9 @@
 {
-    "_comment": "All pages now have 250+ words of SEO content - no noindex protection needed",
-    "_lastUpdated": "2024-02-09",
-    "_status": "All pages are now safe for indexing"
+    "/admin/blog": true,
+    "/404": true,
+    "/not-found": true,
+    "_metadata": {
+        "comment": "Main pages are content-rich and safe for indexing. Protecting administrative and error pages.",
+        "lastUpdated": "2024-03-14"
+    }
 }

@@ -152,6 +152,45 @@ export default function EveningAzkar() {
           </div>
         </div>
 
+        {/* Unique Perspective Section for AdSense */}
+        <div className="max-w-4xl mx-auto mb-12">
+          <div className="glassmorphism rounded-2xl p-8 border-l-4 border-blue-500 shadow-inner">
+            <h2 className="text-2xl font-display font-bold text-gray-800 dark:text-white mb-6">
+              The Evening Transition: A Spiritual Decompression
+            </h2>
+            <div className="grid md:grid-cols-2 gap-8">
+              <div>
+                <h3 className="text-lg font-bold text-blue-600 dark:text-blue-400 mb-2">Emotional Release</h3>
+                <p className="text-gray-600 dark:text-gray-300 text-sm leading-relaxed mb-4">
+                  As the sun sets, the human body naturally transitions into a state of rest. However, the emotional residue of a busy day—frustrations, worries, and exhaustion—can block this transition. **Evening Azkar** act as a spiritual "vent," allowing you to release the day's burdens to Allah.
+                </p>
+                <p className="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">
+                  By reciting <em>"Astaghfirullah"</em> (I seek Allah's forgiveness) and specific evening supplications, you are cleansing your heart of the day's stresses, ensuring they don't follow you into your sleep.
+                </p>
+              </div>
+              <div>
+                <h3 className="text-lg font-bold text-blue-600 dark:text-blue-400 mb-2">Internalizing Protection</h3>
+                <p className="text-gray-600 dark:text-gray-300 text-sm leading-relaxed mb-4">
+                  The night can often be a time of vulnerability, both physically and spiritually. Reciting **Sham Azkar** (Evening Remembrance) is not just a ritual; it's a way to consciously internalize Allah's protection.
+                </p>
+                <p className="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">
+                  This builds "Resilience Through Faith." Instead of worrying about what tomorrow brings, you are entrusting your soul to the Ever-Living, Ever-Sustaining Lord, which naturally lowers the heart rate and improves quality of life.
+                </p>
+              </div>
+            </div>
+
+            <div className="mt-8 bg-blue-50/50 dark:bg-blue-900/10 p-5 rounded-xl">
+              <h3 className="text-lg font-bold text-gray-800 dark:text-white mb-2 flex items-center">
+                <i className="fas fa-moon mr-2 text-blue-500"></i>
+                Modern Tip: The Sunset Pause
+              </h3>
+              <p className="text-gray-600 dark:text-gray-300 text-sm italic">
+                Try to recite your Evening Azkar just before Maghrib. This "Sunset Pause" helps you disconnect from work mode and transition into family/worship mode. It creates a clear boundary in your day, preventing burnout and keeping your spiritual lights on even as the natural world goes dark.
+              </p>
+            </div>
+          </div>
+        </div>
+
         {/* Azkar List */}
         <AdSense className="my-8" />
         <div className="space-y-8 max-w-4xl mx-auto">

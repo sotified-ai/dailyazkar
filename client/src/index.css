@@ -278,11 +278,31 @@
   }
 
   @keyframes shimmer {
-    0% { transform: translateX(-100%); }
-    100% { transform: translateX(100%); }
+    0% {
+      transform: translateX(-100%);
+    }
+
+    100% {
+      transform: translateX(100%);
+    }
   }
 
   .animate-shimmer {
     animation: shimmer 3s infinite;
+  }
+
+  .mushaf-paper {
+    background-color: #fdfaf1;
+    background-image:
+      radial-gradient(#e5e7eb 0.5px, transparent 0.5px),
+      radial-gradient(#e5e7eb 0.5px, #fdfaf1 0.5px);
+    background-size: 20px 20px;
+    background-position: 0 0, 10px 10px;
+    background-attachment: fixed;
+  }
+
+  .dark .mushaf-paper {
+    background-color: transparent;
+    background-image: none;
   }
 }

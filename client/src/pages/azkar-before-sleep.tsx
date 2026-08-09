@@ -12,7 +12,7 @@ export default function AzkarBeforeSleep() {
     "description": "Unlock the spiritual secrets of azkar before sleep. Discover authentic Islamic sleep supplications, protection duas for sleep, and the Prophetic sunnah of bedtime remembrance.",
     "author": {
       "@type": "Organization",
-      "name": "Daily Azkar"
+      "name": "Daily Izkar"
     },
     "image": "https://dailyazkar.site/sleep-azkar-hero.png"
   };
@@ -239,7 +239,7 @@ export default function AzkarBeforeSleep() {
         <div className="text-center bg-gradient-to-br from-indigo-600 to-purple-700 rounded-[3rem] p-16 shadow-[0_20px_60px_rgba(79,70,229,0.5)] border border-white/20">
           <h2 className="text-4xl font-display font-bold text-white mb-6">Experience a Blessed Night</h2>
           <p className="text-indigo-100 text-xl mb-10 max-w-2xl mx-auto">
-            Make <strong>azkar before sleep</strong> your lifelong companion. Join thousands of Muslims using Daily Azkar to perfect their <strong>nightly remembrance</strong> and find true spiritual peace.
+            Make <strong>azkar before sleep</strong> your lifelong companion. Join thousands of Muslims using Daily Izkar to perfect their <strong>nightly remembrance</strong> and find true spiritual peace.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-6">
             <Link href="/azkar" className="bg-white text-indigo-700 px-10 py-5 rounded-full font-bold text-lg hover:scale-105 transition-transform shadow-xl">

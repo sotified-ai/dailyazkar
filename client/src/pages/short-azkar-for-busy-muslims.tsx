@@ -10,11 +10,11 @@ export default function ShortAzkarForBusyMuslims() {
     "description": "Discover short but powerful Islamic remembrances and supplications for busy Muslims who want to maintain spiritual connection with Allah despite tight schedules.",
     "author": {
       "@type": "Organization",
-      "name": "Daily Azkar"
+      "name": "Daily Izkar"
     },
     "publisher": {
       "@type": "Organization",
-      "name": "Daily Azkar",
+      "name": "Daily Izkar",
       "url": "https://dailyazkar.site"
     }
   };
@@ -53,7 +53,7 @@ export default function ShortAzkarForBusyMuslims() {
   return (
     <div className="pt-24 bg-gradient-to-br from-green-50 via-white to-teal-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 min-h-screen">
       <SEOHead
-        title="Short Azkar for Busy Muslims - Quick Islamic Remembrances | Daily Azkar"
+        title="Short Azkar for Busy Muslims - Quick Islamic Remembrances | Daily Izkar"
         description="Discover short but powerful Islamic remembrances and supplications for busy Muslims who want to maintain spiritual connection with Allah despite tight schedules. Learn quick Islamic remembrances."
         keywords="short azkar for busy muslims, quick islamic remembrances, busy muslim azkar, short duas for busy people, quick morning azkar, quick evening azkar, short protection duas, islamic remembrances for busy schedules, quick spiritual practices"
         canonical="https://dailyazkar.site/short-azkar-for-busy-muslims"

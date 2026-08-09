@@ -105,7 +105,7 @@ export default function IslamicCalendarPage() {
   return (
     <div className="pt-24 bg-gradient-to-br from-purple-50 via-white to-indigo-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 min-h-screen">
       <SEOHead
-        title="Islamic Calendar (Hijri) - Important Islamic Dates & Events | Daily Azkar"
+        title="Islamic Calendar (Hijri) - Important Islamic Dates & Events | Daily Izkar"
         description="Explore the Islamic Hijri Calendar with all 12 months and important dates. Track Ramadan, Eid al-Fitr, Eid al-Adha, Hajj, and other significant Islamic occasions."
         keywords="islamic calendar, hijri calendar, muslim calendar, ramadan dates, eid dates, islamic months, التقويم الهجري, islamic events"
         canonical="https://dailyazkar.site/islamic-calendar"

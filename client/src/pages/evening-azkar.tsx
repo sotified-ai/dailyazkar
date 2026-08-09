@@ -29,11 +29,11 @@ export default function EveningAzkar() {
     "description": "Discover the best evening dua and the complete collection of Evening Azkar (أذكار المساء) with Arabic text, transliteration, and English translations. Protect yourself with these blessed night supplications.",
     "author": {
       "@type": "Organization",
-      "name": "Daily Azkar"
+      "name": "Daily Izkar"
     },
     "publisher": {
       "@type": "Organization",
-      "name": "Daily Azkar",
+      "name": "Daily Izkar",
       "url": "https://dailyazkar.site"
     }
   };
@@ -72,7 +72,7 @@ export default function EveningAzkar() {
   return (
     <div className="pt-24 bg-gradient-to-br from-emerald-50 via-white to-blue-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 min-h-screen">
       <SEOHead
-        title="Evening Dua: Authentic Evening Azkar (Verified) | Daily Azkar"
+        title="Evening Dua: Authentic Evening Azkar (Verified) | Daily Izkar"
         description="Discover the best evening dua and complete collection of Evening Azkar with Arabic text, transliteration, and English translations. Protect yourself with these blessed night supplications from authentic Islamic sources."
         keywords="evening dua, evening azkar, أذكار المساء, night dhikr, evening prayers islam, masnoon sham, evening remembrance, islamic supplications, bedtime duas, ramzan evening azkar, ramadan azkar msa, iftar dua, dua before iftar, fasting dua, ramzaan, roza kholne ki dua, shaam app, dua for sleeping, sleeping dua, surah lail, surah layl, al lail, al layl, daily nightly lyrics, evening adhkar, massa lyrics, short night prayer, surah al layl, al magrib, masa lyrics, dua after sleeping, dua close fast"
         canonical="https://dailyazkar.site/evening-azkar"

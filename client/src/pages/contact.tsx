@@ -12,8 +12,8 @@ export default function ContactPage() {
     const structuredData = {
         "@context": "https://schema.org",
         "@type": "ContactPage",
-        "name": "Contact Daily Azkar",
-        "description": "Contact the Daily Azkar team for questions, feedback, or to report issues with our Islamic supplications website.",
+        "name": "Contact Daily Izkar",
+        "description": "Contact the Daily Izkar team for questions, feedback, or to report issues with our Islamic supplications website.",
         "url": "https://dailyazkar.site/contact",
         "contactPoint": {
             "@type": "ContactPoint",
@@ -51,9 +51,9 @@ export default function ContactPage() {
     return (
         <div className="min-h-screen bg-gradient-to-br from-teal-50 via-white to-emerald-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900">
             <SEOHead
-                title="Contact Us | Daily Azkar"
-                description="Contact the Daily Azkar team. Have questions about our Islamic Azkar content, want to report an issue, or provide feedback? Reach out to us."
-                keywords="contact daily azkar, feedback, questions, report issue, islamic website contact"
+                title="Contact Us | Daily Izkar"
+                description="Contact the Daily Izkar team. Have questions about our Islamic Azkar content, want to report an issue, or provide feedback? Reach out to us."
+                keywords="contact Daily Izkar, feedback, questions, report issue, islamic website contact"
                 canonical="https://dailyazkar.site/contact"
                 structuredData={structuredData}
             />
@@ -191,9 +191,9 @@ export default function ContactPage() {
                     <div className="space-y-6">
                         {/* About */}
                         <div className="glassmorphism rounded-2xl p-8">
-                            <h2 className="text-2xl font-bold text-gray-800 dark:text-white mb-4">About Daily Azkar</h2>
+                            <h2 className="text-2xl font-bold text-gray-800 dark:text-white mb-4">About Daily Izkar</h2>
                             <p className="text-gray-600 dark:text-gray-300 leading-relaxed mb-4">
-                                Daily Azkar is a free Islamic resource designed to help Muslims maintain their daily remembrance of Allah. We are dedicated to providing authentic, accurate, and accessible Islamic content for Muslims worldwide.
+                                Daily Izkar is a free Islamic resource designed to help Muslims maintain their daily remembrance of Allah. We are dedicated to providing authentic, accurate, and accessible Islamic content for Muslims worldwide.
                             </p>
                             <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
                                 Our content is sourced from authentic Islamic texts and verified against established scholarly references including Hisnul Muslim (Fortress of the Muslim), the collections of Imam al-Nawawi, and major hadith collections.

@@ -3,13 +3,13 @@
         "page": "/",
         "status": "HEALTHY",
         "seo": {
-            "title": "Daily Azkar - Morning & Evening Islamic Supplications | أذكار الصباح والمساء",
+            "title": "Daily Izkar - Morning & Evening Islamic Supplications | أذكار الصباح والمساء",
             "description": "Discover authentic Morning and Evening Azkar with Arabic text, translations, and audio. Your daily companion for Islamic remembrance and spiritual growth.",
-            "keywords": "daily azkar, morning azkar, evening azkar, islamic supplications, اذكار الصباح, اذكار المساء, dhikr, muslim prayers",
+            "keywords": "Daily Izkar, morning azkar, evening azkar, islamic supplications, اذكار الصباح, اذكار المساء, dhikr, muslim prayers",
             "structuredData": {
                 "@context": "https://schema.org",
                 "@type": "WebSite",
-                "name": "Daily Azkar",
+                "name": "Daily Izkar",
                 "url": "https://dailyazkar.site",
                 "description": "Your daily companion for authentic Islamic remembrance and supplications",
                 "potentialAction": {
@@ -42,7 +42,7 @@
         "page": "/morning-azkar",
         "status": "THIN",
         "seo": {
-            "title": "Morning Azkar (أذكار الصباح) - Complete Daily Supplications | Daily Azkar",
+            "title": "Morning Azkar (أذكار الصباح) - Complete Daily Supplications | Daily Izkar",
             "description": "Complete collection of Morning Azkar with Arabic text, English translation, and repetition count. Start your day with blessed Islamic remembrance.",
             "keywords": "morning azkar, أذكار الصباح, subh azkar, morning dhikr, islamic morning prayers, daily remembrance",
             "structuredData": {
@@ -52,11 +52,11 @@
                 "description": "Authentic Morning Azkar collection with Arabic text and translations",
                 "author": {
                     "@type": "Organization",
-                    "name": "Daily Azkar"
+                    "name": "Daily Izkar"
                 },
                 "publisher": {
                     "@type": "Organization",
-                    "name": "Daily Azkar",
+                    "name": "Daily Izkar",
                     "url": "https://dailyazkar.site"
                 }
             }
@@ -80,7 +80,7 @@
         "page": "/ruqiya",
         "status": "HEALTHY",
         "seo": {
-            "title": "Ruqyah Shariah (الرقية الشرعية) - Islamic Spiritual Healing | Daily Azkar",
+            "title": "Ruqyah Shariah (الرقية الشرعية) - Islamic Spiritual Healing | Daily Izkar",
             "description": "Authentic Ruqyah verses from Quran and Sunnah for spiritual protection and healing. Learn proper Islamic Ruqyah with Arabic text and translations.",
             "keywords": "ruqyah, ruqya shariah, الرقية الشرعية, islamic healing, protection from evil eye, spiritual cure islam",
             "structuredData": {
@@ -90,7 +90,7 @@
                 "description": "Comprehensive guide to authentic Ruqyah for spiritual protection",
                 "author": {
                     "@type": "Organization",
-                    "name": "Daily Azkar"
+                    "name": "Daily Izkar"
                 }
             }
         },
@@ -113,7 +113,7 @@
         "page": "/quran",
         "status": "THIN",
         "seo": {
-            "title": "Quran Reading - Holy Quran Online | Daily Azkar",
+            "title": "Quran Reading - Holy Quran Online | Daily Izkar",
             "description": "Read the Holy Quran online with Arabic text. Access Quranic verses for daily recitation and spiritual guidance.",
             "keywords": "quran online, read quran, holy quran, قرآن كريم, quran arabic, muslim scripture",
             "structuredData": {
@@ -130,7 +130,7 @@
             },
             {
                 "to": "/",
-                "text": "Daily Azkar Home"
+                "text": "Daily Izkar Home"
             }
         ]
     },
@@ -138,7 +138,7 @@
         "page": "/dua-after-salah",
         "status": "THIN",
         "seo": {
-            "title": "Dua After Salah - Post-Prayer Supplications | Daily Azkar",
+            "title": "Dua After Salah - Post-Prayer Supplications | Daily Izkar",
             "description": "Authentic duas to recite after completing your Salah. Learn essential post-prayer supplications with Arabic text and translations.",
             "keywords": "dua after salah, post prayer dua, دعاء بعد الصلاة, after namaz dua, prayer supplications",
             "structuredData": {
@@ -167,7 +167,7 @@
         "page": "/rabbana-duas",
         "status": "THIN",
         "seo": {
-            "title": "Rabbana Duas from Quran - 40 Quranic Supplications | Daily Azkar",
+            "title": "Rabbana Duas from Quran - 40 Quranic Supplications | Daily Izkar",
             "description": "Collection of all Rabbana (Our Lord) duas from the Holy Quran. Beautiful Quranic supplications with Arabic text and meanings.",
             "keywords": "rabbana duas, quranic duas, ربنا, duas from quran, lord prayers quran, islamic supplications",
             "structuredData": {
@@ -196,7 +196,7 @@
         "page": "/islamic-calendar",
         "status": "THIN",
         "seo": {
-            "title": "Islamic Calendar (Hijri) - Today's Date | Daily Azkar",
+            "title": "Islamic Calendar (Hijri) - Today's Date | Daily Izkar",
             "description": "View the Islamic Hijri calendar with today's date. Track important Islamic dates, months, and events throughout the year.",
             "keywords": "islamic calendar, hijri calendar, التقويم الهجري, muslim calendar, hijri date today, islamic months",
             "structuredData": {
@@ -213,7 +213,7 @@
             },
             {
                 "to": "/",
-                "text": "Daily Azkar Home"
+                "text": "Daily Izkar Home"
             }
         ]
     }

@@ -1,4 +1,4 @@
-# Site Map: Daily Azkar Hub Model
+# Site Map: Daily Izkar Hub Model
 
 - **Home** (/)
   - **Azkar Hub** (/azkar)

@@ -13,7 +13,7 @@
 
 ## Sample Meta Tags (Surah Al-Fatiha)
 ```html
-<title>Surah Al-Fatiha - Read Quran Online | Daily Azkar</title>
+<title>Surah Al-Fatiha - Read Quran Online | Daily Izkar</title>
 <meta name="description" content="Read and listen to Surah Al-Fatiha with authentic English and Urdu translation.">
 <meta name="keywords" content="surah al-fatiha, quran chapter 1, opening surah, meccan">
 ```

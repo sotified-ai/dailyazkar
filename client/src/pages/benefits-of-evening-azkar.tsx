@@ -14,11 +14,11 @@ export default function BenefitsOfEveningAzkar() {
     "description": "Discover the profound benefits of reciting evening azkar (أذكار المساء) including spiritual protection, mental peace, and divine blessings for the night.",
     "author": {
       "@type": "Organization",
-      "name": "Daily Azkar"
+      "name": "Daily Izkar"
     },
     "publisher": {
       "@type": "Organization",
-      "name": "Daily Azkar",
+      "name": "Daily Izkar",
       "url": "https://dailyazkar.site"
     }
   };
@@ -57,7 +57,7 @@ export default function BenefitsOfEveningAzkar() {
   return (
     <div className="pt-24 bg-gradient-to-br from-emerald-50 via-white to-blue-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 min-h-screen">
       <SEOHead
-        title="Benefits of Evening Azkar - Spiritual and Psychological Advantages | Daily Azkar"
+        title="Benefits of Evening Azkar - Spiritual and Psychological Advantages | Daily Izkar"
         description="Discover the profound benefits of reciting evening azkar (أذكار المساء) including spiritual protection, mental peace, and divine blessings for the night. Learn how ending your day with remembrance transforms your nights."
         keywords="benefits of evening azkar, evening azkar advantages, spiritual benefits of evening remembrance, psychological benefits of evening azkar, evening azkar protection, evening azkar peace of mind, evening azkar rewards, evening azkar sleep quality"
         canonical="https://dailyazkar.site/benefits-of-evening-azkar"

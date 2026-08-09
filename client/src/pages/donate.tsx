@@ -23,8 +23,8 @@ export default function DonatePage() {
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "name": "Support Daily Azkar - Sadaqah Jariyah",
-    "description": "Support Daily Azkar and earn Sadaqah Jariyah (ongoing charity). Your donation helps spread Islamic knowledge and maintain this free resource for Muslims worldwide.",
+    "name": "Support Daily Izkar - Sadaqah Jariyah",
+    "description": "Support Daily Izkar and earn Sadaqah Jariyah (ongoing charity). Your donation helps spread Islamic knowledge and maintain this free resource for Muslims worldwide.",
     "url": "https://dailyazkar.site/donate"
   };
 
@@ -37,7 +37,7 @@ export default function DonatePage() {
         "name": "Is my donation considered Sadaqah Jariyah?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Yes! When you support Islamic educational resources like Daily Azkar, your donation becomes Sadaqah Jariyah - every person who benefits from the site adds to your rewards."
+          "text": "Yes! When you support Islamic educational resources like Daily Izkar, your donation becomes Sadaqah Jariyah - every person who benefits from the site adds to your rewards."
         }
       }
     ]
@@ -50,8 +50,8 @@ export default function DonatePage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-emerald-50 via-white to-amber-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900">
       <SEOHead
-        title="Support Daily Azkar - Sadaqah Jariyah | Donate"
-        description="Support Daily Azkar and earn Sadaqah Jariyah (ongoing charity). Your donation helps spread Islamic knowledge and maintain this free resource for Muslims worldwide."
+        title="Support Daily Izkar - Sadaqah Jariyah | Donate"
+        description="Support Daily Izkar and earn Sadaqah Jariyah (ongoing charity). Your donation helps spread Islamic knowledge and maintain this free resource for Muslims worldwide."
         keywords="sadaqah jariyah, islamic donation, muslim charity, support islamic app, donate islam, ongoing charity, صدقة جارية"
         canonical="https://dailyazkar.site/donate"
         structuredData={structuredData}
@@ -65,7 +65,7 @@ export default function DonatePage() {
             <i className="fas fa-hand-holding-heart text-white text-3xl"></i>
           </div>
           <h1 className="text-4xl md:text-5xl font-display font-bold text-gray-800 dark:text-white mb-4">
-            Support Daily Azkar
+            Support Daily Izkar
           </h1>
           <h2 className="text-2xl md:text-3xl font-arabic text-emerald-600 dark:text-emerald-400 mb-6">
             صدقة جارية
@@ -82,13 +82,13 @@ export default function DonatePage() {
               Support This Work
             </h2>
             <p className="text-gray-600 dark:text-gray-300 leading-relaxed mb-4">
-              Daily Azkar is a free resource dedicated to helping Muslims maintain their daily remembrance of Allah. We believe that access to authentic Islamic knowledge and resources should be available to everyone, regardless of their financial situation. Your generous support helps us continue this mission.
+              Daily Izkar is a free resource dedicated to helping Muslims maintain their daily remembrance of Allah. We believe that access to authentic Islamic knowledge and resources should be available to everyone, regardless of their financial situation. Your generous support helps us continue this mission.
             </p>
             <p className="text-gray-600 dark:text-gray-300 leading-relaxed mb-4">
               Every donation, no matter how small, contributes to keeping this platform running and developing new features to better serve the Ummah. Our team works tirelessly to ensure that the content provided is authentic, accurate, and beneficial to all who seek it.
             </p>
             <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
-              When you support Daily Azkar, you're not just making a one-time donation - you're investing in a resource that will continue to benefit Muslims worldwide for years to come. This is the essence of Sadaqah Jariyah.
+              When you support Daily Izkar, you're not just making a one-time donation - you're investing in a resource that will continue to benefit Muslims worldwide for years to come. This is the essence of Sadaqah Jariyah.
             </p>
           </div>
         </div>
@@ -103,7 +103,7 @@ export default function DonatePage() {
               The Prophet Muhammad ﷺ said: <em className="text-emerald-600 dark:text-emerald-400">"When a person dies, their deeds come to an end except for three: ongoing charity (Sadaqah Jariyah), knowledge that benefits others, or a righteous child who prays for them"</em> (Muslim).
             </p>
             <p className="text-gray-600 dark:text-gray-300 leading-relaxed mb-4">
-              By supporting Daily Azkar, your contribution becomes <strong>Sadaqah Jariyah</strong> - every person who:
+              By supporting Daily Izkar, your contribution becomes <strong>Sadaqah Jariyah</strong> - every person who:
             </p>
             <ul className="space-y-2 mb-4">
               <li className="flex items-start">
@@ -143,7 +143,7 @@ export default function DonatePage() {
               </div>
               <h3 className="font-semibold text-gray-800 dark:text-white mb-2">Server Costs</h3>
               <p className="text-gray-600 dark:text-gray-300 text-sm">
-                Keeping Daily Azkar accessible 24/7 worldwide requires reliable hosting infrastructure. Your support ensures the site remains fast and available to all.
+                Keeping Daily Izkar accessible 24/7 worldwide requires reliable hosting infrastructure. Your support ensures the site remains fast and available to all.
               </p>
             </div>
             <div className="glassmorphism rounded-xl p-6">
@@ -183,7 +183,7 @@ export default function DonatePage() {
               Donation Methods
             </h2>
             <p className="text-gray-600 dark:text-gray-300 text-center mb-6">
-              Choose your preferred payment method. All payments are secure and go directly towards maintaining Daily Azkar.
+              Choose your preferred payment method. All payments are secure and go directly towards maintaining Daily Izkar.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {bankAccounts.map((account, index) => (
@@ -226,7 +226,7 @@ export default function DonatePage() {
                 Is my donation considered Sadaqah Jariyah?
               </h3>
               <p className="text-gray-600 dark:text-gray-300">
-                Yes! When you support Islamic educational resources like Daily Azkar, your donation becomes Sadaqah Jariyah. Every person who benefits from this site adds to your rewards, in sha Allah, and this continues even after you pass away.
+                Yes! When you support Islamic educational resources like Daily Izkar, your donation becomes Sadaqah Jariyah. Every person who benefits from this site adds to your rewards, in sha Allah, and this continues even after you pass away.
               </p>
             </div>
             <div className="glassmorphism rounded-xl p-6">

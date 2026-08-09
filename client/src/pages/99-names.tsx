@@ -116,7 +116,7 @@ export default function NamesOfAllahPage() {
                 {/* CTA */}
                 <div className="text-center mt-12 bg-emerald-600 rounded-3xl p-10 text-white shadow-2xl">
                     <h2 className="text-3xl font-display font-bold mb-4">Deepen Your Spiritual Journey</h2>
-                    <p className="text-emerald-50 text-xl mb-8">Download our Daily Azkar app or explore our comprehensive guides to Islamic supplications.</p>
+                    <p className="text-emerald-50 text-xl mb-8">Download our Daily Izkar app or explore our comprehensive guides to Islamic supplications.</p>
                     <div className="flex flex-col sm:flex-row justify-center gap-6">
                         <Link href="/azkar" className="bg-white text-emerald-700 px-10 py-4 rounded-full font-bold text-lg hover:scale-105 transition-transform shadow-lg">
                             Go to Azkar Hub

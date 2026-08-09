@@ -81,7 +81,7 @@
         "notes": "Utility page - add Islamic months significance content"
     },
     {
-        "keyword": "daily azkar list",
+        "keyword": "Daily Izkar list",
         "intent": "habit-based devotional",
         "searchVolumeEstimate": "medium",
         "difficulty": "low",

@@ -79,11 +79,11 @@ export default function DuaAfterSalah() {
     "description": "Learn the best dua after prayer and authentic supplications to recite after completing your daily prayers. These blessed words complete your Namaz and bring immense rewards.",
     "author": {
       "@type": "Organization",
-      "name": "Daily Azkar"
+      "name": "Daily Izkar"
     },
     "publisher": {
       "@type": "Organization",
-      "name": "Daily Azkar",
+      "name": "Daily Izkar",
       "url": "https://dailyazkar.site/dua-after-salah"
     }
   };
@@ -114,7 +114,7 @@ export default function DuaAfterSalah() {
   return (
     <div className="pt-24 bg-gradient-to-br from-blue-50 via-white to-indigo-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 min-h-screen">
       <SEOHead
-        title="Dua After Prayer: Authentic Duas after Namaz & Salah | Daily Azkar"
+        title="Dua After Prayer: Authentic Duas after Namaz & Salah | Daily Izkar"
         description="Learn the best dua after prayer and authentic supplications to recite after completing your daily prayers. Includes Arabic text, translations, and references from Hadith."
         keywords="dua after prayer, dua after namaz, dua after salah, post prayer dua, after namaz dua, salah supplications, tasbih after prayer, adhkar after salah, دعاء بعد الصلاة, dua after wudu, fajr time in la, salah meaning, salat al sunnah, dua after azan in english, how to recite namaz, sunni dua after namaz, dua after prayer, dua after the azan, how to perform salat, sunnah salah, attahiyat in english, dua istikhara, istikhara supplication, dua for istikhara"
         canonical="https://dailyazkar.site/dua-after-salah"

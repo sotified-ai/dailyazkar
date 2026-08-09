@@ -6,9 +6,9 @@ export default function AzkarHub() {
     return (
         <div className="pt-24 min-h-screen bg-gradient-to-br from-green-50 via-white to-emerald-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 pb-16">
             <SEOHead
-                title="Azkar Hub - Morning, Evening & Ramadan Supplications | Daily Azkar"
-                description="Your complete hub for authentic daily Azkar. Find Morning Azkar, Evening Azkar, and Ramadan supplications to protect yourself and remember Allah."
-                keywords="azkar hub, morning azkar, evening azkar, ramadan azkar, daily azkar, islamic supplications, dhikr"
+                title="Azkar Hub - Morning, Evening & Ramadan Supplications | Daily Izkar"
+                description="Your complete hub for authentic Daily Izkar. Find Morning Azkar, Evening Azkar, and Ramadan supplications to protect yourself and remember Allah."
+                keywords="azkar hub, morning azkar, evening azkar, ramadan azkar, Daily Izkar, islamic supplications, dhikr"
                 canonical="https://dailyazkar.site/azkar"
             />
 

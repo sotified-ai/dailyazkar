@@ -34,11 +34,11 @@ export default function MorningAzkar() {
       : "Discover the best morning dua and the complete collection of Morning Azkar (أذكار الصباح) with Arabic text, transliteration, and English translations. Includes Prophetic prescriptions for sufficiency (کفایت کا نبوى نسخہ) in all affairs and prayers for completely thanking Allah's blessings.",
     "author": {
       "@type": "Organization",
-      "name": "Daily Azkar"
+      "name": "Daily Izkar"
     },
     "publisher": {
       "@type": "Organization",
-      "name": "Daily Azkar",
+      "name": "Daily Izkar",
       "url": "https://dailyazkar.site"
     }
   };
@@ -77,7 +77,7 @@ export default function MorningAzkar() {
   return (
     <div className="pt-24 bg-gradient-to-br from-amber-50 via-white to-orange-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 min-h-screen">
       <SEOHead
-        title={isUrdu ? "صبح کی دعائیں: 50 مستند صبح کے اذکار ترجمہ کے ساتھ | ڈیلی اذکار" : "Morning Dua: 50 Authentic Morning Azkar with Translation | Daily Azkar"}
+        title={isUrdu ? "صبح کی دعائیں: 50 مستند صبح کے اذکار ترجمہ کے ساتھ | ڈیلی اذکار" : "Morning Dua: 50 Authentic Morning Azkar with Translation | Daily Izkar"}
         description={isUrdu
           ? "صبح کی مسنون دعائیں اور اذکار عربی اور اردو ترجمہ کے ساتھ۔ اپنے دن کا آغاز اللہ کے بابرکت ذکر اور نبوی دعاؤں سے کریں۔"
           : "Discover the best morning dua and complete collection of Morning Azkar with Arabic text, transliteration, and English translations. Start your day with blessed remembrance, divine protection, and Prophetic prescriptions for sufficiency in worldly and hereafter affairs."}

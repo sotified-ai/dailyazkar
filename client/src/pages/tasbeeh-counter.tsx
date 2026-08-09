@@ -48,7 +48,7 @@ export default function TasbeehCounterPage() {
     return (
         <div className="pt-24 bg-gradient-to-br from-emerald-50 via-white to-teal-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 min-h-screen">
             <SEOHead
-                title="Online Tasbeeh Counter - Digital Dhikr & Zikr Tracking | Daily Azkar"
+                title="Online Tasbeeh Counter - Digital Dhikr & Zikr Tracking | Daily Izkar"
                 description="Use our premium online tasbeeh counter to track your daily dhikr. Set custom targets for SubhanAllah, Alhamdulillah, and Allahu Akbar. Free digital tasbih tool."
                 keywords="tasbeeh counter online, digital tasbih, zikr counter, online dhikr tracker, subhanallah counter, alhamdulillah counter, allahu akbar counter, islamic prayer counter"
                 canonical="https://dailyazkar.site/tasbeeh-counter"

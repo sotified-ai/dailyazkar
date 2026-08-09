@@ -1,4 +1,4 @@
-# Antigravity SEO Automation Plan for Daily Azkar
+# Antigravity SEO Automation Plan for Daily Izkar
 
 ## FILE 08 — `08-antigravity-execution-instructions.md`
 

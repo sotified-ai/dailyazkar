@@ -10,11 +10,11 @@ export default function ProtectionDuasInIslam() {
     "description": "Discover the best dua for protection and authentic Islamic supplications for safety against evil, harm, and negative influences, with Arabic text, transliteration, and translations.",
     "author": {
       "@type": "Organization",
-      "name": "Daily Azkar"
+      "name": "Daily Izkar"
     },
     "publisher": {
       "@type": "Organization",
-      "name": "Daily Azkar",
+      "name": "Daily Izkar",
       "url": "https://dailyazkar.site"
     }
   };
@@ -53,7 +53,7 @@ export default function ProtectionDuasInIslam() {
   return (
     <div className="pt-24 bg-gradient-to-br from-red-50 via-white to-rose-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 min-h-screen">
       <SEOHead
-        title="Dua for Protection: Authentic Islamic Supplications for Safety | Daily Azkar"
+        title="Dua for Protection: Authentic Islamic Supplications for Safety | Daily Izkar"
         description="Discover the best dua for protection and authentic Islamic supplications for safety against evil, harm, and negative influences, with Arabic text, transliteration, and translations. Learn Islamic protection duas."
         keywords="dua for protection, dua for protection from evil, protection duas in islam, islamic protection duas, duas for protection from harm, islamic supplications for safety, protection from evil eye duas, protection from black magic duas, islamic safety duas, morning protection duas, evening protection duas"
         canonical="https://dailyazkar.site/protection-duas-in-islam"

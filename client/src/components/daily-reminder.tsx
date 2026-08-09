@@ -38,7 +38,7 @@ export function DailyReminder() {
         <div className="max-w-4xl mx-auto text-center">
           <div className="mb-12 animate-fade-in">
             <h2 className="text-3xl md:text-4xl font-display font-bold text-gray-800 dark:text-white mb-4">
-              Never Miss Your <span className="gradient-text">Daily Azkar</span>
+              Never Miss Your <span className="gradient-text">Daily Izkar</span>
             </h2>
             <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
               Get gentle reminders for your morning and evening remembrance, plus daily Islamic inspiration
@@ -67,7 +67,7 @@ export function DailyReminder() {
               </div>
               <h3 className="text-xl font-semibold text-gray-800 dark:text-white mb-4">Daily Reminders</h3>
               <p className="text-gray-600 dark:text-gray-300 mb-6">
-                Receive gentle notifications for your daily Azkar times
+                Receive gentle notifications for your Daily Izkar times
               </p>
               <div className="space-y-3">
                 <div className="flex items-center justify-between p-3 bg-white dark:bg-gray-700 rounded-lg">

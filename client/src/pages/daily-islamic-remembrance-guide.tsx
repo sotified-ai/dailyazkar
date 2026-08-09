@@ -10,11 +10,11 @@ export default function DailyIslamicRemembranceGuide() {
     "description": "Comprehensive guide to daily Islamic remembrance (dhikr) including morning, evening, and situational azkar with Arabic text, transliteration, and translations.",
     "author": {
       "@type": "Organization",
-      "name": "Daily Azkar"
+      "name": "Daily Izkar"
     },
     "publisher": {
       "@type": "Organization",
-      "name": "Daily Azkar",
+      "name": "Daily Izkar",
       "url": "https://dailyazkar.site"
     }
   };
@@ -33,7 +33,7 @@ export default function DailyIslamicRemembranceGuide() {
       },
       {
         "@type": "Question",
-        "name": "How many times should I recite daily azkar?",
+        "name": "How many times should I recite Daily Izkar?",
         "acceptedAnswer": {
           "@type": "Answer",
           "text": "The frequency varies depending on the specific azkar. Some are recommended to be recited once, while others have specific numbers like 33 times for tasbih. The key is consistency rather than quantity. Start with what you can manage and gradually increase. The Prophet (peace be upon him) emphasized the importance of regularity in dhikr."
@@ -53,9 +53,9 @@ export default function DailyIslamicRemembranceGuide() {
   return (
     <div className="pt-24 bg-gradient-to-br from-green-50 via-white to-teal-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 min-h-screen">
       <SEOHead
-        title="Daily Islamic Remembrance Guide - Complete Manual for Dhikr | Daily Azkar"
+        title="Daily Islamic Remembrance Guide - Complete Manual for Dhikr | Daily Izkar"
         description="Comprehensive guide to daily Islamic remembrance (dhikr) including morning, evening, and situational azkar with Arabic text, transliteration, and translations. Learn the complete manual for Islamic remembrance."
-        keywords="daily islamic remembrance, islamic dhikr guide, daily azkar guide, morning and evening azkar, islamic remembrance manual, daily islamic prayers, daily islamic supplications, morning azkar guide, evening azkar guide, islamic remembrance guide"
+        keywords="daily islamic remembrance, islamic dhikr guide, Daily Izkar guide, morning and evening azkar, islamic remembrance manual, daily islamic prayers, daily islamic supplications, morning azkar guide, evening azkar guide, islamic remembrance guide"
         canonical="https://dailyazkar.site/daily-islamic-remembrance-guide"
         structuredData={structuredData}
       />
@@ -497,7 +497,7 @@ export default function DailyIslamicRemembranceGuide() {
             </div>
             <div className="glassmorphism rounded-xl p-6">
               <h3 className="font-semibold text-gray-800 dark:text-white mb-2">
-                How many times should I recite daily azkar?
+                How many times should I recite Daily Izkar?
               </h3>
               <p className="text-gray-600 dark:text-gray-300">
                 The frequency varies depending on the specific azkar. Some are recommended to be recited once, while others have specific numbers like 33 times for tasbih. The key is consistency rather than quantity. Start with what you can manage and gradually increase. The Prophet (peace be upon him) emphasized the importance of regularity in dhikr. Quality and understanding of the words are more important than quantity.

@@ -15,7 +15,7 @@ export default function OnlineQuranTutor() {
         "description": "Learn Quran online with expert tutors across the USA, UK, Europe, UAE, Qatar, and Saudi Arabia. Dedicated Quran teachers for kids, boys, girls, and adults. Flexible timings and interactive learning.",
         "provider": {
             "@type": "Organization",
-            "name": "Daily Azkar Online Quran Academy",
+            "name": "Daily Izkar Online Quran Academy",
             "sameAs": "https://dailyazkar.site/online-quran-tutor"
         },
         "hasCourseInstance": {

@@ -6,7 +6,7 @@ export default function DuaHub() {
     return (
         <div className="pt-24 min-h-screen bg-gradient-to-br from-green-50 via-white to-emerald-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 pb-16">
             <SEOHead
-                title="Dua Hub - Authentic Islamic Supplications | Daily Azkar"
+                title="Dua Hub - Authentic Islamic Supplications | Daily Izkar"
                 description="Explore a comprehensive collection of authentic islamic Duas, including Rabbana prayers from the Quran and supplications after daily Salah."
                 keywords="dua hub, islamic duas, rabbana duas, dua after salah, supplications, namaz duas, daily prayers"
                 canonical="https://dailyazkar.site/dua"

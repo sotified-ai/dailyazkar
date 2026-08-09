@@ -136,8 +136,8 @@ export default function RamadanAzkarPage() {
         "@type": "Article",
         "headline": "Ramadan Azkar - Sehri, Iftar & Odd Night Azkar for Laylatul Qadr",
         "description": "Complete guide to Ramadan Azkar including Sehri dua, Iftar dua, Laylatul Qadr dua, Odd Night Azkar actions, and fasting supplications. Authentic duas for Ramzan with Arabic text and translation.",
-        "author": { "@type": "Organization", "name": "Daily Azkar" },
-        "publisher": { "@type": "Organization", "name": "Daily Azkar", "url": "https://dailyazkar.site" },
+        "author": { "@type": "Organization", "name": "Daily Izkar" },
+        "publisher": { "@type": "Organization", "name": "Daily Izkar", "url": "https://dailyazkar.site" },
         "url": "https://dailyazkar.site/ramadan-azkar"
     };
 
@@ -183,7 +183,7 @@ export default function RamadanAzkarPage() {
     return (
         <div className="min-h-screen bg-gradient-to-br from-amber-50 via-white to-emerald-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900">
             <SEOHead
-                title="Ramadan Azkar - Sehri, Iftar & Laylatul Qadr (Odd Night) Duas | Daily Azkar"
+                title="Ramadan Azkar - Sehri, Iftar & Laylatul Qadr (Odd Night) Duas | Daily Izkar"
                 description="Complete Ramadan Azkar guide: Dua for suhoor, Iftar dua, Laylatul Qadr dua, Odd Night Azkar & actions, Tarawih duas & Ramzan supplications. Authentic Arabic text with English translation."
                 keywords="dua for suhoor, ramadan azkar, ramzan azkar, laylatul qadr dua, odd night azkar, odd night actions, laylatul qadr amal, sehri dua, iftar dua, fasting duas, roza ki dua, ramadan dua, ramzaan azkar, tarawih dua, ramadan mubarak dua, suhoor dua, dua for breaking fast, ramadan 2025, azkar ramadan"
                 canonical="https://dailyazkar.site/ramadan-azkar"

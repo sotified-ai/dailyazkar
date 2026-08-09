@@ -5,17 +5,17 @@ export default function PrivacyPolicyPage() {
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "name": "Privacy Policy - Daily Azkar",
-    "description": "Privacy Policy for Daily Azkar. Learn how we collect, use, and protect your information.",
+    "name": "Privacy Policy - Daily Izkar",
+    "description": "Privacy Policy for Daily Izkar. Learn how we collect, use, and protect your information.",
     "url": "https://dailyazkar.site/privacy-policy"
   };
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-emerald-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900">
       <SEOHead
-        title="Privacy Policy | Daily Azkar"
-        description="Privacy Policy for Daily Azkar. Learn how we collect, use, and protect your information when you use our Islamic supplications and Azkar website."
-        keywords="privacy policy, daily azkar privacy, data protection"
+        title="Privacy Policy | Daily Izkar"
+        description="Privacy Policy for Daily Izkar. Learn how we collect, use, and protect your information when you use our Islamic supplications and Azkar website."
+        keywords="privacy policy, Daily Izkar privacy, data protection"
         canonical="https://dailyazkar.site/privacy-policy"
         structuredData={structuredData}
       />
@@ -36,7 +36,7 @@ export default function PrivacyPolicyPage() {
           <section>
             <h2 className="text-2xl font-bold text-gray-800 dark:text-white mb-4">1. Introduction</h2>
             <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
-              Welcome to Daily Azkar ("we," "our," or "us"). We are committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website <strong>dailyazkar.site</strong> (the "Site"). Please read this policy carefully. If you disagree with its terms, please discontinue use of the Site.
+              Welcome to Daily Izkar ("we," "our," or "us"). We are committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website <strong>dailyazkar.site</strong> (the "Site"). Please read this policy carefully. If you disagree with its terms, please discontinue use of the Site.
             </p>
           </section>
 
@@ -56,7 +56,7 @@ export default function PrivacyPolicyPage() {
             </ul>
             <h3 className="text-lg font-semibold text-gray-700 dark:text-gray-200 mb-2">Information You Provide</h3>
             <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
-              We do not require you to create an account or provide personal information to use our Site. Daily Azkar is a free resource available to all users without registration.
+              We do not require you to create an account or provide personal information to use our Site. Daily Izkar is a free resource available to all users without registration.
             </p>
           </section>
 
@@ -163,7 +163,7 @@ export default function PrivacyPolicyPage() {
               If you have any questions about this Privacy Policy, please contact us at:
             </p>
             <div className="mt-4 p-4 bg-emerald-50 dark:bg-emerald-900/20 rounded-xl">
-              <p className="text-gray-700 dark:text-gray-200 font-medium">Daily Azkar</p>
+              <p className="text-gray-700 dark:text-gray-200 font-medium">Daily Izkar</p>
               <p className="text-gray-600 dark:text-gray-300">Website: <a href="https://dailyazkar.site" className="text-emerald-600 dark:text-emerald-400 hover:underline">dailyazkar.site</a></p>
               <p className="text-gray-600 dark:text-gray-300">Contact: <Link href="/contact" className="text-emerald-600 dark:text-emerald-400 hover:underline">Contact Us Page</Link></p>
             </div>

@@ -48,7 +48,7 @@ export default function Quran() {
   return (
     <div className="pt-24 bg-gradient-to-br from-green-50 via-white to-emerald-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 min-h-screen">
       <SEOHead
-        title="Holy Quran - Browse All 114 Surahs | Daily Azkar"
+        title="Holy Quran - Browse All 114 Surahs | Daily Izkar"
         description="Explore the Holy Quran with all 114 Surahs. Browse Meccan and Medinan chapters with verse counts. Discover divine guidance, wisdom, and light for believers."
         keywords="quran, holy quran, quran surahs, quran chapters, meccan surahs, medinan surahs, القرآن الكريم, islamic scripture, quran online, al kursi translation, ayatul kursiyyu transliteration, al asr, ayatul kursi in transliteration, falaq surah in english, translation of ayat al kursi, surah falaq transliteration, transliteration of surah falaq, surah al falaq transliteration, surat al falaq, ayat al kursi translation, fatiha translation, surah baqarah transliteration, wal asr translation, al asr translation, ayat kursi transliteration, ayatul kursi with transliteration, surah ikhlas translation, surah ikhlas transliteration, surah list, 4 qul surah, al asr surah translation, al fajr surah, ayatul kursi and translation, ayatul kursi translation"
         canonical="https://dailyazkar.site/quran"

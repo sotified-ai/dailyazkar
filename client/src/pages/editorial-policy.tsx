@@ -9,11 +9,11 @@ export default function EditorialPolicy() {
     "description": "Our editorial policy outlining source verification processes, reference standards, and accuracy guarantees for Islamic content.",
     "author": {
       "@type": "Organization",
-      "name": "Daily Azkar"
+      "name": "Daily Izkar"
     },
     "publisher": {
       "@type": "Organization",
-      "name": "Daily Azkar",
+      "name": "Daily Izkar",
       "url": "https://dailyazkar.site"
     }
   };
@@ -21,7 +21,7 @@ export default function EditorialPolicy() {
   return (
     <div className="pt-24 bg-gradient-to-br from-amber-50 via-white to-orange-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 min-h-screen">
       <SEOHead
-        title="Editorial Policy - Authenticity and Source Verification Standards | Daily Azkar"
+        title="Editorial Policy - Authenticity and Source Verification Standards | Daily Izkar"
         description="Our editorial policy outlining source verification processes, reference standards, and accuracy guarantees for Islamic content. Learn about our authenticity and verification standards."
         keywords="editorial policy, authenticity standards, source verification, islamic content accuracy, reference standards, hadith verification, quran authenticity, islamic scholarship standards, content verification process"
         canonical="https://dailyazkar.site/editorial-policy"
@@ -49,7 +49,7 @@ export default function EditorialPolicy() {
               Our Commitment to Authenticity
             </h2>
             <p className="text-gray-600 dark:text-gray-300 leading-relaxed mb-4">
-              At Daily Azkar, we recognize the immense responsibility of sharing Islamic content with our community. Our editorial policy reflects our unwavering commitment to accuracy, authenticity, and scholarly rigor in presenting Islamic teachings, azkar, and supplications.
+              At Daily Izkar, we recognize the immense responsibility of sharing Islamic content with our community. Our editorial policy reflects our unwavering commitment to accuracy, authenticity, and scholarly rigor in presenting Islamic teachings, azkar, and supplications.
             </p>
             <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
               This policy outlines our comprehensive approach to verifying sources, ensuring accuracy, and maintaining the highest standards of Islamic scholarship in all our content.

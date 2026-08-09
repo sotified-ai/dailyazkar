@@ -36,14 +36,14 @@ export default function DailyBlogs() {
         "@context": "https://schema.org",
         "@type": "Blog",
         "headline": "Daily Islamic Blogs & Reflections",
-        "description": "Read our latest articles on Islamic spirituality, daily Azkar benefits, Quranic insights, and Prophetic guidance."
+        "description": "Read our latest articles on Islamic spirituality, Daily Izkar benefits, Quranic insights, and Prophetic guidance."
     };
 
     return (
         <div className="pt-24 bg-gradient-to-br from-gray-50 via-white to-gray-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 min-h-screen">
             <SEOHead
-                title="Daily Islamic Blogs & Reflections | Daily Azkar"
-                description="Read our latest articles on Islamic spirituality, daily Azkar benefits, Quranic insights, and Prophetic guidance."
+                title="Daily Islamic Blogs & Reflections | Daily Izkar"
+                description="Read our latest articles on Islamic spirituality, Daily Izkar benefits, Quranic insights, and Prophetic guidance."
                 keywords="islamic blog, azkar benefits, muslim lifestyle, spiritual reflections, quranic insights, daily hadith, prophetic guidance"
                 canonical="https://dailyazkar.site/blog"
                 structuredData={structuredData}

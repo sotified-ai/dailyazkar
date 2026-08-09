@@ -20,7 +20,7 @@ const translations: Record<Language, Record<string, string>> = {
         "nav.dua": "Dua Hub",
         "nav.tutor": "Quran Tutor",
         "nav.blogs": "Blogs",
-        "site.title": "Daily Azkar",
+        "site.title": "Daily Izkar",
         "site.tagline": "Islamic Remembrance",
         "common.read_now": "Read Now",
         "common.start_counting": "Start Counting",

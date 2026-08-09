@@ -1,4 +1,4 @@
-# Antigravity SEO Automation Plan for Daily Azkar
+# Antigravity SEO Automation Plan for Daily Izkar
 
 > This document is intentionally written as a **series of Markdown files**.
 > You may split each section into its own `.md` file **or** give this entire document to Antigravity and instruct it to execute each phase in order.
@@ -77,13 +77,13 @@ Identify pages that may violate AdSense or SEO quality standards.
 
 ### Purpose
 
-Build a keyword map aligned with **real search intent** for Daily Azkar.
+Build a keyword map aligned with **real search intent** for Daily Izkar.
 
 ### Keyword Categories
 
 * Informational: meaning of azkar, benefits
 * Devotional: morning azkar, evening azkar
-* Habit‑based: daily azkar list, azkar before sleep
+* Habit‑based: Daily Izkar list, azkar before sleep
 * Long‑tail: dua for anxiety islam
 
 ### Priority Formula
@@ -245,7 +245,7 @@ Optimize only **approved pages**.
 
 ### Final Objective
 
-A stable, AdSense‑safe, SEO‑optimized Daily Azkar site that grows traffic **without automation abuse**.
+A stable, AdSense‑safe, SEO‑optimized Daily Izkar site that grows traffic **without automation abuse**.
 
 ---
 

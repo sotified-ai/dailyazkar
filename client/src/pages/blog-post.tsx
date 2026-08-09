@@ -69,11 +69,11 @@ export default function BlogPost({ params }: { params: { slug: string } }) {
         "datePublished": post.publishedAt || post.createdAt,
         "author": {
             "@type": "Organization",
-            "name": "Daily Azkar"
+            "name": "Daily Izkar"
         },
         "publisher": {
             "@type": "Organization",
-            "name": "Daily Azkar",
+            "name": "Daily Izkar",
             "url": "https://dailyazkar.site"
         }
     };
@@ -81,7 +81,7 @@ export default function BlogPost({ params }: { params: { slug: string } }) {
     return (
         <div className="pt-24 bg-gradient-to-br from-gray-50 via-white to-gray-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 min-h-screen">
             <SEOHead
-                title={`${post.seoTitle || post.title} | Daily Azkar Blogs`}
+                title={`${post.seoTitle || post.title} | Daily Izkar Blogs`}
                 description={post.seoDescription || ""}
                 keywords={post.seoKeywords || ""}
                 canonical={`https://dailyazkar.site/blog/${post.slug}`}

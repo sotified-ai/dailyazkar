@@ -12,7 +12,7 @@ export default function Manzil() {
         "description": "Manzil is a collection of verses from the Quran highly effective for protection from black magic, evil eye, and jinn. یہ منزل آسیب، سحر اور بعض دوسرے خطرات سے حفاظت کیلئے ایک مجرب عمل ہے۔",
         "publisher": {
             "@type": "Organization",
-            "name": "Daily Azkar",
+            "name": "Daily Izkar",
             "url": "https://dailyazkar.site"
         }
     };
@@ -20,7 +20,7 @@ export default function Manzil() {
     return (
         <div className="pt-24 bg-gradient-to-br from-indigo-50 via-white to-blue-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 min-h-screen">
             <SEOHead
-                title="Manzil (منزل) - Protection & Healing | Daily Azkar"
+                title="Manzil (منزل) - Protection & Healing | Daily Izkar"
                 description="Manzil is a collection of verses from the Quran highly effective for protection from black magic, evil eye, and jinn. یہ منزل آسیب، سحر اور بعض دوسرے خطرات سے حفاظت کیلئے ایک مجرب عمل ہے۔"
                 keywords="manzil, manzil dua, protection from evil eye, islamic healing, quranic verses for protection, منزل, protection from black magic, protection from jinn, protection from satan, protection from thieves, protection from wild beasts, شاہ ولی اللہ محدث دہلوى, آسیب، سحر اور خطرات سے حفاظت"
                 canonical="https://dailyazkar.site/manzil"

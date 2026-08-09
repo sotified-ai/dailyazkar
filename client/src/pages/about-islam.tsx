@@ -12,11 +12,11 @@ export default function AboutIslamPage() {
     "description": "Learn about Islam's beautiful practice of Azkar (remembrance of Allah). Discover the spiritual benefits, importance, and role of daily supplications in a Muslim's life.",
     "author": {
       "@type": "Organization",
-      "name": "Daily Azkar"
+      "name": "Daily Izkar"
     },
     "publisher": {
       "@type": "Organization",
-      "name": "Daily Azkar",
+      "name": "Daily Izkar",
       "url": "https://dailyazkar.site"
     }
   };
@@ -47,7 +47,7 @@ export default function AboutIslamPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-emerald-50 via-white to-blue-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900">
       <SEOHead
-        title="About Islam - Understanding Azkar and Remembrance of Allah | Daily Azkar"
+        title="About Islam - Understanding Azkar and Remembrance of Allah | Daily Izkar"
         description="Learn about Islam's beautiful practice of Azkar (remembrance of Allah). Discover the spiritual benefits, importance, and role of daily supplications in a Muslim's life."
         keywords="about islam, azkar meaning, dhikr islam, remembrance of allah, islamic worship, muslim faith, benefits of azkar"
         canonical="https://dailyazkar.site/about-islam"

@@ -10,11 +10,11 @@ export default function DuaAfterFajrPrayer() {
     "description": "Essential duas and supplications to recite after completing the Fajr prayer, with Arabic text, transliteration, and English translation.",
     "author": {
       "@type": "Organization",
-      "name": "Daily Azkar"
+      "name": "Daily Izkar"
     },
     "publisher": {
       "@type": "Organization",
-      "name": "Daily Azkar",
+      "name": "Daily Izkar",
       "url": "https://dailyazkar.site"
     }
   };
@@ -53,7 +53,7 @@ export default function DuaAfterFajrPrayer() {
   return (
     <div className="pt-24 bg-gradient-to-br from-blue-50 via-white to-cyan-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 min-h-screen">
       <SEOHead
-        title="Dua After Fajr Prayer - Supplications Following Dawn Prayer | Daily Azkar"
+        title="Dua After Fajr Prayer - Supplications Following Dawn Prayer | Daily Izkar"
         description="Essential duas and supplications to recite after completing the Fajr prayer, with Arabic text, transliteration, and English translation. Learn the authentic duas for protection and blessings after dawn prayer."
         keywords="dua after fajr prayer, morning duas after fajr, authentic duas after fajr prayer, islamic supplications after fajr, morning azkar after fajr, duas for protection after fajr, morning remembrance after fajr prayer, duas after dawn prayer"
         canonical="https://dailyazkar.site/dua-after-fajr-prayer"

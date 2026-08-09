@@ -11,7 +11,7 @@ if (!GEMINI_API_KEY) {
 const genAI = GEMINI_API_KEY ? new GoogleGenerativeAI(GEMINI_API_KEY) : null;
 const model = genAI ? genAI.getGenerativeModel({
   model: "gemini-2.0-flash",
-  systemInstruction: "You are a helpful Islamic Assistant for the Daily Azkar website. Provide guidance on daily prayers, Azkar (remembrance), Quranic insights, and Prophetic guidance. Be respectful, accurate, and concise. Always provide references from Quran and Sunnah where possible. If asked about things not related to Islam, politely redirect to your core purpose."
+  systemInstruction: "You are a helpful Islamic Assistant for the Daily Izkar website. Provide guidance on daily prayers, Azkar (remembrance), Quranic insights, and Prophetic guidance. Be respectful, accurate, and concise. Always provide references from Quran and Sunnah where possible. If asked about things not related to Islam, politely redirect to your core purpose."
 }) : null;
 
 export function registerChatRoutes(app: Express): void {

@@ -2,13 +2,13 @@
 
 ### Purpose
 
-Build a keyword map aligned with **real search intent** for Daily Azkar.
+Build a keyword map aligned with **real search intent** for Daily Izkar.
 
 ### Keyword Categories
 
 * Informational: meaning of azkar, benefits
 * Devotional: morning azkar, evening azkar
-* Habit‑based: daily azkar list, azkar before sleep
+* Habit‑based: Daily Izkar list, azkar before sleep
 * Long‑tail: dua for anxiety islam
 
 ### Priority Formula

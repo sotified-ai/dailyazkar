@@ -28,7 +28,7 @@ export default function Home() {
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "WebSite",
-    "name": "Daily Azkar",
+    "name": "Daily Izkar",
     "url": "https://dailyazkar.site",
     "description": "Your daily guide to Morning and Evening Zikr, featuring authentic Islamic Azkar and Quran Duas with explanations.",
     "potentialAction": {
@@ -41,9 +41,9 @@ export default function Home() {
   return (
     <div className="pt-24">
       <SEOHead
-        title="Complete Morning & Evening Azkar Guide (Arabic + English) | Daily Azkar"
+        title="Complete Morning & Evening Azkar Guide (Arabic + English) | Daily Izkar"
         description="Your daily guide to Morning and Evening Zikr, featuring authentic Islamic Azkar and Quran Duas with explanations. Enhance your spiritual journey with our interactive content."
-        keywords="Zikr, Azkar, Morning Azkar, Evening Azkar, Quran, Islamic Duas, Daily Prayers, Muslim prayers, spiritual guide, masnoon azkar, ramzan azkar, ramadan azkar, fasting duas, sehri dua, iftar dua, ramzan dua, roza, fasting islam, azkar ramadan, ramadan mubarak, ramzaan, subah ke azkar, sham ke azkar, namaz ke baad ki dua, hifazat ki dua, nazar e bad ki dua, masnoon duain, qurani duain, manzil dua, ruqyah shariah, beemari ki dua, parishani ki dua, wazifa, sone ki dua, jagne ki dua, ghar se nikalne ki dua, safar ki dua, daily azkar in urdu, roman urdu duas, islamic wazaif, dua qabooliyat, rabbana duas in roman english, har bimari ka ilaj quran se, jadu ka ilaj, nazar ka ilaj, subah o sham ke azkar, bimari ki dua, pareshani ki dua, gham ki dua, supplication meaning, dhikr, du aa, tasbeeh, akdar, dua and meaning, akdar meaning, how to make dua, indeed meaning in urdu, how to ask dua, dua muslim, praise god in arabic, protect dua, dhikr meaning, dua to save from evil eye, islamic dua, translate allahu akbar, zikr, askar, la ilaha illallah in arabic, prayer in arabic, prayers in arabic language, qiyam meaning, what is recite, adhkar, define dua"
+        keywords="Zikr, Azkar, Morning Azkar, Evening Azkar, Quran, Islamic Duas, Daily Prayers, Muslim prayers, spiritual guide, masnoon azkar, ramzan azkar, ramadan azkar, fasting duas, sehri dua, iftar dua, ramzan dua, roza, fasting islam, azkar ramadan, ramadan mubarak, ramzaan, subah ke azkar, sham ke azkar, namaz ke baad ki dua, hifazat ki dua, nazar e bad ki dua, masnoon duain, qurani duain, manzil dua, ruqyah shariah, beemari ki dua, parishani ki dua, wazifa, sone ki dua, jagne ki dua, ghar se nikalne ki dua, safar ki dua, Daily Izkar in urdu, roman urdu duas, islamic wazaif, dua qabooliyat, rabbana duas in roman english, har bimari ka ilaj quran se, jadu ka ilaj, nazar ka ilaj, subah o sham ke azkar, bimari ki dua, pareshani ki dua, gham ki dua, supplication meaning, dhikr, du aa, tasbeeh, akdar, dua and meaning, akdar meaning, how to make dua, indeed meaning in urdu, how to ask dua, dua muslim, praise god in arabic, protect dua, dhikr meaning, dua to save from evil eye, islamic dua, translate allahu akbar, zikr, askar, la ilaha illallah in arabic, prayer in arabic, prayers in arabic language, qiyam meaning, what is recite, adhkar, define dua"
         canonical="https://dailyazkar.site"
         structuredData={structuredData}
       />

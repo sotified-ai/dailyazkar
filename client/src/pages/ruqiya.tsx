@@ -54,7 +54,7 @@ export default function Ruqiya() {
     "description": "Authentic Ruqiya from Quran and Sunnah for protection against evil eye, magic, and envy. Spiritual healing through the words of Allah.",
     "publisher": {
       "@type": "Organization",
-      "name": "Daily Azkar",
+      "name": "Daily Izkar",
       "url": "https://dailyazkar.site"
     }
   };
@@ -62,7 +62,7 @@ export default function Ruqiya() {
   return (
     <div className="pt-24 bg-gradient-to-br from-violet-50 via-white to-purple-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 min-h-screen">
       <SEOHead
-        title="Ruqiya (رقية شرعية) - Islamic Spiritual Healing & Protection | Daily Azkar"
+        title="Ruqiya (رقية شرعية) - Islamic Spiritual Healing & Protection | Daily Izkar"
         description="Authentic Ruqiya from Quran and Sunnah. Verses of protection and healing for spiritual well-being, evil eye, and protection from harm."
         keywords="ruqiya, ruqyah shariah, islamic healing, spiritual healing, evil eye protection, quranic healing, رقية شرعية, protection duas"
         canonical="https://dailyazkar.site/ruqiya"

@@ -81,17 +81,17 @@ Status: ✅ Published (1200+ word SEO Optimized Pillar Page)
 
 ---
 
-## 4. Daily Azkar PDF Download (EN)
+## 4. Daily Izkar PDF Download (EN)
 Page: /en/daily-azkar-pdf
 Search intent: transactional
-Primary keyword: "daily azkar pdf"
+Primary keyword: "Daily Izkar pdf"
 Secondary: ["azkar pdf download", "morning evening azkar pdf"]
 
 H2 Outline:
-- Download daily azkar PDF
+- Download Daily Izkar PDF
 - What's included in the PDF
 - Printable azkar format
-- How to use daily azkar effectively
+- How to use Daily Izkar effectively
 
 Content target: 800–1000 words
 

@@ -10,11 +10,11 @@ export default function AzkarForAnxietyInIslam() {
     "description": "Discover authentic Islamic remembrances and supplications to help manage anxiety and find peace of mind according to Islamic teachings.",
     "author": {
       "@type": "Organization",
-      "name": "Daily Azkar"
+      "name": "Daily Izkar"
     },
     "publisher": {
       "@type": "Organization",
-      "name": "Daily Azkar",
+      "name": "Daily Izkar",
       "url": "https://dailyazkar.site"
     }
   };
@@ -53,7 +53,7 @@ export default function AzkarForAnxietyInIslam() {
   return (
     <div className="pt-24 bg-gradient-to-br from-cyan-50 via-white to-blue-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 min-h-screen">
       <SEOHead
-        title="Azkar for Anxiety in Islam - Islamic Remedies for Peace of Mind | Daily Azkar"
+        title="Azkar for Anxiety in Islam - Islamic Remedies for Peace of Mind | Daily Izkar"
         description="Discover authentic Islamic remembrances and supplications to help manage anxiety and find peace of mind according to Islamic teachings. Learn how Islamic remembrance provides spiritual relief from anxiety."
         keywords="azkar for anxiety, islamic remedies for anxiety, muslim anxiety relief, islamic supplications for peace, azkar for peace of mind, islamic treatment for anxiety, duas for anxiety relief, morning azkar for anxiety, evening azkar for anxiety"
         canonical="https://dailyazkar.site/azkar-for-anxiety-in-islam"

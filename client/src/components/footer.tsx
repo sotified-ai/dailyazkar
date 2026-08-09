@@ -36,7 +36,7 @@ export function Footer() {
                 <i className="fas fa-moon text-white text-xl"></i>
               </div>
               <div>
-                <h3 className="text-2xl font-display font-bold gradient-text">Daily Azkar</h3>
+                <h3 className="text-2xl font-display font-bold gradient-text">Daily Izkar</h3>
                 <p className="text-gray-400 text-sm">Islamic Remembrance & Guidance</p>
               </div>
             </Link>
@@ -96,7 +96,7 @@ export function Footer() {
         <div className="border-t border-gray-800 pt-8 mt-8">
           <div className="flex flex-col md:flex-row items-center justify-between gap-6">
             <p className="text-gray-400 text-center md:text-left">
-              © 2025 Daily Azkar. All rights reserved. Made with ❤️ for the Muslim Ummah.
+              © 2025 Daily Izkar. All rights reserved. Made with ❤️ for the Muslim Ummah.
             </p>
 
             <div className="flex items-center gap-4 bg-gray-800/50 p-2 rounded-lg">

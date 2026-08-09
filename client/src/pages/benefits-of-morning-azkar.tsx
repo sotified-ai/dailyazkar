@@ -14,11 +14,11 @@ export default function BenefitsOfMorningAzkar() {
     "description": "Discover the profound benefits of reciting morning azkar (أذكار الصباح) including spiritual protection, mental clarity, and divine blessings.",
     "author": {
       "@type": "Organization",
-      "name": "Daily Azkar"
+      "name": "Daily Izkar"
     },
     "publisher": {
       "@type": "Organization",
-      "name": "Daily Azkar",
+      "name": "Daily Izkar",
       "url": "https://dailyazkar.site"
     }
   };
@@ -57,7 +57,7 @@ export default function BenefitsOfMorningAzkar() {
   return (
     <div className="pt-24 bg-gradient-to-br from-amber-50 via-white to-orange-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 min-h-screen">
       <SEOHead
-        title="Benefits of Morning Azkar - Spiritual and Psychological Advantages | Daily Azkar"
+        title="Benefits of Morning Azkar - Spiritual and Psychological Advantages | Daily Izkar"
         description="Discover the profound benefits of reciting morning azkar (أذكار الصباح) including spiritual protection, mental clarity, and divine blessings. Learn how starting your day with remembrance transforms your life."
         keywords="benefits of morning azkar, morning azkar advantages, spiritual benefits of morning remembrance, psychological benefits of morning azkar, morning azkar protection, morning azkar peace of mind, morning azkar rewards, morning azkar mental health"
         canonical="https://dailyazkar.site/benefits-of-morning-azkar"

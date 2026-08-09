@@ -1,4 +1,4 @@
-# Daily Azkar Application
+# Daily Izkar Application
 
 ## Overview
 

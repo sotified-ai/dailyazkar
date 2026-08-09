@@ -10,11 +10,11 @@ export default function DuaAfterMaghribPrayer() {
     "description": "Essential duas and supplications to recite after completing the Maghrib prayer, with Arabic text, transliteration, and English translation.",
     "author": {
       "@type": "Organization",
-      "name": "Daily Azkar"
+      "name": "Daily Izkar"
     },
     "publisher": {
       "@type": "Organization",
-      "name": "Daily Azkar",
+      "name": "Daily Izkar",
       "url": "https://dailyazkar.site"
     }
   };
@@ -53,7 +53,7 @@ export default function DuaAfterMaghribPrayer() {
   return (
     <div className="pt-24 bg-gradient-to-br from-purple-50 via-white to-indigo-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 min-h-screen">
       <SEOHead
-        title="Dua After Maghrib Prayer - Supplications Following Sunset Prayer | Daily Azkar"
+        title="Dua After Maghrib Prayer - Supplications Following Sunset Prayer | Daily Izkar"
         description="Essential duas and supplications to recite after completing the Maghrib prayer, with Arabic text, transliteration, and English translation. Learn the authentic duas for protection and blessings after sunset prayer."
         keywords="dua after maghrib prayer, evening duas after maghrib, authentic duas after maghrib prayer, islamic supplications after maghrib, evening azkar after maghrib, duas for protection after maghrib, evening remembrance after maghrib prayer, duas after sunset prayer"
         canonical="https://dailyazkar.site/dua-after-maghrib-prayer"

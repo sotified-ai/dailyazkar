@@ -86,7 +86,7 @@ Furthermore, this event underscores the incredible bond of the global Muslim Umm
     
     Allah says in the Quran: "Verily, in the remembrance of Allah do hearts find rest." (13:28). A rested, peaceful heart is far more capable of tackling the challenges of work, family, and personal growth than a heart that starts the day in a state of rush and anxiety.
     
-    Make it a habit to sit down after Fajr prayer, open your Daily Azkar guide, and recited these beautiful prophetic words. The difference in your mental clarity and productivity will be profound.
+    Make it a habit to sit down after Fajr prayer, open your Daily Izkar guide, and recited these beautiful prophetic words. The difference in your mental clarity and productivity will be profound.
     
     Moreover, engaging in morning Azkar actively shields one from the whispers (Waswas) of Shaytan, who thrives on inciting laziness, procrastination, and anxiety. When a believer starts their day with phrases like "Astaghfirullah" (seeking forgiveness) and "SubhanAllah" (glorifying Allah), it spiritually fortifies them. The Prophet ﷺ mentioned in an authentic Hadith that if a person remembers Allah upon waking up, performs ablution, and prays, the "knots" tied by Shaytan during their sleep are completely unraveled, causing the person to wake up energetic and with a good spirit (Sahih al-Bukhari).
     
@@ -179,7 +179,7 @@ Furthermore, this event underscores the incredible bond of the global Muslim Umm
         slug: "consistency-with-daily-dhikr",
         title: "How to Build Consistency with Your Daily Dhikr",
         titleUrdu: "اپنے روزمرہ اذکار میں تسلسل کیسے پیدا کریں",
-        excerpt: "Struggling to remember your daily Azkar? Here are actionable strategies to seamlessly integrate remembrance into your fast-paced life.",
+        excerpt: "Struggling to remember your Daily Izkar? Here are actionable strategies to seamlessly integrate remembrance into your fast-paced life.",
         date: "February 22, 2026",
         readTime: "3 min read",
         category: "Lifestyle",

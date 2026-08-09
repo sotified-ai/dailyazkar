@@ -146,7 +146,7 @@ export default function PrayerTimesPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900">
       <SEOHead
-        title="Islamic Prayer Times - Daily Salah Schedule | Daily Azkar"
+        title="Islamic Prayer Times - Daily Salah Schedule | Daily Izkar"
         description="Find accurate Islamic prayer times for your location. Learn about the five daily prayers (Salah), their importance, and the best times for Fajr, Dhuhr, Asr, Maghrib, and Isha."
         keywords="prayer times, salah times, namaz times, islamic prayer schedule, fajr time, dhuhr time, asr time, maghrib time, isha time, muslim prayer"
         canonical="https://dailyazkar.site/prayer-times"

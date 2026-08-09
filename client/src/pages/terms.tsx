@@ -5,17 +5,17 @@ export default function TermsPage() {
     const structuredData = {
         "@context": "https://schema.org",
         "@type": "WebPage",
-        "name": "Terms of Service - Daily Azkar",
-        "description": "Terms of Service for Daily Azkar. Read our terms and conditions for using our Islamic supplications website.",
+        "name": "Terms of Service - Daily Izkar",
+        "description": "Terms of Service for Daily Izkar. Read our terms and conditions for using our Islamic supplications website.",
         "url": "https://dailyazkar.site/terms"
     };
 
     return (
         <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-blue-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900">
             <SEOHead
-                title="Terms of Service | Daily Azkar"
-                description="Terms of Service for Daily Azkar. Read our terms and conditions for using our free Islamic Azkar, duas, and Quran website."
-                keywords="terms of service, daily azkar terms, conditions of use"
+                title="Terms of Service | Daily Izkar"
+                description="Terms of Service for Daily Izkar. Read our terms and conditions for using our free Islamic Azkar, duas, and Quran website."
+                keywords="terms of service, Daily Izkar terms, conditions of use"
                 canonical="https://dailyazkar.site/terms"
                 structuredData={structuredData}
             />
@@ -36,14 +36,14 @@ export default function TermsPage() {
                     <section>
                         <h2 className="text-2xl font-bold text-gray-800 dark:text-white mb-4">1. Acceptance of Terms</h2>
                         <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
-                            By accessing and using <strong>dailyazkar.site</strong> ("the Site"), you accept and agree to be bound by these Terms of Service. If you do not agree to these terms, please do not use the Site. Daily Azkar reserves the right to update these terms at any time, and continued use of the Site constitutes acceptance of the updated terms.
+                            By accessing and using <strong>dailyazkar.site</strong> ("the Site"), you accept and agree to be bound by these Terms of Service. If you do not agree to these terms, please do not use the Site. Daily Izkar reserves the right to update these terms at any time, and continued use of the Site constitutes acceptance of the updated terms.
                         </p>
                     </section>
 
                     <section>
                         <h2 className="text-2xl font-bold text-gray-800 dark:text-white mb-4">2. Description of Service</h2>
                         <p className="text-gray-600 dark:text-gray-300 leading-relaxed mb-4">
-                            Daily Azkar is a free Islamic resource website that provides:
+                            Daily Izkar is a free Islamic resource website that provides:
                         </p>
                         <ul className="list-disc list-inside space-y-2 text-gray-600 dark:text-gray-300">
                             <li>Morning and Evening Azkar (Islamic daily remembrances)</li>
@@ -87,21 +87,21 @@ export default function TermsPage() {
                     <section>
                         <h2 className="text-2xl font-bold text-gray-800 dark:text-white mb-4">5. Content Accuracy</h2>
                         <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
-                            We strive to ensure all Islamic content (Azkar, duas, Quran references) on Daily Azkar is authentic and sourced from reliable Islamic texts including Hisnul Muslim, Sahih Bukhari, Sahih Muslim, and other authenticated hadith collections. However, we recommend cross-referencing important religious matters with qualified Islamic scholars. Prayer times displayed are approximate estimates and may vary based on your exact location and calculation method.
+                            We strive to ensure all Islamic content (Azkar, duas, Quran references) on Daily Izkar is authentic and sourced from reliable Islamic texts including Hisnul Muslim, Sahih Bukhari, Sahih Muslim, and other authenticated hadith collections. However, we recommend cross-referencing important religious matters with qualified Islamic scholars. Prayer times displayed are approximate estimates and may vary based on your exact location and calculation method.
                         </p>
                     </section>
 
                     <section>
                         <h2 className="text-2xl font-bold text-gray-800 dark:text-white mb-4">6. Advertising</h2>
                         <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
-                            Daily Azkar displays advertisements through Google AdSense to help cover operational costs and keep the site free for all users. Advertisements are clearly marked and separate from the religious content. We do not control the content of third-party advertisements. If you encounter an inappropriate ad, please contact us.
+                            Daily Izkar displays advertisements through Google AdSense to help cover operational costs and keep the site free for all users. Advertisements are clearly marked and separate from the religious content. We do not control the content of third-party advertisements. If you encounter an inappropriate ad, please contact us.
                         </p>
                     </section>
 
                     <section>
                         <h2 className="text-2xl font-bold text-gray-800 dark:text-white mb-4">7. Intellectual Property</h2>
                         <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
-                            The design, layout, and original content of Daily Azkar are our intellectual property. Islamic texts (Quran verses and authenticated hadiths) are in the public domain. Our commentary, explanations, and website structure are protected by copyright.
+                            The design, layout, and original content of Daily Izkar are our intellectual property. Islamic texts (Quran verses and authenticated hadiths) are in the public domain. Our commentary, explanations, and website structure are protected by copyright.
                         </p>
                     </section>
 
@@ -115,7 +115,7 @@ export default function TermsPage() {
                     <section>
                         <h2 className="text-2xl font-bold text-gray-800 dark:text-white mb-4">9. Limitation of Liability</h2>
                         <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
-                            To the fullest extent permitted by law, Daily Azkar shall not be liable for any indirect, incidental, special, consequential, or punitive damages resulting from your use of, or inability to use, the Site.
+                            To the fullest extent permitted by law, Daily Izkar shall not be liable for any indirect, incidental, special, consequential, or punitive damages resulting from your use of, or inability to use, the Site.
                         </p>
                     </section>
 
@@ -139,7 +139,7 @@ export default function TermsPage() {
                             If you have questions about these Terms of Service, please contact us:
                         </p>
                         <div className="mt-4 p-4 bg-blue-50 dark:bg-blue-900/20 rounded-xl">
-                            <p className="text-gray-700 dark:text-gray-200 font-medium">Daily Azkar</p>
+                            <p className="text-gray-700 dark:text-gray-200 font-medium">Daily Izkar</p>
                             <p className="text-gray-600 dark:text-gray-300">Website: <a href="https://dailyazkar.site" className="text-blue-600 dark:text-blue-400 hover:underline">dailyazkar.site</a></p>
                             <p className="text-gray-600 dark:text-gray-300">Contact Form: <Link href="/contact" className="text-blue-600 dark:text-blue-400 hover:underline">Contact Us</Link></p>
                         </div>

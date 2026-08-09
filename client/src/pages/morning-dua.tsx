@@ -12,7 +12,7 @@ export default function MorningDuaPillar() {
         "description": "A comprehensive guide on the best dua after waking up, the significance of morning dua, and a complete list of authentic morning azkar with translation for spiritual success.",
         "author": {
             "@type": "Organization",
-            "name": "Daily Azkar"
+            "name": "Daily Izkar"
         }
     };
 

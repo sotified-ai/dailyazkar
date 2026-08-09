@@ -10,11 +10,11 @@ export default function AzkarForProtectionFromEvilEye() {
     "description": "Discover authentic Islamic remembrances and supplications for protection against the evil eye, with Arabic text, transliteration, and translations.",
     "author": {
       "@type": "Organization",
-      "name": "Daily Azkar"
+      "name": "Daily Izkar"
     },
     "publisher": {
       "@type": "Organization",
-      "name": "Daily Azkar",
+      "name": "Daily Izkar",
       "url": "https://dailyazkar.site"
     }
   };
@@ -53,7 +53,7 @@ export default function AzkarForProtectionFromEvilEye() {
   return (
     <div className="pt-24 bg-gradient-to-br from-teal-50 via-white to-cyan-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 min-h-screen">
       <SEOHead
-        title="Azkar for Protection from Evil Eye - Islamic Remedies Against Harmful Glances | Daily Azkar"
+        title="Azkar for Protection from Evil Eye - Islamic Remedies Against Harmful Glances | Daily Izkar"
         description="Discover authentic Islamic remembrances and supplications for protection against the evil eye, with Arabic text, transliteration, and translations. Learn Islamic protection from evil eye."
         keywords="azkar for protection from evil eye, protection from evil eye duas, islamic protection from evil eye, evil eye protection azkar, duas for evil eye protection, islamic remedies for evil eye, protection from envious glances, morning azkar for evil eye protection, evening azkar for evil eye protection"
         canonical="https://dailyazkar.site/azkar-for-protection-from-evil-eye"

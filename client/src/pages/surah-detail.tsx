@@ -163,7 +163,7 @@ export default function SurahDetail() {
     return (
         <div className="min-h-screen pt-24 pb-12 bg-[#Fdfcf7] dark:bg-background">
             <SEOHead
-                title={`Reading ${surahInfo.name} - Quran | Daily Azkar`}
+                title={`Reading ${surahInfo.name} - Quran | Daily Izkar`}
                 description={`Start reading Surah ${surahInfo.name} (${surahInfo.nameArabic}).`}
             />
 

@@ -10,11 +10,11 @@ export default function AuthenticHadithOnAzkar() {
     "description": "Collection of authentic hadith from Prophet Muhammad (peace be upon him) about the importance and benefits of daily remembrance.",
     "author": {
       "@type": "Organization",
-      "name": "Daily Azkar"
+      "name": "Daily Izkar"
     },
     "publisher": {
       "@type": "Organization",
-      "name": "Daily Azkar",
+      "name": "Daily Izkar",
       "url": "https://dailyazkar.site"
     }
   };
@@ -53,7 +53,7 @@ export default function AuthenticHadithOnAzkar() {
   return (
     <div className="pt-24 bg-gradient-to-br from-purple-50 via-white to-indigo-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 min-h-screen">
       <SEOHead
-        title="Authentic Hadith on Azkar - Verified Sayings of Prophet Muhammad | Daily Azkar"
+        title="Authentic Hadith on Azkar - Verified Sayings of Prophet Muhammad | Daily Izkar"
         description="Collection of authentic hadith from Prophet Muhammad (peace be upon him) about the importance and benefits of daily remembrance. Learn from verified sayings about the significance of azkar in Islamic practice."
         keywords="authentic hadith on azkar, prophet muhammad hadith on remembrance, verified sayings about azkar, authentic islamic remembrance hadith, prophet muhammad on morning azkar, prophet muhammad on evening azkar, authentic hadith morning and evening remembrance"
         canonical="https://dailyazkar.site/authentic-hadith-on-azkar"

@@ -10,11 +10,11 @@ export default function DifferenceBetweenDhikrAndDua() {
     "description": "Learn the distinction between dhikr (remembrance) and dua (supplication) in Islamic practice, their purposes, and how they complement each other in worship.",
     "author": {
       "@type": "Organization",
-      "name": "Daily Azkar"
+      "name": "Daily Izkar"
     },
     "publisher": {
       "@type": "Organization",
-      "name": "Daily Azkar",
+      "name": "Daily Izkar",
       "url": "https://dailyazkar.site"
     }
   };
@@ -53,7 +53,7 @@ export default function DifferenceBetweenDhikrAndDua() {
   return (
     <div className="pt-24 bg-gradient-to-br from-indigo-50 via-white to-purple-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 min-h-screen">
       <SEOHead
-        title="Difference Between Dhikr and Dua - Understanding Islamic Practices | Daily Azkar"
+        title="Difference Between Dhikr and Dua - Understanding Islamic Practices | Daily Izkar"
         description="Learn the distinction between dhikr (remembrance) and dua (supplication) in Islamic practice, their purposes, and how they complement each other in worship. Understand the differences between Islamic remembrance and supplication."
         keywords="difference between dhikr and dua, islamic dhikr vs dua, dhikr and dua explained, islamic remembrance and supplication, what is dhikr, what is dua, dhikr vs dua in islam, understanding islamic worship, islamic practices dhikr dua"
         canonical="https://dailyazkar.site/difference-between-dhikr-and-dua"

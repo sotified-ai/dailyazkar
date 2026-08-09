@@ -24,8 +24,8 @@ export default function CommunityPage() {
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "name": "Muslim Community - Daily Azkar",
-    "description": "Join our growing Muslim community. Share your journey of faith, discuss Islamic topics, and support one another in practicing daily Azkar.",
+    "name": "Muslim Community - Daily Izkar",
+    "description": "Join our growing Muslim community. Share your journey of faith, discuss Islamic topics, and support one another in practicing Daily Izkar.",
     "url": "https://dailyazkar.site/community"
   };
 
@@ -38,7 +38,7 @@ export default function CommunityPage() {
         "name": "How can I participate in the community?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Stay connected with Daily Azkar through our regular updates and engage with fellow users who are on the same spiritual journey."
+          "text": "Stay connected with Daily Izkar through our regular updates and engage with fellow users who are on the same spiritual journey."
         }
       }
     ]
@@ -47,8 +47,8 @@ export default function CommunityPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-purple-50 via-white to-pink-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900">
       <SEOHead
-        title="Muslim Community - Connect with Fellow Believers | Daily Azkar"
-        description="Join our growing Muslim community. Share your journey of faith, discuss Islamic topics, and support one another in practicing daily Azkar and remembrance of Allah."
+        title="Muslim Community - Connect with Fellow Believers | Daily Izkar"
+        description="Join our growing Muslim community. Share your journey of faith, discuss Islamic topics, and support one another in practicing Daily Izkar and remembrance of Allah."
         keywords="muslim community, islamic community, ummah, muslim brothers sisters, islamic fellowship, dhikr community, azkar group"
         canonical="https://dailyazkar.site/community"
         structuredData={structuredData}
@@ -82,7 +82,7 @@ export default function CommunityPage() {
               Islam places great emphasis on community (Ummah). The Prophet Muhammad ﷺ said: <em className="text-purple-600 dark:text-purple-400">"The believers, in their mutual mercy, love, and compassion, are like a single body. If one part of it suffers, the whole body responds with sleeplessness and fever."</em> (Bukhari & Muslim)
             </p>
             <p className="text-gray-600 dark:text-gray-300 leading-relaxed mb-4">
-              Daily Azkar brings together Muslims from around the world who share a common goal: strengthening their connection with Allah through daily remembrance. Together, we encourage one another to maintain consistency in our spiritual practices and support each other on this blessed journey.
+              Daily Izkar brings together Muslims from around the world who share a common goal: strengthening their connection with Allah through daily remembrance. Together, we encourage one another to maintain consistency in our spiritual practices and support each other on this blessed journey.
             </p>
             <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
               Whether you're just beginning your journey of remembrance or have been practicing for years, you'll find a welcoming community here. We believe that collective worship and mutual encouragement amplify our individual efforts and strengthen the bonds of Islamic brotherhood and sisterhood.
@@ -106,7 +106,7 @@ export default function CommunityPage() {
                 </div>
                 <h3 className="font-semibold text-gray-800 dark:text-white mb-2">Mutual Encouragement</h3>
                 <p className="text-gray-600 dark:text-gray-300 text-sm">
-                  Remind each other to maintain daily Azkar practice. When one of us falters, others lift us up with kind reminders.
+                  Remind each other to maintain Daily Izkar practice. When one of us falters, others lift us up with kind reminders.
                 </p>
               </div>
               <div className="bg-white/50 dark:bg-gray-800/50 rounded-xl p-6">
@@ -156,11 +156,11 @@ export default function CommunityPage() {
               className="w-full mb-4 min-h-[120px]"
             />
             <div className="flex flex-wrap gap-3">
-              <Button onClick={() => sharePost('facebook', 'Check out Daily Azkar for beautiful Islamic remembrances!')} className="bg-blue-600 hover:bg-blue-700">
+              <Button onClick={() => sharePost('facebook', 'Check out Daily Izkar for beautiful Islamic remembrances!')} className="bg-blue-600 hover:bg-blue-700">
                 <i className="fab fa-facebook mr-2"></i>
                 Share on Facebook
               </Button>
-              <Button onClick={() => sharePost('twitter', 'Strengthen your connection with Allah through Daily Azkar!')} className="bg-sky-500 hover:bg-sky-600">
+              <Button onClick={() => sharePost('twitter', 'Strengthen your connection with Allah through Daily Izkar!')} className="bg-sky-500 hover:bg-sky-600">
                 <i className="fab fa-twitter mr-2"></i>
                 Share on Twitter
               </Button>
@@ -272,7 +272,7 @@ export default function CommunityPage() {
                 How can I participate in the community?
               </h3>
               <p className="text-gray-600 dark:text-gray-300">
-                Stay connected with Daily Azkar through our regular updates and engage with fellow users who are on the same spiritual journey. Share your reflections on social media, encourage others to practice daily remembrance, and spread the light of Dhikr in your circles.
+                Stay connected with Daily Izkar through our regular updates and engage with fellow users who are on the same spiritual journey. Share your reflections on social media, encourage others to practice daily remembrance, and spread the light of Dhikr in your circles.
               </p>
             </div>
             <div className="glassmorphism rounded-xl p-6">

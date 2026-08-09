@@ -126,7 +126,7 @@ export default function AIAssistant() {
   return (
     <>
       <SEOHead
-        title="AI Assistant | Daily Azkar"
+        title="AI Assistant | Daily Izkar"
         description="Chat with our AI assistant about Islamic daily remembrance (Azkar) and get personalized spiritual guidance."
         canonical="https://dailyazkar.site/ai-assistant"
       />
@@ -175,7 +175,7 @@ export default function AIAssistant() {
                     <div>
                       <i className="fas fa-comments text-4xl text-emerald-500 mb-4"></i>
                       <h2 className="text-xl font-bold text-gray-900 dark:text-white mb-2">
-                        Ask About Daily Azkar
+                        Ask About Daily Izkar
                       </h2>
                       <p className="text-gray-600 dark:text-gray-400 mb-6">
                         Start a new conversation to chat with our AI assistant about Islamic remembrance
@@ -194,7 +194,7 @@ export default function AIAssistant() {
                     <div className="flex-1 overflow-y-auto p-6 space-y-4">
                       {messages.length === 0 ? (
                         <div className="flex items-center justify-center h-full text-gray-500 dark:text-gray-400">
-                          <p>Start the conversation by asking a question about Daily Azkar...</p>
+                          <p>Start the conversation by asking a question about Daily Izkar...</p>
                         </div>
                       ) : (
                         messages.map((msg, idx) => (

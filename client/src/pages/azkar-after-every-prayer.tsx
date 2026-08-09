@@ -10,11 +10,11 @@ export default function AzkarAfterEveryPrayer() {
     "description": "Discover authentic Islamic remembrances and supplications to recite after each of the five daily prayers, with Arabic text, transliteration, and translations.",
     "author": {
       "@type": "Organization",
-      "name": "Daily Azkar"
+      "name": "Daily Izkar"
     },
     "publisher": {
       "@type": "Organization",
-      "name": "Daily Azkar",
+      "name": "Daily Izkar",
       "url": "https://dailyazkar.site"
     }
   };
@@ -53,7 +53,7 @@ export default function AzkarAfterEveryPrayer() {
   return (
     <div className="pt-24 bg-gradient-to-br from-blue-50 via-white to-cyan-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 min-h-screen">
       <SEOHead
-        title="Azkar After Every Prayer - Islamic Supplications for Continued Blessings | Daily Azkar"
+        title="Azkar After Every Prayer - Islamic Supplications for Continued Blessings | Daily Izkar"
         description="Discover authentic Islamic remembrances and supplications to recite after each of the five daily prayers, with Arabic text, transliteration, and translations. Learn Islamic prayers after salah."
         keywords="azkar after every prayer, duas after salah, islamic prayers after prayer, islamic supplications after prayer, post-prayer azkar, morning and evening azkar after prayer, tasbih after prayer, protection duas after prayer, islamic remembrance after salah"
         canonical="https://dailyazkar.site/azkar-after-every-prayer"

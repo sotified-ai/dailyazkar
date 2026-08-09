@@ -93,7 +93,7 @@ const islamicKnowledge: (LocalResult & { tags: string[] })[] = [
   {
     title: "Bismillah (بسم الله)", arabic: "بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ",
     translation: "In the name of Allah, the Most Gracious, the Most Merciful. Said before any important action.",
-    reference: "Quran 1:1", link: "/morning-azkar", category: "Daily Azkar",
+    reference: "Quran 1:1", link: "/morning-azkar", category: "Daily Izkar",
     tags: ["bismillah", "name", "allah", "gracious", "merciful", "basmala", "begin"]
   },
   {

@@ -75,7 +75,7 @@ export function SEOHead({ title, description, keywords, canonical, ogType = 'web
     updateOGTag('og:type', ogType);
     // Use the canonical URL (not window.location.href which may vary)
     updateOGTag('og:url', canonicalHref);
-    updateOGTag('og:site_name', 'Daily Azkar');
+    updateOGTag('og:site_name', 'Daily Izkar');
 
     // ── Twitter Card ─────────────────────────────────────────────
     const updateTwitterTag = (name: string, content: string) => {

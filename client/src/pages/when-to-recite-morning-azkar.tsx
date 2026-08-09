@@ -10,11 +10,11 @@ export default function WhenToReciteMorningAzkar() {
     "description": "Learn the optimal times for reciting morning azkar (أذكار الصباح) according to Islamic tradition and scholarly guidance.",
     "author": {
       "@type": "Organization",
-      "name": "Daily Azkar"
+      "name": "Daily Izkar"
     },
     "publisher": {
       "@type": "Organization",
-      "name": "Daily Azkar",
+      "name": "Daily Izkar",
       "url": "https://dailyazkar.site"
     }
   };
@@ -53,7 +53,7 @@ export default function WhenToReciteMorningAzkar() {
   return (
     <div className="pt-24 bg-gradient-to-br from-yellow-50 via-white to-amber-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 min-h-screen">
       <SEOHead
-        title="When to Recite Morning Azkar - Optimal Times and Guidelines | Daily Azkar"
+        title="When to Recite Morning Azkar - Optimal Times and Guidelines | Daily Izkar"
         description="Learn the optimal times for reciting morning azkar (أذكار الصباح) according to Islamic tradition and scholarly guidance. Discover the preferred timing for maximum spiritual benefit."
         keywords="when to recite morning azkar, best time for morning azkar, morning azkar timing, islamic timing for morning remembrance, morning azkar after fajr, morning azkar before sunrise, morning azkar time window, optimal time for morning azkar"
         canonical="https://dailyazkar.site/when-to-recite-morning-azkar"

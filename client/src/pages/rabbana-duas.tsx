@@ -97,11 +97,11 @@ export default function RabbanaDuas() {
     "description": "Collection of 'Rabbana' duas from the Holy Quran. These powerful supplications begin with 'Our Lord' and are direct words taught by Allah.",
     "author": {
       "@type": "Organization",
-      "name": "Daily Azkar"
+      "name": "Daily Izkar"
     },
     "publisher": {
       "@type": "Organization",
-      "name": "Daily Azkar",
+      "name": "Daily Izkar",
       "url": "https://dailyazkar.site/rabbana-duas"
     }
   };
@@ -140,7 +140,7 @@ export default function RabbanaDuas() {
   return (
     <div className="pt-24 bg-gradient-to-br from-teal-50 via-white to-cyan-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 min-h-screen">
       <SEOHead
-        title="Rabbana Duas - Powerful Quranic Supplications | Daily Azkar"
+        title="Rabbana Duas - Powerful Quranic Supplications | Daily Izkar"
         description="Collection of 'Rabbana' duas from the Holy Quran. These powerful supplications begin with 'Our Lord' and are direct words taught by Allah for our benefit."
         keywords="rabbana duas, quranic duas, rabbana prayers, our lord duas, quran supplications, ربنا دعاء, islamic prayers from quran"
         canonical="https://dailyazkar.site/rabbana-duas"

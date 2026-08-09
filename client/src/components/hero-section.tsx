@@ -24,7 +24,7 @@ export function HeroSection() {
           </div>
           
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-display font-bold mb-6">
-            <span className="gradient-text">Daily Azkar</span>
+            <span className="gradient-text">Daily Izkar</span>
             <br />
             <span className="text-gray-800 dark:text-white">Your Spiritual Companion</span>
           </h1>
@@ -51,7 +51,7 @@ export function HeroSection() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-2xl mx-auto">
             <div className="text-center">
               <div className="text-2xl font-bold text-emerald-600 dark:text-emerald-400">50+</div>
-              <div className="text-sm text-gray-600 dark:text-gray-400">Daily Azkar</div>
+              <div className="text-sm text-gray-600 dark:text-gray-400">Daily Izkar</div>
             </div>
             <div className="text-center">
               <div className="text-2xl font-bold text-amber-600 dark:text-amber-400">114</div>

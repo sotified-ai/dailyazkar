@@ -38,7 +38,7 @@ export default function ResourcesPage() {
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "name": "Islamic Resources - Daily Azkar",
+    "name": "Islamic Resources - Daily Izkar",
     "description": "Curated collection of authentic Islamic resources including Quran, Hadith, books, and educational materials for learning and practicing Islam.",
     "url": "https://dailyazkar.site/resources"
   };
@@ -69,7 +69,7 @@ export default function ResourcesPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-indigo-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900">
       <SEOHead
-        title="Islamic Resources - Quran, Hadith & Educational Materials | Daily Azkar"
+        title="Islamic Resources - Quran, Hadith & Educational Materials | Daily Izkar"
         description="Curated collection of authentic Islamic resources including Quran, Hadith, books, and educational materials for learning and practicing Islam."
         keywords="islamic resources, quran online, hadith collection, islamic books, learn islam, muslim education, islamic learning, authentic sources"
         canonical="https://dailyazkar.site/resources"
@@ -115,7 +115,7 @@ export default function ResourcesPage() {
         {/* Our Azkar Collections */}
         <div className="max-w-4xl mx-auto mb-12">
           <h2 className="text-2xl font-display font-bold text-gray-800 dark:text-white mb-6 text-center">
-            Daily Azkar Collections
+            Daily Izkar Collections
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <Link href="/morning-azkar">

@@ -10,11 +10,11 @@ export default function QuranicDuasExplained() {
     "description": "Discover and understand the most powerful supplications from the Quran with Arabic text, transliteration, translation, and explanation of their benefits.",
     "author": {
       "@type": "Organization",
-      "name": "Daily Azkar"
+      "name": "Daily Izkar"
     },
     "publisher": {
       "@type": "Organization",
-      "name": "Daily Azkar",
+      "name": "Daily Izkar",
       "url": "https://dailyazkar.site"
     }
   };
@@ -53,7 +53,7 @@ export default function QuranicDuasExplained() {
   return (
     <div className="pt-24 bg-gradient-to-br from-amber-50 via-white to-orange-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 min-h-screen">
       <SEOHead
-        title="Quranic Duas Explained - Powerful Supplications from the Quran | Daily Azkar"
+        title="Quranic Duas Explained - Powerful Supplications from the Quran | Daily Izkar"
         description="Discover and understand the most powerful supplications from the Quran with Arabic text, transliteration, translation, and explanation of their benefits. Learn Quranic duas for various needs and situations."
         keywords="quranic duas, duas from quran, powerful duas in quran, quranic supplications, islamic duas from quran, quran verses for dua, quranic duas explained, quran duas for protection, quran duas for guidance, quran duas for forgiveness"
         canonical="https://dailyazkar.site/quranic-duas-explained"

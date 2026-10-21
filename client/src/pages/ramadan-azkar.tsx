@@ -5,6 +5,7 @@ import { Breadcrumbs } from '@/components/breadcrumbs';
 import { RelatedContent } from '@/components/related-content';
 import { useLanguage } from '@/lib/language-context';
 import { cn } from '@/lib/utils';
+import { DuaReaderToolbar, SimpleDuaCard } from '@/components/dua-reader';
 
 const sehriDuas = [
     {
@@ -234,56 +235,29 @@ export default function RamadanAzkarPage() {
 
                 <AdSense className="my-8" />
 
+                <DuaReaderToolbar className="mb-8" />
                 {/* Sehri Duas */}
-                <div className="max-w-4xl mx-auto mb-12">
+                <div className="max-w-5xl mx-auto mb-12">
                     <h2 className="text-3xl font-display font-bold text-gray-800 dark:text-white mb-2 text-center">
                         🌙 Sehri / Suhoor Duas
                     </h2>
                     <p className="text-center text-gray-500 dark:text-gray-400 mb-6 text-sm">Duas for the pre-dawn meal and fasting intention</p>
-                    <div className="space-y-6">
+                    <div className="space-y-8">
                         {sehriDuas.map((dua, i) => (
-                            <div key={i} className="glassmorphism rounded-2xl p-6 md:p-8">
-                                <div className="flex items-start justify-between mb-4">
-                                    <h3 className="text-xl font-bold text-gray-800 dark:text-white">{dua.title}</h3>
-                                    <span className="text-xs px-2 py-1 bg-amber-100 dark:bg-amber-900/30 text-amber-700 dark:text-amber-400 rounded-full ml-2 flex-shrink-0">{dua.reference}</span>
-                                </div>
-                                <p className="text-3xl font-arabic text-right text-gray-800 dark:text-white leading-loose mb-4 bg-amber-50/50 dark:bg-amber-900/10 rounded-xl p-4">
-                                    {dua.arabic}
-                                </p>
-                                <p className="text-base text-amber-600 dark:text-amber-400 italic mb-2">{dua.transliteration}</p>
-                                <p className="text-gray-600 dark:text-gray-300 mb-3"><strong>Translation:</strong> {dua.translation}</p>
-                                <div className="flex items-start gap-2 text-sm text-gray-500 dark:text-gray-400 bg-gray-50 dark:bg-gray-800/50 rounded-lg p-3">
-                                    <i className="fas fa-info-circle mt-0.5 text-amber-500 flex-shrink-0"></i>
-                                    <span>{dua.note}</span>
-                                </div>
-                            </div>
+                            <SimpleDuaCard key={i} {...dua} />
                         ))}
                     </div>
                 </div>
 
                 {/* Iftar Duas */}
-                <div className="max-w-4xl mx-auto mb-12">
+                <div className="max-w-5xl mx-auto mb-12">
                     <h2 className="text-3xl font-display font-bold text-gray-800 dark:text-white mb-2 text-center">
                         🌅 Iftar Duas
                     </h2>
                     <p className="text-center text-gray-500 dark:text-gray-400 mb-6 text-sm">Duas for breaking the fast at Maghrib — Roza Kholne Ki Dua</p>
-                    <div className="space-y-6">
+                    <div className="space-y-8">
                         {iftarDuas.map((dua, i) => (
-                            <div key={i} className="glassmorphism rounded-2xl p-6 md:p-8">
-                                <div className="flex items-start justify-between mb-4">
-                                    <h3 className="text-xl font-bold text-gray-800 dark:text-white">{dua.title}</h3>
-                                    <span className="text-xs px-2 py-1 bg-emerald-100 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-400 rounded-full ml-2 flex-shrink-0">{dua.reference}</span>
-                                </div>
-                                <p className="text-3xl font-arabic text-right text-gray-800 dark:text-white leading-loose mb-4 bg-emerald-50/50 dark:bg-emerald-900/10 rounded-xl p-4">
-                                    {dua.arabic}
-                                </p>
-                                <p className="text-base text-emerald-600 dark:text-emerald-400 italic mb-2">{dua.transliteration}</p>
-                                <p className="text-gray-600 dark:text-gray-300 mb-3"><strong>Translation:</strong> {dua.translation}</p>
-                                <div className="flex items-start gap-2 text-sm text-gray-500 dark:text-gray-400 bg-gray-50 dark:bg-gray-800/50 rounded-lg p-3">
-                                    <i className="fas fa-info-circle mt-0.5 text-emerald-500 flex-shrink-0"></i>
-                                    <span>{dua.note}</span>
-                                </div>
-                            </div>
+                            <SimpleDuaCard key={i} {...dua} />
                         ))}
                     </div>
                 </div>
@@ -291,28 +265,14 @@ export default function RamadanAzkarPage() {
                 <AdSense className="my-8" />
 
                 {/* Ramadan Azkar */}
-                <div className="max-w-4xl mx-auto mb-16">
+                <div className="max-w-5xl mx-auto mb-16">
                     <h2 className="text-3xl font-display font-bold text-gray-800 dark:text-white mb-2 text-center">
                         ✨ Special Ramadan Azkar
                     </h2>
                     <p className="text-center text-gray-500 dark:text-gray-400 mb-6 text-sm">Tarawih, Laylatul Qadr & essential Ramadan supplications</p>
-                    <div className="space-y-6">
+                    <div className="space-y-8">
                         {ramadanAzkar.map((dua, i) => (
-                            <div key={i} className="glassmorphism rounded-2xl p-6 md:p-8">
-                                <div className="flex items-start justify-between mb-4">
-                                    <h3 className="text-xl font-bold text-gray-800 dark:text-white">{dua.title}</h3>
-                                    <span className="text-xs px-2 py-1 bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-400 rounded-full ml-2 flex-shrink-0">{dua.reference}</span>
-                                </div>
-                                <p className="text-3xl font-arabic text-right text-gray-800 dark:text-white leading-loose mb-4 bg-purple-50/50 dark:bg-purple-900/10 rounded-xl p-4">
-                                    {dua.arabic}
-                                </p>
-                                <p className="text-base text-purple-600 dark:text-amber-400 italic mb-2">{dua.transliteration}</p>
-                                <p className="text-gray-600 dark:text-gray-300 mb-3"><strong>Translation:</strong> {dua.translation}</p>
-                                <div className="flex items-start gap-2 text-sm text-gray-500 dark:text-gray-400 bg-gray-50 dark:bg-gray-800/50 rounded-lg p-3">
-                                    <i className="fas fa-info-circle mt-0.5 text-purple-500 flex-shrink-0"></i>
-                                    <span>{dua.note}</span>
-                                </div>
-                            </div>
+                            <SimpleDuaCard key={i} {...dua} />
                         ))}
                     </div>
                 </div>
@@ -340,11 +300,7 @@ export default function RamadanAzkarPage() {
                     {/* Odd Night Azkar */}
                     <div className="grid md:grid-cols-2 gap-6 mb-12">
                         {oddNightAzkar.map((dua, i) => (
-                            <div key={i} className="glassmorphism rounded-2xl p-6 border-l-4 border-amber-500">
-                                <h3 className="font-bold text-gray-800 dark:text-white mb-2">{dua.title}</h3>
-                                <p className="text-2xl font-arabic text-right mb-3 text-emerald-600 dark:text-emerald-400">{dua.arabic}</p>
-                                <p className="text-sm text-gray-600 dark:text-gray-300 italic">{dua.translation}</p>
-                            </div>
+                            <SimpleDuaCard key={i} {...dua} />
                         ))}
                     </div>
 

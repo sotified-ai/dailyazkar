@@ -1,4 +1,5 @@
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { DuaBlock } from "@/components/dua-block";
+import { DuaReaderToolbar } from "@/components/dua-reader";
 import { SEOHead } from "@/components/seo-head";
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { RelatedContent } from "@/components/related-content";
@@ -109,65 +110,10 @@ export default function Ruqiya() {
         </div>
 
         {/* Ruqiya Items */}
-        <div className="space-y-8 max-w-4xl mx-auto">
+        <DuaReaderToolbar className="mb-8" />
+        <div className="space-y-10 max-w-5xl mx-auto">
           {ruqiyaItems.map((item, index) => (
-            <Card key={item.id} className="glassmorphism border-0 shadow-lg animate-slide-up">
-              <CardHeader>
-                <CardTitle className="flex items-center justify-between">
-                  <div className="flex items-center space-x-4">
-                    <div className="w-12 h-12 bg-gradient-to-br from-violet-500 to-purple-600 rounded-full flex items-center justify-center text-white font-bold">
-                      {index + 1}
-                    </div>
-                    <div>
-                      <h3 className="text-xl font-semibold text-gray-800 dark:text-white">
-                        {item.title}
-                      </h3>
-                      <p className="text-lg font-arabic text-violet-600 dark:text-violet-400">
-                        {item.titleArabic}
-                      </p>
-                    </div>
-                  </div>
-                  <div className="text-right">
-                    {item.repetitions > 1 && (
-                      <div className="bg-violet-100 dark:bg-violet-900/30 text-violet-700 dark:text-violet-300 px-3 py-1 rounded-full text-sm font-medium mb-2">
-                        {item.repetitions}x
-                      </div>
-                    )}
-                    <div className="text-xs text-violet-600 dark:text-violet-400 font-medium">
-                      {item.benefits}
-                    </div>
-                  </div>
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                {/* Arabic Text */}
-                <div className="bg-gray-50 dark:bg-gray-800/50 rounded-xl p-6 mb-6">
-                  <p className="text-2xl font-arabic leading-loose text-right text-gray-800 dark:text-white">
-                    {item.content}
-                  </p>
-                </div>
-
-                {/* Translation */}
-                <div className="mb-4">
-                  <h4 className="font-semibold text-gray-800 dark:text-white mb-2">Translation:</h4>
-                  <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
-                    {item.translation}
-                  </p>
-                </div>
-
-                {/* Reference and Benefits */}
-                <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
-                  <div className="flex items-center text-sm text-violet-600 dark:text-violet-400">
-                    <i className="fas fa-book-open mr-2"></i>
-                    <span className="font-medium">Reference: {item.reference}</span>
-                  </div>
-                  <div className="flex items-center text-sm text-emerald-600 dark:text-emerald-400">
-                    <i className="fas fa-heart mr-2"></i>
-                    <span className="font-medium">Benefits: {item.benefits}</span>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
+            <DuaBlock key={item.id} azkar={item} index={index} />
           ))}
         </div>
 

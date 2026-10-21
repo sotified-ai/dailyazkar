@@ -4,6 +4,7 @@ import { SEOHead } from "@/components/seo-head";
 import { AdSense } from "@/components/adsense";
 import { Link } from "wouter";
 import { DuaBlock } from "@/components/dua-block";
+import { DuaReaderToolbar } from "@/components/dua-reader";
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { RelatedContent } from "@/components/related-content";
 import { cn } from "@/lib/utils";
@@ -205,14 +206,15 @@ export default function MorningAzkar() {
 
         {/* Azkar List */}
         <AdSense className="my-8" />
-        <div className="space-y-8 max-w-4xl mx-auto">
+        <DuaReaderToolbar className="mb-8" />
+        <div className="space-y-10 max-w-5xl mx-auto">
           {morningAzkar.items.map((azkar, index) => (
             <DuaBlock key={azkar.id} azkar={azkar} index={index} />
           ))}
         </div>
 
         {/* Hazrat Anas Dua Section */}
-        <div className="max-w-4xl mx-auto mt-16 mb-8">
+        <div className="max-w-5xl mx-auto mt-16 mb-8">
           <div className="text-center mb-10">
             <h2 className="text-3xl font-display font-bold text-gray-800 dark:text-white mb-4">
               Dua of Hazrat Anas (RA)

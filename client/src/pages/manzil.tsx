@@ -1,4 +1,5 @@
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { DuaBlock } from "@/components/dua-block";
+import { DuaReaderToolbar } from "@/components/dua-reader";
 import { SEOHead } from "@/components/seo-head";
 import { manzilDua } from "@/data/azkar-data";
 import { Breadcrumbs } from "@/components/breadcrumbs";
@@ -66,59 +67,9 @@ export default function Manzil() {
                 </div>
 
                 {/* Manzil Content */}
-                <div className="space-y-8 max-w-4xl mx-auto">
-                    <Card className="glassmorphism border-0 shadow-lg animate-slide-up">
-                        <CardHeader>
-                            <CardTitle className="flex items-center justify-between">
-                                <div className="flex items-center space-x-4">
-                                    <div className="w-12 h-12 bg-gradient-to-br from-indigo-500 to-blue-600 rounded-full flex items-center justify-center text-white font-bold">
-                                        <i className="fas fa-book-open"></i>
-                                    </div>
-                                    <div>
-                                        <h3 className="text-xl font-semibold text-gray-800 dark:text-white">
-                                            {manzilDua.title}
-                                        </h3>
-                                        <p className="text-lg font-arabic text-indigo-600 dark:text-indigo-400">
-                                            {manzilDua.titleArabic}
-                                        </p>
-                                    </div>
-                                </div>
-                                <div className="text-right">
-                                    <div className="bg-indigo-100 dark:bg-indigo-900/30 text-indigo-700 dark:text-indigo-300 px-3 py-1 rounded-full text-sm font-medium mb-2">
-                                        1x
-                                    </div>
-                                </div>
-                            </CardTitle>
-                        </CardHeader>
-                        <CardContent>
-                            {/* Arabic Text */}
-                            <div className="bg-gray-50 dark:bg-gray-800/50 rounded-xl p-6 mb-6">
-                                <p className="text-2xl font-arabic leading-relaxed text-right text-gray-800 dark:text-white whitespace-pre-wrap">
-                                    {manzilDua.content}
-                                </p>
-                            </div>
-
-                            {/* Translation */}
-                            <div className="mb-4">
-                                <h4 className="font-semibold text-gray-800 dark:text-white mb-2">Translation:</h4>
-                                <p className="text-gray-600 dark:text-gray-300 leading-relaxed whitespace-pre-wrap">
-                                    {manzilDua.translation}
-                                </p>
-                            </div>
-
-                            {/* Reference and Benefits */}
-                            <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
-                                <div className="flex items-center text-sm text-indigo-600 dark:text-indigo-400">
-                                    <i className="fas fa-book-open mr-2"></i>
-                                    <span className="font-medium">Reference: {manzilDua.reference}</span>
-                                </div>
-                                <div className="flex items-center text-sm text-emerald-600 dark:text-emerald-400">
-                                    <i className="fas fa-heart mr-2"></i>
-                                    <span className="font-medium">Benefits: {manzilDua.benefits}</span>
-                                </div>
-                            </div>
-                        </CardContent>
-                    </Card>
+                <DuaReaderToolbar className="mb-8" />
+                <div className="max-w-5xl mx-auto">
+                    <DuaBlock azkar={manzilDua} index={0} translationLabel="About Manzil" />
                 </div>
 
                 {/* Additional Guidance */}

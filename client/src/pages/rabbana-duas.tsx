@@ -1,4 +1,5 @@
 import { DuaBlock } from "@/components/dua-block";
+import { DuaReaderToolbar } from "@/components/dua-reader";
 import { SEOHead } from "@/components/seo-head";
 import { AdSense } from "@/components/adsense";
 import { Link } from "wouter";
@@ -253,7 +254,8 @@ export default function RabbanaDuas() {
         <AdSense className="my-8" />
 
         {/* Duas List */}
-        <div className="space-y-8 max-w-4xl mx-auto">
+        <DuaReaderToolbar className="mb-8" />
+        <div className="space-y-10 max-w-5xl mx-auto">
           {duas.map((dua, index) => (
             <DuaBlock key={dua.id} azkar={dua} index={index} />
           ))}
